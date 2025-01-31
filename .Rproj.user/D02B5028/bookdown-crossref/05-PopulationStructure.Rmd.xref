@@ -1,0 +1,31 @@
+h1:sec-population-structure Population Structure
+h2:pca-principal-component-analysis PCA (Principal Component Analysis)
+h4:required-dataset Required Dataset:
+h4:one-step 
+h4:outputs Outputs:
+h2:dapc-discriminant-analysis-of-principal-components DAPC (Discriminant Analysis of Principal Components)
+h4:required-dataset-1 Required Dataset:
+h4:step-1-cluster-identification Step 1: 
+h4:step-2-dapc-analysis Step 2: 
+h4:outputs-1 Outputs:
+h2:upgma-unweighted-pair-group-method-with-arithmetic-mean-tree UPGMA (Unweighted Pair Group Method with Arithmetic mean) Tree
+h4:required-dataset-2 Required Dataset:
+h4:steps :
+h4:outputs-2 Outputs:
+h2:nj-neighbor-joining-tree NJ (Neighbor-Joining) Tree
+h4:required-dataset-3 Required Dataset:
+h4:one-step-1 
+h4:outputs-3 Outputs:
+h2:kinship-analysis Kinship Analysis
+h4:required-dataset-4 Required Dataset:
+h4:steps-1 
+h4:outputs-4 Outputs:
+h2:scatter-plot-plus Scatter Plot 
+h4:required-files Required Files:
+h4:steps-2 
+h4:outputs-5 Outputs:
+h2:tree-plot-plus Tree Plot 
+h4:required-files-1 Required Files:
+h4:steps-3 
+h4:outputs-6 Outputs:
+

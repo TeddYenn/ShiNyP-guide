@@ -1,0 +1,85 @@
+##### R CODES #####
+
+# Set the working directory
+setwd("...change...")
+
+# Load the phenotype data from a CSV file
+Pheno_data = read.csv("IRRI_311_Pheno_AG_Clean_ID_Sorted.csv")
+
+# Extract the origin information and create a frequency table
+origin = Pheno_data$Origin
+table(origin)
+
+# Create a data frame with region names, counts, and percentages
+data = data.frame(
+  "region" = names(table(origin)),
+  "number" = as.numeric(table(origin)),
+  "perc" = as.numeric(table(origin)) / length(Pheno_data$Origin)
+)
+
+# Load ggplot2 for visualization and map_data for world map data
+library(ggplot2)
+options(scipen = 999) # Disable scientific notation
+world = map_data("world") # Load world map data
+head(world) # Preview the world map data
+write.csv(world, "world_map.csv") # Save the world map data to a CSV file
+
+# Rename specific regions in the data frame for consistency with map data
+data[4,1] = "Brunei"
+data[5,1] = "Burkina Faso"
+data[11,1] = "Ivory Coast"
+data[20,1] = "Laos"
+data[31,1] = "Sierra Leone"
+data[32,1] = "Solomon Islands"
+data[33,1] = "Sri Lanka"
+data[36,1] = "Vietnam"
+data[37,1] = "Niger"
+
+# Save the updated region information to a CSV file
+write.csv(data, "origin_map.csv")
+
+# Read the processed origin map data
+origin_map = read.csv("origin_map.csv")
+
+# Load additional libraries for data manipulation
+library(dplyr)
+library(stringr)
+library(ggplot2)
+
+# Merge the world map data with the origin map data by region
+worldSubset = inner_join(world, origin_map, by = "region")
+table(worldSubset$region) # Check the frequency of regions in the subset
+
+# Define a minimalist theme for the plot
+plain = theme(
+  axis.text = element_blank(),
+  axis.line = element_blank(),
+  axis.ticks = element_blank(),
+  panel.border = element_blank(),
+  panel.grid = element_blank(),
+  axis.title = element_blank(),
+  panel.background = element_rect(fill = "white"),
+  plot.title = element_text(hjust = 0.5)
+)
+
+# Create a world map visualization with percentage-based fill
+ggplot(data = worldSubset, mapping = aes(x = long, y = lat, group = group)) +
+  geom_polygon(data = world, aes(x = long, y = lat, group = group),
+               fill = "#f7f6f6", color = "#999999", linewidth = 0.01) + # Base world map
+  geom_polygon(aes(fill = perc)) + # Fill regions based on percentage
+  scale_fill_gradient(
+    low = "#f2d489",
+    high = "#e8542d",
+    name = "Percentage (%)",
+    breaks = c(4, 8, 12),
+    labels = c("4", "8", "12"),
+    guide = guide_colorbar(
+      barwidth = 10,
+      barheight = 1.2)) + # Gradient color scale for percentages
+  plain + # Apply the minimalist theme
+  theme(
+    legend.title = element_text(size = 14),
+    legend.text = element_text(size = 12),
+    legend.position = "bottom") # Position the legend at the bottom of the plot
+# Final plot size recommendation: 7' x 4'
+

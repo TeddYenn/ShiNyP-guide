@@ -1,0 +1,18 @@
+h1:sec-selection-sweep Selection Sweep
+h2:pcadapt pcadapt
+h4:required-datasets Required Datasets:
+h4:steps 
+h4:outputs Outputs:
+h2:outflank OutFLANK
+h4:required-datasets-1 Required Datasets:
+h4:steps-1 
+h4:outputs-1 Outputs:
+h2:ibs-identity-by-state IBS (Identity By State)
+h4:required-datasets-2 Required Datasets:
+h4:steps-2 
+h4:outputs-2 Outputs:
+h2:manhattan-plot-plus Manhattan Plot 
+h4:required-files Required Files:
+h4:steps-3 
+h4:outputs-3 Outputs:
+

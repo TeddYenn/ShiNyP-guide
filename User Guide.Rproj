@@ -1,0 +1,22 @@
+Version: 1.0
+ProjectId: d4b5a214-8289-45e1-968d-8bbc47eb99b4
+
+RestoreWorkspace: Default
+SaveWorkspace: Default
+AlwaysSaveHistory: Default
+
+EnableCodeIndexing: Yes
+UseSpacesForTab: Yes
+NumSpacesForTab: 2
+Encoding: UTF-8
+
+RnwWeave: knitr
+LaTeX: pdfLaTeX
+
+AutoAppendNewline: Yes
+StripTrailingWhitespace: Yes
+
+BuildType: Website
+
+MarkdownWrap: Column
+MarkdownWrapAtColumn: 72

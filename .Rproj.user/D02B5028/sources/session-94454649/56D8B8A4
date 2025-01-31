@@ -1,0 +1,31 @@
+{
+    "id": "56D8B8A4",
+    "path": "F:/GWAS_AG/BOOK/GWAS_TUTORIAL/05-extra-analysis-visualization.Rmd",
+    "project_path": "05-extra-analysis-visualization.Rmd",
+    "type": "r_markdown",
+    "hash": "0",
+    "contents": "",
+    "dirty": false,
+    "created": 1734623830252.0,
+    "source_on_save": false,
+    "relative_order": 11,
+    "properties": {
+        "source_window_id": "",
+        "Source": "Source",
+        "cursorPosition": "209,0",
+        "scrollLine": "52",
+        "rmdVisualMode": "true",
+        "rmdVisualModeLocation": "7406:4262.96337890625",
+        "rmdVisualWrapConfigured": "true",
+        "docOutlineVisible": "1",
+        "rmdVisualCollapsedChunks": ""
+    },
+    "folds": "",
+    "lastKnownWriteTime": 1734637031,
+    "encoding": "UTF-8",
+    "collab_server": "",
+    "source_window": "",
+    "last_content_update": 1734637031415,
+    "read_only": false,
+    "read_only_alternatives": []
+}

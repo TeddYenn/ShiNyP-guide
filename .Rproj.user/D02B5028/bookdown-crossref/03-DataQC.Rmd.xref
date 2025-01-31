@@ -1,0 +1,16 @@
+h1:sec-data-qc Data QC
+h2:sample-qc Sample QC
+h4:required-dataset-one-of-the-following Required Dataset (one of the following):
+h4:step-1-get-summary Step 1: Get Summary
+h4:step-2-sample-qc Step 2: Sample QC
+h4:outputs Outputs:
+h2:snp-qc SNP QC
+h4:required-dataset-one-of-the-following-1 Required Dataset (one of the following):
+h4:step-1-get-summary-1 Step 1: Get Summary
+h4:step-2-sample-qc-1 Step 2: Sample QC
+h4:outputs-1 Outputs:
+h2:snp-density SNP Density
+h4:required-dataset-one-of-the-following-2 Required Dataset (one of the following):
+h4:steps Steps:
+h4:outputs-2 Outputs:
+

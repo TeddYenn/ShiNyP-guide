@@ -1,0 +1,40 @@
+
+bookdown::bs4_book:
+  theme:
+
+    primary: "#3358a7"
+    primary: "#9D6853"
+    base_font:
+      google:
+        family: Lato
+    heading_font:
+      google:
+        family: Montserrat
+        wght: 600
+    code_font:
+      google:
+        family: Roboto Mono
+    bg: "#fefefe" # backgrounds
+    fg: "#000000" # fonts
+  repo: https://github.com/TeddYenn/ShiNyP-guide
+
+bookdown::gitbook:
+  css: style.css
+  config:
+    toc:
+      collapse: section
+      before: |
+        <li><a href="./">User Guide for ShiNyP</a></li>
+      after: |
+        <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+    edit: null
+  repo: null
+
+bookdown::pdf_book:
+  latex_engine: xelatex
+  citation_package: natbib
+  keep_tex: yes
+  includes:
+    in_header: preamble.tex
+
+bookdown::epub_book: default

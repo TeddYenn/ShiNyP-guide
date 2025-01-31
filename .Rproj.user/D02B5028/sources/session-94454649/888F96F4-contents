@@ -1,0 +1,386 @@
+# Phenotype Data {#sec-phenotype-data}
+
+1.  **Phenotypic Data Processing**
+
+2.  **Phenotypic Data Visualization**
+
+3.  **Prepare Final Phenotypic Data**
+
+## **Phenotypic Data Processing I**
+
+We aim to process and clean phenotypic data for a dataset called
+**IRRI_311_Pheno**. This dataset contains measurements of various
+phenotypic traits collected under different experimental conditions,
+including controls and treatments at specified time intervals (e.g., 5,
+7, and 14 days under control and treatment).
+
+➡️ **Working on R (RStudio).**
+
+``` r
+##### R CODES #####
+
+# Set the working directory
+setwd("...your file path...")
+
+# Load the phenotype data
+IRRI_311_Pheno = read.csv("IRRI_311_Pheno_AG_Original_ID_Sorted.csv")
+
+# Visualize distributions of different phenotypic traits
+boxplot(IRRI_311_Pheno$Control_5DAS)
+boxplot(IRRI_311_Pheno$Control_7DAS)
+boxplot(IRRI_311_Pheno$Control_14DAS)
+boxplot(IRRI_311_Pheno$AG_7DAS)
+boxplot(IRRI_311_Pheno$AG_14DAS)
+
+# Identify outliers in Control_14DAS (values < 60)
+outliers = which(IRRI_311_Pheno$Control_14DAS < 60)
+outliers
+
+# Create a clean version of the phenotype dataset
+IRRI_311_Pheno_Clean = IRRI_311_Pheno
+IRRI_311_Pheno_Clean[outliers, 7] = IRRI_311_Pheno_Clean[outliers, 6] # Replace outliers in Control_14DAS
+IRRI_311_Pheno_Clean[outliers, 7]
+boxplot(IRRI_311_Pheno_Clean$Control_14DAS) # Visualize the cleaned data
+
+# Create a new variable Control_AG_14DAS (Control-AG under 14 days) and save the clean data
+IRRI_311_Pheno_Clean$Control_AG_7DAS = IRRI_311_Pheno_Clean$Control_7DAS - IRRI_311_Pheno_Clean$AG_7DAS
+IRRI_311_Pheno_Clean$Control_AG_14DAS = IRRI_311_Pheno_Clean$Control_14DAS - IRRI_311_Pheno_Clean$AG_14DAS
+write.csv(IRRI_311_Pheno_Clean, "IRRI_311_Pheno_AG_Clean_ID_Sorted.csv", row.names = F)
+```
+
+**Outputs:**
+
+-   **IRRI_311_Pheno_AG_Clean_ID_Sorted.csv**\
+    Cleaned, sorted and rearranged phenotypic data. Created one trait by
+    Control minus Treatment.
+
+## **Phenotypic Data Processing II**
+
+We focus on exploring and transforming phenotypic data to achieve
+normality, which is essential for many statistical analyses, including
+GWAS. The dataset being processed contains phenotypic measurements,
+specifically the variable `Control_AG_14DAS`, representing the
+difference between control and treatment phenotypes at 14 days after
+sowing.
+
+➡️ **Working on R (RStudio).**
+
+``` r
+##### R CODES #####
+# Set the working directory
+setwd("...your file path...")
+
+# Load the phenotype data
+Pheno_data = read.csv("IRRI_311_Pheno_AG_Clean_ID_Sorted.csv")
+
+# Extract data for normalization
+data = Pheno_data$Control_AG_14DAS
+
+# Perform Shapiro-Wilk test to check normality of the original data
+shapiro.test(data) 
+# p-value = 1.437e-08 Indicates the data does not follow a normal distribution
+
+# Provide summary statistics for the original data
+summary(data)
+
+# Calculate skewness to assess data symmetry
+library(moments)
+skewness(data) # Negative skewness indicates a left skew
+
+# Plot the density of the original data
+plot(density(data), main = "Density plot for original data")
+
+# Create a Q-Q plot to visually check normality of the original data
+qqnorm(data, main = "Q-Q plot for original data")
+qqline(data, col = "red", lwd = 2)
+
+# Apply log transformation to normalize the data
+data_log = log(data)
+shapiro.test(data_log)
+skewness(data_log)
+plot(density(data_log), main="Density plot for log transformed data")
+qqnorm(data_log, main = "Q-Q plot for log transformed data")
+qqline(data_log, col = "red", lwd = 2)
+
+# Apply square root transformation to normalize the data
+data_sqrt = sqrt(data)
+shapiro.test(data_sqrt) 
+skewness(data_sqrt)
+plot(density(data_sqrt), main="Density plot for square root transformed data")
+qqnorm(data_sqrt, main = "Q-Q plot for square root transformed data")
+qqline(data_sqrt, col = "red", lwd = 2)
+
+# Apply z-score normalization to normalize the data 
+data_z = scale(data)
+shapiro.test(data_z)
+skewness(data_z)
+plot(density(data_z), main="Density plot for z-score transformed data")
+qqnorm(data_z, main = "Q-Q plot for z-score transformed data")
+qqline(data_z, col = "red", lwd = 2)
+
+# Apply Box-Cox transformation to normalize the data
+library(MASS)
+data_bc = boxcox(lm(data ~ 1), lambda = seq(-2, 2, by = 0.1))$x[which.max(boxcox(lm(data ~ 1), lambda = seq(-2, 2, by = 0.1))$y)]
+data_transformed = ((data ^ data_bc) - 1) / data_bc 
+shapiro.test(data_transformed)
+skewness(data_transformed)
+plot(density(data_transformed), main="Density plot for Box-Cox transformed data")
+qqnorm(data_transformed, main = "Q-Q plot for Box-Cox transformed data")
+qqline(data_transformed, col = "red", lwd = 2)
+```
+
+**We did not adopt the normalization-transformed phenotypic data**
+because the normality of the transformed data was not better than that
+of the original data.
+
+## **Phenotypic Data Visualization**
+
+We aim to analyze and visualize seed germination data under various
+experimental conditions. This analysis is centered around comparing
+control and treatment groups at different time points (7 and 14 days) to
+assess the effects of treatments on seed germination rates.
+
+-   **Statistical Analysis**:
+
+    1.  **Welch's t-tests** are conducted to compare seed germination
+        rates between:
+
+        -   Control and treatment groups at 7 days.
+
+        -   Control and treatment groups at 14 days.
+
+        -   Control groups at 7 days versus 14 days.
+
+    2.  A **two-way ANOVA** is performed to evaluate the interaction
+        effects of treatment conditions and time points on seed
+        germination.
+
+-   **Visualization**:
+
+    -   Boxplots combined with jitter plots are generated to visualize
+        the spread and differences between groups.
+
+    -   Annotated visualizations are included to emphasize statistical
+        significance (e.g., \*\*\* for p-values).
+
+    -   Line plots are created to compare mean seed germination rates
+        across time points and experimental conditions.
+
+➡️ **Working on R (RStudio).**
+
+``` r
+##### R CODES #####
+
+# Set the working directory
+setwd("...your file path...")
+
+# Load the phenotype data from a CSV file
+Pheno_data = read.csv("IRRI_311_Pheno_AG_Clean_ID_Sorted.csv")
+
+# Load ggplot2 library for data visualization
+library(ggplot2)
+
+# Seed germination analysis: Control vs Treatment (7-day)
+Group1 = Pheno_data$Control_7DAS
+Group2 = Pheno_data$AG_7DAS
+
+# Perform Welch Two Sample t-test
+t.test(Group1, Group2) # p-value < 2.2e-16
+
+# Create a data frame for visualization
+ID = Pheno_data$ID
+data = data.frame(
+  value = c(Group1, Group2),
+  group = rep(c("Control_7", "Treatment_7"), each = length(Group1)),
+  id = rep(ID, 2))
+
+# Generate boxplot and jitter plot for 7-day seed germination
+ggplot(data, aes(x = group, y = value, group = group)) +
+  geom_boxplot(aes(fill = group), color = "grey30", width = 0.65, size = 0.3, alpha = 0.9, outlier.shape = NA) +
+  geom_jitter(width = 0.1, aes(color = group), size = 1.5, alpha = 0.3) +
+  geom_line(aes(group = id), color = "grey70", size = 0.1) +
+  theme_classic() +
+  labs(title = "", x = "", y = "Seed germination (%)") +
+  theme(
+    axis.title.x = element_text(size = 18),
+    axis.title.y = element_text(size = 18),
+    axis.text.x = element_text(size = 16, color = "black"),
+    axis.text.y = element_text(size = 14),
+    legend.position = "none") +
+  scale_fill_manual(values = c("Control_7" = "#9ABF80", "Treatment_7" = "#E38E49")) +
+  scale_color_manual(values = c("Control_7" = "#9ABF80", "Treatment_7" = "#E38E49")) +
+  scale_x_discrete(labels = c("Control_7" = "Control (7-day)", "Treatment_7" = "Treatment (7-day)")) +
+  annotate("segment", x = 1, xend = 2, y = 108, yend = 108, linewidth = 0.8, color = "black") +
+  annotate("segment", x = 1, xend = 1, y = 108, yend = 105, linewidth = 0.8, color = "black") +
+  annotate("segment", x = 2, xend = 2, y = 108, yend = 105, linewidth = 0.8, color = "black") +
+  annotate("text", x = 1.5, y = 110, label = paste("***"), size = 6, hjust = 0.5) # 5 x 5
+
+# Seed germination analysis: Control vs Treatment (14-day)
+Group1 = Pheno_data$Control_14DAS
+Group2 = Pheno_data$AG_14DAS
+
+# Perform Welch Two Sample t-test
+t.test(Group1, Group2) # p-value < 2.2e-16
+
+# Create a data frame for visualization
+data = data.frame(
+  value = c(Group1, Group2),
+  group = rep(c("Control_14", "Treatment_14"), each = length(Group1)),
+  id = rep(ID, 2))
+
+# Generate boxplot and jitter plot for 14-day seed germination
+ggplot(data, aes(x = group, y = value, group = group)) +
+  geom_boxplot(aes(fill = group), color = "grey30", width = 0.65, size = 0.3, alpha = 0.9, outlier.shape = NA) +
+  geom_jitter(width = 0.1, aes(color = group), size = 1.5, alpha = 0.3) +
+  geom_line(aes(group = id), color = "grey70", size = 0.1) +
+  theme_classic() +
+  labs(title = "", x = "", y = "Seed germination (%)") +
+  theme(
+    axis.title.x = element_text(size = 18),
+    axis.title.y = element_text(size = 18),
+    axis.text.x = element_text(size = 16, color = "black"),
+    axis.text.y = element_text(size = 14),
+    legend.position = "none") +
+  scale_fill_manual(values = c("Control_14" = "#9ABF80", "Treatment_14" = "#E38E49")) +
+  scale_color_manual(values = c("Control_14" = "#9ABF80", "Treatment_14" = "#E38E49")) +
+  scale_x_discrete(labels = c("Control_14" = "Control (14-day)", "Treatment_14" = "Treatment (14-day)")) +
+  annotate("segment", x = 1, xend = 2, y = 108, yend = 108, linewidth = 0.8, color = "black") +
+  annotate("segment", x = 1, xend = 1, y = 108, yend = 105, linewidth = 0.8, color = "black") +
+  annotate("segment", x = 2, xend = 2, y = 108, yend = 105, linewidth = 0.8, color = "black") +
+  annotate("text", x = 1.5, y = 110, label = paste("***"), size = 6, hjust = 0.5) # 5 x 5
+
+# Comparison of seed germination between Control groups (7-day vs 14-day)
+Group1 = Pheno_data$Control_AG_7DAS
+Group2 = Pheno_data$Control_AG_14DAS
+
+# Perform Welch Two Sample t-test
+t.test(Group1, Group2) # p-value = 6.721e-10
+
+# Create a data frame for visualization
+data = data.frame(
+  value = c(Group1, Group2),
+  group = rep(c("Group1", "Group2"), each = length(Group1)),
+  id = rep(ID, 2))
+
+# Generate boxplot and jitter plot for comparison
+ggplot(data, aes(x = group, y = value, group = group)) +
+  geom_boxplot(aes(fill = group), color = "grey30", width = 0.65, size = 0.3, alpha = 0.9, outlier.shape = NA) +
+  geom_jitter(width = 0.1, aes(color = group), size = 1.5, alpha = 0.3) +
+  geom_line(aes(group = id), color = "grey70", size = 0.1) +
+  theme_classic() +
+  labs(title = "", x = "", y = "Comparison of seed germination (%)") +
+  theme(
+    axis.title.x = element_text(size = 18),
+    axis.title.y = element_text(size = 18),
+    axis.text.x = element_text(size = 16, color = "black"),
+    axis.text.y = element_text(size = 14),
+    legend.position = "none") +
+  scale_fill_manual(values = c("Group1" = "#D39D55", "Group2" = "#500000")) +
+  scale_color_manual(values = c("Group1" = "#D39D55", "Group2" = "#500000")) +
+  scale_x_discrete(labels = c("Group1" = "7-day", "Group2" = "14-day")) +
+  annotate("segment", x = 1, xend = 2, y = 108, yend = 108, linewidth = 0.8, color = "black") +
+  annotate("segment", x = 1, xend = 1, y = 108, yend = 105, linewidth = 0.8, color = "black") +
+  annotate("segment", x = 2, xend = 2, y = 108, yend = 105, linewidth = 0.8, color = "black") +
+  annotate("text", x = 1.5, y = 110, label = paste("***"), size = 6, hjust = 0.5) # 5 x 5
+
+# Perform Two-Way ANOVA on seed germination data
+data = Pheno_data[, c(1:4, 6:9)] %>%
+  pivot_longer(cols = starts_with("Control") | starts_with("AG"),
+               names_to = c("Condition", "Day"),
+               names_sep = "_",
+               values_to = "Measurement")
+
+# Recode Condition and Day as factors for ANOVA
+data$Condition = factor(data$Condition)
+data$Day = factor(data$Day)
+data$Day = gsub("7DAS", "7-day", data$Day)
+data$Day = gsub("14DAS", "14-day", data$Day)
+
+# Perform ANOVA and display summary results
+anova = aov(Measurement ~ Condition * Day, data = data)
+summary(anova)
+
+# Calculate and visualize the means for each Condition and Day
+data2 = 
+  data %>% 
+  group_by(Condition, Day) %>%
+  summarise(Means = mean(Measurement))
+
+# Generate a line plot to compare mean seed germination
+ggplot(data2, 
+       aes(x = Day, y = Means, colour = Condition, group = Condition)) +
+  geom_point(size = 4) + geom_line() +
+  theme_classic() +
+  labs(title = "", x = "", y = "Mean of seed germination (%)") +
+  theme(
+    axis.title.x = element_text(size = 14),
+    axis.title.y = element_text(size = 14),
+    axis.text.x = element_text(size = 14, color = "black"),
+    axis.text.y = element_text(size = 14),
+    legend.title = element_blank(), 
+    legend.text = element_text(size = 12),
+    legend.position = "bottom",
+    legend.key.spacing.x = unit(10, "mm")) # 4' x 4'
+```
+
+1.  Seed germination on measurement under control and treatment (7-day)
+
+    ![](images/clipboard-3318213223.png){width="400"}
+
+2.  Seed germination on measurement under control and treatment (14-day)
+
+    ![](images/clipboard-1888279539.png){width="400"}
+
+3.  Comparison of seed germination
+
+    ![](images/clipboard-1096461356.png){width="400"}
+
+## **Prepare Final Phenotypic Data**
+
+We generate the final phenotypic data for GWAS analysis. The resulting
+`Pheno` object is optimized for seamless use in GWAS workflows.
+
+➡️ **Working on R (RStudio).**
+
+``` r
+##### R CODES #####
+
+# Set the working directory
+setwd("...your file path...")
+
+# Read the cleaned and sorted phenotypic data from a CSV file
+IRRI_311_Pheno_Clean = read.csv("IRRI_311_Pheno_AG_Clean_ID_Sorted.csv")
+
+# Create a new data frame with selected columns and a modified Taxa column
+Pheno = data.frame(Taxa = paste(IRRI_311_Pheno_Clean$ID, IRRI_311_Pheno_Clean$ID, sep = "_"),
+                   Control_AG_14DAS = IRRI_311_Pheno_Clean$Control_AG_14DAS,
+                   Control_AG_7DAS = IRRI_311_Pheno_Clean$Control_AG_7DAS,
+                   AG_14DAS = IRRI_311_Pheno_Clean$AG_14DAS,
+                   AG_7DAS = IRRI_311_Pheno_Clean$AG_7DAS)
+
+# Save the new data frame as an RDS file for future use
+saveRDS(Pheno, "Pheno.rds") # Final data
+```
+
+**Outputs:**
+
+-   **Pheno.rds**\
+    Phenotypic dataset in ‘data.frame’ format stored in `.rds` file.
+    Ready for GWAS.
+
+## Summary
+
+We have prepared a phenotypic dataset specifically designed for GWAS
+analysis, which includes the following four traits:
+
+-   **Control_AG_14DAS**: The difference in seed germination rates
+    between control and treatment groups at 14 days.
+
+-   **Control_AG_7DAS**: The difference in seed germination rates
+    between control and treatment groups at 7 days.
+
+-   **AG_14DAS**: Seed germination rates under treatment conditions at
+    14 days.
+
+-   **AG_7DAS**: Seed germination rates under treatment conditions at 7
+    days.

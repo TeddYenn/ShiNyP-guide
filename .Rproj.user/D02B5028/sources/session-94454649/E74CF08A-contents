@@ -1,0 +1,16 @@
+book_filename: "GWAS-RICE"
+output_dir: "docs"
+
+delete_merged_file: true
+new_session: yes
+before_chapter_script: "_common.R"
+
+rmd_files:
+    - "index.Rmd"
+    - "01-genotypic-data.Rmd"
+    - "02-phenotypic-data.Rmd"
+    - "03-gwas.Rmd"
+    - "04-post-gwas.Rmd"
+    - "05-extra-analysis-visualization.Rmd"
+    - "06-findings.Rmd"
+    - "07-summary.Rmd"

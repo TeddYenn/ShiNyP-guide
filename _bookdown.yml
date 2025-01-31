@@ -1,0 +1,18 @@
+book_filename: "GWAS-RICE"
+output_dir: "docs"
+
+delete_merged_file: true
+new_session: yes
+before_chapter_script: "_common.R"
+
+rmd_files:
+    - "index.Rmd"
+    - "02-DataInput.Rmd"
+    - "03-DataQC.Rmd"
+    - "04-DataConversation.Rmd"
+    - "05-PopulationStructure.Rmd"
+    - "06-GeneticDiversity.Rmd"
+    - "07-SelectionSweep.Rmd"
+    - "08-CoreCollection.Rmd"
+    - "09-AIReport.Rmd"
+    - "10-Index.Rmd"

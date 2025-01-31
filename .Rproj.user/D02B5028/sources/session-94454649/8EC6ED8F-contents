@@ -1,0 +1,3 @@
+setwd("F:/GWAS_AG/G2")
+
+system("plink --bfile IRRI_1.9M_311 --recode vcf --out IRRI_1.9M_311")

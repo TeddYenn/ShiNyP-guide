@@ -1,0 +1,326 @@
+# Genotype Data {#sec-genotype-data}
+
+1.  **Download Rice SNP data from SNP-Seek (3K RG)**
+
+2.  **Align Accession IDs**
+
+3.  **SNP Data Processing and Quality Control**
+
+4.  **Generate Final Genotypic Dataset**
+
+## **Download Rice SNP data from SNP-Seek (3K RG)**
+
+Data repository for the 3K RG, hosted by IRRI:
+[https://snpseekv3.irri-e-extension.com/v2/download.zul](https://snpseekv3.irri-e-extension.com/v2/_download.zul){.uri}
+
+We utilized the 3K RG 18 million Base SNP Dataset and the 3K RG 404k
+Core SNP Dataset:
+
+-   **3K RG 18mio Base SNP Dataset:** A base SNP set consisting of
+    approximately 18 million SNPs was derived from the initial \~29
+    million biallelic SNPs by excluding those with an excessive number
+    of heterozygous calls.
+
+-   **3K RG 404k CoreSNP Dataset:** The Core SNP set was derived from
+    the filtered SNP set through a two-step LD pruning procedure.
+
+-   [**Mapping
+    table**](https://3kricegenome.s3.us-east-1.amazonaws.com/kaust_irri_3k_16refs/3K_list_sra_ids.txt)**:**
+    NCBI SRA accession IDs to 3K RG assay IDs.
+
+Please download the PLINK `.bed`, `.bim`, and `.fam` files for the two
+datasets. After downloading, extract the files and rename them as
+`IRRI_18M_3024` and `IRRI_404K_3024`. Also, download and save the
+[**Mapping
+table**](https://3kricegenome.s3.us-east-1.amazonaws.com/kaust_irri_3k_16refs/3K_list_sra_ids.txt)
+in a `.csv` file and rename it to `IRRI_3K_ID`.
+
+```{block, type = "rmdnote"}
+The reference genome for these datasets is 'Nipponbare MSU7/IRGSP1.0'.
+```
+
+## **Align Accession IDs**
+
+Match the accession IDs between the phenotypic data and SNP datasets. We
+identified three issues related to inconsistencies in the spelling,
+formatting, and ranking of ID names between the phenotype data and
+genotype datasets:
+
+1.  The ID names in the phenotype data must correspond precisely with
+    those in the genotype datasets, using the Mapping Table as a
+    reference.
+
+2.  The format of ID names in the Mapping Table is inconsistent with the
+    format used in the phenotype data. For example, consider a sample
+    named `EX WUKARI (WILD)::IRGC 63214-3`:
+
+    | ID in Phenotype                | ID in [Mapping Table](https://3kricegenome.s3.us-east-1.amazonaws.com/kaust_irri_3k_16refs/3K_list_sra_ids.txt) | ID in Genotype |
+    |------------------------|-----------------------|------------------------|
+    | EX WUKARI (WILD)::IRGC 63214-3 | EX_WUKARI\_(WILD)::IRGC_63214-1                                                                                 | IRIS_313-11657 |
+    |                                | IRIS_313-11657                                                                                                  |                |
+
+3.  In the genotype datasets, the rank order of ID names does not follow
+    the correct sequence. For example, the correct order should be:
+    `IRIS_313-8890`, `IRIS_313-9101`, and `IRIS_313-11657`, not
+    `IRIS_313-11657`, `IRIS_313-8890`, and `IRIS_313-9101`.
+
+➡️ **Working on R (RStudio).**
+
+``` r
+##### R CODES #####
+
+# Set the working directory
+setwd("...your file path...")
+
+# Load the datasets
+IRRI_3K = read.csv("IRRI_3K_ID.csv") # Mapping table 
+IRRI_341 = read.csv("IRRI_341_Pheno_AG_Original.csv") # Phenotypic Data
+
+# Process designations in IRRI_3K dataset
+IRRI_3K[1:5,2]
+IRRI_3K_ID = gsub("_", " ", IRRI_3K[,2])
+IRRI_341[1:5,1]
+
+# Match designations between the two datasets
+loc = c()
+for (i in 1:dim(IRRI_341)[1]) {
+  match_index = which(IRRI_3K_ID == IRRI_341$Designation[i])
+  if (length(match_index) == 0) {
+    loc[i] = NA 
+  } else {
+    loc[i] = match_index
+  }
+}
+
+# Check for unmatched entries and summarize
+loc
+sum(is.na(loc)) 
+
+# Create a new annotated data frame combining information from both datasets
+IRRI_341_ID = data.frame("Designation" = IRRI_341$Designation)
+for (i in 1:length(loc)) {
+  if (is.na(loc[i])) {
+    IRRI_341_ID$ID = NA
+  } else {
+    IRRI_341_ID$ID = IRRI_3K$X3K_DNA_IRIS_UNIQUE_ID[loc]
+    IRRI_341_ID$Origin = IRRI_3K$Country_Origin_updated[loc]
+    IRRI_341_ID$SRA = IRRI_3K$SRA[loc]
+    IRRI_341_ID$Control_5DAS = IRRI_341$PERCENT_SEEDGER_5DAS
+    IRRI_341_ID$Control_7DAS = IRRI_341$PERCENT_SEEDGER_7DAS
+    IRRI_341_ID$Control_14DAS = IRRI_341$PERCENT_SEEDGER_14DAS
+    IRRI_341_ID$AG_7DAS = IRRI_341$PERCENT_SEEDGER_7DAS_AG
+    IRRI_341_ID$AG_14DAS = IRRI_341$PERCENT_SEEDGER_14DAS_AG
+  }
+}
+
+# Preview the annotated data frame
+head(IRRI_341_ID)
+tail(IRRI_341_ID)
+
+# Save the annotated data frame to a CSV file
+write.csv(IRRI_341_ID, "IRRI_341_Pheno_AG_Original_ID.csv", row.names = F)
+
+# Sort the annotated data by ID and identify specific entries
+IRRI_341_ID_sorted = IRRI_341_ID[order(IRRI_341_ID$ID), ]
+which(IRRI_341_ID_sorted$ID == "IRIS_313-7620") # 245
+which(IRRI_341_ID_sorted$ID == "IRIS_313-9989") # 311
+which(IRRI_341_ID_sorted$ID == "IRIS_313-10020") # 5
+which(IRRI_341_ID_sorted$ID == "IRIS_313-15901") # 5
+
+# Rearrange the data frame to exclude specific entries
+IRRI_311_ID_sorted = IRRI_341_ID_sorted[c(1:4, 245:311, 5:244), ]
+
+# Save the sorted and rearranged data frame to a CSV file
+write.csv(IRRI_311_ID_sorted, "IRRI_311_Pheno_AG_Original_ID_Sorted.csv", row.names = F)
+
+# Export a text file with the IDs for further analysis
+write.table(cbind(IRRI_311_ID_sorted$ID, IRRI_311_ID_sorted$ID), "IRRI_311_ID.txt", row.names = F, col.names = F, quote = F)
+```
+
+**Outputs:**
+
+-   **IRRI_341_Pheno_AG_Original_ID.csv**\
+    Annotated phenotypic data with aligned and matched ID names.
+
+-   **IRRI_311_Pheno_AG_Original_ID_Sorted.csv**\
+    Phenotypic data that has been sorted and reorganized.
+
+-   **IRRI_311_ID.txt**\
+    A text file containing the list of IDs.
+
+## SNP Data Processing and Quality Control
+
+Perform data generation and quality control on the SNP data for the
+subset of 311 samples. Starting with the 3K Rice Genome 18 million SNP
+dataset (IRRI_18M_3024), the dataset is filtered for missingness,
+reducing it to 10 million SNPs, and further refined based on minor
+allele frequency (MAF) to approximately 1.9 million high-quality SNPs,
+ready for GWAS.
+
+➡️ **Working on PLINK in the terminal.**
+
+``` r
+##### PLINK COMMANDS #####
+
+# Change your path into the directory of the '3K RG 18mio Base SNP Dataset (IRRI_18M_311)'
+# cd ...your file path...
+
+# Subset dataset to include 311 individuals with phenotype and genotype
+./plink --bfile IRRI_18M_3024 --keep IRRI_311_ID.txt --make-bed --noweb --allow-no-sex --out IRRI_18M_311
+# --keep: Retain 311 samples with Phenotype and Genotype
+
+./plink --bfile IRRI_18M_311
+# --missing: Calculate SNP missing rates
+# Changes the outcome's filenames into IRRI_18M_311.lmiss and IRRI_18M_311.imiss.
+
+# Create a new dataset after removing SNPs with high missing rates
+./plink --bfile IRRI_18M_311 --exclude remove_SNP_list_miss_IRRI_18M_311.txt --make-bed --noweb --allow-no-sex --out IRRI_10M_311
+# -> 10617659 variants and 311 people pass filters and QC
+./plink --bfile IRRI_10M_311 --missing
+# Changes the outcome's filenames into IRRI_10M_311.lmiss and IRRI_10M_311.imiss.
+./plink --bfile IRRI_10M_311 --freq
+
+# Create a new dataset after removing SNPs with low MAF
+./plink --bfile IRRI_10M_311 --exclude remove_SNP_list_maf_IRRI_10M_311.txt --make-bed --noweb --allow-no-sex --out IRRI_1.9M_311
+# -> 1972824 variants and 311 people pass filters and QC
+./plink --bfile IRRI_1.9M_311 --missing
+./plink --bfile IRRI_1.9M_311 --freq
+./plink --bfile IRRI_1.9M_311 --het
+# Changes the outcome's filenames into IRRI_1.9M_311.lmiss, IRRI_1.9M_311.imiss, IRRI_1.9M_311.frq and IRRI_1.9M_311.het.
+```
+
+➡️ **Working on R (RStudio).**
+
+``` r
+##### R CODES #####
+# Set the working directory
+setwd("...your file path...")
+
+# Remove SNPs with a high missing rate (retain SNPs with missing rate ≤ 0.05)
+library(data.table)
+SNP_miss = fread("IRRI_18M_311.lmiss")
+hist(SNP_miss$F_MISS, main = "Histogram of SNP missing rate of IRRI_18M_311", xlab = "SNP missing rate") # Visualize SNP missing rate
+summary(SNP_miss$F_MISS)
+
+# Calculate and visualize sample missing rates
+Sample_miss = fread("IRRI_18M_311.imiss")
+hist(Sample_miss$F_MISS, main = "Histogram of sample missing rate of IRRI_18M_311", xlab = "Sample missing rate") # Visualize sample missing rate
+summary(Sample_miss$F_MISS)
+
+# Identify and remove SNPs with high missing rates
+loc = which(SNP_miss$F_MISS >= 0.05)
+remove_SNP_list = SNP_miss[loc, 2]
+dim(SNP_miss)[1]-dim(remove_SNP_list)[1] # SNPs passing filters
+write.table(remove_SNP_list, "remove_SNP_list_miss_IRRI_18M_311.txt", row.names = F, col.names = F, quote = F)
+
+# Calculate SNP missing rates for the filtered dataset
+SNP_miss = fread("IRRI_10M_311.lmiss")
+hist(SNP_miss$F_MISS, main = "Histogram of SNP missing rate of IRRI_10M_311", xlab = "SNP missing rate") # Visualize SNP missing rate
+summary(SNP_miss$F_MISS)
+
+# Calculate and visualize sample missing rates for the filtered dataset
+Sample_miss = fread("IRRI_10M_311.imiss")
+hist(Sample_miss$F_MISS, main = "Histogram of sample missing rate of IRRI_10M_311", xlab = "Sample missing rate") # Visualize sample missing rate
+summary(Sample_miss$F_MISS)
+
+# Remove SNPs with minor allele frequency (MAF) < 0.05
+frq_data = fread("IRRI_10M_311.frq") # Load frequency data
+hist(frq_data$MAF, main = "Histogram of MAF of IRRI_10M_311", xlab = "Minor allele frequency") # Visualize MAF
+summary(frq_data$MAF)
+
+# Identify and remove SNPs with low MAF
+loc = which(frq_data$MAF < 0.05)
+remove_SNP_list = frq_data[loc, 2]
+dim(frq_data)[1]-dim(remove_SNP_list)[1] # SNPs passing filters
+write.table(remove_SNP_list, "remove_SNP_list_maf_IRRI_10M_311.txt", row.names = F, col.names = F, quote = F)
+
+# Check data quality metrics: missing rate, MAF, inbreeding F, and HWE
+# Calculate and visualize SNP missing rates for the final dataset
+SNP_miss = fread("IRRI_1.9M_311.lmiss")
+hist(SNP_miss$F_MISS, main = "Histogram of SNP missing rate of IRRI_1.9M_311", xlab = "SNP missing rate")
+summary(SNP_miss$F_MISS)
+
+# Calculate and visualize sample missing rates for the final dataset
+Sample_miss = fread("IRRI_1.9M_311.imiss")
+hist(Sample_miss$F_MISS, main = "Histogram of sample missing rate of IRRI_1.9M_311", xlab = "Sample missing rate")
+summary(Sample_miss$F_MISS)
+
+# Calculate and visualize MAF for the final dataset
+frq_data = fread("IRRI_1.9M_311.frq")
+hist(frq_data$MAF, main = "Histogram of MAF of IRRI_1.9M_311", xlab = "Minor allele frequency")
+summary(frq_data$MAF)
+
+# Calculate and visualize inbreeding coefficient (F) for the final dataset
+het_data = fread("IRRI_1.9M_311.het")
+hist(het_data$F, main = "Histogram of F coefficient of IRRI_1.9M_311", xlab = "Inbreeding F coefficient")
+summary(het_data$F)
+```
+
+1.  Histogram of SNP missing rate of IRRI_1.9M_311
+
+    ![](images/clipboard-3645527022.png){width="400"}
+
+2.  Histogram of sample missing rate of IRRI_1.9M_311
+
+    ![](images/clipboard-933301329.png){width="400"}
+
+3.  Histogram of MAF of IRRI_1.9M_311
+
+    ![](images/clipboard-276080335.png){width="400"}
+
+4.  Histogram of F coefficient of IRRI_1.9M_311
+
+    ![](images/clipboard-1747488611.png){width="400"}
+
+## **Generate Final Genotypic Dataset**
+
+Prepare the final genotypic dataset for GWAS analysis. We now need to
+convert the QC-passed SNP data in PLINK format (`.bed`, `.bim`, and
+`.fam`) into HapMap format, compatible with the GAPIT package.
+
+➡️ **Working on PLINK in the terminal.**
+
+``` r
+##### PLINK COMMANDS #####
+
+# Change your path into the directory of the 'IRRI_1.9M_311'
+# cd ...your file path...
+
+./plink --bfile IRRI_1.9M_311 --recode vcf --out IRRI_1.9M_311
+```
+
+➡️ **Working on R (RStudio).**
+
+``` r
+##### R CODES #####
+
+# Set the working directory
+setwd("...your file path...")
+
+library(vcfR)
+vcfR = read.vcfR(
+  "IRRI_1.9M_311.vcf",
+  limit = 1e+50,
+  nrows = -1,
+  skip = 0,
+  cols = NULL,
+  convertNA = TRUE,
+  checkFile = TRUE,
+  check_keys = TRUE,
+  verbose = TRUE)
+
+myHapMap = vcfR2hapmap(vcfR_test)
+class(myHapMap)
+
+write.table(myHapMap,
+            file = "IRRI_1.9M_311.hmp.txt",
+            sep = "\t",
+            row.names = FALSE,
+            col.names = FALSE)
+
+Geno = read.table("IRRI_1.9M_311.hmp.txt", head = FALSE)
+saveRDS(Geno, "Geno.rds") # Final data for GWAS
+```
+
+We have prepared a genotypic dataset tailored for GWAS analysis,
+comprising 311 samples and 1.9 million SNPs.

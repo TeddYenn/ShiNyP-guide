@@ -1,0 +1,6 @@
+"0","##### R CODES #####"
+"0",""
+"0","# Set the working directory"
+"0","setwd(""...change..."")"
+"2","錯誤發生在 setwd(""...change..."")： 無法變更工作目錄
+"

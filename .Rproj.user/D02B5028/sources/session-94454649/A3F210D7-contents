@@ -1,0 +1,45 @@
+setwd("F:/GWAS_AG/G2")
+system("plink --bfile IRRI_1.9M_311 --thin 0.1 --set-hh-missing --r2 --ld-window-r2 0 --ld-window 99999 --ld-window-kb 1000 --out IRRI_190K_311_LD")
+
+./plink --bfile IRRI_1.9M_311 --thin 0.1 --set-hh-missing --r2 --ld-window-r2 0 --ld-window 99999 --ld-window-kb 1000 --out IRRI_190K_311_LD
+
+
+library(data.table)
+data = fread("IRRI_190K_311_LD.ld", header = T,sep = "")
+
+LD.decay = function(ld){
+  ld1 = ld[order(ld[,5]-ld[,2]),]
+  distance = ld1[,5]-ld1[,2]
+  ld_distance = data.frame(distance,ld1$R2)
+  block = seq(1, max(ld_distance[,1]), by = 3000)
+  ld2 = rep(0,length(block))
+  decay = data.frame(block,ld2)
+  for (i in 1:length(block)) {
+    cat("now is handling the", i, "th block", "\n")
+    intv = subset(ld_distance,(ld_distance[,1]>=block[i] & ld_distance[,1]<(block[i]+1000)))
+    decay[i,2] = mean(intv[,2])
+  }
+  return(decay)
+}
+
+LD.decay = LD.decay(data)
+
+library(ggplot2) 
+library(ggthemes)
+
+LD.decay = readRDS("F:/GWAS_AG/Else/IRRI_190K_311_LD.rds")
+
+ggplot(LD.decay) +
+  labs(x = "Distance (kb)", y = expression(r^{2})) +
+  geom_line(aes(x = block, y = ld2), color = "#d3a02f", size = 2) +  # Original line
+  scale_x_continuous(limits = c(0.0, 4.5*10^5), breaks = c(0, 1*10^5, 2*10^5, 3*10^5, 4*10^5), labels = c("0", "100", "200", "300", "400"), expand = c(0.01, 0)) +
+  scale_y_continuous(limits = c(0.0, 0.65), breaks = c(0, 0.2, 0.4, 0.6), labels = c("0.0", "0.2", "0.4", "0.6"), expand = c(0.03, 0)) +
+  theme_classic() +
+  theme(
+    axis.title.x = element_text(size = 18),
+    axis.title.y = element_text(size = 18, vjust = 2),
+    axis.text.x = element_text(size = 16),
+    axis.text.y = element_text(size = 16)
+  )
+
+# 4 x 6

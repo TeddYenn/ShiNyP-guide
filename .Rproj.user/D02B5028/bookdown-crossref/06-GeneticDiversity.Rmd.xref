@@ -1,0 +1,20 @@
+h1:sec-genetic-diversity Genetic Diversity
+h2:diversity-parameter Diversity Parameter
+h4:required-datasets Required Datasets:
+h4:steps 
+h4:outputs Outputs:
+h2:circos-plot Circos Plot
+h4:sec-required-dataset-chr Required Dataset:
+h4:step-1-sliding-window 
+h4:step-2-circos-plot 
+h4:outputs-1 Outputs:
+h2:genetic-distance Genetic Distance
+h4:required-dataset Required Dataset:
+h4:steps-1 
+h4:outputs-2 Outputs:
+h2:amova-analysis-of-molecular-variance AMOVA (Analysis of MOlecular VAriance)
+h4:required-dataset-1 Required Dataset:
+h4:step-1-run-amova 
+h4:step-2-run-permutation-test  Permutation Test
+h4:outputs-3 Outputs:
+
