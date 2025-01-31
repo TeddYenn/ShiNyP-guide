@@ -22,7 +22,7 @@
 <script src="libs/bootstrap-4.6.0/bootstrap.bundle.min.js"></script><link href="libs/Lato-0.4.9/font.css" rel="stylesheet">
 <link href="libs/Roboto_Mono-0.4.9/font.css" rel="stylesheet">
 <link href="libs/Montserrat-0.4.9/font.css" rel="stylesheet">
-<script src="libs/bs3compat-0.8.0/transition.js"></script><script src="libs/bs3compat-0.8.0/tabs.js"></script><script src="libs/bs3compat-0.8.0/bs3compat.js"></script><link href="libs/bs4_book-1.0.0/bs4_book.css" rel="stylesheet">
+<script src="libs/bs3compat-0.9.0/transition.js"></script><script src="libs/bs3compat-0.9.0/tabs.js"></script><script src="libs/bs3compat-0.9.0/bs3compat.js"></script><link href="libs/bs4_book-1.0.0/bs4_book.css" rel="stylesheet">
 <script src="libs/bs4_book-1.0.0/bs4_book.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/autocomplete.js/0.38.0/autocomplete.jquery.min.js" integrity="sha512-GU9ayf+66Xx2TmpxqJpliWbT5PiGYxpaG8rfnBEk1LL8l1KGkRShhngwdXK1UgqhAzWpZHSiYPc09/NwDQIGyg==" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/mark.min.js" integrity="sha512-5CYOlHXGh6QpOFA/TeTylKLWfB3ftPsde7AnmhuitiTX4K5SqCLBeKro6sPS8ilsz1Q4NRx3v8Ko2IBiszzdww==" crossorigin="anonymous"></script><!-- CSS --><style type="text/css">
     
     div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
@@ -401,9 +401,14 @@ Structure</u>/<u>DAPC</u>.</p>
 DAPC_Group_Info.csv)</li>
 </ul>
 <blockquote>
-<p><strong>Note</strong>: You can add more information about samples by adding new
-variables to the Group Info. file. Ensure that the sample order
-remains unchanged.</p>
+<p><strong>Note:</strong> If you are using a <strong>DAPC object</strong> as input, ensure that
+there are <strong>at least 4 groups</strong>. Since an N-group dataset has N-1 LD
+axes, you need more than 3 axes to generate a 3D scatter plot.</p>
+</blockquote>
+<blockquote>
+<p><strong>Note</strong>: You can add metadata (more information about samples) by
+adding new variables to the Group Info. file. Ensure that the sample
+order remains unchanged.</p>
 </blockquote>
 <details><summary>
 ➡️ Example: Group Info. file (CSV).

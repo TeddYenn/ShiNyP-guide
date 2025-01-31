@@ -28,6 +28,9 @@ Agronomy, National Chung Hsing University, Taiwan, is licensed under the
 [GNU General Public
 License](https://www.gnu.org/licenses/gpl-3.0.html.en).
 
+For any inquiries, please email us at:
+[teddyhuangyh\@gmail.com](mailto:teddyhuangyh@gmail.com){.email}.
+
 Last Updated: February 2025
 
 ::: {.highlighted-text style="padding-top: 15px; padding-bottom: 1px; padding-left: 15px;background-color: #ceeafa; color: #0a3f5d"}
@@ -102,6 +105,104 @@ submit a report through our feedback form:
 
 # Quickstart {#sec-quickstart .unnumbered}
 
+Before installing [***ShiNyP***]{style="color: #9D6853;"}, ensure your
+system meets the following requirements:
+
+------------------------------------------------------------------------
+
+1.  **Operating System**: Windows, macOS, or Linux
+
+2.  **R Version**: R ≥ 4.4 (compatible with Bioconductor version 3.19)
+
+3.  **R Tools**:
+
+    -   **Windows**:
+        [Rtools](https://cran.r-project.org/bin/windows/Rtools/)
+
+    -   **macOS**: [Xcode Command Line
+        Tools](https://developer.apple.com/xcode/)
+
+    -   **Linux**: Development tools (e.g., `r-base-dev`)
+
+------------------------------------------------------------------------
+
+<details>
+
+<summary>⚙️ **Getting Started with R/RStudio/Rtools**</summary>
+
+**Step 1: Download and Install R (Prerequisite)**
+
+1.  Visit the official R Project website: <https://www.r-project.org/>.
+
+    -   **Windows**: Click **Download R for Windows**, select "base,"
+        and download the latest version.
+
+    -   **MacOS**: Click **Download R for macOS** and choose the correct
+        version for your system.
+
+2.  Install R by double-clicking the downloaded installer and following
+    the on-screen instructions. Use the default options unless specific
+    needs arise.
+
+**Step 2: Download RStudio**
+
+1.  Go to the RStudio official download page:
+    <https://posit.co/download/rstudio-desktop/>.
+
+2.  Click **Download** under "RStudio Desktop - Open Source License."
+
+3.  Select the version suitable for your operating system:
+
+    -   **Windows**: `.exe` file
+
+    -   **MacOS**: `.dmg` file
+
+**Step 3: Install RStudio**
+
+1.  Locate the downloaded file and double-click it to start the
+    installation.
+
+    -   **Windows**: Run the `.exe` installer and follow the wizard
+        steps.
+
+    -   **MacOS**: Drag the RStudio icon into the Applications folder.
+
+2.  After installation, launch RStudio.
+
+**Step 4: Launch RStudio**
+
+1.  Open RStudio by clicking the shortcut created during installation or
+    searching for "RStudio" in your system's application launcher.
+
+2.  RStudio will automatically detect your R installation and link to
+    it.
+
+**Step 5: Familiarize Yourself with RStudio Interface**
+
+RStudio has four main panels:
+
+1.  **Console (Bottom-left)**: Where you run R commands.
+
+2.  **Source (Top-left)**: For writing and editing scripts.
+
+3.  **Environment/History (Top-right)**: Displays objects, variables,
+    and command history.
+
+4.  **Plots/Files/Help (Bottom-right)**: Displays plots, files, and R
+    documentation.
+
+</details>
+
+------------------------------------------------------------------------
+
+> **Note**: [***ShiNyP***]{style="color: #9D6853;"} is currently in the
+> Beta version. Ensure you are comfortable working with beta software
+> and reporting any issues you encounter. For any inquiries, please
+> email us at:
+> [teddyhuangyh\@gmail.com](mailto:teddyhuangyh@gmail.com){.email}.
+
+------------------------------------------------------------------------
+
 **Step 1: Pre-install Required Package**
 
 ``` r
@@ -135,6 +236,123 @@ Data**]{style="color: #1e90ff;"}.
 
 ------------------------------------------------------------------------
 
+<details>
+
+<summary>⚒️ **Encountered an error? Let’s fix it!**\</summary\>
+
+During installation or while running
+[***ShiNyP***]{style="color: #9D6853;"}, you might encounter issues.
+Below are common problems and their solutions.
+
+[⚠️](https://emojipedia.org/warning) **R and Bioconductor Version Mismatch**
+
+:   The installation specifies Bioconductor version 3.19, which requires
+    R version ≥ 4.4. If your R version is below 4.4, update it from
+    CRAN.
+
+    ``` r
+    # Check your R version
+    R.version.string
+    ```
+
+[⚠️](https://emojipedia.org/warning) **Installation of Dependencies**
+
+:   Installing packages like *shiny* and *dartR* may require
+    **additional developer tools**. You might encounter error messages
+    such as:
+
+    ``` r
+    ERROR: dependencies 'shiny', 'dartR' are not available for package 'ShiNyP'
+    ```
+
+:   -   **For Windows**:
+
+        Download Rtools from CRAN Rtools.
+
+        Run the installer and follow the on-screen instructions.
+
+        Ensure Rtools is added to your system PATH during installation.
+
+        Verify Installation:
+
+        ``` r
+        pkgbuild::find_rtools()
+        ```
+
+        It should return `TRUE` if Rtools is correctly installed.
+
+    -   **For macOS**:
+
+        Open Terminal: Press `Cmd + Space`, type "Terminal", and press
+        `Enter`.
+
+        Run the Installation Command:
+
+        ``` r
+        xcode-select --install
+        ```
+
+        Verify Installation
+
+        ``` r
+        xcode-select -p
+        ```
+
+        It should return `/Library/Developer/CommandLineTools`.
+
+    -   **For Linux**:
+
+        Install Essential Build Tools:
+
+        ``` r
+        sudo apt-get install r-base-dev
+        sudo apt-get install build-essential libcurl4-gnutls-dev libxml2-dev libssl-dev
+        ```
+
+[⚠️](https://emojipedia.org/warning) GitHub Installation Issues
+
+:   Verify that your system is connected to the internet. Check for any
+    firewall or proxy settings that might block GitHub access.
+
+[⚠️](https://emojipedia.org/warning) Package Loading Issues
+
+:   Errors occur when loading [***ShiNyP***]{style="color: #9D6853;"} or
+    its dependencies, possibly due to outdated packages or conflicts.
+
+    1.  **Update All Installed Packages**:
+
+        When prompted with
+
+        ``` r
+        # These packages have more recent versions available.
+        # It is recommended to update all of them.
+        # Which would you like to update?
+
+        # -> Respond with 1 to update all packages.
+        ```
+
+        **Please type 1 (1: All)**
+
+    2.  If a specific package is causing issues, reinstall it.
+
+        ``` r
+        install.packages("dartRverse")
+        BiocManager::install("SNPRelate")
+        remotes::install_github("irudnyts/openai", ref = "r6", force = TRUE)
+        ```
+
+    3.  Check for Namespace Conflicts:
+
+        Identify if multiple packages are masking functions.
+
+        ``` r
+        conflicts()
+        ```
+
+</details>
+
+------------------------------------------------------------------------
+
 ![](images/0928_頁面_1.jpg){width="650"}
 
 ------------------------------------------------------------------------
@@ -156,6 +374,3 @@ and running it locally on the R environment.
 -   Oct 2024: Release v0.1.0 on
     [GitHub](https://github.com/TeddYenn/ShiNyP).
 -   Feb 2025: Upgrade and update the user guide.
-
-For any inquiries, please email us at:
-[teddyhuangyh\@gmail.com](mailto:teddyhuangyh@gmail.com){.email}

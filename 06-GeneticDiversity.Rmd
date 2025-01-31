@@ -27,6 +27,9 @@ performed using the function from *snpReady* package [@granato2018].
     downloadable from [Data Input]{.underline} or [Data QC]{.underline}
     pages.
 
+> **Note:** If you upload Group Info., ensure that each group contains
+> at least 2 samples.
+
 ------------------------------------------------------------------------
 
 #### **Steps:** {.unnumbered style="padding: 0px 5px; margin: 0px 10px"}
@@ -85,6 +88,9 @@ parameters in a sliding window format.
 -   **Chromosome Info.** **(CSV)**: Reference genome information of the
     current study. For more details about this file, refer to
     **Section** \@ref(snp-density) **(SNP Density)**.
+
+> **Note:** Please ensure that each chromosome contains at least one SNP
+> marker.
 
 ------------------------------------------------------------------------
 

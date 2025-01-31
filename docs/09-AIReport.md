@@ -15,6 +15,54 @@ AI-driven report. Powered by the *openai* package
 
 ![](images/clipboard-4284234040.png){width="650"}
 
+------------------------------------------------------------------------
+
+## ✨ Tasks for AI models: {.unnumbered style="padding: 0px 5px; margin: 0px 10px"}
+
+-   **Summary Request**: Generate a [succinct overview of the key
+    findings]{.underline} from a genome-wide SNP analysis, ensuring
+    clarity and a structured presentation of results.
+
+-   **Data Interpretation**: Facilitate the analysis of genome-wide SNP
+    data by [elucidating findings and offering insights]{.underline}
+    into population structure and genetic variation.
+
+-   **Report Structuring**: Develop a comprehensive framework for
+    organizing and presenting the results of genome-wide SNP analysis in
+    a [scientific report]{.underline} format.
+
+-   **Idea Expansion**: Assist in brainstorming potential [future
+    research directions or experiments informed]{.underline} by the
+    results of the SNP analysis.
+
+------------------------------------------------------------------------
+
+## [🔑](https://emojipedia.org/key) **How to get the OpenAI API key**: {.unnumbered style="padding: 0px 5px; margin: 0px 10px"}
+
+1.  **Sign Up or Log In** to the OpenAI website:
+    <a href="https://platform.openai.com/docs/overview" target="_blank"><https://platform.openai.com/docs/overview></a>.
+
+2.  **Check Your Usage** to track (free) credits and current
+    consumption:
+    <a href="https://platform.openai.com/usage" target="_blank"><https://platform.openai.com/usage></a>.
+
+3.  If your (free) credits are **insufficient**, you can manage billing
+    and payments by visiting:
+    <a href="https://platform.openai.com/settings/organization/billing/overview" target="_blank"><https://platform.openai.com/settings/organization/billing/overview></a>.
+
+4.  **Generate a New API Key** by going to:
+    <a href="https://platform.openai.com/api-keys" target="_blank"><https://platform.openai.com/api-keys></a>.
+
+5.  **Copy and Paste** the generated key into a Notepad file and save it
+    as a `.txt` file for [***ShiNyP***]{style="color: #9D6853;"} use.
+
+Upon signing up, OpenAI provides free credits valid for 3 months. After
+the free trial credits expire or are exhausted, you'll be billed based
+on your usage. Costs depend on the model and the number of tokens
+processed.
+
+------------------------------------------------------------------------
+
 #### Step 1: Preliminary Results {.unnumbered style="padding: 0px 5px; margin: 0px 10px"}
 
 1.  Enter the species name for the current study.
@@ -52,57 +100,7 @@ AI-driven report. Powered by the *openai* package
 
 ------------------------------------------------------------------------
 
-#### ✨ Tasks for AI models: {.unnumbered style="padding: 0px 5px; margin: 0px 10px"}
-
--   **Summary Request**: Generate a [succinct overview of the key
-    findings]{.underline} from a genome-wide SNP analysis, ensuring
-    clarity and a structured presentation of results.
-
--   **Data Interpretation**: Facilitate the analysis of genome-wide SNP
-    data by [elucidating findings and offering insights]{.underline}
-    into population structure and genetic variation.
-
--   **Report Structuring**: Develop a comprehensive framework for
-    organizing and presenting the results of genome-wide SNP analysis in
-    a [scientific report]{.underline} format.
-
--   **Idea Expansion**: Assist in brainstorming potential [future
-    research directions or experiments informed]{.underline} by the
-    results of the SNP analysis.
-
-------------------------------------------------------------------------
-
-#### [🔑](https://emojipedia.org/key) **How to get the OpenAI API key**: {.unnumbered style="padding: 0px 5px; margin: 0px 10px"}
-
-1.  **Sign Up or Log In** to the OpenAI website:
-    <a href="https://platform.openai.com/docs/overview" target="_blank"><https://platform.openai.com/docs/overview></a>.
-
-2.  **Check Your Usage** to track (free) credits and current
-    consumption:
-    <a href="https://platform.openai.com/usage" target="_blank"><https://platform.openai.com/usage></a>.
-
-3.  If your (free) credits are **insufficient**, you can manage billing
-    and payments by visiting:
-    <a href="https://platform.openai.com/settings/organization/billing/overview" target="_blank"><https://platform.openai.com/settings/organization/billing/overview></a>.
-
-4.  **Generate a New API Key** by going to:
-    <a href="https://platform.openai.com/api-keys" target="_blank"><https://platform.openai.com/api-keys></a>.
-
-5.  **Copy and Paste** the generated key into a Notepad file and save it
-    as a `.txt` file for [***ShiNyP***]{style="color: #9D6853;"} use.
-
-Upon signing up, OpenAI provides free credits valid for 3 months. After
-the free trial credits expire or are exhausted, you'll be billed based
-on your usage. Costs depend on the model and the number of tokens
-processed.
-
-![](images/clipboard-420815584.png){width="650"}
-
-*The AI Report Complete!*
-
-------------------------------------------------------------------------
-
-#### [❌](https://emojipedia.org/cross-mark) Encountered an error? Let’s fix it! {.unnumbered style="padding: 0px 5px; margin: 0px 10px"}
+## [❌](https://emojipedia.org/cross-mark) Encountered an error? Let’s fix it! {.unnumbered style="padding: 0px 5px; margin: 0px 10px"}
 
 [⚠️](https://emojipedia.org/warning) Error: Could not find function OpenAI
 
@@ -111,8 +109,13 @@ processed.
     reinstalling the package using the following command:
 
     ``` r
+    detach("package:ShiNyP", unload = TRUE)
+    detach("package:openai", unload = TRUE)
     remotes::install_github("irudnyts/openai", ref = "r6", force = TRUE)
     library(openai)
+    # Start the ShiNyP Platform Again
+    library(ShiNyP)
+    ShiNyP::run_ShiNyP()
     ```
 
 [⚠️](https://emojipedia.org/warning) Error: HTTP 401 Unauthorized
@@ -123,10 +126,10 @@ processed.
     (1) You are using a revoked API key.
 
     (2) You are using a different API key than one under the requesting
-    organization.
+        organization.
 
     (3) You are using an API key that does not have the required
-    permissions for the endpoint you are calling.
+        permissions for the endpoint you are calling.
 
     To resolve this error, first check that you are using the correct
     API key and organization ID in your request header. You can find
@@ -142,3 +145,9 @@ processed.
     To resolve this issue, try selecting the 'GPT-3.5 Turbo' model to
     generate the report first. If successful, you can then switch to
     other models for subsequent tasks.
+
+------------------------------------------------------------------------
+
+![](images/clipboard-420815584.png){width="650"}
+
+*The AI Report Complete!*

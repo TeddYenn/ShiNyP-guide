@@ -6,23 +6,23 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <title>Quickstart | User Guide for ShiNyP</title>
 <meta name="author" content="Yen-Hsiang Huang, Chung-Feng Kao">
-<meta name="description" content='Step 1: Pre-install Required Package install.packages("BiocManager") BiocManager::install(version = "3.19") BiocManager::install(c("qvalue", "SNPRelate", "ggtree"), force = TRUE) Step 2: Install...'>
+<meta name="description" content="Before installing ShiNyP, ensure your system meets the following requirements: Operating System: Windows, macOS, or Linux R Version: R ≥ 4.4 (compatible with Bioconductor version 3.19) R Tools:...">
 <meta name="generator" content="bookdown 0.40 with bs4_book()">
 <meta property="og:title" content="Quickstart | User Guide for ShiNyP">
 <meta property="og:type" content="book">
 <meta property="og:url" content="https://github.com/TeddYenn/ShiNyP-guide/sec-quickstart.html">
 <meta property="og:image" content="https://github.com/TeddYenn/ShiNyP-guide/images/cover.png">
-<meta property="og:description" content='Step 1: Pre-install Required Package install.packages("BiocManager") BiocManager::install(version = "3.19") BiocManager::install(c("qvalue", "SNPRelate", "ggtree"), force = TRUE) Step 2: Install...'>
+<meta property="og:description" content="Before installing ShiNyP, ensure your system meets the following requirements: Operating System: Windows, macOS, or Linux R Version: R ≥ 4.4 (compatible with Bioconductor version 3.19) R Tools:...">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Quickstart | User Guide for ShiNyP">
-<meta name="twitter:description" content='Step 1: Pre-install Required Package install.packages("BiocManager") BiocManager::install(version = "3.19") BiocManager::install(c("qvalue", "SNPRelate", "ggtree"), force = TRUE) Step 2: Install...'>
+<meta name="twitter:description" content="Before installing ShiNyP, ensure your system meets the following requirements: Operating System: Windows, macOS, or Linux R Version: R ≥ 4.4 (compatible with Bioconductor version 3.19) R Tools:...">
 <meta name="twitter:image" content="https://github.com/TeddYenn/ShiNyP-guide/images/cover.png">
 <!-- JS --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/6.4.6/fuse.js" integrity="sha512-zv6Ywkjyktsohkbp9bb45V6tEMoWhzFzXis+LrMehmJZZSys19Yxf1dopHx7WzIKxr5tK2dVcYmaCk2uqdjF4A==" crossorigin="anonymous"></script><script src="https://kit.fontawesome.com/6ecbd6c532.js" crossorigin="anonymous"></script><script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <link href="libs/bootstrap-4.6.0/bootstrap.min.css" rel="stylesheet">
 <script src="libs/bootstrap-4.6.0/bootstrap.bundle.min.js"></script><link href="libs/Lato-0.4.9/font.css" rel="stylesheet">
 <link href="libs/Roboto_Mono-0.4.9/font.css" rel="stylesheet">
 <link href="libs/Montserrat-0.4.9/font.css" rel="stylesheet">
-<script src="libs/bs3compat-0.8.0/transition.js"></script><script src="libs/bs3compat-0.8.0/tabs.js"></script><script src="libs/bs3compat-0.8.0/bs3compat.js"></script><link href="libs/bs4_book-1.0.0/bs4_book.css" rel="stylesheet">
+<script src="libs/bs3compat-0.9.0/transition.js"></script><script src="libs/bs3compat-0.9.0/tabs.js"></script><script src="libs/bs3compat-0.9.0/bs3compat.js"></script><link href="libs/bs4_book-1.0.0/bs4_book.css" rel="stylesheet">
 <script src="libs/bs4_book-1.0.0/bs4_book.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/autocomplete.js/0.38.0/autocomplete.jquery.min.js" integrity="sha512-GU9ayf+66Xx2TmpxqJpliWbT5PiGYxpaG8rfnBEk1LL8l1KGkRShhngwdXK1UgqhAzWpZHSiYPc09/NwDQIGyg==" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/mark.min.js" integrity="sha512-5CYOlHXGh6QpOFA/TeTylKLWfB3ftPsde7AnmhuitiTX4K5SqCLBeKro6sPS8ilsz1Q4NRx3v8Ko2IBiszzdww==" crossorigin="anonymous"></script><!-- CSS --><style type="text/css">
     
     div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
@@ -93,6 +93,92 @@
   </header><main class="col-sm-12 col-md-9 col-lg-7" id="content"><div id="sec-quickstart" class="section level1 unnumbered">
 <h1>Quickstart<a class="anchor" aria-label="anchor" href="#sec-quickstart"><i class="fas fa-link"></i></a>
 </h1>
+<p>Before installing <span style="color: #9D6853;"><strong><em>ShiNyP</em></strong></span>, ensure your
+system meets the following requirements:</p>
+<hr>
+<ol style="list-style-type: decimal">
+<li><p><strong>Operating System</strong>: Windows, macOS, or Linux</p></li>
+<li><p><strong>R Version</strong>: R ≥ 4.4 (compatible with Bioconductor version 3.19)</p></li>
+<li>
+<p><strong>R Tools</strong>:</p>
+<ul>
+<li><p><strong>Windows</strong>:
+<a href="https://cran.r-project.org/bin/windows/Rtools/">Rtools</a></p></li>
+<li><p><strong>macOS</strong>: <a href="https://developer.apple.com/xcode/">Xcode Command Line
+Tools</a></p></li>
+<li><p><strong>Linux</strong>: Development tools (e.g., <code>r-base-dev</code>)</p></li>
+</ul>
+</li>
+</ol>
+<hr>
+<details><summary>
+⚙️ <strong>Getting Started with R/RStudio/Rtools</strong>
+</summary><p><strong>Step 1: Download and Install R (Prerequisite)</strong></p>
+<ol style="list-style-type: decimal">
+<li>
+<p>Visit the official R Project website: <a href="https://www.r-project.org/" class="uri">https://www.r-project.org/</a>.</p>
+<ul>
+<li><p><strong>Windows</strong>: Click <strong>Download R for Windows</strong>, select “base,”
+and download the latest version.</p></li>
+<li><p><strong>MacOS</strong>: Click <strong>Download R for macOS</strong> and choose the correct
+version for your system.</p></li>
+</ul>
+</li>
+<li><p>Install R by double-clicking the downloaded installer and following
+the on-screen instructions. Use the default options unless specific
+needs arise.</p></li>
+</ol>
+<p><strong>Step 2: Download RStudio</strong></p>
+<ol style="list-style-type: decimal">
+<li><p>Go to the RStudio official download page:
+<a href="https://posit.co/download/rstudio-desktop/" class="uri">https://posit.co/download/rstudio-desktop/</a>.</p></li>
+<li><p>Click <strong>Download</strong> under “RStudio Desktop - Open Source License.”</p></li>
+<li>
+<p>Select the version suitable for your operating system:</p>
+<ul>
+<li><p><strong>Windows</strong>: <code>.exe</code> file</p></li>
+<li><p><strong>MacOS</strong>: <code>.dmg</code> file</p></li>
+</ul>
+</li>
+</ol>
+<p><strong>Step 3: Install RStudio</strong></p>
+<ol style="list-style-type: decimal">
+<li>
+<p>Locate the downloaded file and double-click it to start the
+installation.</p>
+<ul>
+<li><p><strong>Windows</strong>: Run the <code>.exe</code> installer and follow the wizard
+steps.</p></li>
+<li><p><strong>MacOS</strong>: Drag the RStudio icon into the Applications folder.</p></li>
+</ul>
+</li>
+<li><p>After installation, launch RStudio.</p></li>
+</ol>
+<p><strong>Step 4: Launch RStudio</strong></p>
+<ol style="list-style-type: decimal">
+<li><p>Open RStudio by clicking the shortcut created during installation or
+searching for “RStudio” in your system’s application launcher.</p></li>
+<li><p>RStudio will automatically detect your R installation and link to
+it.</p></li>
+</ol>
+<p><strong>Step 5: Familiarize Yourself with RStudio Interface</strong></p>
+<p>RStudio has four main panels:</p>
+<ol style="list-style-type: decimal">
+<li><p><strong>Console (Bottom-left)</strong>: Where you run R commands.</p></li>
+<li><p><strong>Source (Top-left)</strong>: For writing and editing scripts.</p></li>
+<li><p><strong>Environment/History (Top-right)</strong>: Displays objects, variables,
+and command history.</p></li>
+<li><p><strong>Plots/Files/Help (Bottom-right)</strong>: Displays plots, files, and R
+documentation.</p></li>
+</ol></details><hr>
+<blockquote>
+<p><strong>Note</strong>: <span style="color: #9D6853;"><strong><em>ShiNyP</em></strong></span> is currently in the
+Beta version. Ensure you are comfortable working with beta software
+and reporting any issues you encounter. For any inquiries, please
+email us at:
+<a href="mailto:teddyhuangyh@gmail.com" class="email">teddyhuangyh@gmail.com</a>.</p>
+</blockquote>
+<hr>
 <p><strong>Step 1: Pre-install Required Package</strong></p>
 <div class="sourceCode" id="cb1"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/utils/install.packages.html">install.packages</a></span><span class="op">(</span><span class="st">"BiocManager"</span><span class="op">)</span></span>
@@ -115,6 +201,102 @@ Data</strong></span>.</p>
 <span style="color: #1e90ff;"><strong>Open in Browser</strong></span> button.</p>
 </blockquote>
 <hr>
+<details><summary><p>⚒️ <strong>Encountered an error? Let’s fix it!</strong>&lt;/summary&gt;</p>
+<p>During installation or while running
+<span style="color: #9D6853;"><strong><em>ShiNyP</em></strong></span>, you might encounter issues.
+Below are common problems and their solutions.</p>
+<dl>
+<dt>
+<a href="https://emojipedia.org/warning">⚠️</a> <strong>R and Bioconductor Version Mismatch</strong>
+</dt>
+<dd>
+<p>The installation specifies Bioconductor version 3.19, which requires
+R version ≥ 4.4. If your R version is below 4.4, update it from
+CRAN.</p>
+<div class="sourceCode" id="cb4"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="co"># Check your R version</span></span>
+<span><span class="va">R.version.string</span></span></code></pre></div>
+</dd>
+<dt>
+<a href="https://emojipedia.org/warning">⚠️</a> <strong>Installation of Dependencies</strong>
+</dt>
+<dd>
+<p>Installing packages like <em>shiny</em> and <em>dartR</em> may require
+<strong>additional developer tools</strong>. You might encounter error messages
+such as:</p>
+<div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb5-1"><a href="sec-quickstart.html#cb5-1" tabindex="-1"></a>ERROR<span class="sc">:</span> dependencies <span class="st">'shiny'</span>, <span class="st">'dartR'</span> are not available <span class="cf">for</span> package <span class="st">'ShiNyP'</span></span></code></pre></div>
+</dd>
+<dd>
+<ul>
+<li>
+<p><strong>For Windows</strong>:</p>
+<p>Download Rtools from CRAN Rtools.</p>
+<p>Run the installer and follow the on-screen instructions.</p>
+<p>Ensure Rtools is added to your system PATH during installation.</p>
+<p>Verify Installation:</p>
+<div class="sourceCode" id="cb6"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="fu">pkgbuild</span><span class="fu">::</span><span class="fu"><a href="https://pkgbuild.r-lib.org/reference/has_rtools.html">find_rtools</a></span><span class="op">(</span><span class="op">)</span></span></code></pre></div>
+<p>It should return <code>TRUE</code> if Rtools is correctly installed.</p>
+</li>
+<li>
+<p><strong>For macOS</strong>:</p>
+<p>Open Terminal: Press <code>Cmd + Space</code>, type “Terminal”, and press
+<code>Enter</code>.</p>
+<p>Run the Installation Command:</p>
+<div class="sourceCode" id="cb7"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="va">xcode</span><span class="op">-</span><span class="va">select</span> <span class="op">-</span><span class="op">-</span><span class="va">install</span></span></code></pre></div>
+<p>Verify Installation</p>
+<div class="sourceCode" id="cb8"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="va">xcode</span><span class="op">-</span><span class="va">select</span> <span class="op">-</span><span class="va">p</span></span></code></pre></div>
+<p>It should return <code>/Library/Developer/CommandLineTools</code>.</p>
+</li>
+<li>
+<p><strong>For Linux</strong>:</p>
+<p>Install Essential Build Tools:</p>
+<div class="sourceCode" id="cb9"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb9-1"><a href="sec-quickstart.html#cb9-1" tabindex="-1"></a>sudo apt<span class="sc">-</span>get install r<span class="sc">-</span>base<span class="sc">-</span>dev</span>
+<span id="cb9-2"><a href="sec-quickstart.html#cb9-2" tabindex="-1"></a>sudo apt<span class="sc">-</span>get install build<span class="sc">-</span>essential libcurl4<span class="sc">-</span>gnutls<span class="sc">-</span>dev libxml2<span class="sc">-</span>dev libssl<span class="sc">-</span>dev</span></code></pre></div>
+</li>
+</ul>
+</dd>
+<dt>
+<a href="https://emojipedia.org/warning">⚠️</a> GitHub Installation Issues</dt>
+<dd>
+<p>Verify that your system is connected to the internet. Check for any
+firewall or proxy settings that might block GitHub access.</p>
+</dd>
+<dt>
+<a href="https://emojipedia.org/warning">⚠️</a> Package Loading Issues</dt>
+<dd>
+<p>Errors occur when loading <span style="color: #9D6853;"><strong><em>ShiNyP</em></strong></span> or
+its dependencies, possibly due to outdated packages or conflicts.</p>
+<ol style="list-style-type: decimal">
+<li>
+<p><strong>Update All Installed Packages</strong>:</p>
+<p>When prompted with</p>
+<div class="sourceCode" id="cb10"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="co"># These packages have more recent versions available.</span></span>
+<span><span class="co"># It is recommended to update all of them.</span></span>
+<span><span class="co"># Which would you like to update?</span></span>
+<span></span>
+<span><span class="co"># -&gt; Respond with 1 to update all packages.</span></span></code></pre></div>
+<p><strong>Please type 1 (1: All)</strong></p>
+</li>
+<li>
+<p>If a specific package is causing issues, reinstall it.</p>
+<div class="sourceCode" id="cb11"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/utils/install.packages.html">install.packages</a></span><span class="op">(</span><span class="st">"dartRverse"</span><span class="op">)</span></span>
+<span><span class="fu">BiocManager</span><span class="fu">::</span><span class="fu"><a href="https://bioconductor.github.io/BiocManager/reference/install.html">install</a></span><span class="op">(</span><span class="st">"SNPRelate"</span><span class="op">)</span></span>
+<span><span class="fu">remotes</span><span class="fu">::</span><span class="fu"><a href="https://remotes.r-lib.org/reference/install_github.html">install_github</a></span><span class="op">(</span><span class="st">"irudnyts/openai"</span>, ref <span class="op">=</span> <span class="st">"r6"</span>, force <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span></span></code></pre></div>
+</li>
+<li>
+<p>Check for Namespace Conflicts:</p>
+<p>Identify if multiple packages are masking functions.</p>
+<div class="sourceCode" id="cb12"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/base/conflicts.html">conflicts</a></span><span class="op">(</span><span class="op">)</span></span></code></pre></div>
+</li>
+</ol>
+</dd>
+</dl></summary></details><hr>
 <div class="inline-figure"><img src="images/0928_%E9%A0%81%E9%9D%A2_1.jpg" width="650"></div>
 <hr>
 <p><span style="color: #9D6853;"><strong><em>ShiNyP</em></strong></span> is also accessible online at
@@ -134,9 +316,6 @@ and running it locally on the R environment.</p>
 <a href="https://github.com/TeddYenn/ShiNyP">GitHub</a>.</li>
 <li>Feb 2025: Upgrade and update the user guide.</li>
 </ul>
-<p>For any inquiries, please email us at:
-<a href="mailto:teddyhuangyh@gmail.com" class="email">teddyhuangyh@gmail.com</a></p>
-
 </div>
   <div class="chapter-nav">
 <div class="prev"><a href="index.html">Welcome to ShiNyP</a></div>

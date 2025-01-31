@@ -1,4 +1,1024 @@
 {
-    "sources": [],
-    "project_biblios": []
+    "sources": [
+        {
+            "DOI": "10.5281/zenodo.56714",
+            "URL": "http://dx.doi.org/10.5281/zenodo.56714",
+            "author": [
+                {
+                    "family": "Silge",
+                    "given": "Julia"
+                },
+                {
+                    "family": "Robinson",
+                    "given": "David"
+                },
+                {
+                    "family": "Hester",
+                    "given": "Jim"
+                }
+            ],
+            "id": "tidytext-archive",
+            "issued": {
+                "date-parts": [
+                    [
+                        2016,
+                        6
+                    ]
+                ]
+            },
+            "title": "tidytext: Text mining using dplyr, ggplot2, and other tidy tools",
+            "title-short": "tidytext",
+            "type": ""
+        },
+        {
+            "URL": "http://www.jstatsoft.org/v25/i05/",
+            "author": [
+                {
+                    "family": "Feinerer",
+                    "given": "Ingo"
+                },
+                {
+                    "family": "Hornik",
+                    "given": "Kurt"
+                },
+                {
+                    "family": "Meyer",
+                    "given": "David"
+                }
+            ],
+            "container-title": "Journal of Statistical Software",
+            "id": "tm",
+            "issue": "5",
+            "issued": {
+                "date-parts": [
+                    [
+                        2008
+                    ]
+                ]
+            },
+            "page": "1-54",
+            "title": "Text mining infrastructure in r",
+            "type": "article-journal",
+            "volume": "25"
+        },
+        {
+            "DOI": "10.18637/jss.v059.i10",
+            "ISSN": "1548-7660",
+            "URL": "https://www.jstatsoft.org/index.php/jss/article/view/v059i10",
+            "author": [
+                {
+                    "family": "Wickham",
+                    "given": "Hadley"
+                }
+            ],
+            "container-title": "Journal of Statistical Software",
+            "id": "tidydata",
+            "issue": "1",
+            "issued": {
+                "date-parts": [
+                    [
+                        2014
+                    ]
+                ]
+            },
+            "keyword": "",
+            "page": "1-23",
+            "title": "Tidy data",
+            "type": "article-journal",
+            "volume": "59"
+        },
+        {
+            "URL": "https://CRAN.R-project.org/package=broom",
+            "author": [
+                {
+                    "family": "Robinson",
+                    "given": "David"
+                }
+            ],
+            "id": "R-broom",
+            "issued": {
+                "date-parts": [
+                    [
+                        2017
+                    ]
+                ]
+            },
+            "note": "R package version 0.4.2",
+            "title": "broom: Convert statistical analysis objects into tidy data frames",
+            "title-short": "broom",
+            "type": "book"
+        },
+        {
+            "URL": "https://cran.rstudio.com/package=gutenbergr",
+            "author": [
+                {
+                    "family": "Robinson",
+                    "given": "David"
+                }
+            ],
+            "id": "R-gutenbergr",
+            "issued": {
+                "date-parts": [
+                    [
+                        2016
+                    ]
+                ]
+            },
+            "note": "R package version 0.1.2",
+            "title": "gutenbergr: Download and process public domain works from project gutenberg",
+            "title-short": "gutenbergr",
+            "type": "book"
+        },
+        {
+            "URL": "https://CRAN.R-project.org/package=tokenizers",
+            "author": [
+                {
+                    "family": "Mullen",
+                    "given": "Lincoln"
+                }
+            ],
+            "id": "R-tokenizers",
+            "issued": {
+                "date-parts": [
+                    [
+                        2016
+                    ]
+                ]
+            },
+            "note": "R package version 0.1.3",
+            "title": "tokenizers: A consistent interface to tokenize natural language text",
+            "title-short": "tokenizers",
+            "type": "book"
+        },
+        {
+            "DOI": "10.21105/joss.00037",
+            "URL": "http://dx.doi.org/10.21105/joss.00037",
+            "author": [
+                {
+                    "family": "Silge",
+                    "given": "Julia"
+                },
+                {
+                    "family": "Robinson",
+                    "given": "David"
+                }
+            ],
+            "container-title": "JOSS",
+            "id": "R-tidytext",
+            "issue": "3",
+            "issued": {
+                "date-parts": [
+                    [
+                        2016,
+                        7
+                    ]
+                ]
+            },
+            "publisher": "The Open Journal",
+            "title": "tidytext: Text mining and analysis using tidy data principles in r",
+            "title-short": "tidytext",
+            "type": "article-journal",
+            "volume": "1"
+        },
+        {
+            "URL": "https://CRAN.R-project.org/package=dplyr",
+            "author": [
+                {
+                    "family": "Wickham",
+                    "given": "Hadley"
+                },
+                {
+                    "family": "Francois",
+                    "given": "Romain"
+                }
+            ],
+            "id": "R-dplyr",
+            "issued": {
+                "date-parts": [
+                    [
+                        2016
+                    ]
+                ]
+            },
+            "note": "R package version 0.5.0",
+            "title": "dplyr: A grammar of data manipulation",
+            "title-short": "dplyr",
+            "type": "book"
+        },
+        {
+            "URL": "https://CRAN.R-project.org/package=tidyr",
+            "author": [
+                {
+                    "family": "Wickham",
+                    "given": "Hadley"
+                }
+            ],
+            "id": "R-tidyr",
+            "issued": {
+                "date-parts": [
+                    [
+                        2016
+                    ]
+                ]
+            },
+            "note": "R package version 0.6.0",
+            "title": "tidyr: Easily tidy data with ‘spread()‘ and ‘gather()‘ functions",
+            "title-short": "tidyr",
+            "type": "book"
+        },
+        {
+            "URL": "https://CRAN.R-project.org/package=purrr",
+            "author": [
+                {
+                    "family": "Henry",
+                    "given": "Lionel"
+                },
+                {
+                    "family": "Wickham",
+                    "given": "Hadley"
+                }
+            ],
+            "id": "R-purrr",
+            "issued": {
+                "date-parts": [
+                    [
+                        2018
+                    ]
+                ]
+            },
+            "note": "R package version 0.2.5",
+            "title": "Purrr: Functional programming tools",
+            "title-short": "Purrr",
+            "type": "book"
+        },
+        {
+            "ISBN": "978-0-387-98140-6",
+            "URL": "http://ggplot2.org",
+            "author": [
+                {
+                    "family": "Wickham",
+                    "given": "Hadley"
+                }
+            ],
+            "id": "R-ggplot2",
+            "issued": {
+                "date-parts": [
+                    [
+                        2009
+                    ]
+                ]
+            },
+            "publisher": "Springer-Verlag New York",
+            "title": "ggplot2: Elegant graphics for data analysis",
+            "title-short": "ggplot2",
+            "type": "book"
+        },
+        {
+            "URL": "https://CRAN.R-project.org/package=quanteda",
+            "author": [
+                {
+                    "family": "Benoit",
+                    "given": "Kenneth"
+                },
+                {
+                    "family": "Nulty",
+                    "given": "Paul"
+                }
+            ],
+            "id": "R-quanteda",
+            "issued": {
+                "date-parts": [
+                    [
+                        2016
+                    ]
+                ]
+            },
+            "note": "R package version 0.9.8",
+            "title": "quanteda: Quantitative analysis of textual data",
+            "title-short": "quanteda",
+            "type": "book"
+        },
+        {
+            "URL": "https://CRAN.R-project.org/package=janeaustenr",
+            "author": [
+                {
+                    "family": "Silge",
+                    "given": "Julia"
+                }
+            ],
+            "id": "R-janeaustenr",
+            "issued": {
+                "date-parts": [
+                    [
+                        2016
+                    ]
+                ]
+            },
+            "note": "R package version 0.1.2",
+            "title": "janeaustenr: Jane austen’s complete novels",
+            "title-short": "janeaustenr",
+            "type": "book"
+        },
+        {
+            "URL": "http://www.jstatsoft.org/v21/i12/",
+            "author": [
+                {
+                    "family": "Wickham",
+                    "given": "Hadley"
+                }
+            ],
+            "container-title": "Journal of Statistical Software",
+            "id": "R-reshape2",
+            "issue": "12",
+            "issued": {
+                "date-parts": [
+                    [
+                        2007
+                    ]
+                ]
+            },
+            "page": "1-20",
+            "title": "Reshaping data with the reshape package",
+            "type": "article-journal",
+            "volume": "21"
+        },
+        {
+            "DOI": "10.1111/j.1540-6261.2010.01625.x",
+            "ISSN": "1540-6261",
+            "URL": "http://dx.doi.org/10.1111/j.1540-6261.2010.01625.x",
+            "author": [
+                {
+                    "family": "Loughran",
+                    "given": "Tim"
+                },
+                {
+                    "family": "McDonald",
+                    "given": "Bill"
+                }
+            ],
+            "container-title": "The Journal of Finance",
+            "id": "loughran2011liability",
+            "issue": "1",
+            "issued": {
+                "date-parts": [
+                    [
+                        2011
+                    ]
+                ]
+            },
+            "page": "35-65",
+            "publisher": "Blackwell Publishing Inc",
+            "title": "When is a liability not a liability? Textual analysis, dictionaries, and 10-ks",
+            "type": "article-journal",
+            "volume": "66"
+        },
+        {
+            "URL": "https://cran.r-project.org/package=mallet",
+            "author": [
+                {
+                    "family": "Mimno",
+                    "given": "David"
+                }
+            ],
+            "id": "R-mallet",
+            "issued": {
+                "date-parts": [
+                    [
+                        2013
+                    ]
+                ]
+            },
+            "note": "R package version 1.0",
+            "title": "mallet: A wrapper around the java machine learning tool MALLET",
+            "title-short": "mallet",
+            "type": "book"
+        },
+        {
+            "ISBN": "0262062798, 9780262062794",
+            "author": [
+                {
+                    "family": "Abelson",
+                    "given": "Hal"
+                }
+            ],
+            "container-title": "Essentials of programming languages, 3rd edition",
+            "edition": "3",
+            "id": "Friedman:2008:EPL:1378240",
+            "issued": {
+                "date-parts": [
+                    [
+                        2008
+                    ]
+                ]
+            },
+            "publisher": "The MIT Press",
+            "title": "Foreword",
+            "type": "chapter"
+        },
+        {
+            "URL": "http://github.com/trinker/sentimentr",
+            "author": [
+                {
+                    "family": "Rinker",
+                    "given": "Tyler W."
+                }
+            ],
+            "id": "R-sentimentr",
+            "issued": {
+                "date-parts": [
+                    [
+                        2017
+                    ]
+                ]
+            },
+            "note": "version 1.0.0",
+            "publisher": "University at Buffalo/SUNY",
+            "publisher-place": "Buffalo, New York",
+            "title": "sentimentr: Calculate text polarity sentiment",
+            "title-short": "sentimentr",
+            "type": "book"
+        },
+        {
+            "URL": "https://cran.r-project.org/package=coreNLP",
+            "author": [
+                {
+                    "family": "Arnold",
+                    "given": "Taylor"
+                },
+                {
+                    "family": "Tilton",
+                    "given": "Lauren"
+                }
+            ],
+            "id": "R-coreNLP",
+            "issued": {
+                "date-parts": [
+                    [
+                        2016
+                    ]
+                ]
+            },
+            "note": "R package version 0.4.2",
+            "title": "coreNLP: Wrappers around stanford CoreNLP tools",
+            "title-short": "coreNLP",
+            "type": "book"
+        },
+        {
+            "URL": "https://cran.r-project.org/package=cleanNLP",
+            "author": [
+                {
+                    "family": "Arnold",
+                    "given": "Taylor B."
+                }
+            ],
+            "id": "R-cleanNLP",
+            "issued": {
+                "date-parts": [
+                    [
+                        2016
+                    ]
+                ]
+            },
+            "note": "R package version 0.24",
+            "title": "cleanNLP: A tidy data model for natural language processing",
+            "title-short": "cleanNLP",
+            "type": "book"
+        },
+        {
+            "URL": "https://cran.r-project.org/package=ggraph",
+            "author": [
+                {
+                    "family": "Pedersen",
+                    "given": "Thomas Lin"
+                }
+            ],
+            "id": "R-ggraph",
+            "issued": {
+                "date-parts": [
+                    [
+                        2017
+                    ]
+                ]
+            },
+            "note": "R package version 1.0.0",
+            "title": "ggraph: An implementation of grammar of graphics for graphs and networks",
+            "title-short": "ggraph",
+            "type": "book"
+        },
+        {
+            "URL": "http://yihui.org/knitr/",
+            "author": [
+                {
+                    "family": "Xie",
+                    "given": "Yihui"
+                }
+            ],
+            "edition": "2nd",
+            "id": "xie2015",
+            "issued": {
+                "date-parts": [
+                    [
+                        2015
+                    ]
+                ]
+            },
+            "note": "ISBN 978-1498716963",
+            "publisher": "Chapman; Hall/CRC",
+            "publisher-place": "Boca Raton, Florida",
+            "title": "Dynamic documents with R and knitr",
+            "type": "book"
+        },
+        {
+            "DOI": "10.1111/1755-0998.12592",
+            "URL": "http://dx.doi.org/10.1111/1755-0998.12592",
+            "author": [
+                {
+                    "family": "Luu",
+                    "given": "Keurcien"
+                },
+                {
+                    "family": "Bazin",
+                    "given": "Eric"
+                },
+                {
+                    "family": "Blum",
+                    "given": "Michael G. B."
+                }
+            ],
+            "container-title": "Molecular Ecology Resources",
+            "id": "Luu2017",
+            "issue": "1",
+            "issued": {
+                "date-parts": [
+                    [
+                        2016,
+                        9,
+                        7
+                    ]
+                ]
+            },
+            "language": "en",
+            "page": "67-77",
+            "title": "<i>pcadapt</i>: an R package to perform genome scans for selection based on principal component analysis",
+            "title-short": "<i>pcadapt</i>",
+            "type": "article-journal",
+            "volume": "17"
+        },
+        {
+            "DOI": "10.1086/682949",
+            "URL": "http://dx.doi.org/10.1086/682949",
+            "author": [
+                {
+                    "family": "Whitlock",
+                    "given": "Michael C."
+                },
+                {
+                    "family": "Lotterhos",
+                    "given": "Katie E."
+                }
+            ],
+            "container-title": "The American Naturalist",
+            "id": "whitlock2015",
+            "issue": "S1",
+            "issued": {
+                "date-parts": [
+                    [
+                        2015,
+                        10
+                    ]
+                ]
+            },
+            "language": "en",
+            "page": "S24-S36",
+            "title": "Reliable Detection of Loci Responsible for Local Adaptation: Inference of a Null Model through Trimming the Distribution of<i>F</i><sub>ST</sub>",
+            "title-short": "Reliable Detection of Loci Responsible for Local Adaptation",
+            "type": "article-journal",
+            "volume": "186"
+        },
+        {
+            "DOI": "10.1371/journal.pone.0181420",
+            "URL": "http://dx.doi.org/10.1371/journal.pone.0181420",
+            "author": [
+                {
+                    "family": "Jeong",
+                    "given": "Seongmun"
+                },
+                {
+                    "family": "Kim",
+                    "given": "Jae-Yoon"
+                },
+                {
+                    "family": "Jeong",
+                    "given": "Soon-Chun"
+                },
+                {
+                    "family": "Kang",
+                    "given": "Sung-Taeg"
+                },
+                {
+                    "family": "Moon",
+                    "given": "Jung-Kyung"
+                },
+                {
+                    "family": "Kim",
+                    "given": "Namshin"
+                }
+            ],
+            "container-title": "PLOS ONE",
+            "editor": [
+                {
+                    "dropping-particle": "de",
+                    "family": "Brevern",
+                    "given": "Alexandre G."
+                }
+            ],
+            "id": "Jeong2017",
+            "issue": "7",
+            "issued": {
+                "date-parts": [
+                    [
+                        2017,
+                        7,
+                        20
+                    ]
+                ]
+            },
+            "language": "en",
+            "page": "e0181420",
+            "title": "GenoCore: A simple and fast algorithm for core subset selection from large genotype datasets",
+            "title-short": "GenoCore",
+            "type": "article-journal",
+            "volume": "12"
+        },
+        {
+            "DOI": "10.1186/1471-2156-11-94",
+            "URL": "http://dx.doi.org/10.1186/1471-2156-11-94",
+            "author": [
+                {
+                    "family": "Jombart",
+                    "given": "Thibaut"
+                },
+                {
+                    "family": "Devillard",
+                    "given": "Sébastien"
+                },
+                {
+                    "family": "Balloux",
+                    "given": "François"
+                }
+            ],
+            "container-title": "BMC Genetics",
+            "id": "jombart2010",
+            "issue": "1",
+            "issued": {
+                "date-parts": [
+                    [
+                        2010
+                    ]
+                ]
+            },
+            "language": "en",
+            "page": "94",
+            "title": "Discriminant analysis of principal components: a new method for the analysis of genetically structured populations",
+            "title-short": "Discriminant analysis of principal components",
+            "type": "article-journal",
+            "volume": "11"
+        },
+        {
+            "DOI": "10.7717/peerj.281",
+            "URL": "http://dx.doi.org/10.7717/peerj.281",
+            "author": [
+                {
+                    "family": "Kamvar",
+                    "given": "Zhian N."
+                },
+                {
+                    "family": "Tabima",
+                    "given": "Javier F."
+                },
+                {
+                    "family": "Grünwald",
+                    "given": "Niklaus J."
+                }
+            ],
+            "container-title": "PeerJ",
+            "id": "kamvar2014",
+            "issued": {
+                "date-parts": [
+                    [
+                        2014,
+                        3,
+                        4
+                    ]
+                ]
+            },
+            "language": "en",
+            "page": "e281",
+            "title": "<i>Poppr</i>: an R package for genetic analysis of populations with clonal, partially clonal, and/or sexual reproduction",
+            "title-short": "<i>Poppr</i>",
+            "type": "article-journal",
+            "volume": "2"
+        },
+        {
+            "DOI": "10.1111/2041-210x.12628",
+            "URL": "http://dx.doi.org/10.1111/2041-210X.12628",
+            "author": [
+                {
+                    "family": "Yu",
+                    "given": "Guangchuang"
+                },
+                {
+                    "family": "Smith",
+                    "given": "David K."
+                },
+                {
+                    "family": "Zhu",
+                    "given": "Huachen"
+                },
+                {
+                    "family": "Guan",
+                    "given": "Yi"
+                },
+                {
+                    "family": "Lam",
+                    "given": "Tommy Tsan-Yuk"
+                }
+            ],
+            "container-title": "Methods in Ecology and Evolution",
+            "editor": [
+                {
+                    "family": "McInerny",
+                    "given": "Greg"
+                }
+            ],
+            "id": "yu2016",
+            "issue": "1",
+            "issued": {
+                "date-parts": [
+                    [
+                        2016,
+                        9,
+                        22
+                    ]
+                ]
+            },
+            "language": "en",
+            "page": "28-36",
+            "title": "ggtree: an r package for visualization and annotation of phylogenetic trees with their covariates and other associated data",
+            "title-short": "ggtree",
+            "type": "article-journal",
+            "volume": "8"
+        },
+        {
+            "DOI": "10.1093/bioinformatics/bty633",
+            "URL": "http://dx.doi.org/10.1093/bioinformatics/bty633",
+            "author": [
+                {
+                    "family": "Paradis",
+                    "given": "Emmanuel"
+                },
+                {
+                    "family": "Schliep",
+                    "given": "Klaus"
+                }
+            ],
+            "container-title": "Bioinformatics",
+            "editor": [
+                {
+                    "family": "Schwartz",
+                    "given": "Russell"
+                }
+            ],
+            "id": "paradis2018",
+            "issue": "3",
+            "issued": {
+                "date-parts": [
+                    [
+                        2018,
+                        7,
+                        17
+                    ]
+                ]
+            },
+            "language": "en",
+            "page": "526-528",
+            "title": "ape 5.0: an environment for modern phylogenetics and evolutionary analyses in R",
+            "title-short": "ape 5.0",
+            "type": "article-journal",
+            "volume": "35"
+        },
+        {
+            "DOI": "10.1038/ng.548",
+            "URL": "http://dx.doi.org/10.1038/ng.548",
+            "author": [
+                {
+                    "family": "Kang",
+                    "given": "Hyun Min"
+                },
+                {
+                    "family": "Sul",
+                    "given": "Jae Hoon"
+                },
+                {
+                    "family": "Service",
+                    "given": "Susan K"
+                },
+                {
+                    "family": "Zaitlen",
+                    "given": "Noah A"
+                },
+                {
+                    "family": "Kong",
+                    "given": "Sit-yee"
+                },
+                {
+                    "family": "Freimer",
+                    "given": "Nelson B"
+                },
+                {
+                    "family": "Sabatti",
+                    "given": "Chiara"
+                },
+                {
+                    "family": "Eskin",
+                    "given": "Eleazar"
+                }
+            ],
+            "container-title": "Nature Genetics",
+            "id": "kang2010",
+            "issue": "4",
+            "issued": {
+                "date-parts": [
+                    [
+                        2010,
+                        3,
+                        7
+                    ]
+                ]
+            },
+            "language": "en",
+            "page": "348-354",
+            "title": "Variance component model to account for sample structure in genome-wide association studies",
+            "type": "article-journal",
+            "volume": "42"
+        },
+        {
+            "DOI": "10.1007/s11032-018-0844-8",
+            "URL": "http://dx.doi.org/10.1007/s11032-018-0844-8",
+            "author": [
+                {
+                    "family": "Granato",
+                    "given": "Italo S. C."
+                },
+                {
+                    "family": "Galli",
+                    "given": "Giovanni"
+                },
+                {
+                    "dropping-particle": "de",
+                    "family": "Oliveira Couto",
+                    "given": "Evellyn Giselly"
+                },
+                {
+                    "dropping-particle": "e",
+                    "family": "Souza",
+                    "given": "Massaine Bandeira"
+                },
+                {
+                    "family": "Mendonça",
+                    "given": "Leandro Freitas"
+                },
+                {
+                    "family": "Fritsche-Neto",
+                    "given": "Roberto"
+                }
+            ],
+            "container-title": "Molecular Breeding",
+            "id": "granato2018",
+            "issue": "8",
+            "issued": {
+                "date-parts": [
+                    [
+                        2018,
+                        7,
+                        23
+                    ]
+                ]
+            },
+            "language": "en",
+            "title": "snpReady: a tool to assist breeders in genomic analysis",
+            "title-short": "snpReady",
+            "type": "article-journal",
+            "volume": "38"
+        },
+        {
+            "DOI": "10.1093/bioinformatics/btu393",
+            "URL": "http://dx.doi.org/10.1093/bioinformatics/btu393",
+            "author": [
+                {
+                    "family": "Gu",
+                    "given": "Zuguang"
+                },
+                {
+                    "family": "Gu",
+                    "given": "Lei"
+                },
+                {
+                    "family": "Eils",
+                    "given": "Roland"
+                },
+                {
+                    "family": "Schlesner",
+                    "given": "Matthias"
+                },
+                {
+                    "family": "Brors",
+                    "given": "Benedikt"
+                }
+            ],
+            "container-title": "Bioinformatics",
+            "id": "gu2014",
+            "issue": "19",
+            "issued": {
+                "date-parts": [
+                    [
+                        2014,
+                        6,
+                        14
+                    ]
+                ]
+            },
+            "language": "en",
+            "page": "2811-2812",
+            "title": "<i>circlize</i>implements and enhances circular visualization in R",
+            "type": "article-journal",
+            "volume": "30"
+        },
+        {
+            "DOI": "10.1093/genetics/131.2.479",
+            "URL": "http://dx.doi.org/10.1093/genetics/131.2.479",
+            "author": [
+                {
+                    "family": "Excoffier",
+                    "given": "L"
+                },
+                {
+                    "family": "Smouse",
+                    "given": "P E"
+                },
+                {
+                    "family": "Quattro",
+                    "given": "J M"
+                }
+            ],
+            "container-title": "Genetics",
+            "id": "excoffier1992",
+            "issue": "2",
+            "issued": {
+                "date-parts": [
+                    [
+                        1992,
+                        6,
+                        1
+                    ]
+                ]
+            },
+            "language": "en",
+            "page": "479-491",
+            "title": "Analysis of molecular variance inferred from metric distances among DNA haplotypes: application to human mitochondrial DNA restriction data.",
+            "title-short": "Analysis of molecular variance inferred from metric distances among DNA haplotypes",
+            "type": "article-journal",
+            "volume": "131"
+        },
+        {
+            "DOI": "10.1111/j.1471-8286.2004.00828.x",
+            "URL": "http://dx.doi.org/10.1111/j.1471-8286.2004.00828.x",
+            "author": [
+                {
+                    "family": "GOUDET",
+                    "given": "JÉRÔME"
+                }
+            ],
+            "container-title": "Molecular Ecology Notes",
+            "id": "goudet2004",
+            "issue": "1",
+            "issued": {
+                "date-parts": [
+                    [
+                        2004,
+                        12,
+                        13
+                    ]
+                ]
+            },
+            "language": "en",
+            "page": "184-186",
+            "title": "hierfstat, a package for r to compute and test hierarchical  <i>F</i>-statistics",
+            "type": "article-journal",
+            "volume": "5"
+        }
+    ],
+    "project_biblios": [
+        "book.bib"
+    ]
 }

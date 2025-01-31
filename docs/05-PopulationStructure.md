@@ -285,9 +285,13 @@ Structure]{.underline}/[DAPC]{.underline}.
 -   **Group and Other Info.** (i.e. metadata, modifiable from
     DAPC_Group_Info.csv)
 
-> **Note**: You can add more information about samples by adding new
-> variables to the Group Info. file. Ensure that the sample order
-> remains unchanged.
+> **Note:** If you are using a **DAPC object** as input, ensure that
+> there are **at least 4 groups**. Since an N-group dataset has N-1 LD
+> axes, you need more than 3 axes to generate a 3D scatter plot.
+
+> **Note**: You can add metadata (more information about samples) by
+> adding new variables to the Group Info. file. Ensure that the sample
+> order remains unchanged.
 
 <details>
 
