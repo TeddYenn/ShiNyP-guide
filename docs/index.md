@@ -91,24 +91,25 @@ submit a report through our feedback form:
 -   **Podcast Program**:
     <a href="https://notebooklm.google.com/notebook/a952a309-6372-428d-90af-71593d784dd1/audio"target="_blank">https://reurl.cc/WN6R35</a>
 
+> **Note**: Due to limited memory usage on the demo platform, we [**DO
+> NOT RECOMMEND**]{style="color: #8b0000;"} using it to analyze large
+> SNP dataset. For real data analysis, please consider downloading the
+> platform from GitHub repository
+> <a href="https://github.com/TeddYenn/ShiNyP" target="_blank">[**https://github.com/TeddYenn/ShiNyP**](https://github.com/TeddYenn/ShiNyP){.uri}</a>
+> and running it locally on the R environment.
+
 ------------------------------------------------------------------------
 
-![](images/Fig.%201-02-01.jpg){width="650"}
-
-| ▲ **An overview of the [*ShiNyP*]{style="color: #9D6853;"} platform's workflow for genome-wide SNP data analysis.**
-| **- Data Input & Processing**: Beginning with <a href="https://teddyenn.github.io/ShiNyP-guide/sec-data-input.html" target="_blank">VCF data input</a>, it performs <a href="https://teddyenn.github.io/ShiNyP-guide/sec-data-qc.html" target="_blank">quality control (QC)</a> and <a href="https://teddyenn.github.io/ShiNyP-guide/sec-data-conversion.html" target="_blank">data transformation</a> steps.
-| **- Analysis & Output**: The analysis phase is divided into modules, each represented as a page in the platform, with multiple subpages offering specific analytical functions, including <a href="https://teddyenn.github.io/ShiNyP-guide/sec-population-structure.html" target="_blank">population structure</a>, <a href="https://teddyenn.github.io/ShiNyP-guide/sec-genetic-diversity.html" target="_blank">genetic diversity</a>, <a href="https://teddyenn.github.io/ShiNyP-guide/sec-selection-sweep.html" target="_blank">selection sweep</a>, and <a href="https://teddyenn.github.io/ShiNyP-guide/sec-core-collection.html" target="_blank">core collection</a>.
-| **- Customized Output**: The final output offers tailored visualizations and includes an AI-generated report summarizing the results. The pipeline streamlines data input, processing, and advanced analysis to deliver publication-ready figures and reports customized to the user’s needs.
-| \*Subpage frame colors indicate available functions for customization. For example, blue frames for [PCA]{.underline} and [DAPC]{.underline} correspond to the Scatter Plot ^Plus^ tool for customizing scatter plots, while red and purple frames correspond to Tree Plot ^Plus^ and Manhattan Plot ^Plus^, respectively.
+![](images/0928_頁面_1.jpg){width="650"}
 
 ------------------------------------------------------------------------
 
 # Quickstart {#sec-quickstart .unnumbered}
 
+## Prerequisites {.unnumbered}
+
 Before installing [***ShiNyP***]{style="color: #9D6853;"}, ensure your
 system meets the following requirements:
-
-------------------------------------------------------------------------
 
 1.  **Operating System**: Windows, macOS, or Linux
 
@@ -191,6 +192,39 @@ RStudio has four main panels:
 4.  **Plots/Files/Help (Bottom-right)**: Displays plots, files, and R
     documentation.
 
+**Step 6: Install Rtools**
+
+-   **Windows**: Download and install the newest 64-bit
+    [**Rtools**](https://cran.r-project.org/bin/windows/Rtools/)installer
+    from CRAN. Rtools is a toolchain bundle required for building R
+    packages from source, particularly those that require C/C++ or
+    Fortran code compilation.
+
+    Run the file to install **Rtools**, following the onscreen
+    instructions. If unsure, keep the default settings. Then, return to
+    this page and continue.
+
+    First, run `Sys.which("make")`. If it detects **make.exe**, you're
+    all set. If not, configure the system path.
+
+-   **MacOS**: Open Terminal: Press `Cmd + Space`, type "Terminal", and
+    press `Enter`. Run the following command and press `Enter`.
+
+    ``` r
+    xcode-select --install
+    ```
+
+    Enter your password if prompted and follow the onscreen
+    instructions.
+
+    Verify Installation:
+
+    ``` r
+    xcode-select -p
+    ```
+
+    It should return `/Library/Developer/CommandLineTools`.
+
 </details>
 
 ------------------------------------------------------------------------
@@ -202,6 +236,8 @@ RStudio has four main panels:
 > [teddyhuangyh\@gmail.com](mailto:teddyhuangyh@gmail.com){.email}.
 
 ------------------------------------------------------------------------
+
+## Installing ShiNyP {.unnumbered}
 
 **Step 1: Pre-install Required Package**
 
@@ -236,15 +272,13 @@ Data**]{style="color: #1e90ff;"}.
 
 ------------------------------------------------------------------------
 
-<details>
-
-<summary>⚒️ **Encountered an error? Let’s fix it!**\</summary\>
+## Troubleshooting {.unnumbered}
 
 During installation or while running
 [***ShiNyP***]{style="color: #9D6853;"}, you might encounter issues.
 Below are common problems and their solutions.
 
-[⚠️](https://emojipedia.org/warning) **R and Bioconductor Version Mismatch**
+⚒️ **R and Bioconductor Version Mismatch**
 
 :   The installation specifies Bioconductor version 3.19, which requires
     R version ≥ 4.4. If your R version is below 4.4, update it from
@@ -255,7 +289,9 @@ Below are common problems and their solutions.
     R.version.string
     ```
 
-[⚠️](https://emojipedia.org/warning) **Installation of Dependencies**
+------------------------------------------------------------------------
+
+⚒️ **Installation of Dependencies**
 
 :   Installing packages like *shiny* and *dartR* may require
     **additional developer tools**. You might encounter error messages
@@ -267,7 +303,8 @@ Below are common problems and their solutions.
 
 :   -   **For Windows**:
 
-        Download Rtools from CRAN Rtools.
+        Download Rtools from [**CRAN
+        Rtools**](https://cran.r-project.org/bin/windows/Rtools/).
 
         Run the installer and follow the on-screen instructions.
 
@@ -292,7 +329,7 @@ Below are common problems and their solutions.
         xcode-select --install
         ```
 
-        Verify Installation
+        Verify Installation:
 
         ``` r
         xcode-select -p
@@ -309,12 +346,16 @@ Below are common problems and their solutions.
         sudo apt-get install build-essential libcurl4-gnutls-dev libxml2-dev libssl-dev
         ```
 
-[⚠️](https://emojipedia.org/warning) GitHub Installation Issues
+------------------------------------------------------------------------
+
+⚒️ **GitHub Installation Issues**
 
 :   Verify that your system is connected to the internet. Check for any
     firewall or proxy settings that might block GitHub access.
 
-[⚠️](https://emojipedia.org/warning) Package Loading Issues
+------------------------------------------------------------------------
+
+⚒️ **Package Loading Issues**
 
 :   Errors occur when loading [***ShiNyP***]{style="color: #9D6853;"} or
     its dependencies, possibly due to outdated packages or conflicts.
@@ -349,25 +390,21 @@ Below are common problems and their solutions.
         conflicts()
         ```
 
-</details>
+------------------------------------------------------------------------
+
+## Main Functions {.unnumbered}
+
+![](images/Fig.%201-02-01.jpg){width="650"}
+
+| ▲ **An overview of the [*ShiNyP*]{style="color: #9D6853;"} platform's workflow for genome-wide SNP data analysis.**
+| **- Data Input & Processing**: Beginning with <a href="https://teddyenn.github.io/ShiNyP-guide/sec-data-input.html" target="_blank">VCF data input</a>, it performs <a href="https://teddyenn.github.io/ShiNyP-guide/sec-data-qc.html" target="_blank">quality control (QC)</a> and <a href="https://teddyenn.github.io/ShiNyP-guide/sec-data-conversion.html" target="_blank">data transformation</a> steps.
+| **- Analysis & Output**: The analysis phase is divided into modules, each represented as a page in the platform, with multiple subpages offering specific analytical functions, including <a href="https://teddyenn.github.io/ShiNyP-guide/sec-population-structure.html" target="_blank">population structure</a>, <a href="https://teddyenn.github.io/ShiNyP-guide/sec-genetic-diversity.html" target="_blank">genetic diversity</a>, <a href="https://teddyenn.github.io/ShiNyP-guide/sec-selection-sweep.html" target="_blank">selection sweep</a>, and <a href="https://teddyenn.github.io/ShiNyP-guide/sec-core-collection.html" target="_blank">core collection</a>.
+| **- Customized Output**: The final output offers tailored visualizations and includes an AI-generated report summarizing the results. The pipeline streamlines data input, processing, and advanced analysis to deliver publication-ready figures and reports customized to the user’s needs.
+| \*Subpage frame colors indicate available functions for customization. For example, blue frames for [PCA]{.underline} and [DAPC]{.underline} correspond to the Scatter Plot ^Plus^ tool for customizing scatter plots, while red and purple frames correspond to Tree Plot ^Plus^ and Manhattan Plot ^Plus^, respectively.
 
 ------------------------------------------------------------------------
 
-![](images/0928_頁面_1.jpg){width="650"}
-
-------------------------------------------------------------------------
-
-[***ShiNyP***]{style="color: #9D6853;"} is also accessible online at
-<a href="https://teddyhuang.shinyapps.io/ShiNyP/" target="_blank">[**https://teddyhuang.shinyapps.io/ShiNyP/**](https://teddyhuang.shinyapps.io/ShiNyP/){.uri}</a>.
-But, please note that due to limited memory usage on this platform, we
-[**DO NOT RECOMMEND**]{style="color: #8b0000;"} using it to analyze
-large SNP dataset. The online version is intended solely as a demo
-website for demonstration purposes. For real data analysis, please
-consider downloading the platform from GitHub repository
-<a href="https://github.com/TeddYenn/ShiNyP" target="_blank">[**https://github.com/TeddYenn/ShiNyP**](https://github.com/TeddYenn/ShiNyP){.uri}</a>
-and running it locally on the R environment.
-
-------------------------------------------------------------------------
+## Updates {.unnumbered}
 
 -   Aug 2024: Initial release alpha version on
     [GitHub](https://github.com/TeddYenn/ShiNyP).
