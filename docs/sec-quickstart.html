@@ -6,16 +6,16 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <title>Quickstart | User Guide for ShiNyP</title>
 <meta name="author" content="Yen-Hsiang Huang, Chung-Feng Kao">
-<meta name="description" content="Prerequisites Before installing ShiNyP, ensure your system meets the following requirements: Operating System: Windows, macOS, or Linux R Version: R ≥ 4.4 (compatible with Bioconductor version...">
+<meta name="description" content="Prerequisites Before installing ShiNyP, ensure your system meets the following requirements: R Version: R ≥ 4.4 (compatible with Bioconductor version 3.19) R Tools: Windows: Rtools macOS: Xcode...">
 <meta name="generator" content="bookdown 0.40 with bs4_book()">
 <meta property="og:title" content="Quickstart | User Guide for ShiNyP">
 <meta property="og:type" content="book">
 <meta property="og:url" content="https://github.com/TeddYenn/ShiNyP-guide/sec-quickstart.html">
 <meta property="og:image" content="https://github.com/TeddYenn/ShiNyP-guide/images/cover.png">
-<meta property="og:description" content="Prerequisites Before installing ShiNyP, ensure your system meets the following requirements: Operating System: Windows, macOS, or Linux R Version: R ≥ 4.4 (compatible with Bioconductor version...">
+<meta property="og:description" content="Prerequisites Before installing ShiNyP, ensure your system meets the following requirements: R Version: R ≥ 4.4 (compatible with Bioconductor version 3.19) R Tools: Windows: Rtools macOS: Xcode...">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Quickstart | User Guide for ShiNyP">
-<meta name="twitter:description" content="Prerequisites Before installing ShiNyP, ensure your system meets the following requirements: Operating System: Windows, macOS, or Linux R Version: R ≥ 4.4 (compatible with Bioconductor version...">
+<meta name="twitter:description" content="Prerequisites Before installing ShiNyP, ensure your system meets the following requirements: R Version: R ≥ 4.4 (compatible with Bioconductor version 3.19) R Tools: Windows: Rtools macOS: Xcode...">
 <meta name="twitter:image" content="https://github.com/TeddYenn/ShiNyP-guide/images/cover.png">
 <!-- JS --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/6.4.6/fuse.js" integrity="sha512-zv6Ywkjyktsohkbp9bb45V6tEMoWhzFzXis+LrMehmJZZSys19Yxf1dopHx7WzIKxr5tK2dVcYmaCk2uqdjF4A==" crossorigin="anonymous"></script><script src="https://kit.fontawesome.com/6ecbd6c532.js" crossorigin="anonymous"></script><script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <link href="libs/bootstrap-4.6.0/bootstrap.min.css" rel="stylesheet">
@@ -99,7 +99,6 @@
 <p>Before installing <span style="color: #9D6853;"><strong><em>ShiNyP</em></strong></span>, ensure your
 system meets the following requirements:</p>
 <ol style="list-style-type: decimal">
-<li><p><strong>Operating System</strong>: Windows, macOS, or Linux</p></li>
 <li><p><strong>R Version</strong>: R ≥ 4.4 (compatible with Bioconductor version 3.19)</p></li>
 <li>
 <p><strong>R Tools</strong>:</p>
@@ -115,7 +114,7 @@ Tools</a></p></li>
 <hr>
 <details><summary>
 ⚙️ <strong>Getting Started with R/RStudio/Rtools</strong>
-</summary><p><strong>Step 1: Download and Install R (Prerequisite)</strong></p>
+</summary><p><strong>Step 1: Install R</strong></p>
 <ol style="list-style-type: decimal">
 <li>
 <p>Visit the official R Project website: <a href="https://www.r-project.org/" class="uri">https://www.r-project.org/</a>.</p>
@@ -130,7 +129,7 @@ version for your system.</p></li>
 the on-screen instructions. Use the default options unless specific
 needs arise.</p></li>
 </ol>
-<p><strong>Step 2: Download RStudio</strong></p>
+<p><strong>Step 2: Install RStudio</strong></p>
 <ol style="list-style-type: decimal">
 <li><p>Go to the RStudio official download page:
 <a href="https://posit.co/download/rstudio-desktop/" class="uri">https://posit.co/download/rstudio-desktop/</a>.</p></li>
@@ -138,13 +137,10 @@ needs arise.</p></li>
 <li>
 <p>Select the version suitable for your operating system:</p>
 <ul>
-<li><p><strong>Windows</strong>: <code>.exe</code> file</p></li>
-<li><p><strong>MacOS</strong>: <code>.dmg</code> file</p></li>
+<li><p><strong>Windows</strong>: <code>.exe</code> file.</p></li>
+<li><p><strong>MacOS</strong>: <code>.dmg</code> file.</p></li>
 </ul>
 </li>
-</ol>
-<p><strong>Step 3: Install RStudio</strong></p>
-<ol style="list-style-type: decimal">
 <li>
 <p>Locate the downloaded file and double-click it to start the
 installation.</p>
@@ -156,24 +152,23 @@ steps.</p></li>
 </li>
 <li><p>After installation, launch RStudio.</p></li>
 </ol>
-<p><strong>Step 4: Launch RStudio</strong></p>
+<p><strong>Step 3: Launch RStudio</strong></p>
 <ol style="list-style-type: decimal">
 <li><p>Open RStudio by clicking the shortcut created during installation or
 searching for “RStudio” in your system’s application launcher.</p></li>
 <li><p>RStudio will automatically detect your R installation and link to
 it.</p></li>
-</ol>
-<p><strong>Step 5: Familiarize Yourself with RStudio Interface</strong></p>
+<li>
 <p>RStudio has four main panels:</p>
-<ol style="list-style-type: decimal">
-<li><p><strong>Console (Bottom-left)</strong>: Where you run R commands.</p></li>
-<li><p><strong>Source (Top-left)</strong>: For writing and editing scripts.</p></li>
-<li><p><strong>Environment/History (Top-right)</strong>: Displays objects, variables,
-and command history.</p></li>
-<li><p><strong>Plots/Files/Help (Bottom-right)</strong>: Displays plots, files, and R
-documentation.</p></li>
+<p><strong>Console (Bottom-left)</strong>: Where you run R commands.</p>
+<p><strong>Source (Top-left)</strong>: For writing and editing scripts.</p>
+<p><strong>Environment/History (Top-right)</strong>: Displays objects, variables,
+and command history.</p>
+<p><strong>Plots/Files/Help (Bottom-right)</strong>: Displays plots, files, and R
+documentation.</p>
+</li>
 </ol>
-<p><strong>Step 6: Install Rtools</strong></p>
+<p><strong>Step 5: Install Rtools</strong></p>
 <ul>
 <li>
 <p><strong>Windows</strong>: Download and install the newest 64-bit

@@ -37,6 +37,50 @@ where SNP marker ID information is missing,
 names as [#CHROM:POS]{.underline}, such as [2:12500]{.underline},
 indicating chromosome 2, position 12500.
 
+For the current version (v0.1.0),
+[***ShiNyP***]{style="color: #9D6853;"} is optimized for **genome-wide
+SNP** analysis in **diploid species**, supporting a wide range of
+diploid taxa, including plants, animals, and microbial eukaryotes. If
+you have polyploid datasets, please follow these steps:
+
+<details>
+
+<summary>➡️ Applying GATK Program for Diploidization</summary>
+
+**Step 1: Prepare Input GVCFs**
+
+Ensure you have multiple **GVCF** files generated from
+**HaplotypeCaller** for each sample.
+
+**Step 2: Combine GVCFs (if multiple samples)**
+
+If you have more than one sample, merge GVCFs using:
+
+```         
+gatk CombineGVCFs \
+  -R reference.fasta \
+  --variant sample1.g.vcf.gz \
+  --variant sample2.g.vcf.gz \
+  -O combined.g.vcf.gz
+```
+
+**Step 3: Perform Joint Genotyping**
+
+Run GenotypeGVCFs to generate a diploid VCF:
+
+```         
+gatk GenotypeGVCFs \
+  -R reference.fasta \
+  -V combined.g.vcf.gz \
+  -O sample_diploid.vcf.gz
+```
+
+The final **VCF file** contains **diploid genotypes** (`0/0`, `0/1`, or
+`1/1`). For more information, please
+visit <https://gatk.broadinstitute.org/hc/en-us/articles/360037057852-GenotypeGVCFs>.
+
+</details>
+
 ------------------------------------------------------------------------
 
 #### Step 1: Input your VCF File {.unnumbered style="padding: 0px 5px; margin: 0px 10px"}

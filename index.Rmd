@@ -23,6 +23,18 @@ editor_options:
 
 # Welcome to ShiNyP {#sec-welcome-to-s .unnumbered}
 
+```{=html}
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-2662B66TL7"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-2662B66TL7');
+</script>
+```
+
 This work, primarily authored by Yen-Hsiang Huang from the Department of
 Agronomy, National Chung Hsing University, Taiwan, is licensed under the
 [GNU General Public
@@ -42,7 +54,7 @@ live at <https://teddyenn.github.io/ShiNyP-guide/>.**
 
 ::: {style="background-color: #7c6f41; color: white; padding: 10px 5px; margin: 10px 0px; border-radius: 15px;"}
 | 📄 **Input:** Genome-wide biallelic SNP in Variant Call Format (VCF) file format.
-| 📊 **Analysis:** Data QC, population genetics analysis, core collection…
+| 📊 **Analysis:** Data QC, population genetics analysis, core collection, and more.
 | 📋 **Output:** Publication-ready figures, tables, data objects, and AI-driven report.
 :::
 
@@ -53,7 +65,7 @@ live at <https://teddyenn.github.io/ShiNyP-guide/>.**
 | \> Comprehensive statistical and computational exploration
 | \> Customizable visualization options
 | \> Publication-ready figures and tables
-| \> Reproducible analyzed data objects
+| \> Reusable analyzed data objects
 | \> AI-driven report generation
 
 ------------------------------------------------------------------------
@@ -67,31 +79,18 @@ Platform for Genome-Wide SNP Analysis and Visualization
 
 If you encounter any issues or have suggestions for new features, please
 submit a report through our feedback form:
-<a href="https://forms.gle/GPCggSo5czyNLfoB7" target="_blank">https://forms.gle/GPCggSo5czyNLfoB7</a>
-
--   **Journal Article**:
-    <a href="https://www.example.com" target="_blank">Under
-    Review...</a>
-
--   **GitHub Repository**:
-    <a href="https://github.com/TeddYenn/ShiNyP" target="_blank">https://github.com/TeddYenn/ShiNyP</a>
-
--   **User Manual**:
-    <a href="https://github.com/TeddYenn/ShiNyP" target="_blank">https://teddyenn.github.io/ShiNyP-guide</a>
+<https://forms.gle/GPCggSo5czyNLfoB7>
 
 -   **Demo Datasets**:
-    <a href="https://reurl.cc/QEx5lZ" target="_blank">https://reurl.cc/QEx5lZ</a>
+    <https://github.com/TeddYenn/ShiNyP/tree/main/tools/Demo_Datasets>
 
--   **Demo Platform**:
-    <a href="https://teddyhuang.shinyapps.io/ShiNyP/" target="_blank">https://teddyhuang.shinyapps.io/ShiNyP</a>
+-   [***ShiNyP***]{style="color: #9D6853;"} **Outputs** :
+    <https://zenodo.org/records/14813628>
 
--   **Feedback Form**:
-    <a href="https://forms.gle/GPCggSo5czyNLfoB7" target="_blank">https://forms.gle/GPCggSo5czyNLfoB7</a>
+-   **Online Platform (Demo)**:
+    <https://teddyhuang.shinyapps.io/ShiNyP_Demo/>
 
--   **Podcast Program**:
-    <a href="https://notebooklm.google.com/notebook/a952a309-6372-428d-90af-71593d784dd1/audio"target="_blank">https://reurl.cc/WN6R35</a>
-
-> **Note**: Due to limited memory usage on the demo platform, we [**DO
+> **Note**: Due to limited memory usage on the online platform, we [**DO
 > NOT RECOMMEND**]{style="color: #8b0000;"} using it to analyze large
 > SNP dataset. For real data analysis, please consider downloading the
 > platform from GitHub repository
@@ -111,11 +110,9 @@ submit a report through our feedback form:
 Before installing [***ShiNyP***]{style="color: #9D6853;"}, ensure your
 system meets the following requirements:
 
-1.  **Operating System**: Windows, macOS, or Linux
+1.  **R Version**: R ≥ 4.4 (compatible with Bioconductor version 3.19)
 
-2.  **R Version**: R ≥ 4.4 (compatible with Bioconductor version 3.19)
-
-3.  **R Tools**:
+2.  **R Tools**:
 
     -   **Windows**:
         [Rtools](https://cran.r-project.org/bin/windows/Rtools/)
@@ -131,7 +128,7 @@ system meets the following requirements:
 
 <summary>⚙️ **Getting Started with R/RStudio/Rtools**</summary>
 
-**Step 1: Download and Install R (Prerequisite)**
+**Step 1: Install R**
 
 1.  Visit the official R Project website: <https://www.r-project.org/>.
 
@@ -145,7 +142,7 @@ system meets the following requirements:
     the on-screen instructions. Use the default options unless specific
     needs arise.
 
-**Step 2: Download RStudio**
+**Step 2: Install RStudio**
 
 1.  Go to the RStudio official download page:
     <https://posit.co/download/rstudio-desktop/>.
@@ -154,13 +151,11 @@ system meets the following requirements:
 
 3.  Select the version suitable for your operating system:
 
-    -   **Windows**: `.exe` file
+    -   **Windows**: `.exe` file.
 
-    -   **MacOS**: `.dmg` file
+    -   **MacOS**: `.dmg` file.
 
-**Step 3: Install RStudio**
-
-1.  Locate the downloaded file and double-click it to start the
+4.  Locate the downloaded file and double-click it to start the
     installation.
 
     -   **Windows**: Run the `.exe` installer and follow the wizard
@@ -168,9 +163,9 @@ system meets the following requirements:
 
     -   **MacOS**: Drag the RStudio icon into the Applications folder.
 
-2.  After installation, launch RStudio.
+5.  After installation, launch RStudio.
 
-**Step 4: Launch RStudio**
+**Step 3: Launch RStudio**
 
 1.  Open RStudio by clicking the shortcut created during installation or
     searching for "RStudio" in your system's application launcher.
@@ -178,21 +173,19 @@ system meets the following requirements:
 2.  RStudio will automatically detect your R installation and link to
     it.
 
-**Step 5: Familiarize Yourself with RStudio Interface**
+3.  RStudio has four main panels:
 
-RStudio has four main panels:
+    **Console (Bottom-left)**: Where you run R commands.
 
-1.  **Console (Bottom-left)**: Where you run R commands.
+    **Source (Top-left)**: For writing and editing scripts.
 
-2.  **Source (Top-left)**: For writing and editing scripts.
-
-3.  **Environment/History (Top-right)**: Displays objects, variables,
+    **Environment/History (Top-right)**: Displays objects, variables,
     and command history.
 
-4.  **Plots/Files/Help (Bottom-right)**: Displays plots, files, and R
+    **Plots/Files/Help (Bottom-right)**: Displays plots, files, and R
     documentation.
 
-**Step 6: Install Rtools**
+**Step 5: Install Rtools**
 
 -   **Windows**: Download and install the newest 64-bit
     [**Rtools**](https://cran.r-project.org/bin/windows/Rtools/)installer

@@ -123,7 +123,33 @@ where SNP marker ID information is missing,
 <span style="color: #9D6853;"><strong><em>ShiNyP</em></strong></span> will auto-generate the SNP ID
 names as <u>#CHROM:POS</u>, such as <u>2:12500</u>,
 indicating chromosome 2, position 12500.</p>
-<hr>
+<p>For the current version (v0.1.0),
+<span style="color: #9D6853;"><strong><em>ShiNyP</em></strong></span> is optimized for <strong>genome-wide
+SNP</strong> analysis in <strong>diploid species</strong>, supporting a wide range of
+diploid taxa, including plants, animals, and microbial eukaryotes. If
+you have polyploid datasets, please follow these steps:</p>
+<details><summary>
+➡️ Applying GATK Program for Diploidization
+</summary><p><strong>Step 1: Prepare Input GVCFs</strong></p>
+<p>Ensure you have multiple <strong>GVCF</strong> files generated from
+<strong>HaplotypeCaller</strong> for each sample.</p>
+<p><strong>Step 2: Combine GVCFs (if multiple samples)</strong></p>
+<p>If you have more than one sample, merge GVCFs using:</p>
+<pre><code>gatk CombineGVCFs \
+  -R reference.fasta \
+  --variant sample1.g.vcf.gz \
+  --variant sample2.g.vcf.gz \
+  -O combined.g.vcf.gz</code></pre>
+<p><strong>Step 3: Perform Joint Genotyping</strong></p>
+<p>Run GenotypeGVCFs to generate a diploid VCF:</p>
+<pre><code>gatk GenotypeGVCFs \
+  -R reference.fasta \
+  -V combined.g.vcf.gz \
+  -O sample_diploid.vcf.gz</code></pre>
+<p>The final <strong>VCF file</strong> contains <strong>diploid genotypes</strong> (<code>0/0</code>, <code>0/1</code>, or
+<code>1/1</code>). For more information, please
+visit <a href="https://gatk.broadinstitute.org/hc/en-us/articles/360037057852-GenotypeGVCFs" class="uri">https://gatk.broadinstitute.org/hc/en-us/articles/360037057852-GenotypeGVCFs</a>.</p>
+</details><hr>
 </div>
 <div id="step-1-input-your-vcf-file" class="section level4 unnumbered" style="padding: 0px 5px; margin: 0px 10px">
 <h4>Step 1: Input your VCF File<a class="anchor" aria-label="anchor" href="#step-1-input-your-vcf-file"><i class="fas fa-link"></i></a>
