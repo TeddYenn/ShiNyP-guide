@@ -21,7 +21,7 @@ editor_options:
     wrap: 72
 ---
 
-# Welcome to ShiNyP {#sec-welcome-to-s .unnumbered}
+# Welcome to *ShiNyP* {#sec-welcome-to-s .unnumbered}
 
 ```{=html}
 <!-- Google tag (gtag.js) -->
@@ -35,10 +35,16 @@ editor_options:
 </script>
 ```
 
-This work, primarily authored by Yen-Hsiang Huang from the Department of
-Agronomy, National Chung Hsing University, Taiwan, is licensed under the
-[GNU General Public
-License](https://www.gnu.org/licenses/gpl-3.0.html.en).
+::: {style="display: flex; align-items: center;"}
+<a href="https://github.com/TeddYenn/ShiNyP">
+<img src="images/ShiNyP-icon_20250213.png" alt="ShiNyP-icon" class="cover" width="100" height="100"/>
+</a>
+
+<p>This work, primarily authored by Yen-Hsiang Huang from the Department
+of Agronomy, National Chung Hsing University, Taiwan, is licensed under
+the <a href="https://www.gnu.org/licenses/gpl-3.0.html.en">GNU General
+Public License</a>.</p>
+:::
 
 For any inquiries, please email us at:
 [teddyhuangyh\@gmail.com](mailto:teddyhuangyh@gmail.com){.email}.
@@ -50,7 +56,10 @@ Last Updated: February 2025
 live at <https://teddyenn.github.io/ShiNyP-guide/>.**
 :::
 
-## ShiNyP {.unnumbered}
+## *ShiNyP* {.unnumbered}
+
+[***ShiNyP***]{style="color: #9D6853;"} is a platform designed for
+real-time processing, analysis, and visualization of SNP datasets.
 
 ::: {style="background-color: #7c6f41; color: white; padding: 10px 5px; margin: 10px 0px; border-radius: 15px;"}
 | 📄 **Input:** Genome-wide biallelic SNP in Variant Call Format (VCF) file format.
@@ -58,44 +67,16 @@ live at <https://teddyenn.github.io/ShiNyP-guide/>.**
 | 📋 **Output:** Publication-ready figures, tables, data objects, and AI-driven report.
 :::
 
-------------------------------------------------------------------------
-
-| **Key Features**
-| Real-time Processing, Analysis, and Visualization of SNP Datasets:
-| \> Comprehensive statistical and computational exploration
-| \> Customizable visualization options
-| \> Publication-ready figures and tables
-| \> Reusable analyzed data objects
-| \> AI-driven report generation
-
-------------------------------------------------------------------------
-
-## Publication {.unnumbered}
-
-Huang et al. (upcoming 2025) *ShiNyP*: An Interactive Shiny-Based
-Platform for Genome-Wide SNP Analysis and Visualization
-
-## Support {.unnumbered}
-
-If you encounter any issues or have suggestions for new features, please
-submit a report through our feedback form:
-<https://forms.gle/GPCggSo5czyNLfoB7>
-
 -   **Demo Datasets**:
     <https://github.com/TeddYenn/ShiNyP/tree/main/tools/Demo_Datasets>
 
--   [***ShiNyP***]{style="color: #9D6853;"} **Outputs** :
+-   [***ShiNyP***]{style="color: #9D6853;"} **Outputs**:
     <https://zenodo.org/records/14813628>
 
--   **Online Platform (Demo)**:
-    <https://teddyhuang.shinyapps.io/ShiNyP_Demo/>
-
-> **Note**: Due to limited memory usage on the online platform, we [**DO
-> NOT RECOMMEND**]{style="color: #8b0000;"} using it to analyze large
-> SNP dataset. For real data analysis, please consider downloading the
-> platform from GitHub repository
-> <a href="https://github.com/TeddYenn/ShiNyP" target="_blank">[**https://github.com/TeddYenn/ShiNyP**](https://github.com/TeddYenn/ShiNyP){.uri}</a>
-> and running it locally on the R environment.
+If you encounter any issues or have suggestions for new features, please
+submit a report through our [Feedback
+Form](https://forms.gle/GPCggSo5czyNLfoB7) or email us
+at: [teddyhuangyh\@gmail.com](mailto:teddyhuangyh@gmail.com)
 
 ------------------------------------------------------------------------
 
