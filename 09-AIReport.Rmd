@@ -148,6 +148,6 @@ processed.
 
 ------------------------------------------------------------------------
 
-![](images/clipboard-420815584.png){width="650"}
+![](screenshots/AIReport.png){width="650"}
 
 *The AI Report Complete!*

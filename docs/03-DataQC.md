@@ -55,7 +55,7 @@ This will generate the Post-QC
 -   **Site Info. (RDS)**: Updated SNP site information file. It's
     necessary for downstream analyses, *please download and save it!*
 
-![](images/圖片19.png){width="650"}
+![](screenshots/DataQC1.png){width="650"}
 
 *Sample QC Complete!*
 
@@ -106,7 +106,7 @@ This will generate the Post-QC
 -   **Site Info. (RDS)**: Updated SNP site information file. It's
     necessary for downstream analyses, *please download and save it!*
 
-![](images/圖片21.png){width="650"}
+![](screenshots/DataQC2.png){width="650"}
 
 *SNP QC Complete!*
 
@@ -179,7 +179,7 @@ This will generate the Post-QC
     *SNPs_over_1000bp*: The number of SNPs per 1,000 base pairs,
     providing a normalized measure of SNP density across the genome.
 
-![](images/clipboard-3331950775.png){width="650"}
+![](screenshots/DataQC3.png){width="650"}
 
 *SNP Density Complete!*
 

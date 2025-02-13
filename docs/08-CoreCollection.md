@@ -55,7 +55,7 @@ entire population. This approach is modified function from GenoCore
 -   **Coverage Plot of Core Sample Set (PDF)**: Visualizes the sample
     coverage by each iteration.
 
-![](images/clipboard-675369449.png){width="650"}
+![](screenshots/CoreCollection1.png){width="650"}
 
 *The Core Sample Set Complete!*
 
@@ -108,6 +108,6 @@ observed in the full dataset.
 
 -   **Site Info. of Core SNPs (RDS)**: Core SNPs site information file.
 
-![](images/clipboard-1144175211.png){width="650"}
+![](screenshots/CoreCollection2.png){width="650"}
 
 *The Core SNP Set Complete!*

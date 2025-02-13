@@ -59,6 +59,7 @@ will generate the [**`genlight`**]{style="color: #8b0000;"} file.
 > This will save you from having to input the large VCF file again next
 > time.
 
-![](images/圖片22.png){width="650"}
+![](screenshots/DataTransform1.png){width="650"}
 
 *Data Transformation Complete!*
+

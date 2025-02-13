@@ -68,7 +68,7 @@ performed using the function from *snpReady* package [@granato2018].
 -   **Fst Matrix (CSV)**: A table showing pairwise Fst based on defined
     group assignments.
 
-![](images/clipboard-4215023438.png){width="650"}
+![](screenshots/GeneticDiversity1.png){width="650"}
 
 *Diversity Analysis Complete!*
 
@@ -128,7 +128,7 @@ parameters in a sliding window format.
 -   **Circos Plot (PDF)**: A circos plot visualizing the user-selected
     parameters, with the top 1% of each parameter colored in red.
 
-![](images/clipboard-3157688358.png){width="650"}
+![](screenshots/GeneticDiversity2.png){width="650"}
 
 *Circos Plot Complete!*
 
@@ -166,7 +166,7 @@ Pairwise genetic distance between populations is computed using
 -   **Genetic Distance Matrix (CSV)**: A pairwise genetic distance
     matrix based on the user-selected method.
 
-![](images/clipboard-124406020.png){width="650"}
+![](screenshots/GeneticDiversity3.png){width="650"}
 
 *Genetic Distance Complete!*
 
@@ -220,6 +220,6 @@ the function from *hierfstat* and *poppr* packages [@kamvar2014;
 
 -   **AMOVA Table (CSV)**: A table with detailed AMOVA results.
 
-![](images/clipboard-1689228022.png){width="650"}
+![](screenshots/GeneticDiversity4.png){width="650"}
 
 *AMOVA Complete!*

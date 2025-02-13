@@ -139,7 +139,7 @@ visit <https://gatk.broadinstitute.org/hc/en-us/articles/360037057852-GenotypeG
 > a time (e.g., you must wait for the input process to finish before you
 > can reset the data).
 
-![](images/圖片18.png){width="650"}
+![](screenshots/DataInput1.png){width="650"}
 
 *VCF Data Input!*
 
@@ -168,7 +168,7 @@ visit <https://gatk.broadinstitute.org/hc/en-us/articles/360037057852-GenotypeG
     [**`genind`**]{style="color: #8b0000;"}, and
     [**`genlight`**]{style="color: #8b0000;"} files.
 
-![](images/圖片17.png){width="650"}
+![](screenshots/DataInput2.png){width="650"}
 
 [***`data.frame`***]{style="color: #8b0000;"}*/[**`genind`**]{style="color: #8b0000;"}/[**`genlight`**]{style="color: #8b0000;"}
 Data Input!*

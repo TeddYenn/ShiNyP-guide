@@ -1,4 +1,4 @@
-book_filename: "GWAS-RICE"
+book_filename: "ShiNyP-guide"
 output_dir: "docs"
 
 delete_merged_file: true

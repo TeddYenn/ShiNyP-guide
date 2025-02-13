@@ -68,7 +68,7 @@ population structure [@Luu2017].
     as significant by pcadapt, including their site info., p-values, and
     adjusted p-values.
 
-![](images/clipboard-1914990218.png){width="650"}
+![](screenshots/SelectionSweep1.png){width="650"}
 
 *The pcadapt Complete!*
 
@@ -124,7 +124,7 @@ more information, visit
     identified as significant by OutFLANK, including their site info.,
     Fst values, and p-values.
 
-![](images/clipboard-1859743608.png){width="650"}
+![](screenshots/SelectionSweep2.png){width="650"}
 
 *The OutFLANK* *Complete!*
 
@@ -180,7 +180,7 @@ individuals, useful for identifying pedigree relationships.
     results, including SNP count, different SNPs, and the ratio of
     different SNPs per window.
 
-![](images/clipboard-4086295864.png){width="650"}
+![](screenshots/SelectionSweep3.png){width="650"}
 
 *The IBS Complete!*
 
@@ -230,6 +230,6 @@ Sweep]{.underline}/[OutFLANK]{.underline}.
 > **Note**: If generating a plot for p-values, make sure to use '-log10'
 > transformation for the Y axis.
 
-![](images/clipboard-2598995324.png){width="650"}
+![](screenshots/SelectionSweep4.png){width="650"}
 
 *Manhattan* *Plot ^Plus^ Complete!*
