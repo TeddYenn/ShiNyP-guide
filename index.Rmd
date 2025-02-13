@@ -67,12 +67,6 @@ real-time processing, analysis, and visualization of SNP datasets.
 | 📋 **Output:** Publication-ready figures, tables, data objects, and AI-driven report.
 :::
 
--   **Demo Datasets**:
-    <https://github.com/TeddYenn/ShiNyP/tree/main/tools/Demo_Datasets>
-
--   [***ShiNyP***]{style="color: #9D6853;"} **Outputs**:
-    <https://zenodo.org/records/14813628>
-
 If you encounter any issues or have suggestions for new features, please
 submit a report through our [Feedback
 Form](https://forms.gle/GPCggSo5czyNLfoB7) or email us

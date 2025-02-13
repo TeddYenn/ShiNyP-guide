@@ -100,7 +100,7 @@ visit <https://gatk.broadinstitute.org/hc/en-us/articles/360037057852-GenotypeG
     Data**]{style="color: #fff;background-color: #007ACC;"} button and
     select one species. Detailed descriptions of the demo datasets are
     available at
-    <a href="https://reurl.cc/QEx5lZ" target="_blank">https://reurl.cc/QEx5lZ</a>.
+    <https://github.com/TeddYenn/ShiNyP/tree/main/tools/Demo_Datasets>.
 
 > **Note:** By default, the genotypic information for 5 samples and 10
 > SNPs will be displayed on the interactive table.
