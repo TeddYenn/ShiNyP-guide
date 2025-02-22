@@ -6,16 +6,16 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <title>1 Data Input | User Guide for ShiNyP</title>
 <meta name="author" content="Yen-Hsiang Huang, Chung-Feng Kao">
-<meta name="description" content="➡️ This section contains two subpages: VCF and data.frame/genind/genlight, allowing you to upload various data types for analysis.   1.1 VCF  Required Dataset (one of the following): VCF file from...">
+<meta name="description" content="➡️ This section contains two subpages: VCF and data.frame/genlight, allowing you to upload various data types for analysis.   1.1 VCF  Required Dataset (one of the following): VCF file from PLINK...">
 <meta name="generator" content="bookdown 0.40 with bs4_book()">
 <meta property="og:title" content="1 Data Input | User Guide for ShiNyP">
 <meta property="og:type" content="book">
 <meta property="og:url" content="https://github.com/TeddYenn/ShiNyP-guide/sec-data-input.html">
 <meta property="og:image" content="https://github.com/TeddYenn/ShiNyP-guide/images/cover.png">
-<meta property="og:description" content="➡️ This section contains two subpages: VCF and data.frame/genind/genlight, allowing you to upload various data types for analysis.   1.1 VCF  Required Dataset (one of the following): VCF file from...">
+<meta property="og:description" content="➡️ This section contains two subpages: VCF and data.frame/genlight, allowing you to upload various data types for analysis.   1.1 VCF  Required Dataset (one of the following): VCF file from PLINK...">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="1 Data Input | User Guide for ShiNyP">
-<meta name="twitter:description" content="➡️ This section contains two subpages: VCF and data.frame/genind/genlight, allowing you to upload various data types for analysis.   1.1 VCF  Required Dataset (one of the following): VCF file from...">
+<meta name="twitter:description" content="➡️ This section contains two subpages: VCF and data.frame/genlight, allowing you to upload various data types for analysis.   1.1 VCF  Required Dataset (one of the following): VCF file from PLINK...">
 <meta name="twitter:image" content="https://github.com/TeddYenn/ShiNyP-guide/images/cover.png">
 <!-- JS --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/6.4.6/fuse.js" integrity="sha512-zv6Ywkjyktsohkbp9bb45V6tEMoWhzFzXis+LrMehmJZZSys19Yxf1dopHx7WzIKxr5tK2dVcYmaCk2uqdjF4A==" crossorigin="anonymous"></script><script src="https://kit.fontawesome.com/6ecbd6c532.js" crossorigin="anonymous"></script><script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <link href="libs/bootstrap-4.6.0/bootstrap.min.css" rel="stylesheet">
@@ -96,8 +96,8 @@
 </h1>
 <div style="background-color: #7c6f41; color: white; padding: 10px 5px; margin: 10px 0px; border-radius: 15px;">
 <p>➡️ This section contains two subpages: <u><strong>VCF</strong></u> and
-<u><strong>data.frame/genind/genlight</strong></u>, allowing you to upload
-various data types for analysis.</p>
+<u><strong>data.frame/genlight</strong></u>, allowing you to upload various
+data types for analysis.</p>
 </div>
 <hr>
 <div class="inline-figure"><img src="images/Supp.%20Fig.%201-5_%E9%A0%81%E9%9D%A2_1.jpg" width="650"></div>
@@ -123,33 +123,7 @@ where SNP marker ID information is missing,
 <span style="color: #9D6853;"><strong><em>ShiNyP</em></strong></span> will auto-generate the SNP ID
 names as <u>#CHROM:POS</u>, such as <u>2:12500</u>,
 indicating chromosome 2, position 12500.</p>
-<p>For the current version (v0.1.0),
-<span style="color: #9D6853;"><strong><em>ShiNyP</em></strong></span> is optimized for <strong>genome-wide
-SNP</strong> analysis in <strong>diploid species</strong>, supporting a wide range of
-diploid taxa, including plants, animals, and microbial eukaryotes. If
-you have polyploid datasets, please follow these steps:</p>
-<details><summary>
-➡️ Applying GATK Program for Diploidization
-</summary><p><strong>Step 1: Prepare Input GVCFs</strong></p>
-<p>Ensure you have multiple <strong>GVCF</strong> files generated from
-<strong>HaplotypeCaller</strong> for each sample.</p>
-<p><strong>Step 2: Combine GVCFs (if multiple samples)</strong></p>
-<p>If you have more than one sample, merge GVCFs using:</p>
-<pre><code>gatk CombineGVCFs \
-  -R reference.fasta \
-  --variant sample1.g.vcf.gz \
-  --variant sample2.g.vcf.gz \
-  -O combined.g.vcf.gz</code></pre>
-<p><strong>Step 3: Perform Joint Genotyping</strong></p>
-<p>Run GenotypeGVCFs to generate a diploid VCF:</p>
-<pre><code>gatk GenotypeGVCFs \
-  -R reference.fasta \
-  -V combined.g.vcf.gz \
-  -O sample_diploid.vcf.gz</code></pre>
-<p>The final <strong>VCF file</strong> contains <strong>diploid genotypes</strong> (<code>0/0</code>, <code>0/1</code>, or
-<code>1/1</code>). For more information, please
-visit <a href="https://gatk.broadinstitute.org/hc/en-us/articles/360037057852-GenotypeGVCFs" class="uri">https://gatk.broadinstitute.org/hc/en-us/articles/360037057852-GenotypeGVCFs</a>.</p>
-</details><hr>
+<hr>
 </div>
 <div id="step-1-input-your-vcf-file" class="section level4 unnumbered" style="padding: 0px 5px; margin: 0px 10px">
 <h4>Step 1: Input your VCF File<a class="anchor" aria-label="anchor" href="#step-1-input-your-vcf-file"><i class="fas fa-link"></i></a>
@@ -168,7 +142,7 @@ VCF File</strong></span> button.</p></li>
 Data</strong></span> button and
 select one species. Detailed descriptions of the demo datasets are
 available at
-<a href="https://github.com/TeddYenn/ShiNyP/tree/main/tools/Demo_Datasets" class="uri">https://github.com/TeddYenn/ShiNyP/tree/main/tools/Demo_Datasets</a>.</li>
+<a href="https://github.com/TeddYenn/ShiNyP/tree/main/inst/demo_data" class="uri">https://github.com/TeddYenn/ShiNyP/tree/main/inst/demo_data</a>.</li>
 </ol>
 <blockquote>
 <p><strong>Note:</strong> By default, the genotypic information for 5 samples and 10
@@ -189,6 +163,14 @@ RDS format) and Site Info (in RDS format) so that you will not have
 to input the VCF file again; instead, you can upload the
 <span style="color: #8b0000;"><strong><code>data.frame</code></strong></span> file.</p></li>
 </ol>
+<blockquote>
+<p><strong>Note:</strong> For the current version (v0.1.1),
+<span style="color: #9D6853;"><strong><em>ShiNyP</em></strong></span> is optimized for <strong>genome-wide
+SNP</strong> analysis in <strong>diploid species</strong>, supporting a wide range of
+diploid taxa, including plants, animals, and microbial eukaryotes. If
+you have polyploid or haploid dataset, please tick the ‘Applying
+diploidization processing’ checkbox.</p>
+</blockquote>
 <hr>
 </div>
 <div id="outputs" class="section level4 unnumbered" style="padding: 0px 5px; margin: 0px 10px">
@@ -215,20 +197,19 @@ can reset the data).</p>
 <hr>
 </div>
 </div>
-<div id="data.framegenindgenlight" class="section level2" number="1.2">
+<div id="data.framegenlight" class="section level2" number="1.2">
 <h2>
-<span class="header-section-number">1.2</span> data.frame/genind/genlight<a class="anchor" aria-label="anchor" href="#data.framegenindgenlight"><i class="fas fa-link"></i></a>
+<span class="header-section-number">1.2</span> data.frame/genlight<a class="anchor" aria-label="anchor" href="#data.framegenlight"><i class="fas fa-link"></i></a>
 </h2>
 <div id="required-dataset" class="section level4 unnumbered" style="padding: 0px 5px; margin: 0px 10px">
 <h4>Required Dataset:<a class="anchor" aria-label="anchor" href="#required-dataset"><i class="fas fa-link"></i></a>
 </h4>
 <ul>
 <li><p><span style="color: #8b0000;"><strong><code>data.frame</code></strong></span> in RDS file format</p></li>
-<li><p><span style="color: #8b0000;"><strong><code>genind</code></strong></span> in RDS file format</p></li>
 <li><p><span style="color: #8b0000;"><strong><code>genlight</code></strong></span> in RDS file format</p></li>
 </ul>
 <div class="line-block">
-<span style="color: #8b0000;"><strong><code>data.frame</code></strong></span> file can be downloaded from the subpages <u>VCF</u>, <u>Sample QC</u>, and <u>SNP QC</u>.<br><span style="color: #8b0000;"><strong><code>genind</code></strong></span> and <span style="color: #8b0000;"><strong><code>genlight</code></strong></span> files can be downloaded from the <u>Data Conversion</u> page.</div>
+<span style="color: #8b0000;"><strong><code>data.frame</code></strong></span> file can be downloaded from the subpages <u>VCF</u>, <u>Sample QC</u>, <u>SNP QC</u>, <u>Core Sample Set,</u> and <u>Core SNP Set</u>.<br><span style="color: #8b0000;"><strong><code>genlight</code></strong></span> files can be downloaded from the <u>Data Transform</u> page.</div>
 <hr>
 </div>
 <div id="one-step" class="section level4 unnumbered" style="padding: 0px 5px; margin: 0px 10px">
@@ -239,12 +220,11 @@ can reset the data).</p>
 <li>
 <span style="background-color: #e7eaed;">Browse</span> and click the
 <span style="color: #fff;background-color: #007ACC;"><strong>Input</strong></span> button
-to upload your <span style="color: #8b0000;"><strong><code>data.frame</code></strong></span>,
-<span style="color: #8b0000;"><strong><code>genind</code></strong></span>, and
+to upload your <span style="color: #8b0000;"><strong><code>data.frame</code></strong></span> and
 <span style="color: #8b0000;"><strong><code>genlight</code></strong></span> files.</li>
 </ol>
 <div class="inline-figure"><img src="screenshots/DataInput2.png" width="650"></div>
-<p><span style="color: #8b0000;"><strong><em><code>data.frame</code></em></strong></span><em>/<span style="color: #8b0000;"><strong><code>genind</code></strong></span>/<span style="color: #8b0000;"><strong><code>genlight</code></strong></span>
+<p><span style="color: #8b0000;"><strong><em><code>data.frame</code></em></strong></span><em>/<span style="color: #8b0000;"><strong><code>genlight</code></strong></span>
 Data Input!</em></p>
 <hr>
 </div>
@@ -258,7 +238,7 @@ Data Input!</em></p>
       <ul class="nav navbar-nav">
 <li><a class="nav-link" href="#sec-data-input"><span class="header-section-number">1</span> Data Input</a></li>
 <li><a class="nav-link" href="#vcf"><span class="header-section-number">1.1</span> VCF</a></li>
-<li><a class="nav-link" href="#data.framegenindgenlight"><span class="header-section-number">1.2</span> data.frame/genind/genlight</a></li>
+<li><a class="nav-link" href="#data.framegenlight"><span class="header-section-number">1.2</span> data.frame/genlight</a></li>
 </ul>
 
       <div class="book-extra">

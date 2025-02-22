@@ -38,7 +38,8 @@ performed using the function from *snpReady* package [@granato2018].
     (required).
 
 2.  [Upload]{style="background-color: #fceed2;"} **Group Info.** from
-    DAPC (optional). If uploaded, population-based parameters will be
+    [Population Structure]{.underline}/[DAPC]{.underline} subpage
+    (optional). If uploaded, population-based parameters will be
     calculated.
 
 3.  Click the [**Run Diversity
@@ -80,7 +81,7 @@ Genome-wide diversity is visualized using Circos plots generated with
 the *circlize* package [@gu2014] based on results of diversity
 parameters in a sliding window format.
 
-#### Required Dataset: {#sec-required-dataset-chr .unnumbered style="padding: 0px 5px; margin: 0px 10px"}
+#### Required Datasets: {#sec-required-dataset-chr .unnumbered style="padding: 0px 5px; margin: 0px 10px"}
 
 -   Auto-import the results from the [Genetic
     Diversity]{.underline}/[Diversity Parameter]{.underline} subpage.
@@ -140,19 +141,21 @@ Pairwise genetic distance between populations is computed using
 *hierfstat* package. For more information, visit
 <a href="https://rdrr.io/cran/hierfstat/man/genet.dist.html" target="_blank">https://rdrr.io/cran/hierfstat/man/genet.dist.html</a>.
 
-#### Required Dataset: {.unnumbered style="padding: 0px 5px; margin: 0px 10px"}
+#### Required Datasets: {.unnumbered style="padding: 0px 5px; margin: 0px 10px"}
 
--   [**`genind`**]{style="color: #8b0000;"} with 'Group Info.',
-    downloadable from [Data Conversion]{.underline} page after you have
-    both the [**`data.frame`**]{style="color: #8b0000;"} and Group Info.
+-   [**`data.frame`**]{style="color: #8b0000;"}
+-   **Group Info.** from [Population
+    Structure]{.underline}/[DAPC]{.underline} subpage (required).
 
 ------------------------------------------------------------------------
 
 #### **Steps:** {.unnumbered style="padding: 0px 5px; margin: 0px 10px"}
 
-1.  Select a method.
+1.  [Upload]{style="background-color: #fceed2;"} **Group Info.**
 
-2.  Click the [**Run Genetic
+2.  Select a method.
+
+3.  Click the [**Run Genetic
     Distance**]{style="color: #fff;background-color: #007ACC;"} button
     to generate the pairwise genetic distance.
 
@@ -181,9 +184,9 @@ the function from *hierfstat* and *poppr* packages [@kamvar2014;
 
 #### Required Dataset: {.unnumbered style="padding: 0px 5px; margin: 0px 10px"}
 
--   [**`genind`**]{style="color: #8b0000;"} with 'Group Info.',
-    downloadable from [Data Conversion]{.underline} page after you have
-    both the [**`data.frame`**]{style="color: #8b0000;"} and Group Info.
+-   [**`genlight`**]{style="color: #8b0000;"} with 'Group Info.',
+    downloadable from [Data Transform]{.underline} page after you have
+    Group Info.
 
 ------------------------------------------------------------------------
 

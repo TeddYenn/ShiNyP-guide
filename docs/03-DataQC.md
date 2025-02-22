@@ -123,7 +123,7 @@ This will generate the Post-QC
 -   **Chromosome Info.** **(CSV)**: Reference genome information of the
     current study.
 
-    <a href="https://drive.google.com/file/d/1gIEba13YizQ14IU8gPYj8q57C3urTUpa/view?usp=drive_link" target="_blank">***Click
+    `<a href="`{=html}<https://github.com/TeddYenn/ShiNyP/tree/main/inst/demo_data/Wild_Rice/Chromosome_Info.csv>`" target="_blank">`{=html}***Click
     here***</a>*: Download an example of **Chromosome Info.(CSV)**.*
 
 <details>

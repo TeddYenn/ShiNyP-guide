@@ -8,8 +8,8 @@ editor_options:
 
 ::: {style="background-color: #7c6f41; color: white; padding: 10px 5px; margin: 10px 0px; border-radius: 15px;"}
 ➡️ This section contains two subpages: [**VCF**]{.underline} and
-[**data.frame/genind/genlight**]{.underline}, allowing you to upload
-various data types for analysis.
+[**data.frame/genlight**]{.underline}, allowing you to upload various
+data types for analysis.
 :::
 
 ------------------------------------------------------------------------
@@ -37,50 +37,6 @@ where SNP marker ID information is missing,
 names as [#CHROM:POS]{.underline}, such as [2:12500]{.underline},
 indicating chromosome 2, position 12500.
 
-For the current version (v0.1.0),
-[***ShiNyP***]{style="color: #9D6853;"} is optimized for **genome-wide
-SNP** analysis in **diploid species**, supporting a wide range of
-diploid taxa, including plants, animals, and microbial eukaryotes. If
-you have polyploid datasets, please follow these steps:
-
-<details>
-
-<summary>➡️ Applying GATK Program for Diploidization</summary>
-
-**Step 1: Prepare Input GVCFs**
-
-Ensure you have multiple **GVCF** files generated from
-**HaplotypeCaller** for each sample.
-
-**Step 2: Combine GVCFs (if multiple samples)**
-
-If you have more than one sample, merge GVCFs using:
-
-```         
-gatk CombineGVCFs \
-  -R reference.fasta \
-  --variant sample1.g.vcf.gz \
-  --variant sample2.g.vcf.gz \
-  -O combined.g.vcf.gz
-```
-
-**Step 3: Perform Joint Genotyping**
-
-Run GenotypeGVCFs to generate a diploid VCF:
-
-```         
-gatk GenotypeGVCFs \
-  -R reference.fasta \
-  -V combined.g.vcf.gz \
-  -O sample_diploid.vcf.gz
-```
-
-The final **VCF file** contains **diploid genotypes** (`0/0`, `0/1`, or
-`1/1`). For more information, please
-visit <https://gatk.broadinstitute.org/hc/en-us/articles/360037057852-GenotypeGVCFs>.
-
-</details>
-
 ------------------------------------------------------------------------
 
 #### Step 1: Input your VCF File {.unnumbered style="padding: 0px 5px; margin: 0px 10px"}
@@ -100,7 +56,7 @@ visit <https://gatk.broadinstitute.org/hc/en-us/articles/360037057852-GenotypeG
     Data**]{style="color: #fff;background-color: #007ACC;"} button and
     select one species. Detailed descriptions of the demo datasets are
     available at
-    <https://github.com/TeddYenn/ShiNyP/tree/main/tools/Demo_Datasets>.
+    <https://github.com/TeddYenn/ShiNyP/tree/main/inst/demo_data>.
 
 > **Note:** By default, the genotypic information for 5 samples and 10
 > SNPs will be displayed on the interactive table.
@@ -118,6 +74,13 @@ visit <https://gatk.broadinstitute.org/hc/en-us/articles/360037057852-GenotypeG
     RDS format) and Site Info (in RDS format) so that you will not have
     to input the VCF file again; instead, you can upload the
     [**`data.frame`**]{style="color: #8b0000;"} file.
+
+> **Note:** For the current version (v0.1.1),
+> [***ShiNyP***]{style="color: #9D6853;"} is optimized for **genome-wide
+> SNP** analysis in **diploid species**, supporting a wide range of
+> diploid taxa, including plants, animals, and microbial eukaryotes. If
+> you have polyploid or haploid dataset, please tick the 'Applying
+> diploidization processing' checkbox.
 
 ------------------------------------------------------------------------
 
@@ -145,18 +108,16 @@ visit <https://gatk.broadinstitute.org/hc/en-us/articles/360037057852-GenotypeG
 
 ------------------------------------------------------------------------
 
-## data.frame/genind/genlight
+## data.frame/genlight
 
 #### Required Dataset: {.unnumbered style="padding: 0px 5px; margin: 0px 10px"}
 
 -   [**`data.frame`**]{style="color: #8b0000;"} in RDS file format
 
--   [**`genind`**]{style="color: #8b0000;"} in RDS file format
-
 -   [**`genlight`**]{style="color: #8b0000;"} in RDS file format
 
-| [**`data.frame`**]{style="color: #8b0000;"} file can be downloaded from the subpages [VCF]{.underline}, [Sample QC]{.underline}, and [SNP QC]{.underline}.
-| [**`genind`**]{style="color: #8b0000;"} and [**`genlight`**]{style="color: #8b0000;"} files can be downloaded from the [Data Conversion]{.underline} page.
+| [**`data.frame`**]{style="color: #8b0000;"} file can be downloaded from the subpages [VCF]{.underline}, [Sample QC]{.underline}, [SNP QC]{.underline}, [Core Sample Set,]{.underline} and [Core SNP Set]{.underline}.
+| [**`genlight`**]{style="color: #8b0000;"} files can be downloaded from the [Data Transform]{.underline} page.
 
 ------------------------------------------------------------------------
 
@@ -164,13 +125,12 @@ visit <https://gatk.broadinstitute.org/hc/en-us/articles/360037057852-GenotypeG
 
 1.  [Browse]{style="background-color: #e7eaed;"} and click the
     [**Input**]{style="color: #fff;background-color: #007ACC;"} button
-    to upload your [**`data.frame`**]{style="color: #8b0000;"},
-    [**`genind`**]{style="color: #8b0000;"}, and
+    to upload your [**`data.frame`**]{style="color: #8b0000;"} and
     [**`genlight`**]{style="color: #8b0000;"} files.
 
 ![](screenshots/DataInput2.png){width="650"}
 
-[***`data.frame`***]{style="color: #8b0000;"}*/[**`genind`**]{style="color: #8b0000;"}/[**`genlight`**]{style="color: #8b0000;"}
+[***`data.frame`***]{style="color: #8b0000;"}*/[**`genlight`**]{style="color: #8b0000;"}
 Data Input!*
 
 ------------------------------------------------------------------------

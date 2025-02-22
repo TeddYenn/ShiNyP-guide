@@ -6,16 +6,16 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <title>3 Data Transform | User Guide for ShiNyP</title>
 <meta name="author" content="Yen-Hsiang Huang, Chung-Feng Kao">
-<meta name="description" content="➡️ This section allow you to convert your SNP data in data.frame into genind and genlight.  Required Dataset (one of the following): Input VCF Data (data.frame file) from the Data Input page....">
+<meta name="description" content="➡️ This section allow you to convert your SNP data in data.frame into genind and more.  Required Dataset (one of the following): Input VCF Data (data.frame file) from the Data Input page. Post-QC...">
 <meta name="generator" content="bookdown 0.40 with bs4_book()">
 <meta property="og:title" content="3 Data Transform | User Guide for ShiNyP">
 <meta property="og:type" content="book">
 <meta property="og:url" content="https://github.com/TeddYenn/ShiNyP-guide/sec-data-conversion.html">
 <meta property="og:image" content="https://github.com/TeddYenn/ShiNyP-guide/images/cover.png">
-<meta property="og:description" content="➡️ This section allow you to convert your SNP data in data.frame into genind and genlight.  Required Dataset (one of the following): Input VCF Data (data.frame file) from the Data Input page....">
+<meta property="og:description" content="➡️ This section allow you to convert your SNP data in data.frame into genind and more.  Required Dataset (one of the following): Input VCF Data (data.frame file) from the Data Input page. Post-QC...">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="3 Data Transform | User Guide for ShiNyP">
-<meta name="twitter:description" content="➡️ This section allow you to convert your SNP data in data.frame into genind and genlight.  Required Dataset (one of the following): Input VCF Data (data.frame file) from the Data Input page....">
+<meta name="twitter:description" content="➡️ This section allow you to convert your SNP data in data.frame into genind and more.  Required Dataset (one of the following): Input VCF Data (data.frame file) from the Data Input page. Post-QC...">
 <meta name="twitter:image" content="https://github.com/TeddYenn/ShiNyP-guide/images/cover.png">
 <!-- JS --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/6.4.6/fuse.js" integrity="sha512-zv6Ywkjyktsohkbp9bb45V6tEMoWhzFzXis+LrMehmJZZSys19Yxf1dopHx7WzIKxr5tK2dVcYmaCk2uqdjF4A==" crossorigin="anonymous"></script><script src="https://kit.fontawesome.com/6ecbd6c532.js" crossorigin="anonymous"></script><script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <link href="libs/bootstrap-4.6.0/bootstrap.min.css" rel="stylesheet">
@@ -96,7 +96,7 @@
 </h1>
 <div style="background-color: #7c6f41; color: white; padding: 10px 5px; margin: 10px 0px; border-radius: 15px;">
 <p>➡️ This section allow you to convert your SNP data in <strong>data.frame</strong>
-into <strong>genind</strong> and <strong>genlight</strong>.</p>
+into <strong>genind</strong> and <strong>more</strong>.</p>
 </div>
 <div id="required-dataset-one-of-the-following-4" class="section level4 unnumbered" style="padding: 0px 5px; margin: 0px 10px">
 <h4>Required Dataset (one of the following):<a class="anchor" aria-label="anchor" href="#required-dataset-one-of-the-following-4"><i class="fas fa-link"></i></a>
@@ -109,47 +109,95 @@ the <u>Data QC</u> page.</p></li>
 </ul>
 <hr>
 </div>
-<div id="step-1-transform-data.frame-to-genind" class="section level4 unnumbered" style="padding: 0px 5px; margin: 0px 10px">
-<h4>Step 1: Transform <span style="color: #8b0000;"><strong><code>data.frame</code></strong></span> to <span style="color: #8b0000;"><strong><code>genind</code></strong></span><a class="anchor" aria-label="anchor" href="#step-1-transform-data.frame-to-genind"><i class="fas fa-link"></i></a>
-</h4>
-<p>Click the <span style="color: #fff;background-color: #007ACC;"><strong>Transform to
-genind</strong></span> button. This
-will generate the <span style="color: #8b0000;"><strong><code>genind</code></strong></span> file.</p>
-<blockquote>
-<p><strong>Note:</strong> After obtaining the clustering results from the <u>Population
-Structure</u>/<u>DAPC</u> subpage, you can add <strong>Group
-Info.</strong> to the <span style="color: #8b0000;"><strong><code>genind</code></strong></span> file by
-inputting the ‘<strong>DAPC_Group_Info.csv</strong>’. This step is necessary for
-analyses like ‘Genetic Distance’ and ‘AMOVA’.</p>
-</blockquote>
-<hr>
-</div>
-<div id="step-2-transform-genind-to-genlight" class="section level4 unnumbered" style="padding: 0px 5px; margin: 0px 10px">
-<h4>Step 2: Transform <span style="color: #8b0000;"><strong><code>genind</code></strong></span> to <span style="color: #8b0000;"><strong><code>genlight</code></strong></span><a class="anchor" aria-label="anchor" href="#step-2-transform-genind-to-genlight"><i class="fas fa-link"></i></a>
+<div id="step-1-transform-data.frame-to-genlight" class="section level4 unnumbered" style="padding: 0px 5px; margin: 0px 10px">
+<h4>Step 1: Transform <span style="color: #8b0000;"><strong><code>data.frame</code></strong></span> to <span style="color: #8b0000;"><strong><code>genlight</code></strong></span><a class="anchor" aria-label="anchor" href="#step-1-transform-data.frame-to-genlight"><i class="fas fa-link"></i></a>
 </h4>
 <p>Click the <span style="color: #fff;background-color: #007ACC;"><strong>Transform to
 genlight</strong></span> button. This
 will generate the <span style="color: #8b0000;"><strong><code>genlight</code></strong></span> file.</p>
+<blockquote>
+<p><strong>Note:</strong> After obtaining the clustering results from the <u>Population
+Structure</u>/<u>DAPC</u> subpage, you can add <strong>Group
+Info.</strong> to the <span style="color: #8b0000;"><strong><code>genlight</code></strong></span> file by
+inputting the ‘<strong>DAPC_Group_Info.csv</strong>’. This step is necessary for
+analyses like ‘AMOVA’ and ‘OutFLANK’.</p>
+</blockquote>
+<hr>
+</div>
+<div id="output" class="section level4 unnumbered" style="padding: 0px 5px; margin: 0px 10px">
+<h4>Output:<a class="anchor" aria-label="anchor" href="#output"><i class="fas fa-link"></i></a>
+</h4>
+<ul>
+<li>
+<strong>genlight (RDS)</strong>: <span style="color: #8b0000;"><strong><code>genlight</code></strong></span> file.
+It’s necessary for downstream analyses, <em>please download and save
+it!</em>
+</li>
+</ul>
+<blockquote>
+<p><strong>Note:</strong> Please download and save your
+<span style="color: #8b0000;"><strong><code>data.frame</code></strong></span> and
+<span style="color: #8b0000;"><strong><code>genlight</code></strong></span> files after transformation.
+This will save you from having to input the large VCF file again next
+time.</p>
+</blockquote>
+<hr>
+</div>
+<div id="step-2-transform-genind-to-others" class="section level4 unnumbered" style="padding: 0px 5px; margin: 0px 10px">
+<h4>Step 2: Transform <span style="color: #8b0000;"><strong><code>genind</code></strong></span> to others<a class="anchor" aria-label="anchor" href="#step-2-transform-genind-to-others"><i class="fas fa-link"></i></a>
+</h4>
+<p>Select the desired data format to export from
+<span style="color: #8b0000;"><strong><code>genlight</code></strong></span> and click the
+<span style="color: #fff;background-color: #007ACC;"><strong>Transform</strong></span> button.
+This will generate the specified file.</p>
 <hr>
 </div>
 <div id="outputs-4" class="section level4 unnumbered" style="padding: 0px 5px; margin: 0px 10px">
 <h4>Outputs:<a class="anchor" aria-label="anchor" href="#outputs-4"><i class="fas fa-link"></i></a>
 </h4>
 <ul>
-<li><p><strong>genind (RDS)</strong>: <span style="color: #8b0000;"><strong><code>genind</code></strong></span> file. It’s
-necessary for downstream analyses, <em>please download and save it!</em></p></li>
-<li><p><strong>genlight (RDS)</strong>: <span style="color: #8b0000;"><strong><code>genlight</code></strong></span> file.
-It’s necessary for downstream analyses, <em>please download and save
-it!</em></p></li>
+<li><p><strong>genlight (RDS)</strong>: <span style="color: #8b0000;"><strong><code>genlight</code></strong></span> file
+with Group Info. It’s necessary for downstream analyses, <em>please
+download and save it!</em> Downloadable on
+<span style="color: #9D6853;"><strong><em>ShiNyP</em></strong></span>.</p></li>
+<li><p><strong>genind (RDS)</strong>: Input format for
+<span style="color: #9D6853;"><strong><em>ShiNyP</em></strong></span><u>DAPC</u> subpage,
+optimized for DAPC analysis to reduce computation time. Downloadable
+on <span style="color: #9D6853;"><strong><em>ShiNyP</em></strong></span>.</p></li>
 </ul>
-<blockquote>
-<p><strong>Note:</strong> Please download and save your
-<span style="color: #8b0000;"><strong><code>data.frame</code></strong></span>,
-<span style="color: #8b0000;"><strong><code>genind</code></strong></span>, and
-<span style="color: #8b0000;"><strong><code>genlight</code></strong></span> files after transformation.
-This will save you from having to input the large VCF file again next
-time.</p>
-</blockquote>
+<p>The following transformed files will be generated at the specified path
+you provide.</p>
+<ul>
+<li><p><strong>PLINK (PED &amp; MAP)</strong>: Input format for
+<a href="https://www.cog-genomics.org/plink/1.9/input#ped">PLINK</a> program,
+designed to perform a range of basic and large-scale SNP analyses.</p></li>
+<li><p><strong>GenAlEx (CSV)</strong>: Input format for
+<a href="https://biology-assets.anu.edu.au/GenAlEx/Welcome.html">GenAlEx</a>
+program, offers a wide range of population genetic analysis in
+Excel.</p></li>
+<li><p><strong>LEA (GENO &amp; LFMM)</strong>: Input format for
+<a href="https://www.bioconductor.org/packages/release/bioc/html/LEA.html">LEA</a>
+R package, designed for population genomics, landscape genomics and
+genotype-environment association tests.</p></li>
+<li><p><strong>GDS (GDS)</strong>: Input format for
+<a href="https://bioconductor.org/packages/release/bioc/html/SNPRelate.html">SNPRelate</a>
+R package, designed for efficient SNP data analysis.</p></li>
+<li><p><strong>STRUCTURE (STR)</strong>: Input format for
+<a href="https://web.stanford.edu/group/pritchardlab/structure.html">STRUCTURE</a>
+program, used for inferring population structure.</p></li>
+<li><p><strong>fastStructure (STR)</strong>: Input format for
+<a href="https://rajanil.github.io/fastStructure/">fastStructure</a> program,
+used for inferring population structure from large SNP data.</p></li>
+<li><p><strong>PHYLIP (TXT)</strong>: Input format for
+<a href="https://phylipweb.github.io/phylip/">PHYLIP</a> program, used for
+phylogenetic tree reconstruction and evolutionary analysis.</p></li>
+<li><p><strong>Treemix (GZ)</strong>: Input format for
+<a href="https://speciationgenomics.github.io/Treemix/">Treemix</a> program,
+designed for modeling population splits and migration events.</p></li>
+<li><p><strong>BayeScan (TXT)</strong>: Input format for
+<a href="https://cmpg.unibe.ch/software/BayeScan/files/BayeScan2.0_manual.pdf">BayeScan</a>,
+used for detecting loci under selection.</p></li>
+</ul>
 <div class="inline-figure"><img src="screenshots/DataTransform1.png" width="650"></div>
 <p><em>Data Transformation Complete!</em></p>
 

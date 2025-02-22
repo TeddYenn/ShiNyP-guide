@@ -1,6 +1,6 @@
 sec-data-input
 vcf
-data.framegenindgenlight
+data.framegenlight
 sec-data-qc
 sample-qc
 snp-qc

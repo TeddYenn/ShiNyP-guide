@@ -20,7 +20,7 @@ Establish a core collection that represents the genetic variation of the
 entire population. This approach is modified function from GenoCore
 [@Jeong2017].
 
-#### Required Datasets: {.unnumbered style="padding: 0px 5px; margin: 0px 10px"}
+#### Required Dataset: {.unnumbered style="padding: 0px 5px; margin: 0px 10px"}
 
 -   [**`data.frame`**]{style="color: #8b0000;"}
 
@@ -64,7 +64,7 @@ entire population. This approach is modified function from GenoCore
 ## Core SNP Set
 
 Establish a core SNP collection that represents the genetic variation
-observed in the full dataset.
+observed in the full dataset or a random SNP set.
 
 #### Required Datasets: {.unnumbered style="padding: 0px 5px; margin: 0px 10px"}
 
@@ -76,17 +76,17 @@ observed in the full dataset.
     current study. For more details about this file, refer to
     **Section** \@ref(snp-density) **(SNP Density)**.
 -   **DAPC Object** (DAPC_dapc_Object.rds), downloadable from
-    [Population Structure]{.underline}/[DAPC]{.underline}.
+    [Population Structure]{.underline}/[DAPC]{.underline} subpage.
 
 ------------------------------------------------------------------------
 
 #### **Steps:** {.unnumbered style="padding: 0px 5px; margin: 0px 10px"}
 
 1.  [Upload]{style="background-color: #fceed2;"} required datasts:
-    **Site Info. (RDS)**, **Chromosome Info.** **(CSV)**, and **DAPC
-    Object (RDS)**.
+    **Site Info. (RDS)** and **Chromosome Info.** **(CSV)**.
 
-2.  Choose the maximum core SNPs ratio (%).
+2.  Choose the method and [Upload]{style="background-color: #fceed2;"}
+    **DAPC Object (RDS)** or set the parameter.
 
 3.  Click the [**Run Core
     SNP**]{style="color: #fff;background-color: #007ACC;"} button to

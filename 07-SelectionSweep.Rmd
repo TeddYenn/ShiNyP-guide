@@ -81,11 +81,11 @@ more information, visit
 
 #### Required Datasets: {.unnumbered style="padding: 0px 5px; margin: 0px 10px"}
 
--   [**`genind`**]{style="color: #8b0000;"} with 'Group Info.',
-    downloadable from [Data Conversion]{.underline} page after you have
-    both the [**`data.frame`**]{style="color: #8b0000;"} and Group Info.
+-   [**`genlight`**]{style="color: #8b0000;"} with 'Group Info.',
+    downloadable from [Data Transform]{.underline} page after you have
+    Group Info.
 -   **Site Info.** **(RDS)** of the current
-    [**`data.frame`**]{style="color: #8b0000;"}, downloadable from [Data
+    [**`genlight`**]{style="color: #8b0000;"} downloadable from [Data
     Input]{.underline} or [Data QC]{.underline} pages.
 
 ------------------------------------------------------------------------

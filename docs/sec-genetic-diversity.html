@@ -131,7 +131,8 @@ at least 2 samples.</p>
 <li><p><span style="background-color: #fceed2;">Upload</span> <strong>Site Info.</strong>
 (required).</p></li>
 <li><p><span style="background-color: #fceed2;">Upload</span> <strong>Group Info.</strong> from
-DAPC (optional). If uploaded, population-based parameters will be
+<u>Population Structure</u>/<u>DAPC</u> subpage
+(optional). If uploaded, population-based parameters will be
 calculated.</p></li>
 <li><p>Click the <span style="color: #fff;background-color: #007ACC;"><strong>Run Diversity
 Analysis</strong></span> button
@@ -170,7 +171,7 @@ group assignments.</p></li>
 the <em>circlize</em> package <span class="citation">(<a href="sec-index.html#ref-gu2014">Gu et al. 2014</a>)</span> based on results of diversity
 parameters in a sliding window format.</p>
 <div id="sec-required-dataset-chr" class="section level4 unnumbered" style="padding: 0px 5px; margin: 0px 10px">
-<h4>Required Dataset:<a class="anchor" aria-label="anchor" href="#sec-required-dataset-chr"><i class="fas fa-link"></i></a>
+<h4>Required Datasets:<a class="anchor" aria-label="anchor" href="#sec-required-dataset-chr"><i class="fas fa-link"></i></a>
 </h4>
 <ul>
 <li><p>Auto-import the results from the <u>Genetic
@@ -234,14 +235,14 @@ parameters, with the top 1% of each parameter colored in red.</p></li>
 <p>Pairwise genetic distance between populations is computed using
 <em>hierfstat</em> package. For more information, visit
 <a href="https://rdrr.io/cran/hierfstat/man/genet.dist.html" target="_blank">https://rdrr.io/cran/hierfstat/man/genet.dist.html</a>.</p>
-<div id="required-dataset-6" class="section level4 unnumbered" style="padding: 0px 5px; margin: 0px 10px">
-<h4>Required Dataset:<a class="anchor" aria-label="anchor" href="#required-dataset-6"><i class="fas fa-link"></i></a>
+<div id="required-datasets-1" class="section level4 unnumbered" style="padding: 0px 5px; margin: 0px 10px">
+<h4>Required Datasets:<a class="anchor" aria-label="anchor" href="#required-datasets-1"><i class="fas fa-link"></i></a>
 </h4>
 <ul>
+<li><span style="color: #8b0000;"><strong><code>data.frame</code></strong></span></li>
 <li>
-<span style="color: #8b0000;"><strong><code>genind</code></strong></span> with ‘Group Info.’,
-downloadable from <u>Data Conversion</u> page after you have
-both the <span style="color: #8b0000;"><strong><code>data.frame</code></strong></span> and Group Info.</li>
+<strong>Group Info.</strong> from <u>Population
+Structure</u>/<u>DAPC</u> subpage (required).</li>
 </ul>
 <hr>
 </div>
@@ -250,6 +251,7 @@ both the <span style="color: #8b0000;"><strong><code>data.frame</code></strong><
 <strong>Steps:</strong><a class="anchor" aria-label="anchor" href="#steps-6"><i class="fas fa-link"></i></a>
 </h4>
 <ol style="list-style-type: decimal">
+<li><p><span style="background-color: #fceed2;">Upload</span> <strong>Group Info.</strong></p></li>
 <li><p>Select a method.</p></li>
 <li><p>Click the <span style="color: #fff;background-color: #007ACC;"><strong>Run Genetic
 Distance</strong></span> button
@@ -278,14 +280,14 @@ matrix based on the user-selected method.</p></li>
 <p>A method for assessing genetic variations and relationships within and
 between populations <span class="citation">(<a href="sec-index.html#ref-excoffier1992">Excoffier, Smouse, and Quattro 1992</a>)</span>.This approach is performed using
 the function from <em>hierfstat</em> and <em>poppr</em> packages <span class="citation">(<a href="sec-index.html#ref-kamvar2014">Kamvar, Tabima, and Grünwald 2014</a>; <a href="sec-index.html#ref-goudet2004">GOUDET 2004</a>)</span>.</p>
-<div id="required-dataset-7" class="section level4 unnumbered" style="padding: 0px 5px; margin: 0px 10px">
-<h4>Required Dataset:<a class="anchor" aria-label="anchor" href="#required-dataset-7"><i class="fas fa-link"></i></a>
+<div id="required-dataset-6" class="section level4 unnumbered" style="padding: 0px 5px; margin: 0px 10px">
+<h4>Required Dataset:<a class="anchor" aria-label="anchor" href="#required-dataset-6"><i class="fas fa-link"></i></a>
 </h4>
 <ul>
 <li>
-<span style="color: #8b0000;"><strong><code>genind</code></strong></span> with ‘Group Info.’,
-downloadable from <u>Data Conversion</u> page after you have
-both the <span style="color: #8b0000;"><strong><code>data.frame</code></strong></span> and Group Info.</li>
+<span style="color: #8b0000;"><strong><code>genlight</code></strong></span> with ‘Group Info.’,
+downloadable from <u>Data Transform</u> page after you have
+Group Info.</li>
 </ul>
 <hr>
 </div>
