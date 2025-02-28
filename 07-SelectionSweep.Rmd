@@ -13,7 +13,7 @@ Plot**]{.underline}^**Plus**^, allowing you to detect selection
 signatures in different scenario and customize your plot.
 :::
 
-![](images/Supp.%20Fig.%201-5_頁面_4.jpg){width="650"}
+![](images/Supplementary%20Fig.%204.jpg){width="700"}
 
 ## pcadapt
 

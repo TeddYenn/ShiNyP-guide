@@ -1016,6 +1016,78 @@
             "title": "hierfstat, a package for r to compute and test hierarchical  <i>F</i>-statistics",
             "type": "article-journal",
             "volume": "5"
+        },
+        {
+            "DOI": "10.1016/j.ajhg.2018.07.015",
+            "URL": "http://dx.doi.org/10.1016/j.ajhg.2018.07.015",
+            "author": [
+                {
+                    "family": "Browning",
+                    "given": "Brian L."
+                },
+                {
+                    "family": "Zhou",
+                    "given": "Ying"
+                },
+                {
+                    "family": "Browning",
+                    "given": "Sharon R."
+                }
+            ],
+            "container-title": "The American Journal of Human Genetics",
+            "id": "browning2018",
+            "issue": "3",
+            "issued": {
+                "date-parts": [
+                    [
+                        2018,
+                        9
+                    ]
+                ]
+            },
+            "language": "en",
+            "page": "338-348",
+            "title": "A One-Penny Imputed Genome from Next-Generation Reference Panels",
+            "type": "article-journal",
+            "volume": "103"
+        },
+        {
+            "DOI": "10.1016/j.ajhg.2021.08.005",
+            "URL": "http://dx.doi.org/10.1016/j.ajhg.2021.08.005",
+            "author": [
+                {
+                    "family": "Browning",
+                    "given": "Brian L."
+                },
+                {
+                    "family": "Tian",
+                    "given": "Xiaowen"
+                },
+                {
+                    "family": "Zhou",
+                    "given": "Ying"
+                },
+                {
+                    "family": "Browning",
+                    "given": "Sharon R."
+                }
+            ],
+            "container-title": "The American Journal of Human Genetics",
+            "id": "browning2021",
+            "issue": "10",
+            "issued": {
+                "date-parts": [
+                    [
+                        2021,
+                        10
+                    ]
+                ]
+            },
+            "language": "en",
+            "page": "1880-1890",
+            "title": "Fast two-stage phasing of large-scale sequence data",
+            "type": "article-journal",
+            "volume": "108"
         }
     ],
     "project_biblios": [

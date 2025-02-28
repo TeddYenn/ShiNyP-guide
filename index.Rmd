@@ -74,7 +74,7 @@ at: [teddyhuangyh\@gmail.com](mailto:teddyhuangyh@gmail.com)
 
 ------------------------------------------------------------------------
 
-![](images/0928_頁面_1.jpg){width="650"}
+![](images/Graphical%20Abstract.png){width="650"}
 
 ------------------------------------------------------------------------
 
@@ -374,10 +374,10 @@ Below are common problems and their solutions.
 
 ## Main Functions {.unnumbered}
 
-![](images/Fig.%201-02-01.jpg){width="650"}
+![](images/Fig.%201.jpg){width="650"}
 
 | ▲ **An overview of the [*ShiNyP*]{style="color: #9D6853;"} platform's workflow for genome-wide SNP data analysis.**
-| ◾ **Data Input & Processing**: Beginning with <a href="https://teddyenn.github.io/ShiNyP-guide/sec-data-input.html" target="_blank">VCF data input</a>, it performs <a href="https://teddyenn.github.io/ShiNyP-guide/sec-data-qc.html" target="_blank">quality control (QC)</a> and <a href="https://teddyenn.github.io/ShiNyP-guide/sec-data-conversion.html" target="_blank">data transformation</a> steps.
-| ◾ **Analysis & Output**: The analysis phase is divided into modules, each represented as a page in the platform, with multiple subpages offering specific analytical functions, including <a href="https://teddyenn.github.io/ShiNyP-guide/sec-population-structure.html" target="_blank">population structure</a>, <a href="https://teddyenn.github.io/ShiNyP-guide/sec-genetic-diversity.html" target="_blank">genetic diversity</a>, <a href="https://teddyenn.github.io/ShiNyP-guide/sec-selection-sweep.html" target="_blank">selection sweep</a>, and <a href="https://teddyenn.github.io/ShiNyP-guide/sec-core-collection.html" target="_blank">core collection</a>.
-| ◾ **Customized Output**: The final output offers tailored visualizations and includes an AI-generated report summarizing the results. The pipeline streamlines data input, processing, and advanced analysis to deliver publication-ready figures and reports customized to the user’s needs.
+| ▶️ **Data Input & Processing**: Beginning with <a href="https://teddyenn.github.io/ShiNyP-guide/sec-data-input.html" target="_blank">VCF data input</a>, it performs <a href="https://teddyenn.github.io/ShiNyP-guide/sec-data-qc.html" target="_blank">quality control (QC)</a> and <a href="https://teddyenn.github.io/ShiNyP-guide/sec-data-conversion.html" target="_blank">data transformation</a> steps.
+| ▶️ **Analysis & Output**: The analysis phase is divided into modules, each represented as a page in the platform, with multiple subpages offering specific analytical functions, including <a href="https://teddyenn.github.io/ShiNyP-guide/sec-population-structure.html" target="_blank">population structure</a>, <a href="https://teddyenn.github.io/ShiNyP-guide/sec-genetic-diversity.html" target="_blank">genetic diversity</a>, <a href="https://teddyenn.github.io/ShiNyP-guide/sec-selection-sweep.html" target="_blank">selection sweep</a>, and <a href="https://teddyenn.github.io/ShiNyP-guide/sec-core-collection.html" target="_blank">core collection</a>.
+| ▶️ **Customized Output**: The final output offers tailored visualizations and includes an AI-generated report summarizing the results. The pipeline streamlines data input, processing, and advanced analysis to deliver publication-ready figures and reports customized to the user’s needs.
 | \*Subpage frame colors indicate available functions for customization. For example, blue frames for [PCA]{.underline} and [DAPC]{.underline} correspond to the Scatter Plot ^Plus^ tool for customizing scatter plots, while red and purple frames correspond to Tree Plot ^Plus^ and Manhattan Plot ^Plus^, respectively.

@@ -13,7 +13,7 @@ AI-driven report. Powered by the *openai* package
 <a href="https://github.com/irudnyts/openai" target="_blank">https://github.com/irudnyts/openai</a>.
 :::
 
-![](images/clipboard-4284234040.png){width="650"}
+![](images/Supplementary%20Fig.%206B.png){width="550"}
 
 ------------------------------------------------------------------------
 
@@ -92,7 +92,7 @@ processed.
 
     ▼ Example of API key file (TXT).
 
-    ![](images/clipboard-3104956900.png){width="450"}
+    ![](images/OpenAI-API.png){width="450"}
 
 4.  Click the [**Get
     Report**]{style="color: #fff;background-color: #00a595;"} button to

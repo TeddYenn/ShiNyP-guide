@@ -3,7 +3,7 @@
     "path": "C:/Users/teddy/Desktop/ShiNyP User Guide2/08-CoreCollection.Rmd",
     "project_path": "08-CoreCollection.Rmd",
     "type": "r_markdown",
-    "hash": "2824209320",
+    "hash": "3819136097",
     "contents": "",
     "dirty": false,
     "created": 1738301883813.0,
@@ -16,14 +16,16 @@
         "rmdVisualWrapConfigured": "true",
         "docOutlineVisible": "1",
         "rmdVisualCollapsedChunks": "",
-        "rmdVisualModeLocation": "215:0"
+        "rmdVisualModeLocation": "54:264.4444580078125",
+        "cursorPosition": "14,35",
+        "scrollLine": "0"
     },
     "folds": "",
-    "lastKnownWriteTime": 1738301001,
+    "lastKnownWriteTime": 1740624957,
     "encoding": "UTF-8",
     "collab_server": "",
     "source_window": "",
-    "last_content_update": 1738301001,
+    "last_content_update": 1740624957935,
     "read_only": false,
     "read_only_alternatives": []
 }

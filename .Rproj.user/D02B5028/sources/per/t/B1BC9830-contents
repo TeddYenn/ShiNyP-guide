@@ -13,7 +13,7 @@ Distance**]{.underline}, and [**AMOVA**]{.underline}, allowing you to
 conduct various population diversity and differentiation analyses.
 :::
 
-![](images/Supp.%20Fig.%201-5_頁面_3.jpg){width="650"}
+![](images/Supplementary%20Fig.%203.jpg){width="700"}
 
 ## Diversity Parameter
 
@@ -27,6 +27,9 @@ performed using the function from *snpReady* package [@granato2018].
     downloadable from [Data Input]{.underline} or [Data QC]{.underline}
     pages.
 
+> **Note:** If you upload Group Info., ensure that each group contains
+> at least 2 samples.
+
 ------------------------------------------------------------------------
 
 #### **Steps:** {.unnumbered style="padding: 0px 5px; margin: 0px 10px"}
@@ -35,7 +38,8 @@ performed using the function from *snpReady* package [@granato2018].
     (required).
 
 2.  [Upload]{style="background-color: #fceed2;"} **Group Info.** from
-    DAPC (optional). If uploaded, population-based parameters will be
+    [Population Structure]{.underline}/[DAPC]{.underline} subpage
+    (optional). If uploaded, population-based parameters will be
     calculated.
 
 3.  Click the [**Run Diversity
@@ -65,7 +69,7 @@ performed using the function from *snpReady* package [@granato2018].
 -   **Fst Matrix (CSV)**: A table showing pairwise Fst based on defined
     group assignments.
 
-![](images/clipboard-4215023438.png){width="650"}
+![](screenshots/GeneticDiversity1.png){width="650"}
 
 *Diversity Analysis Complete!*
 
@@ -77,7 +81,7 @@ Genome-wide diversity is visualized using Circos plots generated with
 the *circlize* package [@gu2014] based on results of diversity
 parameters in a sliding window format.
 
-#### Required Dataset: {#sec-required-dataset-chr .unnumbered style="padding: 0px 5px; margin: 0px 10px"}
+#### Required Datasets: {#sec-required-dataset-chr .unnumbered style="padding: 0px 5px; margin: 0px 10px"}
 
 -   Auto-import the results from the [Genetic
     Diversity]{.underline}/[Diversity Parameter]{.underline} subpage.
@@ -85,6 +89,9 @@ parameters in a sliding window format.
 -   **Chromosome Info.** **(CSV)**: Reference genome information of the
     current study. For more details about this file, refer to
     **Section** \@ref(snp-density) **(SNP Density)**.
+
+> **Note:** Please ensure that each chromosome contains at least one SNP
+> marker.
 
 ------------------------------------------------------------------------
 
@@ -122,7 +129,7 @@ parameters in a sliding window format.
 -   **Circos Plot (PDF)**: A circos plot visualizing the user-selected
     parameters, with the top 1% of each parameter colored in red.
 
-![](images/clipboard-3157688358.png){width="650"}
+![](screenshots/GeneticDiversity2.png){width="650"}
 
 *Circos Plot Complete!*
 
@@ -134,19 +141,21 @@ Pairwise genetic distance between populations is computed using
 *hierfstat* package. For more information, visit
 <a href="https://rdrr.io/cran/hierfstat/man/genet.dist.html" target="_blank">https://rdrr.io/cran/hierfstat/man/genet.dist.html</a>.
 
-#### Required Dataset: {.unnumbered style="padding: 0px 5px; margin: 0px 10px"}
+#### Required Datasets: {.unnumbered style="padding: 0px 5px; margin: 0px 10px"}
 
--   [**`genind`**]{style="color: #8b0000;"} with 'Group Info.',
-    downloadable from [Data Conversion]{.underline} page after you have
-    both the [**`data.frame`**]{style="color: #8b0000;"} and Group Info.
+-   [**`data.frame`**]{style="color: #8b0000;"}
+-   **Group Info.** from [Population
+    Structure]{.underline}/[DAPC]{.underline} subpage (required).
 
 ------------------------------------------------------------------------
 
 #### **Steps:** {.unnumbered style="padding: 0px 5px; margin: 0px 10px"}
 
-1.  Select a method.
+1.  [Upload]{style="background-color: #fceed2;"} **Group Info.**
 
-2.  Click the [**Run Genetic
+2.  Select a method.
+
+3.  Click the [**Run Genetic
     Distance**]{style="color: #fff;background-color: #007ACC;"} button
     to generate the pairwise genetic distance.
 
@@ -160,7 +169,7 @@ Pairwise genetic distance between populations is computed using
 -   **Genetic Distance Matrix (CSV)**: A pairwise genetic distance
     matrix based on the user-selected method.
 
-![](images/clipboard-124406020.png){width="650"}
+![](screenshots/GeneticDiversity3.png){width="650"}
 
 *Genetic Distance Complete!*
 
@@ -175,9 +184,9 @@ the function from *hierfstat* and *poppr* packages [@kamvar2014;
 
 #### Required Dataset: {.unnumbered style="padding: 0px 5px; margin: 0px 10px"}
 
--   [**`genind`**]{style="color: #8b0000;"} with 'Group Info.',
-    downloadable from [Data Conversion]{.underline} page after you have
-    both the [**`data.frame`**]{style="color: #8b0000;"} and Group Info.
+-   [**`genlight`**]{style="color: #8b0000;"} with 'Group Info.',
+    downloadable from [Data Transform]{.underline} page after you have
+    Group Info.
 
 ------------------------------------------------------------------------
 
@@ -214,6 +223,6 @@ the function from *hierfstat* and *poppr* packages [@kamvar2014;
 
 -   **AMOVA Table (CSV)**: A table with detailed AMOVA results.
 
-![](images/clipboard-1689228022.png){width="650"}
+![](screenshots/GeneticDiversity4.png){width="650"}
 
 *AMOVA Complete!*

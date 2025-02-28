@@ -55,7 +55,7 @@ This will generate the Post-QC
 -   **Site Info. (RDS)**: Updated SNP site information file. It's
     necessary for downstream analyses, *please download and save it!*
 
-![](screenshots/DataQC1.png){width="650"}
+![](images/圖片19.png){width="650"}
 
 *Sample QC Complete!*
 
@@ -106,7 +106,7 @@ This will generate the Post-QC
 -   **Site Info. (RDS)**: Updated SNP site information file. It's
     necessary for downstream analyses, *please download and save it!*
 
-![](screenshots/DataQC2.png){width="650"}
+![](images/圖片21.png){width="650"}
 
 *SNP QC Complete!*
 
@@ -123,7 +123,7 @@ This will generate the Post-QC
 -   **Chromosome Info.** **(CSV)**: Reference genome information of the
     current study.
 
-    `<a href="`{=html}<https://github.com/TeddYenn/ShiNyP/tree/main/inst/demo_data/Wild_Rice/Chromosome_Info.csv>`" target="_blank">`{=html}***Click
+    <a href="https://drive.google.com/file/d/1gIEba13YizQ14IU8gPYj8q57C3urTUpa/view?usp=drive_link" target="_blank">***Click
     here***</a>*: Download an example of **Chromosome Info.(CSV)**.*
 
 <details>
@@ -179,7 +179,7 @@ This will generate the Post-QC
     *SNPs_over_1000bp*: The number of SNPs per 1,000 base pairs,
     providing a normalized measure of SNP density across the genome.
 
-![](screenshots/DataQC3.png){width="650"}
+![](images/clipboard-3331950775.png){width="650"}
 
 *SNP Density Complete!*
 

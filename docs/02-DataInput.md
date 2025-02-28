@@ -12,9 +12,9 @@ editor_options:
 data types for analysis.
 :::
 
-------------------------------------------------------------------------
+![](images/Supplementary%20Fig.%201.jpg){width="700"}
 
-![](images/Supp.%20Fig.%201-5_頁面_1.jpg){width="650"}
+------------------------------------------------------------------------
 
 ## VCF
 
@@ -36,6 +36,74 @@ where SNP marker ID information is missing,
 [***ShiNyP***]{style="color: #9D6853;"} will auto-generate the SNP ID
 names as [#CHROM:POS]{.underline}, such as [2:12500]{.underline},
 indicating chromosome 2, position 12500.
+
+<details>
+
+<summary>⚙️ **Using Beagle for Imputation**</summary>
+
+[**Beagle**](https://faculty.washington.edu/browning/beagle/beagle_5.4_18Mar22.pdf)
+is a widely used tool for phasing [@browning2021], genotype imputation
+[@browning2018], and haplotype inference in diploid and polyploid
+species. It supports VCF input/output and uses a Hidden Markov Model
+(HMM) for imputation.
+
+**Step 1: Installation**
+
+Download the latest Beagle JAR file:
+<https://faculty.washington.edu/browning/beagle/beagle.html>
+
+**Step 2:** **Input Files**
+
+1.  Genotype file (`gt=your_data.vcf.gz`): Contains the target genotypes
+    to be imputed.
+
+2.  Reference panel (`ref=reference.vcf.gz`): A phased reference panel
+    (optional).
+
+3.  Genetic map (`map=genetic_map.txt`): PLINK format genetic map
+    (optional).
+
+Compress and index input files:
+
+``` bash
+bgzip your_data.vcf
+tabix -p vcf your_data.vcf.gz
+```
+
+**Step 3:** **Running Beagle for Imputation**
+
+``` bash
+java -Xmx8g -jar beagle.5.4.jar \
+  gt=your_data.vcf.gz \
+  ref=reference.vcf.gz \
+  map=genetic_map.txt \
+  out=imputed_output \
+  nthreads=8 \
+  iterations=20 \
+  window=50
+```
+
+`gt=your_data.vcf.gz` → Input genotype file (your VCF dataset).\
+`ref=reference.vcf.gz` → Reference panel (must be phased and non-missing
+alleles).\
+`map=genetic_map.txt` → Genetic map (If no map is specified, Beagle
+assumes a constant recombination rate of 1 cM per Mb).
+
+`nthreads=8` → Genetic map (uses more CPU threads for faster
+computation.).\
+`window=50` → Sets window size (default = 40 cM).\
+`iterations=20` → Increases iterations for better accuracy (default =
+12).
+
+`out=imputed_output` → Output file prefix.
+
+**Output Files**
+
+-   `imputed_output.vcf.gz`: Imputed genotype VCF file.
+
+-   `imputed_output.log`: Log file with summary statistics.
+
+</details>
 
 ------------------------------------------------------------------------
 

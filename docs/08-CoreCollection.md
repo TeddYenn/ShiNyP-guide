@@ -12,7 +12,7 @@ Set**]{.underline}, and [**Core SNP Set**]{.underline}, allowing you to
 capture the key samples and SNPs.
 :::
 
-![](images/Supp.%20Fig.%201-5_頁面_5.jpg){width="650"}
+![](images/Supplementary%20Fig.%205.jpg){width="700"}
 
 ## Core Sample Set
 

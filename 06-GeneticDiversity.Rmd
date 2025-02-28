@@ -13,7 +13,7 @@ Distance**]{.underline}, and [**AMOVA**]{.underline}, allowing you to
 conduct various population diversity and differentiation analyses.
 :::
 
-![](images/Supp.%20Fig.%201-5_頁面_3.jpg){width="650"}
+![](images/Supplementary%20Fig.%203.jpg){width="700"}
 
 ## Diversity Parameter
 

@@ -13,42 +13,7 @@ AI-driven report. Powered by the *openai* package
 <a href="https://github.com/irudnyts/openai" target="_blank">https://github.com/irudnyts/openai</a>.
 :::
 
-![](images/clipboard-4284234040.png){width="650"}
-
-#### Step 1: Preliminary Results {.unnumbered style="padding: 0px 5px; margin: 0px 10px"}
-
-1.  Enter the species name for the current study.
-
-2.  Click the
-    [**Auto-generate**]{style="color: #fff;background-color: #00a595;"}
-    button to obtain **Preliminary Results** from the
-    [***ShiNyP***]{style="color: #9D6853;"} workflow.
-
-> **Note**: You can download the Preliminary Results as a `.txt` file,
-> edit it as needed, and upload it again for 'AI-driven Report' use.
-
-------------------------------------------------------------------------
-
-#### Step 2: AI-Driven Report {.unnumbered style="padding: 0px 5px; margin: 0px 10px"}
-
-1.  Select an AI model. We recommend using **GPT-4o mini**, which offers
-    the most cost-efficient performance. For more information, see below
-    and visit:
-    <a href="https://platform.openai.com/docs/models" target="_blank">https://platform.openai.com/docs/models</a>.
-
-2.  Specify the task for your Preliminary Results to OpenAI models (see
-    below).
-
-3.  Upload the `.txt` file containing your OpenAI API key (e.g.,
-    "sk-......").
-
-    ▼ Example of API key file (TXT).
-
-    ![](images/clipboard-3104956900.png){width="450"}
-
-4.  Click the [**Get
-    Report**]{style="color: #fff;background-color: #00a595;"} button to
-    obtain **AI-driven Report**.
+![](images/Supplementary%20Fig.%206B.png){width="550"}
 
 ------------------------------------------------------------------------
 
@@ -96,9 +61,42 @@ the free trial credits expire or are exhausted, you'll be billed based
 on your usage. Costs depend on the model and the number of tokens
 processed.
 
-![](images/clipboard-420815584.png){width="650"}
+------------------------------------------------------------------------
 
-*The AI Report Complete!*
+#### Step 1: Preliminary Results {.unnumbered style="padding: 0px 5px; margin: 0px 10px"}
+
+1.  Enter the species name for the current study.
+
+2.  Click the
+    [**Auto-generate**]{style="color: #fff;background-color: #00a595;"}
+    button to obtain **Preliminary Results** from the
+    [***ShiNyP***]{style="color: #9D6853;"} workflow.
+
+> **Note**: You can download the Preliminary Results as a `.txt` file,
+> edit it as needed, and upload it again for 'AI-driven Report' use.
+
+------------------------------------------------------------------------
+
+#### Step 2: AI-Driven Report {.unnumbered style="padding: 0px 5px; margin: 0px 10px"}
+
+1.  Select an AI model. We recommend using **GPT-4o mini**, which offers
+    the most cost-efficient performance. For more information, see below
+    and visit:
+    <a href="https://platform.openai.com/docs/models" target="_blank">https://platform.openai.com/docs/models</a>.
+
+2.  Specify the task for your Preliminary Results to OpenAI models (see
+    below).
+
+3.  Upload the `.txt` file containing your OpenAI API key (e.g.,
+    "sk-......").
+
+    ▼ Example of API key file (TXT).
+
+    ![](images/OpenAI-API.png){width="450"}
+
+4.  Click the [**Get
+    Report**]{style="color: #fff;background-color: #00a595;"} button to
+    obtain **AI-driven Report**.
 
 ------------------------------------------------------------------------
 
@@ -111,8 +109,13 @@ processed.
     reinstalling the package using the following command:
 
     ``` r
+    detach("package:ShiNyP", unload = TRUE)
+    detach("package:openai", unload = TRUE)
     remotes::install_github("irudnyts/openai", ref = "r6", force = TRUE)
     library(openai)
+    # Start the ShiNyP Platform Again
+    library(ShiNyP)
+    ShiNyP::run_ShiNyP()
     ```
 
 [⚠️](https://emojipedia.org/warning) Error: HTTP 401 Unauthorized
@@ -142,3 +145,9 @@ processed.
     To resolve this issue, try selecting the 'GPT-3.5 Turbo' model to
     generate the report first. If successful, you can then switch to
     other models for subsequent tasks.
+
+------------------------------------------------------------------------
+
+![](screenshots/AIReport.png){width="650"}
+
+*The AI Report Complete!*

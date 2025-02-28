@@ -99,8 +99,8 @@
 <u><strong>data.frame/genlight</strong></u>, allowing you to upload various
 data types for analysis.</p>
 </div>
+<div class="inline-figure"><img src="images/Supplementary%20Fig.%201.jpg" width="700"></div>
 <hr>
-<div class="inline-figure"><img src="images/Supp.%20Fig.%201-5_%E9%A0%81%E9%9D%A2_1.jpg" width="650"></div>
 <div id="vcf" class="section level2" number="1.1">
 <h2>
 <span class="header-section-number">1.1</span> VCF<a class="anchor" aria-label="anchor" href="#vcf"><i class="fas fa-link"></i></a>
@@ -123,7 +123,49 @@ where SNP marker ID information is missing,
 <span style="color: #9D6853;"><strong><em>ShiNyP</em></strong></span> will auto-generate the SNP ID
 names as <u>#CHROM:POS</u>, such as <u>2:12500</u>,
 indicating chromosome 2, position 12500.</p>
-<hr>
+<details><summary>
+⚙️ <strong>Using Beagle for Imputation</strong>
+</summary><p><a href="https://faculty.washington.edu/browning/beagle/beagle_5.4_18Mar22.pdf"><strong>Beagle</strong></a>
+is a widely used tool for phasing <span class="citation">(<a href="sec-index.html#ref-browning2021">Browning et al. 2021</a>)</span>, genotype imputation
+<span class="citation">(<a href="sec-index.html#ref-browning2018">Browning, Zhou, and Browning 2018</a>)</span>, and haplotype inference in diploid and polyploid
+species. It supports VCF input/output and uses a Hidden Markov Model
+(HMM) for imputation.</p>
+<p><strong>Step 1: Installation</strong></p>
+<p>Download the latest Beagle JAR file:
+<a href="https://faculty.washington.edu/browning/beagle/beagle.html" class="uri">https://faculty.washington.edu/browning/beagle/beagle.html</a></p>
+<p><strong>Step 2:</strong> <strong>Input Files</strong></p>
+<ol style="list-style-type: decimal">
+<li><p>Genotype file (<code>gt=your_data.vcf.gz</code>): Contains the target genotypes
+to be imputed.</p></li>
+<li><p>Reference panel (<code>ref=reference.vcf.gz</code>): A phased reference panel
+(optional).</p></li>
+<li><p>Genetic map (<code>map=genetic_map.txt</code>): PLINK format genetic map
+(optional).</p></li>
+</ol>
+<p>Compress and index input files:</p>
+<div class="sourceCode" id="cb15"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb15-1"><a href="sec-data-input.html#cb15-1" tabindex="-1"></a><span class="ex">bgzip</span> your_data.vcf</span>
+<span id="cb15-2"><a href="sec-data-input.html#cb15-2" tabindex="-1"></a><span class="ex">tabix</span> <span class="at">-p</span> vcf your_data.vcf.gz</span></code></pre></div>
+<p><strong>Step 3:</strong> <strong>Running Beagle for Imputation</strong></p>
+<div class="sourceCode" id="cb16"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb16-1"><a href="sec-data-input.html#cb16-1" tabindex="-1"></a><span class="ex">java</span> <span class="at">-Xmx8g</span> <span class="at">-jar</span> beagle.5.4.jar <span class="dt">\</span></span>
+<span id="cb16-2"><a href="sec-data-input.html#cb16-2" tabindex="-1"></a>  gt=your_data.vcf.gz <span class="dt">\</span></span>
+<span id="cb16-3"><a href="sec-data-input.html#cb16-3" tabindex="-1"></a>  ref=reference.vcf.gz <span class="dt">\</span></span>
+<span id="cb16-4"><a href="sec-data-input.html#cb16-4" tabindex="-1"></a>  map=genetic_map.txt <span class="dt">\</span></span>
+<span id="cb16-5"><a href="sec-data-input.html#cb16-5" tabindex="-1"></a>  out=imputed_output <span class="dt">\</span></span>
+<span id="cb16-6"><a href="sec-data-input.html#cb16-6" tabindex="-1"></a>  nthreads=8 <span class="dt">\</span></span>
+<span id="cb16-7"><a href="sec-data-input.html#cb16-7" tabindex="-1"></a>  iterations=20 <span class="dt">\</span></span>
+<span id="cb16-8"><a href="sec-data-input.html#cb16-8" tabindex="-1"></a>  window=50</span></code></pre></div>
+<p><code>gt=your_data.vcf.gz</code> → Input genotype file (your VCF dataset).<br><code>ref=reference.vcf.gz</code> → Reference panel (must be phased and non-missing
+alleles).<br><code>map=genetic_map.txt</code> → Genetic map (If no map is specified, Beagle
+assumes a constant recombination rate of 1 cM per Mb).</p>
+<p><code>nthreads=8</code> → Genetic map (uses more CPU threads for faster
+computation.).<br><code>window=50</code> → Sets window size (default = 40 cM).<br><code>iterations=20</code> → Increases iterations for better accuracy (default =
+12).</p>
+<p><code>out=imputed_output</code> → Output file prefix.</p>
+<p><strong>Output Files</strong></p>
+<ul>
+<li><p><code>imputed_output.vcf.gz</code>: Imputed genotype VCF file.</p></li>
+<li><p><code>imputed_output.log</code>: Log file with summary statistics.</p></li>
+</ul></details><hr>
 </div>
 <div id="step-1-input-your-vcf-file" class="section level4 unnumbered" style="padding: 0px 5px; margin: 0px 10px">
 <h4>Step 1: Input your VCF File<a class="anchor" aria-label="anchor" href="#step-1-input-your-vcf-file"><i class="fas fa-link"></i></a>

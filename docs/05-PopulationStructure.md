@@ -15,7 +15,7 @@ allowing you to conduct various population structure analyses and
 customize your plot.
 :::
 
-![](images/Supp.%20Fig.%201-5_頁面_2.jpg){width="650"}
+![](images/Supplementary%20Fig.%202.jpg){width="700"}
 
 ## PCA (Principal Component Analysis)
 
@@ -297,9 +297,9 @@ Structure]{.underline}/[DAPC]{.underline}.
 
 <details>
 
-<summary>➡️ Example: Group Info. file (CSV).</summary>
+<summary>➡️ **Example: Group Info. file (CSV)**</summary>
 
-![](images/clipboard-4028088589.png){width="350"}
+![](images/Chromosome-Info.png){width="350"}
 
 </details>
 
@@ -382,4 +382,3 @@ Structure]{.underline}/[NJ]{.underline}.
 ![](screenshots/PopulationStructure7.png){width="650"}
 
 *Tree Plot ^Plus^ Complete!*
-

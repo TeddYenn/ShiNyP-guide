@@ -3,7 +3,7 @@
     "path": "C:/Users/teddy/Desktop/ShiNyP User Guide2/04-DataConversation.Rmd",
     "project_path": "04-DataConversation.Rmd",
     "type": "r_markdown",
-    "hash": "2460996182",
+    "hash": "252851226",
     "contents": "",
     "dirty": false,
     "created": 1738301881326.0,
@@ -16,14 +16,16 @@
         "rmdVisualWrapConfigured": "true",
         "docOutlineVisible": "1",
         "rmdVisualCollapsedChunks": "",
-        "rmdVisualModeLocation": "52:0"
+        "rmdVisualModeLocation": "52:0",
+        "cursorPosition": "0,0",
+        "scrollLine": "0"
     },
     "folds": "",
-    "lastKnownWriteTime": 1738301001,
+    "lastKnownWriteTime": 1740182955,
     "encoding": "UTF-8",
     "collab_server": "",
     "source_window": "",
-    "last_content_update": 1738301001,
+    "last_content_update": 1740182955,
     "read_only": false,
     "read_only_alternatives": []
 }

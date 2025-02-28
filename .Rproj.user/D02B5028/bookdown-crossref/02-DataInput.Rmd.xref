@@ -4,7 +4,7 @@ h4:required-dataset-one-of-the-following Required Dataset (one of the following)
 h4:step-1-input-your-vcf-file Step 1: Input your VCF File
 h4:step-2-transform-to-data.frame Step 2: Transform to data.frame
 h4:outputs Outputs:
-h2:data.framegenindgenlight data.frame/genind/genlight
+h2:data.framegenlight data.frame/genlight
 h4:required-dataset Required Dataset:
 h4:one-step 
 
