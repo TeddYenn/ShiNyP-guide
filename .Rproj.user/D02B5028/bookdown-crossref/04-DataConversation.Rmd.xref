@@ -1,6 +1,7 @@
 h1:sec-data-conversion Data Transform
 h4:required-dataset-one-of-the-following Required Dataset (one of the following):
-h4:step-1-transform-data.frame-to-genind Step 1: Transform  to 
-h4:step-2-transform-genind-to-genlight Step 2: Transform  to 
+h4:step-1-transform-data.frame-to-genlight Step 1: Transform  to 
+h4:output Output:
+h4:step-2-transform-genind-to-others Step 2: Transform  to others
 h4:outputs Outputs:
 

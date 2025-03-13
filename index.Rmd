@@ -41,13 +41,10 @@ editor_options:
 </a>
 
 <p>This work, primarily authored by Yen-Hsiang Huang from the Department
-of Agronomy, National Chung Hsing University, Taiwan, is licensed under
-the <a href="https://www.gnu.org/licenses/gpl-3.0.html.en">GNU General
-Public License</a>.</p>
+of Agronomy, National Chung Hsing University, Taiwan (🇹🇼), is licensed
+under the <a href="https://www.gnu.org/licenses/gpl-3.0.html.en">GNU
+General Public License</a>.</p>
 :::
-
-For any inquiries, please email us at:
-[teddyhuangyh\@gmail.com](mailto:teddyhuangyh@gmail.com){.email}.
 
 Last Updated: February 2025
 
@@ -84,9 +81,9 @@ at: [teddyhuangyh\@gmail.com](mailto:teddyhuangyh@gmail.com)
     [GitHub](https://github.com/TeddYenn/ShiNyP).
 -   Oct 2024: Release v0.1.0 on
     [GitHub](https://github.com/TeddYenn/ShiNyP).
--   Feb 2025: Release v0.1.1 on
+-   Feb 2025: 🆕 Release v0.1.1 on
     [GitHub](https://github.com/TeddYenn/ShiNyP).
--   Feb 2025: Upgrade and update the user guide.
+-   Feb 2025: 🆕 Upgrade and update the user guide.
 
 ------------------------------------------------------------------------
 
@@ -97,9 +94,9 @@ at: [teddyhuangyh\@gmail.com](mailto:teddyhuangyh@gmail.com)
 Before installing [***ShiNyP***]{style="color: #9D6853;"}, ensure your
 system meets the following requirements:
 
-1.  **R Version**: R ≥ 4.4 (compatible with Bioconductor version 3.19)
+1.  **R Version**: R ≥ 4.4 (compatible with Bioconductor version 3.20)
 
-2.  **R Tools**:
+2.  **R Tools** (recommended, not required)
 
     -   **Windows**:
         [Rtools](https://cran.r-project.org/bin/windows/Rtools/)
@@ -209,21 +206,13 @@ system meets the following requirements:
 
 ------------------------------------------------------------------------
 
-> **Note**: [***ShiNyP***]{style="color: #9D6853;"} is currently in the
-> Beta version. Ensure you are comfortable working with beta software
-> and reporting any issues you encounter. For any inquiries, please
-> email us at:
-> [teddyhuangyh\@gmail.com](mailto:teddyhuangyh@gmail.com){.email}.
-
-------------------------------------------------------------------------
-
 ## Installing ShiNyP {.unnumbered}
 
 **Step 1: Pre-install Required Package**
 
 ``` r
 install.packages("BiocManager")
-BiocManager::install(version = "3.19")
+BiocManager::install(version = "3.20")
 BiocManager::install(c("qvalue", "SNPRelate", "ggtree"), force = TRUE)
 ```
 
@@ -249,6 +238,11 @@ Data**]{style="color: #1e90ff;"}.
 
 > **Note:** If you run in [RStudio]{.underline}, you can click the
 > [**Open in Browser**]{style="color: #1e90ff;"} button.
+>
+> [***ShiNyP***]{style="color: #9D6853;"} is currently in the **Beta
+> version**. Ensure you are comfortable working with beta software and
+> reporting any issues you encounter. For any inquiries, please email us
+> at: [teddyhuangyh\@gmail.com](mailto:teddyhuangyh@gmail.com){.email}.
 
 ------------------------------------------------------------------------
 

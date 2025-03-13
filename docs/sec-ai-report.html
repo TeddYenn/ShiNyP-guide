@@ -6,16 +6,16 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <title>8 AI Report | User Guide for ShiNyP</title>
 <meta name="author" content="Yen-Hsiang Huang, Chung-Feng Kao">
-<meta name="description" content="➡️ This page allows you to generate your preliminary results from prior analysis, input your OpenAI API key, select an AI model, and get an AI-driven report. Powered by the openai package...">
-<meta name="generator" content="bookdown 0.40 with bs4_book()">
+<meta name="description" content="➡️ This page allows you to generate your preliminary results from prior analysis, input your API key, select an AI model, and get an AI-driven report. Powered by the ellmer package...">
+<meta name="generator" content="bookdown 0.42 with bs4_book()">
 <meta property="og:title" content="8 AI Report | User Guide for ShiNyP">
 <meta property="og:type" content="book">
 <meta property="og:url" content="https://github.com/TeddYenn/ShiNyP-guide/sec-ai-report.html">
 <meta property="og:image" content="https://github.com/TeddYenn/ShiNyP-guide/images/cover.png">
-<meta property="og:description" content="➡️ This page allows you to generate your preliminary results from prior analysis, input your OpenAI API key, select an AI model, and get an AI-driven report. Powered by the openai package...">
+<meta property="og:description" content="➡️ This page allows you to generate your preliminary results from prior analysis, input your API key, select an AI model, and get an AI-driven report. Powered by the ellmer package...">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="8 AI Report | User Guide for ShiNyP">
-<meta name="twitter:description" content="➡️ This page allows you to generate your preliminary results from prior analysis, input your OpenAI API key, select an AI model, and get an AI-driven report. Powered by the openai package...">
+<meta name="twitter:description" content="➡️ This page allows you to generate your preliminary results from prior analysis, input your API key, select an AI model, and get an AI-driven report. Powered by the ellmer package...">
 <meta name="twitter:image" content="https://github.com/TeddYenn/ShiNyP-guide/images/cover.png">
 <!-- JS --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/6.4.6/fuse.js" integrity="sha512-zv6Ywkjyktsohkbp9bb45V6tEMoWhzFzXis+LrMehmJZZSys19Yxf1dopHx7WzIKxr5tK2dVcYmaCk2uqdjF4A==" crossorigin="anonymous"></script><script src="https://kit.fontawesome.com/6ecbd6c532.js" crossorigin="anonymous"></script><script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <link href="libs/bootstrap-4.6.0/bootstrap.min.css" rel="stylesheet">
@@ -96,54 +96,15 @@
 </h1>
 <div class="highlighted-text" style="background-color: #7c6f41; color: white; padding: 10px 5px; margin: 10px 0px; border-radius: 15px;">
 <p>➡️ This page allows you to generate your preliminary results from prior
-analysis, input your OpenAI API key, select an AI model, and get an
-AI-driven report. Powered by the <em>openai</em> package
-<a href="https://github.com/irudnyts/openai" target="_blank">https://github.com/irudnyts/openai</a>.</p>
+analysis, input your API key, select an AI model, and get an AI-driven
+report. Powered by the <strong><em>ellmer</em></strong> package
+<a href="https://ellmer.tidyverse.org/index.html" target="_blank">https://ellmer.tidyverse.org/index.html</a>.</p>
 </div>
 <div class="inline-figure"><img src="images/Supplementary%20Fig.%206B.png" width="550"></div>
 <hr>
-<div id="tasks-for-ai-models" class="section level2 unnumbered" style="padding: 0px 5px; margin: 0px 10px">
-<h2>✨ Tasks for AI models:<a class="anchor" aria-label="anchor" href="#tasks-for-ai-models"><i class="fas fa-link"></i></a>
+<div id="your-ai-report-is-almost-ready" class="section level2 unnumbered" style="padding: 0px 5px; margin: 0px 10px">
+<h2>📋 Your AI report is almost ready!<a class="anchor" aria-label="anchor" href="#your-ai-report-is-almost-ready"><i class="fas fa-link"></i></a>
 </h2>
-<ul>
-<li><p><strong>Summary Request</strong>: Generate a <u>succinct overview of the key
-findings</u> from a genome-wide SNP analysis, ensuring
-clarity and a structured presentation of results.</p></li>
-<li><p><strong>Data Interpretation</strong>: Facilitate the analysis of genome-wide SNP
-data by <u>elucidating findings and offering insights</u>
-into population structure and genetic variation.</p></li>
-<li><p><strong>Report Structuring</strong>: Develop a comprehensive framework for
-organizing and presenting the results of genome-wide SNP analysis in
-a <u>scientific report</u> format.</p></li>
-<li><p><strong>Idea Expansion</strong>: Assist in brainstorming potential <u>future
-research directions or experiments informed</u> by the
-results of the SNP analysis.</p></li>
-</ul>
-<hr>
-</div>
-<div id="how-to-get-the-openai-api-key" class="section level2 unnumbered" style="padding: 0px 5px; margin: 0px 10px">
-<h2>
-<a href="https://emojipedia.org/key">🔑</a> <strong>How to get the OpenAI API key</strong>:<a class="anchor" aria-label="anchor" href="#how-to-get-the-openai-api-key"><i class="fas fa-link"></i></a>
-</h2>
-<ol style="list-style-type: decimal">
-<li><p><strong>Sign Up or Log In</strong> to the OpenAI website:
-<a href="https://platform.openai.com/docs/overview" target="_blank"></a><a href="https://platform.openai.com/docs/overview" class="uri">https://platform.openai.com/docs/overview</a>.</p></li>
-<li><p><strong>Check Your Usage</strong> to track (free) credits and current
-consumption:
-<a href="https://platform.openai.com/usage" target="_blank"></a><a href="https://platform.openai.com/usage" class="uri">https://platform.openai.com/usage</a>.</p></li>
-<li><p>If your (free) credits are <strong>insufficient</strong>, you can manage billing
-and payments by visiting:
-<a href="https://platform.openai.com/settings/organization/billing/overview" target="_blank"></a><a href="https://platform.openai.com/settings/organization/billing/overview" class="uri">https://platform.openai.com/settings/organization/billing/overview</a>.</p></li>
-<li><p><strong>Generate a New API Key</strong> by going to:
-<a href="https://platform.openai.com/api-keys" target="_blank"></a><a href="https://platform.openai.com/api-keys" class="uri">https://platform.openai.com/api-keys</a>.</p></li>
-<li><p><strong>Copy and Paste</strong> the generated key into a Notepad file and save it
-as a <code>.txt</code> file for <span style="color: #9D6853;"><strong><em>ShiNyP</em></strong></span> use.</p></li>
-</ol>
-<p>Upon signing up, OpenAI provides free credits valid for 3 months. After
-the free trial credits expire or are exhausted, you’ll be billed based
-on your usage. Costs depend on the model and the number of tokens
-processed.</p>
-<hr>
 <div id="step-1-preliminary-results" class="section level4 unnumbered" style="padding: 0px 5px; margin: 0px 10px">
 <h4>Step 1: Preliminary Results<a class="anchor" aria-label="anchor" href="#step-1-preliminary-results"><i class="fas fa-link"></i></a>
 </h4>
@@ -164,14 +125,13 @@ edit it as needed, and upload it again for ‘AI-driven Report’ use.</p>
 <h4>Step 2: AI-Driven Report<a class="anchor" aria-label="anchor" href="#step-2-ai-driven-report"><i class="fas fa-link"></i></a>
 </h4>
 <ol style="list-style-type: decimal">
-<li><p>Select an AI model. We recommend using <strong>GPT-4o mini</strong>, which offers
-the most cost-efficient performance. For more information, see below
-and visit:
-<a href="https://platform.openai.com/docs/models" target="_blank">https://platform.openai.com/docs/models</a>.</p></li>
-<li><p>Specify the task for your Preliminary Results to OpenAI models (see
-below).</p></li>
+<li><p>Select an AI model. We recommend using <strong>o3-mini</strong>, which offers the
+most reasoning performance. For more information, see below and
+visit:
+<a href="https://platform.openai.com/docs/models" target="_blank"></a><a href="https://platform.openai.com/docs/models" class="uri">https://platform.openai.com/docs/models</a>.</p></li>
+<li><p>Specify the task for your Preliminary Results to AI models.</p></li>
 <li>
-<p>Upload the <code>.txt</code> file containing your OpenAI API key (e.g.,
+<p>Upload the <code>.txt</code> file containing your AI API key (e.g.,
 “sk-……”).</p>
 <p>▼ Example of API key file (TXT).</p>
 <div class="inline-figure"><img src="images/OpenAI-API.png" width="450"></div>
@@ -183,26 +143,120 @@ obtain <strong>AI-driven Report</strong>.</p></li>
 <hr>
 </div>
 </div>
+<div id="tasks-for-ai" class="section level2 unnumbered" style="padding: 0px 5px; margin: 0px 10px">
+<h2>✨ Tasks for AI<a class="anchor" aria-label="anchor" href="#tasks-for-ai"><i class="fas fa-link"></i></a>
+</h2>
+<ul>
+<li><p><strong>Summary Request</strong>: Provide a clear, structured overview of key SNP
+analysis results.</p></li>
+<li><p><strong>Data Interpretation</strong>: Clarify findings and highlight key insights
+into population genetics.</p></li>
+<li><p><strong>Report Structuring</strong>: Create a framework for presenting SNP
+analysis results in a scientific report.</p></li>
+<li><p><strong>Idea Expansion</strong>: Propose future research directions informed by
+SNP findings.</p></li>
+</ul>
+<hr>
+</div>
+<div id="ai-models" class="section level2 unnumbered" style="padding: 0px 5px; margin: 0px 10px">
+<h2>🤖 AI models<a class="anchor" aria-label="anchor" href="#ai-models"><i class="fas fa-link"></i></a>
+</h2>
+<p>🆕 For <span style="color: #9D6853;"><strong><em>ShiNyP</em></strong></span> v0.1.0 (03/13/2025), we
+support eight AI models:</p>
+<div class="inline-table"><table class="table table-sm">
+<colgroup>
+<col width="25%">
+<col width="25%">
+<col width="25%">
+<col width="25%">
+</colgroup>
+<thead><tr class="header">
+<th>Models</th>
+<th>Company</th>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tbody>
+<tr class="odd">
+<td>DeepSeek-V3</td>
+<td>DeepSeek</td>
+<td>Cost-optimized</td>
+<td>Fast, affordable model</td>
+</tr>
+<tr class="even">
+<td>o3-mini</td>
+<td>OpenAI</td>
+<td>Reasoning</td>
+<td>Fast, flexible, intelligent reasoning model</td>
+</tr>
+<tr class="odd">
+<td>o1-mini</td>
+<td>OpenAI</td>
+<td>Reasoning</td>
+<td>A faster, more affordable reasoning model than o1</td>
+</tr>
+<tr class="even">
+<td>GPT-4o</td>
+<td>OpenAI</td>
+<td>Flagship</td>
+<td>Fast, intelligent, flexible GPT model</td>
+</tr>
+<tr class="odd">
+<td>GPT-4o mini</td>
+<td>OpenAI</td>
+<td>Cost-optimized</td>
+<td>Fast, affordable small model for focused tasks</td>
+</tr>
+<tr class="even">
+<td>GPT-4 Turbo</td>
+<td>OpenAI</td>
+<td>Older GPT</td>
+<td>An older high-intelligence GPT model</td>
+</tr>
+<tr class="odd">
+<td>GPT-4</td>
+<td>OpenAI</td>
+<td>Older GPT</td>
+<td>An older high-intelligence GPT model</td>
+</tr>
+<tr class="even">
+<td>GPT-3.5 Turbo</td>
+<td>OpenAI</td>
+<td>Older GPT</td>
+<td>Legacy GPT model for cheaper chat and non-chat tasks</td>
+</tr>
+</tbody>
+</table></div>
+<hr>
+</div>
+<div id="how-to-get-the-openai-api-key" class="section level2 unnumbered" style="padding: 0px 5px; margin: 0px 10px">
+<h2>
+<a href="https://emojipedia.org/key">🔑</a> <strong>How to get the OpenAI API key</strong><a class="anchor" aria-label="anchor" href="#how-to-get-the-openai-api-key"><i class="fas fa-link"></i></a>
+</h2>
+<ol style="list-style-type: decimal">
+<li><p><strong>Sign Up or Log In</strong> to the OpenAI website:
+<a href="https://platform.openai.com/docs/overview" target="_blank"></a><a href="https://platform.openai.com/docs/overview" class="uri">https://platform.openai.com/docs/overview</a>.</p></li>
+<li><p><strong>Check Your Usage</strong> to track credits and current consumption:
+<a href="https://platform.openai.com/usage" target="_blank"></a><a href="https://platform.openai.com/usage" class="uri">https://platform.openai.com/usage</a>.</p></li>
+<li><p>If your credits are <strong>insufficient</strong>, you can manage billing and
+payments by visiting:
+<a href="https://platform.openai.com/settings/organization/billing/overview" target="_blank"></a><a href="https://platform.openai.com/settings/organization/billing/overview" class="uri">https://platform.openai.com/settings/organization/billing/overview</a>.</p></li>
+<li><p><strong>Generate a New API Key</strong> by going to:
+<a href="https://platform.openai.com/api-keys" target="_blank"></a><a href="https://platform.openai.com/api-keys" class="uri">https://platform.openai.com/api-keys</a>.</p></li>
+<li><p><strong>Copy and Paste</strong> the generated key into a Notepad file and save it
+as a <code>.txt</code> file for <span style="color: #9D6853;"><strong><em>ShiNyP</em></strong></span> use.</p></li>
+</ol>
+<blockquote>
+<p><strong>Note:</strong> Costs depend on the model and the number of tokens
+processed.</p>
+</blockquote>
+<hr>
+</div>
 <div id="encountered-an-error-lets-fix-it" class="section level2 unnumbered" style="padding: 0px 5px; margin: 0px 10px">
 <h2>
 <a href="https://emojipedia.org/cross-mark">❌</a> Encountered an error? Let’s fix it!<a class="anchor" aria-label="anchor" href="#encountered-an-error-lets-fix-it"><i class="fas fa-link"></i></a>
 </h2>
 <dl>
-<dt>
-<a href="https://emojipedia.org/warning">⚠️</a> Error: Could not find function OpenAI</dt>
-<dd>
-<p>This error may indicate that the <strong>irudnyts/openai</strong> package from
-GitHub was not installed correctly. To resolve this issue, try
-reinstalling the package using the following command:</p>
-<div class="sourceCode" id="cb17"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/detach.html">detach</a></span><span class="op">(</span><span class="st">"package:ShiNyP"</span>, unload <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span></span>
-<span><span class="kw"><a href="https://rdrr.io/r/base/detach.html">detach</a></span><span class="op">(</span><span class="st">"package:openai"</span>, unload <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span></span>
-<span><span class="fu">remotes</span><span class="fu">::</span><span class="fu"><a href="https://remotes.r-lib.org/reference/install_github.html">install_github</a></span><span class="op">(</span><span class="st">"irudnyts/openai"</span>, ref <span class="op">=</span> <span class="st">"r6"</span>, force <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span></span>
-<span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://github.com/irudnyts/openai">openai</a></span><span class="op">)</span></span>
-<span><span class="co"># Start the ShiNyP Platform Again</span></span>
-<span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va">ShiNyP</span><span class="op">)</span></span>
-<span><span class="fu">ShiNyP</span><span class="fu">::</span><span class="fu">run_ShiNyP</span><span class="op">(</span><span class="op">)</span></span></code></pre></div>
-</dd>
 <dt>
 <a href="https://emojipedia.org/warning">⚠️</a> Error: HTTP 401 Unauthorized</dt>
 <dd>
@@ -244,8 +298,10 @@ other models for subsequent tasks.</p>
     <nav id="toc" data-toggle="toc" aria-label="On this page"><h2>On this page</h2>
       <ul class="nav navbar-nav">
 <li><a class="nav-link" href="#sec-ai-report"><span class="header-section-number">8</span> AI Report</a></li>
-<li><a class="nav-link" href="#tasks-for-ai-models">✨ Tasks for AI models:</a></li>
-<li><a class="nav-link" href="#how-to-get-the-openai-api-key">🔑 How to get the OpenAI API key:</a></li>
+<li><a class="nav-link" href="#your-ai-report-is-almost-ready">📋 Your AI report is almost ready!</a></li>
+<li><a class="nav-link" href="#tasks-for-ai">✨ Tasks for AI</a></li>
+<li><a class="nav-link" href="#ai-models">🤖 AI models</a></li>
+<li><a class="nav-link" href="#how-to-get-the-openai-api-key">🔑 How to get the OpenAI API key</a></li>
 <li><a class="nav-link" href="#encountered-an-error-lets-fix-it">❌ Encountered an error? Let’s fix it!</a></li>
 </ul>
 

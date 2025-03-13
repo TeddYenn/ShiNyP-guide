@@ -66,7 +66,7 @@ This will generate the specified file.
     [***ShiNyP***]{style="color: #9D6853;"}.
 
 -   **genind (RDS)**: Input format for
-    [***ShiNyP***]{style="color: #9D6853;"}[DAPC]{.underline} subpage,
+    [***ShiNyP***]{style="color: #9D6853;"} [DAPC]{.underline} subpage,
     optimized for DAPC analysis to reduce computation time. Downloadable
     on [***ShiNyP***]{style="color: #9D6853;"}.
 
