@@ -6,6 +6,18 @@ editor_options:
 
 # Data Transform {#sec-data-conversion}
 
+```{=html}
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-2662B66TL7"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-2662B66TL7');
+</script>
+```
+
 ::: {style="background-color: #7c6f41; color: white; padding: 10px 5px; margin: 10px 0px; border-radius: 15px;"}
 ➡️ This section allow you to convert your SNP data in **data.frame**
 into **genind** and **more**.

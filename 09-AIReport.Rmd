@@ -6,6 +6,18 @@ editor_options:
 
 # AI Report {#sec-ai-report}
 
+```{=html}
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-2662B66TL7"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-2662B66TL7');
+</script>
+```
+
 ::: {.highlighted-text style="background-color: #7c6f41; color: white; padding: 10px 5px; margin: 10px 0px; border-radius: 15px;"}
 ➡️ This page allows you to generate your preliminary results from prior
 analysis, input your API key, select an AI model, and get an AI-driven
@@ -73,11 +85,11 @@ report. Powered by the ***ellmer*** package
 
 ## 🤖 AI models {.unnumbered style="padding: 0px 5px; margin: 0px 10px"}
 
-🆕 For [***ShiNyP***]{style="color: #9D6853;"} v0.1.0 (03/13/2025), we
+🆕 For [***ShiNyP***]{style="color: #9D6853;"} v0.1.1 (03/13/2025), we
 support eight AI models:
 
 | Models | Company | Type | Description |
-|----|----|----|----|
+|------------------|------------------|------------------|------------------|
 | DeepSeek-V3 | DeepSeek | Cost-optimized | Fast, affordable model |
 | o3-mini | OpenAI | Reasoning | Fast, flexible, intelligent reasoning model |
 | o1-mini | OpenAI | Reasoning | A faster, more affordable reasoning model than o1 |

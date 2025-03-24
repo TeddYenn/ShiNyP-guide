@@ -6,6 +6,18 @@ editor_options:
 
 # INDEX {#sec-index}
 
+```{=html}
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-2662B66TL7"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-2662B66TL7');
+</script>
+```
+
 -   AI Report
     [8](https://teddyenn.github.io/ShiNyP-guide/sec-ai-report.html#sec-ai-report)
 
