@@ -19,13 +19,12 @@ editor_options:
 ```
 
 ::: {.highlighted-text style="background-color: #7c6f41; color: white; padding: 10px 5px; margin: 10px 0px; border-radius: 15px;"}
-➡️ This page allows you to generate your preliminary results from prior
-analysis, input your API key, select an AI model, and get an AI-driven
-report. Powered by the ***ellmer*** package
-<a href="https://ellmer.tidyverse.org/index.html" target="_blank">https://ellmer.tidyverse.org/index.html</a>.
+| ➡️ This page is designed to generate the preliminary results from prior analysis,
+|         select an AI model, input the API key, and get an AI-driven report.
+|         Powered by the ***ellmer*** package.
 :::
 
-![](images/Supplementary%20Fig.%206B.png){width="550"}
+![](images/Supplementary%20Fig.%206B.png){width="650"}
 
 ------------------------------------------------------------------------
 
@@ -33,12 +32,11 @@ report. Powered by the ***ellmer*** package
 
 #### Step 1: Preliminary Results {.unnumbered style="padding: 0px 5px; margin: 0px 10px"}
 
-1.  Enter the species name for the current study.
+1.  Enter the species name for your current analysis.
 
 2.  Click the
     [**Auto-generate**]{style="color: #fff;background-color: #00a595;"}
-    button to obtain **Preliminary Results** from the
-    [***ShiNyP***]{style="color: #9D6853;"} workflow.
+    button to obtain **Preliminary Results**.
 
 > **Note**: You can download the Preliminary Results as a `.txt` file,
 > edit it as needed, and upload it again for 'AI-driven Report' use.
@@ -47,23 +45,82 @@ report. Powered by the ***ellmer*** package
 
 #### Step 2: AI-Driven Report {.unnumbered style="padding: 0px 5px; margin: 0px 10px"}
 
-1.  Select an AI model. We recommend using **o3-mini**, which offers the
-    most reasoning performance. For more information, see below and
-    visit:
-    <a href="https://platform.openai.com/docs/models" target="_blank"><https://platform.openai.com/docs/models></a>.
+1.  Select an AI model.
 
-2.  Specify the task for your Preliminary Results to AI models.
+2.  Define the task for the AI model.
 
-3.  Upload the `.txt` file containing your AI API key (e.g.,
-    "sk-......").
+3.  Select the conversation mode (*Single-Turn*: one request;
+    *Multi-Turn*: up to five requests).
 
-    ▼ Example of API key file (TXT).
+4.  Select the report language.
+
+5.  Upload your AI API key: Provide a `.txt` file containing your API
+    key (e.g., sk-...).\
+    💡Google Gemini API key is free — see below to get started!
+
+    ▼ Example of API key file.
 
     ![](images/OpenAI-API.png){width="450"}
 
-4.  Click the [**Get
+6.  Click the [**Get
     Report**]{style="color: #fff;background-color: #00a595;"} button to
     obtain **AI-driven Report**.
+
+7.  Download the `.docx` (Word) file with a fully styled, professional
+    layout.
+
+------------------------------------------------------------------------
+
+## 🤖 AI models {#ai-models .unnumbered style="padding: 0px 5px; margin: 0px 10px"}
+
+🆕 For [***ShiNyP***]{style="color: #9D6853;"} v0.1.2 (04/11/2025), we
+support 10 AI models:
+
++-------------------+-----------+-------------------+--------------+
+| Models            | Developer | Price per 1M      | Overall rank |
+|                   |           | Tokens (Input /   |              |
+|                   |           | Output)           |              |
++===================+===========+===================+==============+
+| DeepSeek-V3       | DeepSeek  | \$0.07/\$1.10     | 🥈           |
++-------------------+-----------+-------------------+--------------+
+| Gemini 2.0 Flash  | Google    | **Free** or\      | 🥇           |
+|                   |           | \$0.10/\$0.40     |              |
++-------------------+-----------+-------------------+--------------+
+| Gemini 2.0        | Google    | **Free** or\      |              |
+| Flash-Lite        |           | \                 |              |
+|                   |           | \                 |              |
+|                   |           | \                 |              |
+|                   |           | \$0.075/\$0.30    |              |
++-------------------+-----------+-------------------+--------------+
+| o3-mini           | OpenAI    | \$1.10/\$4.40     | 🥉^\#^       |
++-------------------+-----------+-------------------+--------------+
+| o1-mini           | OpenAI    | \$1.10/\$4.40     | 🥉^\#^       |
++-------------------+-----------+-------------------+--------------+
+| GPT -4o           | OpenAI    | \                 | 🥈           |
+|                   |           | \                 |              |
+|                   |           | \                 |              |
+|                   |           | \$2.50/\$10.00    |              |
++-------------------+-----------+-------------------+--------------+
+| GPT-4o mini       | OpenAI    | \$0.15/\$0.60     |              |
++-------------------+-----------+-------------------+--------------+
+| GPT-4 Turbo       | OpenAI    | \$ 10.00/\$30.00  |              |
++-------------------+-----------+-------------------+--------------+
+| GPT-4             | OpenAI    | \$ 30.00/\$60.00  |              |
++-------------------+-----------+-------------------+--------------+
+| GPT-3.5 Turbo     | OpenAI    | \$0.50/\$1.50     |              |
++-------------------+-----------+-------------------+--------------+
+
+: ⚡ We recommend using Google [**Gemini 2.0
+Flash**](https://ai.google.dev/gemini-api/docs/models/gemini#gemini-2.0-flash)—the
+flagship model—for generating AI reports. ***It is free to use*** (see
+below).\
+💸 If you have paid API access from DeepSeek or OpenAI, we recommend
+using [DeepSeek-V3](https://api-docs.deepseek.com/news/news250325) or
+[GPT-4o](https://platform.openai.com/docs/models/gpt-4o) for optimal
+performance. ^\#^ Please note that
+[o3-mini](https://platform.openai.com/docs/models/o3-mini) and
+[o1-mini](https://platform.openai.com/docs/models/o1-mini) are more
+suitable for single-turn conversations and are not ideal for multi-turn.
 
 ------------------------------------------------------------------------
 
@@ -83,44 +140,41 @@ report. Powered by the ***ellmer*** package
 
 ------------------------------------------------------------------------
 
-## 🤖 AI models {.unnumbered style="padding: 0px 5px; margin: 0px 10px"}
+## [🔑](https://emojipedia.org/key) **How to get the API key** {.unnumbered style="padding: 0px 5px; margin: 0px 10px"}
 
-🆕 For [***ShiNyP***]{style="color: #9D6853;"} v0.1.1 (03/13/2025), we
-support eight AI models:
+**1️⃣ Sign Up or Log In:**
 
-| Models | Company | Type | Description |
-|------------------|------------------|------------------|------------------|
-| DeepSeek-V3 | DeepSeek | Cost-optimized | Fast, affordable model |
-| o3-mini | OpenAI | Reasoning | Fast, flexible, intelligent reasoning model |
-| o1-mini | OpenAI | Reasoning | A faster, more affordable reasoning model than o1 |
-| GPT-4o | OpenAI | Flagship | Fast, intelligent, flexible GPT model |
-| GPT-4o mini | OpenAI | Cost-optimized | Fast, affordable small model for focused tasks |
-| GPT-4 Turbo | OpenAI | Older GPT | An older high-intelligence GPT model |
-| GPT-4 | OpenAI | Older GPT | An older high-intelligence GPT model |
-| GPT-3.5 Turbo | OpenAI | Older GPT | Legacy GPT model for cheaper chat and non-chat tasks |
+-   Google: <https://aistudio.google.com/>
 
-------------------------------------------------------------------------
+-   OpenAI: <https://auth.openai.com/create-account>
 
-## [🔑](https://emojipedia.org/key) **How to get the OpenAI API key** {.unnumbered style="padding: 0px 5px; margin: 0px 10px"}
+-   DeepSeek: <https://platform.deepseek.com/sign_in>
 
-1.  **Sign Up or Log In** to the OpenAI website:
-    <a href="https://platform.openai.com/docs/overview" target="_blank"><https://platform.openai.com/docs/overview></a>.
+2️⃣ **Generate Your API Key:**
 
-2.  **Check Your Usage** to track credits and current consumption:
-    <a href="https://platform.openai.com/usage" target="_blank"><https://platform.openai.com/usage></a>.
+-   Google: Click "Create API Key" bottom
+    <https://aistudio.google.com/apikey>
 
-3.  If your credits are **insufficient**, you can manage billing and
-    payments by visiting:
-    <a href="https://platform.openai.com/settings/organization/billing/overview" target="_blank"><https://platform.openai.com/settings/organization/billing/overview></a>.
+-   OpenAI: <https://platform.openai.com/api-keys>
 
-4.  **Generate a New API Key** by going to:
-    <a href="https://platform.openai.com/api-keys" target="_blank"><https://platform.openai.com/api-keys></a>.
+-   DeepSeek: <https://platform.deepseek.com/api_keys>
 
-5.  **Copy and Paste** the generated key into a Notepad file and save it
-    as a `.txt` file for [***ShiNyP***]{style="color: #9D6853;"} use.
+3️⃣ **Save Your API Key:**
 
-> **Note:** Costs depend on the model and the number of tokens
-> processed.
+-   Copy the generated key and paste it into a Notepad file.
+
+-   Save the file as `.txt` for [***ShiNyP***]{style="color: #9D6853;"}
+    use.
+
+4️⃣ **Manage Billing & Payments:**
+
+-   OpenAI:
+    <https://platform.openai.com/settings/organization/billing/overview>
+
+-   DeepSeek: <https://platform.deepseek.com/top_up>
+
+> **Note:** Costs vary depending on the model, conversation mode, and
+> the AI task requested.
 
 ------------------------------------------------------------------------
 
@@ -140,9 +194,7 @@ support eight AI models:
         permissions for the endpoint you are calling.
 
     To resolve this error, first check that you are using the correct
-    API key and organization ID in your request header. You can find
-    your API key and organization ID in your account settings
-    [here](https://platform.openai.com/account/api-keys).
+    API key and organization ID in your request header.
 
 [⚠️](https://emojipedia.org/warning) Error: Failed to Perform HTTP Request
 

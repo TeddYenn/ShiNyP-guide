@@ -46,9 +46,9 @@ reducing the dimensionality of genetic data.
     PCA**]{style="color: #fff;background-color: #007ACC;"} button to
     generate PCA plots and the following downloadable files.
 
-> **Note**: You can upload the **Group Info.** (from [Population
-> Structure]{.underline}/[DAPC]{.underline}) or **Core Sample Info.**
-> (from [Core Collection]{.underline}/[Core Sample Set]{.underline}) to
+> **Note**: You can upload the Group Info. (from [Population
+> Structure]{.underline}/[DAPC]{.underline}) or Core Sample Info. (from
+> [Core Collection]{.underline}/[Core Sample Set]{.underline}) to
 > classify individuals and color them in the PCA Scatter Plot.
 
 ------------------------------------------------------------------------

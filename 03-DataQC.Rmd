@@ -19,10 +19,7 @@ editor_options:
 ```
 
 ::: {style="background-color: #7c6f41; color: white; padding: 10px 5px; margin: 10px 0px; border-radius: 15px;"}
-➡️ This section contains three subpages: [**Sample QC**]{.underline},
-[**SNP QC**]{.underline}, and [**SNP Density**]{.underline}, allowing
-you to assess the quality of samples and SNPs in **data.frame**, as well
-as visualize SNP density across the genome.
+| ➡️ This section contains three subpages: [**Sample QC**]{.underline}, [**SNP QC**]{.underline}, and [**SNP | Density**]{.underline}, | allowing you to assess the quality of samples and SNPs in **data.frame**, as well as visualize SNP density across the genome.
 :::
 
 ## Sample QC
@@ -136,11 +133,11 @@ This will generate the Post-QC
     current study.
 
     <a href="https://drive.google.com/file/d/1gIEba13YizQ14IU8gPYj8q57C3urTUpa/view?usp=drive_link" target="_blank">***Click
-    here***</a>*: Download an example of **Chromosome Info.(CSV)**.*
+    here***</a>*: Download an example of Chromosome Info.(CSV).*
 
 <details>
 
-<summary>➡️ Example: **Chromosome Info.** of rice (Data source:
+<summary>➡️ Example: Chromosome Info. of rice (Data source:
 <a href="https://www.ncbi.nlm.nih.gov/datasets/genome/GCF_034140825.1/" target="_blank"><https://www.ncbi.nlm.nih.gov/datasets/genome/GCF_034140825.1/></a>)</summary>
 
 | Chr   | Start | End      |
@@ -164,8 +161,8 @@ This will generate the Post-QC
 
 #### Steps: {.unnumbered style="padding: 0px 5px; margin: 0px 10px"}
 
-1.  [Upload]{style="background-color: #fceed2;"} **Site Info.**
-    **(RDS)** and **Chromosome Info. (CSV)**.
+1.  [Upload]{style="background-color: #fceed2;"} Site Info. (RDS) and
+    Chromosome Info. (CSV).
 
 2.  Choose a window size in kilobases (kb).
 

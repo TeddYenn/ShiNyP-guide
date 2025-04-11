@@ -40,9 +40,9 @@ genlight**]{style="color: #fff;background-color: #007ACC;"} button. This
 will generate the [**`genlight`**]{style="color: #8b0000;"} file.
 
 > **Note:** After obtaining the clustering results from the [Population
-> Structure]{.underline}/[DAPC]{.underline} subpage, you can add **Group
-> Info.** to the [**`genlight`**]{style="color: #8b0000;"} file by
-> inputting the ‘**DAPC_Group_Info.csv**’. This step is necessary for
+> Structure]{.underline}/[DAPC]{.underline} subpage, you can add Group
+> Info. to the [**`genlight`**]{style="color: #8b0000;"} file by
+> inputting the ‘DAPC_Group_Info.csv’. This step is necessary for
 > analyses like ‘AMOVA’ and ‘OutFLANK’.
 
 ------------------------------------------------------------------------

@@ -19,9 +19,8 @@ editor_options:
 ```
 
 ::: {style="background-color: #7c6f41; color: white; padding: 10px 5px; margin: 10px 0px; border-radius: 15px;"}
-➡️ This section contains two subpages: [**VCF**]{.underline} and
-[**data.frame/genlight**]{.underline}, allowing you to upload various
-data types for analysis.
+| ➡️ This section contains two subpages: [**VCF**]{.underline} and [**data.frame/genlight**]{.underline}, allowing you
+|         to upload various data types for analysis.
 :::
 
 ![](images/Supplementary%20Fig.%201.jpg){width="700"}
@@ -156,11 +155,11 @@ computation.).\
     [**`data.frame`**]{style="color: #8b0000;"} file.
 
 > **Note:** For the current version (v0.1.1),
-> [***ShiNyP***]{style="color: #9D6853;"} is optimized for **genome-wide
-> SNP** analysis in **diploid species**, supporting a wide range of
-> diploid taxa, including plants, animals, and microbial eukaryotes. If
-> you have polyploid or haploid dataset, please tick the 'Applying
-> diploidization processing' checkbox.
+> [***ShiNyP***]{style="color: #9D6853;"} is optimized for genome-wide
+> SNP analysis in diploid species, supporting a wide range of diploid
+> taxa, including plants, animals, and microbial eukaryotes. If you have
+> polyploid or haploid dataset, please tick the 'Applying diploidization
+> processing' checkbox.
 
 ------------------------------------------------------------------------
 

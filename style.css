@@ -8,9 +8,9 @@ h1, h2, h3 {
   font-weight: 600;
 }
 code {
-  font-family: 'Roboto Mono', monospace;
+  font-family: 'Sofia Sans Condensed', monospace;
+  font-style: italic;
 }
-
 p.caption {
   color: #777;
   margin-top: 10px;

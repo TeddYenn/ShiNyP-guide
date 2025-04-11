@@ -4,7 +4,7 @@ editor_options:
     wrap: 72
 ---
 
-# INDEX {#sec-index}
+# FAQ {#sec-index}
 
 ```{=html}
 <!-- Google tag (gtag.js) -->
@@ -17,6 +17,8 @@ editor_options:
   gtag('config', 'G-2662B66TL7');
 </script>
 ```
+
+## Index {.unnumbered}
 
 -   AI Report
     [8](https://teddyenn.github.io/ShiNyP-guide/sec-ai-report.html#sec-ai-report)

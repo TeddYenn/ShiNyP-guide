@@ -6,16 +6,16 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <title>Quickstart | User Guide for ShiNyP</title>
 <meta name="author" content="Yen-Hsiang Huang, Chung-Feng Kao">
-<meta name="description" content="Prerequisites Before installing ShiNyP, ensure your system meets the following requirements: R Version: R ≥ 4.4 (compatible with Bioconductor version 3.20) R Tools (recommended, not required)...">
+<meta name="description" content="Prerequisites Before installing ShiNyP, ensure your system meets the following requirements: R Version: R ≥ 4.4 (Compatible with Bioconductor version 3.20) R Tools (Recommended) ⚙️ Getting Started...">
 <meta name="generator" content="bookdown 0.42 with bs4_book()">
 <meta property="og:title" content="Quickstart | User Guide for ShiNyP">
 <meta property="og:type" content="book">
 <meta property="og:url" content="https://github.com/TeddYenn/ShiNyP-guide/sec-quickstart.html">
 <meta property="og:image" content="https://github.com/TeddYenn/ShiNyP-guide/images/cover.png">
-<meta property="og:description" content="Prerequisites Before installing ShiNyP, ensure your system meets the following requirements: R Version: R ≥ 4.4 (compatible with Bioconductor version 3.20) R Tools (recommended, not required)...">
+<meta property="og:description" content="Prerequisites Before installing ShiNyP, ensure your system meets the following requirements: R Version: R ≥ 4.4 (Compatible with Bioconductor version 3.20) R Tools (Recommended) ⚙️ Getting Started...">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Quickstart | User Guide for ShiNyP">
-<meta name="twitter:description" content="Prerequisites Before installing ShiNyP, ensure your system meets the following requirements: R Version: R ≥ 4.4 (compatible with Bioconductor version 3.20) R Tools (recommended, not required)...">
+<meta name="twitter:description" content="Prerequisites Before installing ShiNyP, ensure your system meets the following requirements: R Version: R ≥ 4.4 (Compatible with Bioconductor version 3.20) R Tools (Recommended) ⚙️ Getting Started...">
 <meta name="twitter:image" content="https://github.com/TeddYenn/ShiNyP-guide/images/cover.png">
 <!-- JS --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/6.4.6/fuse.js" integrity="sha512-zv6Ywkjyktsohkbp9bb45V6tEMoWhzFzXis+LrMehmJZZSys19Yxf1dopHx7WzIKxr5tK2dVcYmaCk2uqdjF4A==" crossorigin="anonymous"></script><script src="https://kit.fontawesome.com/6ecbd6c532.js" crossorigin="anonymous"></script><script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <link href="libs/bootstrap-4.6.0/bootstrap.min.css" rel="stylesheet">
@@ -82,7 +82,7 @@
 <li><a class="" href="sec-selection-sweep.html"><span class="header-section-number">6</span> Selection Sweep</a></li>
 <li><a class="" href="sec-core-collection.html"><span class="header-section-number">7</span> Core Collection</a></li>
 <li><a class="" href="sec-ai-report.html"><span class="header-section-number">8</span> AI Report</a></li>
-<li><a class="" href="sec-index.html"><span class="header-section-number">9</span> INDEX</a></li>
+<li><a class="" href="sec-index.html"><span class="header-section-number">9</span> FAQ</a></li>
 </ul>
 
         <div class="book-extra">
@@ -99,19 +99,9 @@
 <p>Before installing <span style="color: #9D6853;"><strong><em>ShiNyP</em></strong></span>, ensure your
 system meets the following requirements:</p>
 <ol style="list-style-type: decimal">
-<li><p><strong>R Version</strong>: R ≥ 4.4 (compatible with Bioconductor version 3.20)</p></li>
-<li>
-<p><strong>R Tools</strong> (recommended, not required)</p>
-<ul>
-<li><p><strong>Windows</strong>:
-<a href="https://cran.r-project.org/bin/windows/Rtools/">Rtools</a></p></li>
-<li><p><strong>macOS</strong>: <a href="https://developer.apple.com/xcode/">Xcode Command Line
-Tools</a></p></li>
-<li><p><strong>Linux</strong>: Development tools (e.g., <code>r-base-dev</code>)</p></li>
-</ul>
-</li>
+<li><p><strong>R Version</strong>: R ≥ 4.4 (Compatible with Bioconductor version 3.20)</p></li>
+<li><p><strong>R Tools</strong> (Recommended)</p></li>
 </ol>
-<hr>
 <details><summary>
 ⚙️ <strong>Getting Started with R/RStudio/Rtools</strong>
 </summary><p><strong>Step 1: Install R</strong></p>
@@ -203,7 +193,7 @@ instructions.</p>
 <div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/utils/install.packages.html">install.packages</a></span><span class="op">(</span><span class="st">"BiocManager"</span><span class="op">)</span></span>
 <span><span class="fu">BiocManager</span><span class="fu">::</span><span class="fu"><a href="https://bioconductor.github.io/BiocManager/reference/install.html">install</a></span><span class="op">(</span>version <span class="op">=</span> <span class="st">"3.20"</span><span class="op">)</span></span>
-<span><span class="fu">BiocManager</span><span class="fu">::</span><span class="fu"><a href="https://bioconductor.github.io/BiocManager/reference/install.html">install</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">"qvalue"</span>, <span class="st">"SNPRelate"</span>, <span class="st">"ggtree"</span><span class="op">)</span>, force <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span></span></code></pre></div>
+<span><span class="fu">BiocManager</span><span class="fu">::</span><span class="fu"><a href="https://bioconductor.github.io/BiocManager/reference/install.html">install</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">"qvalue"</span>, <span class="st">"SNPRelate"</span>, <span class="st">"ggtree"</span>, <span class="st">"snpStats"</span><span class="op">)</span>, force <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span></span></code></pre></div>
 <p><strong>Step 2: Install the <span style="color: #9D6853;"><em>ShiNyP</em></span></strong> <strong>Package
 from GitHub</strong></p>
 <div class="sourceCode" id="cb4"><pre class="downlit sourceCode r">
@@ -212,17 +202,15 @@ from GitHub</strong></p>
 <p><strong>Step 3: Start the <span style="color: #9D6853;"><em>ShiNyP</em></span></strong> <strong>Platform</strong></p>
 <div class="sourceCode" id="cb5"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va">ShiNyP</span><span class="op">)</span></span>
-<span><span class="fu">ShiNyP</span><span class="fu">::</span><span class="fu">run_ShiNyP</span><span class="op">(</span><span class="op">)</span></span></code></pre></div>
+<span><span class="fu">ShiNyP</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/ShiNyP/man/run_ShiNyP.html">run_ShiNyP</a></span><span class="op">(</span><span class="op">)</span></span></code></pre></div>
 <p><strong>Step 4: Run <span style="color: #9D6853;"><em>ShiNyP</em></span></strong> <strong>Analysis</strong></p>
 <p>Input your SNP data in VCF format, or feel free to use our <span style="color: #1e90ff;"><strong>Demo
 Data</strong></span>.</p>
 <blockquote>
 <p><strong>Note:</strong> If you run in <u>RStudio</u>, you can click the
 <span style="color: #1e90ff;"><strong>Open in Browser</strong></span> button.</p>
-<p><span style="color: #9D6853;"><strong><em>ShiNyP</em></strong></span> is currently in the <strong>Beta
-version</strong>. Ensure you are comfortable working with beta software and
-reporting any issues you encounter. For any inquiries, please email us
-at: <a href="mailto:teddyhuangyh@gmail.com" class="email">teddyhuangyh@gmail.com</a>.</p>
+<p>For any inquiries, please email us at:
+<a href="mailto:teddyhuangyh@gmail.com" class="email">teddyhuangyh@gmail.com</a>.</p>
 </blockquote>
 <hr>
 </div>
@@ -320,8 +308,7 @@ its dependencies, possibly due to outdated packages or conflicts.</p>
 <p>If a specific package is causing issues, reinstall it.</p>
 <div class="sourceCode" id="cb13"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/utils/install.packages.html">install.packages</a></span><span class="op">(</span><span class="st">"dartRverse"</span><span class="op">)</span></span>
-<span><span class="fu">BiocManager</span><span class="fu">::</span><span class="fu"><a href="https://bioconductor.github.io/BiocManager/reference/install.html">install</a></span><span class="op">(</span><span class="st">"SNPRelate"</span><span class="op">)</span></span>
-<span><span class="fu">remotes</span><span class="fu">::</span><span class="fu"><a href="https://remotes.r-lib.org/reference/install_github.html">install_github</a></span><span class="op">(</span><span class="st">"irudnyts/openai"</span>, ref <span class="op">=</span> <span class="st">"r6"</span>, force <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span></span></code></pre></div>
+<span><span class="fu">BiocManager</span><span class="fu">::</span><span class="fu"><a href="https://bioconductor.github.io/BiocManager/reference/install.html">install</a></span><span class="op">(</span><span class="st">"SNPRelate"</span><span class="op">)</span></span></code></pre></div>
 </li>
 <li>
 <p>Check for Namespace Conflicts:</p>
@@ -338,9 +325,9 @@ its dependencies, possibly due to outdated packages or conflicts.</p>
 <h2>Main Functions<a class="anchor" aria-label="anchor" href="#main-functions"><i class="fas fa-link"></i></a>
 </h2>
 <div class="inline-figure"><img src="images/Fig.%201.jpg" width="650"></div>
-<div class="line-block">▲ <strong>An overview of the <span style="color: #9D6853;"><em>ShiNyP</em></span> platform’s workflow for genome-wide SNP data analysis.</strong><br>
-▶️ <strong>Data Input &amp; Processing</strong>: Beginning with <a href="https://teddyenn.github.io/ShiNyP-guide/sec-data-input.html" target="_blank">VCF data input</a>, it performs <a href="https://teddyenn.github.io/ShiNyP-guide/sec-data-qc.html" target="_blank">quality control (QC)</a> and <a href="https://teddyenn.github.io/ShiNyP-guide/sec-data-conversion.html" target="_blank">data transformation</a> steps.<br>
-▶️ <strong>Analysis &amp; Output</strong>: The analysis phase is divided into modules, each represented as a page in the platform, with multiple subpages offering specific analytical functions, including <a href="https://teddyenn.github.io/ShiNyP-guide/sec-population-structure.html" target="_blank">population structure</a>, <a href="https://teddyenn.github.io/ShiNyP-guide/sec-genetic-diversity.html" target="_blank">genetic diversity</a>, <a href="https://teddyenn.github.io/ShiNyP-guide/sec-selection-sweep.html" target="_blank">selection sweep</a>, and <a href="https://teddyenn.github.io/ShiNyP-guide/sec-core-collection.html" target="_blank">core collection</a>.<br>
+<div class="line-block">▲ <strong>An overview of the <span style="color: #9D6853;"><em>ShiNyP</em></span> platform’s workflow for genome-wide SNP data analysis.</strong><br><br>
+▶️ <strong>Data Input &amp; Processing</strong>: Beginning with <a href="https://teddyenn.github.io/ShiNyP-guide/sec-data-input.html" target="_blank">VCF data input</a>, it performs <a href="https://teddyenn.github.io/ShiNyP-guide/sec-data-qc.html" target="_blank">quality control (QC)</a> and <a href="https://teddyenn.github.io/ShiNyP-guide/sec-data-conversion.html" target="_blank">data transformation</a> steps.<br><br>
+▶️ <strong>Analysis &amp; Output</strong>: The analysis phase is divided into modules, each represented as a page in the platform, with multiple subpages offering specific analytical functions, including <a href="https://teddyenn.github.io/ShiNyP-guide/sec-population-structure.html" target="_blank">population structure</a>, <a href="https://teddyenn.github.io/ShiNyP-guide/sec-genetic-diversity.html" target="_blank">genetic diversity</a>, <a href="https://teddyenn.github.io/ShiNyP-guide/sec-selection-sweep.html" target="_blank">selection sweep</a>, and <a href="https://teddyenn.github.io/ShiNyP-guide/sec-core-collection.html" target="_blank">core collection</a>.<br><br>
 ▶️ <strong>Customized Output</strong>: The final output offers tailored visualizations and includes an AI-generated report summarizing the results. The pipeline streamlines data input, processing, and advanced analysis to deliver publication-ready figures and reports customized to the user’s needs.<br>
 *Subpage frame colors indicate available functions for customization. For example, blue frames for <u>PCA</u> and <u>DAPC</u> correspond to the Scatter Plot <sup>Plus</sup> tool for customizing scatter plots, while red and purple frames correspond to Tree Plot <sup>Plus</sup> and Manhattan Plot <sup>Plus</sup>, respectively.</div>
 
@@ -374,7 +361,7 @@ its dependencies, possibly due to outdated packages or conflicts.</p>
 <footer class="bg-primary text-light mt-5"><div class="container"><div class="row">
 
   <div class="col-12 col-md-6 mt-3">
-    <p>"<strong>User Guide for ShiNyP</strong>: SNP Analysis and Visualization Platform" was written by Yen-Hsiang Huang, Chung-Feng Kao. It was last built on Feb 2025.</p>
+    <p>"<strong>User Guide for ShiNyP</strong>: SNP Analysis and Visualization Platform" was written by Yen-Hsiang Huang, Chung-Feng Kao. It was last built on Apr 2025.</p>
   </div>
 
   <div class="col-12 col-md-6 mt-3">

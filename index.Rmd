@@ -2,7 +2,7 @@
 title: "User Guide for ShiNyP"
 subtitle: "SNP Analysis and Visualization Platform"
 author: "Yen-Hsiang Huang, Chung-Feng Kao"
-date: "Feb 2025"
+date: "Apr 2025"
 knit: "bookdown::render_book"
 site: bookdown::bookdown_site
 output: bookdown::bs4_book
@@ -46,7 +46,7 @@ under the <a href="https://www.gnu.org/licenses/gpl-3.0.html.en">GNU
 General Public License</a>.</p>
 :::
 
-Last Updated: February 2025
+Last Updated: April 2025
 
 ::: {.highlighted-text style="padding-top: 15px; padding-bottom: 1px; padding-left: 15px;background-color: #ceeafa; color: #0a3f5d"}
 **This is the user guide site for [*ShiNyP*]{style="color: #9D6853;"},
@@ -59,7 +59,7 @@ live at <https://teddyenn.github.io/ShiNyP-guide/>.**
 real-time processing, analysis, and visualization of SNP datasets.
 
 ::: {style="background-color: #7c6f41; color: white; padding: 10px 5px; margin: 10px 0px; border-radius: 15px;"}
-| 📄 **Input:** Genome-wide biallelic SNP in Variant Call Format (VCF) file format.
+| 📄 **Input:** Genome-wide biallelic SNP in Variant Call Format (VCF) file.
 | 📊 **Analysis:** Data QC, population genetics analysis, core collection, and more.
 | 📋 **Output:** Publication-ready figures, tables, data objects, and AI-driven report.
 :::
@@ -79,11 +79,28 @@ at: [teddyhuangyh\@gmail.com](mailto:teddyhuangyh@gmail.com)
 
 -   Aug 2024: Initial release alpha version on
     [GitHub](https://github.com/TeddYenn/ShiNyP).
+
 -   Oct 2024: Release v0.1.0 on
     [GitHub](https://github.com/TeddYenn/ShiNyP).
--   Feb 2025: 🆕 Release v0.1.1 on
+
+-   Feb 2025: Release v0.1.1 on
     [GitHub](https://github.com/TeddYenn/ShiNyP).
--   Feb 2025: 🆕 Upgrade and update the user guide.
+
+    \- Simplified workflow for Data Input & Transform.
+
+    \- Refined visual elements.
+
+    \- Optimized memory usage.
+
+-   Apr 2025: 🆕 Release v0.1.2 on
+    [GitHub](https://github.com/TeddYenn/ShiNyP).
+
+    \- Enhanced AI report functionality with new configuration options.
+
+    \- Improved the layout of preliminary results for better
+    readability.
+
+    \- Added more methods for constructing core SNP set.
 
 ------------------------------------------------------------------------
 
@@ -94,19 +111,9 @@ at: [teddyhuangyh\@gmail.com](mailto:teddyhuangyh@gmail.com)
 Before installing [***ShiNyP***]{style="color: #9D6853;"}, ensure your
 system meets the following requirements:
 
-1.  **R Version**: R ≥ 4.4 (compatible with Bioconductor version 3.20)
+1.  **R Version**: R ≥ 4.4 (Compatible with Bioconductor version 3.20)
 
-2.  **R Tools** (recommended, not required)
-
-    -   **Windows**:
-        [Rtools](https://cran.r-project.org/bin/windows/Rtools/)
-
-    -   **macOS**: [Xcode Command Line
-        Tools](https://developer.apple.com/xcode/)
-
-    -   **Linux**: Development tools (e.g., `r-base-dev`)
-
-------------------------------------------------------------------------
+2.  **R Tools** (Recommended)
 
 <details>
 
@@ -213,7 +220,7 @@ system meets the following requirements:
 ``` r
 install.packages("BiocManager")
 BiocManager::install(version = "3.20")
-BiocManager::install(c("qvalue", "SNPRelate", "ggtree"), force = TRUE)
+BiocManager::install(c("qvalue", "SNPRelate", "ggtree", "snpStats"), force = TRUE)
 ```
 
 **Step 2: Install the [*ShiNyP*]{style="color: #9D6853;"}** **Package
@@ -239,10 +246,8 @@ Data**]{style="color: #1e90ff;"}.
 > **Note:** If you run in [RStudio]{.underline}, you can click the
 > [**Open in Browser**]{style="color: #1e90ff;"} button.
 >
-> [***ShiNyP***]{style="color: #9D6853;"} is currently in the **Beta
-> version**. Ensure you are comfortable working with beta software and
-> reporting any issues you encounter. For any inquiries, please email us
-> at: [teddyhuangyh\@gmail.com](mailto:teddyhuangyh@gmail.com){.email}.
+> For any inquiries, please email us at:
+> [teddyhuangyh\@gmail.com](mailto:teddyhuangyh@gmail.com){.email}.
 
 ------------------------------------------------------------------------
 
@@ -353,7 +358,6 @@ Below are common problems and their solutions.
         ``` r
         install.packages("dartRverse")
         BiocManager::install("SNPRelate")
-        remotes::install_github("irudnyts/openai", ref = "r6", force = TRUE)
         ```
 
     3.  Check for Namespace Conflicts:
@@ -371,7 +375,10 @@ Below are common problems and their solutions.
 ![](images/Fig.%201.jpg){width="650"}
 
 | ▲ **An overview of the [*ShiNyP*]{style="color: #9D6853;"} platform's workflow for genome-wide SNP data analysis.**
+| 
 | ▶️ **Data Input & Processing**: Beginning with <a href="https://teddyenn.github.io/ShiNyP-guide/sec-data-input.html" target="_blank">VCF data input</a>, it performs <a href="https://teddyenn.github.io/ShiNyP-guide/sec-data-qc.html" target="_blank">quality control (QC)</a> and <a href="https://teddyenn.github.io/ShiNyP-guide/sec-data-conversion.html" target="_blank">data transformation</a> steps.
+| 
 | ▶️ **Analysis & Output**: The analysis phase is divided into modules, each represented as a page in the platform, with multiple subpages offering specific analytical functions, including <a href="https://teddyenn.github.io/ShiNyP-guide/sec-population-structure.html" target="_blank">population structure</a>, <a href="https://teddyenn.github.io/ShiNyP-guide/sec-genetic-diversity.html" target="_blank">genetic diversity</a>, <a href="https://teddyenn.github.io/ShiNyP-guide/sec-selection-sweep.html" target="_blank">selection sweep</a>, and <a href="https://teddyenn.github.io/ShiNyP-guide/sec-core-collection.html" target="_blank">core collection</a>.
+| 
 | ▶️ **Customized Output**: The final output offers tailored visualizations and includes an AI-generated report summarizing the results. The pipeline streamlines data input, processing, and advanced analysis to deliver publication-ready figures and reports customized to the user’s needs.
 | \*Subpage frame colors indicate available functions for customization. For example, blue frames for [PCA]{.underline} and [DAPC]{.underline} correspond to the Scatter Plot ^Plus^ tool for customizing scatter plots, while red and purple frames correspond to Tree Plot ^Plus^ and Manhattan Plot ^Plus^, respectively.
