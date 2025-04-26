@@ -21,7 +21,7 @@ editor_options:
     wrap: 72
 ---
 
-# Welcome to *ShiNyP* {#sec-welcome-to-s .unnumbered}
+# Welcome to *ShiNyP* {#sec-welcome .unnumbered}
 
 ```{=html}
 <!-- Google tag (gtag.js) -->
@@ -42,343 +42,185 @@ editor_options:
 
 <p>This work, primarily authored by Yen-Hsiang Huang from the Department
 of Agronomy, National Chung Hsing University, Taiwan (🇹🇼), is licensed
-under the <a href="https://www.gnu.org/licenses/gpl-3.0.html.en">GNU
-General Public License</a>.</p>
+under the [GNU General Public
+License](https://www.gnu.org/licenses/gpl-3.0.html.en).</p>
 :::
 
 Last Updated: April 2025
 
-::: {.highlighted-text style="padding-top: 15px; padding-bottom: 1px; padding-left: 15px;background-color: #ceeafa; color: #0a3f5d"}
-**This is the user guide site for [*ShiNyP*]{style="color: #9D6853;"},
-live at <https://teddyenn.github.io/ShiNyP-guide/>.**
-:::
+------------------------------------------------------------------------
 
-## *ShiNyP* {.unnumbered}
+## Quickstart {.unnumbered}
 
-[***ShiNyP***]{style="color: #9D6853;"} is a platform designed for
-real-time processing, analysis, and visualization of SNP datasets.
+🚀 [**Run *ShiNyP* via
+R**](https://teddyenn.github.io/ShiNyP-guide/sec-run-shinyp-via-r.html)
+
+🚀 [**Run *ShiNyP* via
+Docker**](https://teddyenn.github.io/ShiNyP-guide/sec-run-shinyp-via-docker.html)
+
+------------------------------------------------------------------------
+
+## Overview {.unnumbered}
+
+*ShiNyP* is a platform designed for real-time processing, analysis, and
+visualization of SNP datasets.
 
 ::: {style="background-color: #7c6f41; color: white; padding: 10px 5px; margin: 10px 0px; border-radius: 15px;"}
 | 📄 **Input:** Genome-wide biallelic SNP in Variant Call Format (VCF) file.
 | 📊 **Analysis:** Data QC, population genetics analysis, core collection, and more.
-| 📋 **Output:** Publication-ready figures, tables, data objects, and AI-driven report.
+| 📋 **Output:** Publication-ready figures, tables, R objects, and free AI-driven report.
 :::
 
-If you encounter any issues or have suggestions for new features, please
-submit a report through our [Feedback
-Form](https://forms.gle/GPCggSo5czyNLfoB7) or email us
-at: [teddyhuangyh\@gmail.com](mailto:teddyhuangyh@gmail.com)
+<br>
 
-------------------------------------------------------------------------
-
-![](images/Graphical%20Abstract.png){width="650"}
+![](images/0.gif){width="6.8in"}
 
 ------------------------------------------------------------------------
 
 ## Updates {.unnumbered}
 
--   Aug 2024: Initial release alpha version on
-    [GitHub](https://github.com/TeddYenn/ShiNyP).
+Aug 2024: alpha version
 
--   Oct 2024: Release v0.1.0 on
-    [GitHub](https://github.com/TeddYenn/ShiNyP).
+:   
 
--   Feb 2025: Release v0.1.1 on
-    [GitHub](https://github.com/TeddYenn/ShiNyP).
+Oct 2024: v0.1.0
 
-    \- Simplified workflow for Data Input & Transform.
+:   
 
-    \- Refined visual elements.
+Feb 2025: v0.1.1
 
-    \- Optimized memory usage.
+:   | - Simplified workflow for Data Input & Transform.
+    | - Refined visual elements.
+    | - Optimized memory usage.
 
--   Apr 2025: 🆕 Release v0.1.2 on
-    [GitHub](https://github.com/TeddYenn/ShiNyP).
+🆕 Apr 2025: v0.1.2 on [GitHub](https://github.com/TeddYenn/ShiNyP).
 
-    \- Enhanced AI report functionality with new configuration options.
-
-    \- Improved the layout of preliminary results for better
-    readability.
-
-    \- Added more methods for constructing core SNP set.
+:   | - Enhanced AI report functionality with new options and models.
+    | - Improved the layout of preliminary results for better readability.
+    | - Added more methods for constructing core SNP set.
+    | - Added the Docker-based installation.
 
 ------------------------------------------------------------------------
 
-# Quickstart {#sec-quickstart .unnumbered}
+## Support {.unnumbered}
 
-## Prerequisites {.unnumbered}
+If you encounter any issues or have suggestions for new features, please
+submit a request on the [GitHub Issues
+page](https://github.com/TeddYenn/ShiNyP/issues) or email us at:
+[teddyhuangyh\@gmail.com](#0)
 
-Before installing [***ShiNyP***]{style="color: #9D6853;"}, ensure your
-system meets the following requirements:
+<br>
 
-1.  **R Version**: R ≥ 4.4 (Compatible with Bioconductor version 3.20)
-
-2.  **R Tools** (Recommended)
-
-<details>
-
-<summary>⚙️ **Getting Started with R/RStudio/Rtools**</summary>
-
-**Step 1: Install R**
-
-1.  Visit the official R Project website: <https://www.r-project.org/>.
-
-    -   **Windows**: Click **Download R for Windows**, select "base,"
-        and download the latest version.
-
-    -   **MacOS**: Click **Download R for macOS** and choose the correct
-        version for your system.
-
-2.  Install R by double-clicking the downloaded installer and following
-    the on-screen instructions. Use the default options unless specific
-    needs arise.
-
-**Step 2: Install RStudio**
-
-1.  Go to the RStudio official download page:
-    <https://posit.co/download/rstudio-desktop/>.
-
-2.  Click **Download** under "RStudio Desktop - Open Source License."
-
-3.  Select the version suitable for your operating system:
-
-    -   **Windows**: `.exe` file.
-
-    -   **MacOS**: `.dmg` file.
-
-4.  Locate the downloaded file and double-click it to start the
-    installation.
-
-    -   **Windows**: Run the `.exe` installer and follow the wizard
-        steps.
-
-    -   **MacOS**: Drag the RStudio icon into the Applications folder.
-
-5.  After installation, launch RStudio.
-
-**Step 3: Launch RStudio**
-
-1.  Open RStudio by clicking the shortcut created during installation or
-    searching for "RStudio" in your system's application launcher.
-
-2.  RStudio will automatically detect your R installation and link to
-    it.
-
-3.  RStudio has four main panels:
-
-    **Console (Bottom-left)**: Where you run R commands.
-
-    **Source (Top-left)**: For writing and editing scripts.
-
-    **Environment/History (Top-right)**: Displays objects, variables,
-    and command history.
-
-    **Plots/Files/Help (Bottom-right)**: Displays plots, files, and R
-    documentation.
-
-**Step 5: Install Rtools**
-
--   **Windows**: Download and install the newest 64-bit
-    [**Rtools**](https://cran.r-project.org/bin/windows/Rtools/)installer
-    from CRAN. Rtools is a toolchain bundle required for building R
-    packages from source, particularly those that require C/C++ or
-    Fortran code compilation.
-
-    Run the file to install **Rtools**, following the onscreen
-    instructions. If unsure, keep the default settings. Then, return to
-    this page and continue.
-
-    First, run `Sys.which("make")`. If it detects **make.exe**, you're
-    all set. If not, configure the system path.
-
--   **MacOS**: Open Terminal: Press `Cmd + Space`, type "Terminal", and
-    press `Enter`. Run the following command and press `Enter`.
-
-    ``` r
-    xcode-select --install
-    ```
-
-    Enter your password if prompted and follow the onscreen
-    instructions.
-
-    Verify Installation:
-
-    ``` r
-    xcode-select -p
-    ```
-
-    It should return `/Library/Developer/CommandLineTools`.
-
-</details>
+> **This is the User Guide site for *ShiNyP*, live at [GitHub
+> Page](https://teddyenn.github.io/ShiNyP-guide/).**
 
 ------------------------------------------------------------------------
 
-## Installing ShiNyP {.unnumbered}
+# **Get Started** 🚀 {.unnumbered}
 
-**Step 1: Pre-install Required Package**
+There are two easy ways to install and run *ShiNyP*:
+
+1.  **Using R**:\
+    This method is suitable if you already have R installed or prefer
+    working within the R environment. You’ll need to install some R
+    packages and then launch *ShiNyP* directly from R environment. ▸
+    R/RStudio/Rtools Tutorial for Beginners!
+
+2.  **Using Docker**:\
+    This is the simpler option if you’d rather skip installing R or any
+    packages. With Docker, you can run *ShiNyP* in a ready-to-use setup
+    with just one command. ▸ Docker Tutorial for Beginners!
+
+<br>
+
+------------------------------------------------------------------------
+
+## 🔘 Run *ShiNyP* via R {#sec-run-shinyp-via-r .unnumbered}
+
+#### **✅ Prerequisites** {.unnumbered}
+
+Before installing *ShiNyP*, ensure your system meets the following
+requirements:
+
+-   [**R**](https://www.r-project.org/): Version ≥ 4.4.
+
+    Check your current version in R: **`getRversion()`**
+
+-   [**Bioconductor**](https://www.bioconductor.org/install/): Version ≥
+    3.20.
+
+    Match your Bioconductor version with your R version (e.g., use
+    Bioconductor 3.21 if R = 4.5).
+
+#### **1️⃣ Install Required Package** {.unnumbered}
 
 ``` r
 install.packages("BiocManager")
-BiocManager::install(version = "3.20")
+BiocManager::install(version = "3.21") # Use the version that matches your R
 BiocManager::install(c("qvalue", "SNPRelate", "ggtree", "snpStats"), force = TRUE)
 ```
 
-**Step 2: Install the [*ShiNyP*]{style="color: #9D6853;"}** **Package
-from GitHub**
+#### **2️⃣ Install the *ShiNyP* Package** {.unnumbered}
 
 ``` r
-install.packages("remotes") 
+install.packages("remotes")
 remotes::install_github("TeddYenn/ShiNyP", force = TRUE)
 ```
 
-**Step 3: Start the [*ShiNyP*]{style="color: #9D6853;"}** **Platform**
+#### **3️⃣ Start the *ShiNyP* Platform** {.unnumbered}
 
 ``` r
 library(ShiNyP)
 ShiNyP::run_ShiNyP()
 ```
 
-**Step 4: Run [*ShiNyP*]{style="color: #9D6853;"}** **Analysis**
+#### **4️⃣ Run Analysis on *ShiNyP*** {.unnumbered}
 
-Input your SNP data in VCF format, or feel free to use our [**Demo
+Input your SNP dataset in VCF, or try the built-in [**Demo
 Data**]{style="color: #1e90ff;"}.
 
-> **Note:** If you run in [RStudio]{.underline}, you can click the
-> [**Open in Browser**]{style="color: #1e90ff;"} button.
->
-> For any inquiries, please email us at:
-> [teddyhuangyh\@gmail.com](mailto:teddyhuangyh@gmail.com){.email}.
+![](images/1.2-R.gif){width="6.8in"}
 
 ------------------------------------------------------------------------
 
-## Troubleshooting {.unnumbered}
+<br>
 
-During installation or while running
-[***ShiNyP***]{style="color: #9D6853;"}, you might encounter issues.
-Below are common problems and their solutions.
+## 🔘 Run *ShiNyP* via Docker {#sec-run-shinyp-via-docker .unnumbered}
 
-⚒️ **R and Bioconductor Version Mismatch**
+If you have 🐳 Docker installed, you can launch *ShiNyP* without
+installing R.
 
-:   The installation specifies Bioconductor version 3.19, which requires
-    R version ≥ 4.4. If your R version is below 4.4, update it from
-    CRAN.
+#### **✅ Prerequisite** {.unnumbered}
 
-    ``` r
-    # Check your R version
-    R.version.string
-    ```
+-   [Docker](https://www.docker.com/).
 
-------------------------------------------------------------------------
+    Verify your Docker installation in Terminal: **`docker --version`**
 
-⚒️ **Installation of Dependencies**
+#### **1️⃣ Pull the Docker Image** {.unnumbered}
 
-:   Installing packages like *shiny* and *dartR* may require
-    **additional developer tools**. You might encounter error messages
-    such as:
+``` bash
+docker run -d -p 3838:3838 teddyenn/shinyp-platform
+```
 
-    ``` r
-    ERROR: dependencies 'shiny', 'dartR' are not available for package 'ShiNyP'
-    ```
+#### **2️⃣ Start the *ShiNyP* Platform** {.unnumbered}
 
-:   -   **For Windows**:
+Open your browser and visit 👉
+[http://localhost:3838](http://localhost:3838/)
 
-        Download Rtools from [**CRAN
-        Rtools**](https://cran.r-project.org/bin/windows/Rtools/).
-
-        Run the installer and follow the on-screen instructions.
-
-        Ensure Rtools is added to your system PATH during installation.
-
-        Verify Installation:
-
-        ``` r
-        pkgbuild::find_rtools()
-        ```
-
-        It should return `TRUE` if Rtools is correctly installed.
-
-    -   **For macOS**:
-
-        Open Terminal: Press `Cmd + Space`, type "Terminal", and press
-        `Enter`.
-
-        Run the Installation Command:
-
-        ``` r
-        xcode-select --install
-        ```
-
-        Verify Installation:
-
-        ``` r
-        xcode-select -p
-        ```
-
-        It should return `/Library/Developer/CommandLineTools`.
-
-    -   **For Linux**:
-
-        Install Essential Build Tools:
-
-        ``` r
-        sudo apt-get install r-base-dev
-        sudo apt-get install build-essential libcurl4-gnutls-dev libxml2-dev libssl-dev
-        ```
+![](images/1.3-Docker.gif){width="6.8in"}
 
 ------------------------------------------------------------------------
 
-⚒️ **GitHub Installation Issues**
+<br>
 
-:   Verify that your system is connected to the internet. Check for any
-    firewall or proxy settings that might block GitHub access.
+## Main Features {.unnumbered}
 
-------------------------------------------------------------------------
+![](images/Graphical%20Abstract.jpg){width="680"}
 
-⚒️ **Package Loading Issues**
-
-:   Errors occur when loading [***ShiNyP***]{style="color: #9D6853;"} or
-    its dependencies, possibly due to outdated packages or conflicts.
-
-    1.  **Update All Installed Packages**:
-
-        When prompted with
-
-        ``` r
-        # These packages have more recent versions available.
-        # It is recommended to update all of them.
-        # Which would you like to update?
-
-        # -> Respond with 1 to update all packages.
-        ```
-
-        **Please type 1 (1: All)**
-
-    2.  If a specific package is causing issues, reinstall it.
-
-        ``` r
-        install.packages("dartRverse")
-        BiocManager::install("SNPRelate")
-        ```
-
-    3.  Check for Namespace Conflicts:
-
-        Identify if multiple packages are masking functions.
-
-        ``` r
-        conflicts()
-        ```
-
-------------------------------------------------------------------------
-
-## Main Functions {.unnumbered}
-
-![](images/Fig.%201.jpg){width="650"}
-
-| ▲ **An overview of the [*ShiNyP*]{style="color: #9D6853;"} platform's workflow for genome-wide SNP data analysis.**
-| 
-| ▶️ **Data Input & Processing**: Beginning with <a href="https://teddyenn.github.io/ShiNyP-guide/sec-data-input.html" target="_blank">VCF data input</a>, it performs <a href="https://teddyenn.github.io/ShiNyP-guide/sec-data-qc.html" target="_blank">quality control (QC)</a> and <a href="https://teddyenn.github.io/ShiNyP-guide/sec-data-conversion.html" target="_blank">data transformation</a> steps.
-| 
-| ▶️ **Analysis & Output**: The analysis phase is divided into modules, each represented as a page in the platform, with multiple subpages offering specific analytical functions, including <a href="https://teddyenn.github.io/ShiNyP-guide/sec-population-structure.html" target="_blank">population structure</a>, <a href="https://teddyenn.github.io/ShiNyP-guide/sec-genetic-diversity.html" target="_blank">genetic diversity</a>, <a href="https://teddyenn.github.io/ShiNyP-guide/sec-selection-sweep.html" target="_blank">selection sweep</a>, and <a href="https://teddyenn.github.io/ShiNyP-guide/sec-core-collection.html" target="_blank">core collection</a>.
-| 
-| ▶️ **Customized Output**: The final output offers tailored visualizations and includes an AI-generated report summarizing the results. The pipeline streamlines data input, processing, and advanced analysis to deliver publication-ready figures and reports customized to the user’s needs.
-| \*Subpage frame colors indicate available functions for customization. For example, blue frames for [PCA]{.underline} and [DAPC]{.underline} correspond to the Scatter Plot ^Plus^ tool for customizing scatter plots, while red and purple frames correspond to Tree Plot ^Plus^ and Manhattan Plot ^Plus^, respectively.
+| 🔼 **Overview of the *ShiNyP* Platform Workflow for SNP Analysis.**
+| ▸ **Data Input & Processing:**
+| The workflow begins with Variant Call Format (VCF) [Data Input](https://teddyenn.github.io/ShiNyP-guide/sec-data-input.html), followed by essential steps such as [Data Quality Control (QC)](https://teddyenn.github.io/ShiNyP-guide/sec-data-qc.html) and [Data Transformation](https://teddyenn.github.io/ShiNyP-guide/sec-data-conversion.html) to prepare the data for analysis.
+| ▸ **Modular Analysis & Output:**
+| Analytical functions are organized into distinct modules—each accessible as a separate page within the platform. These include: [Population Structure](https://teddyenn.github.io/ShiNyP-guide/sec-population-structure.html), [Genetic Diversity](https://teddyenn.github.io/ShiNyP-guide/sec-genetic-diversity.html), [Selection Sweep](https://teddyenn.github.io/ShiNyP-guide/sec-selection-sweep.html), and [Core Collection](https://teddyenn.github.io/ShiNyP-guide/sec-core-collection.html). Each module contains multiple subpages offering specialized tools for detailed analysis.
+| ▸ **Customizable Output:**
+| *ShiNyP* delivers publication-ready visualizations and AI-generated reports that summarize analytical results in clear, structured narratives. Users can tailor output formats to fit specific research needs, ensuring both flexibility and interpretability.

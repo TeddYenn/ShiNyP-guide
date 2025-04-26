@@ -6,21 +6,21 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <title>4 Population Structure | User Guide for ShiNyP</title>
 <meta name="author" content="Yen-Hsiang Huang, Chung-Feng Kao">
-<meta name="description" content="window.dataLayer = window.dataLayer || [];  function gtag(){dataLayer.push(arguments);}  gtag('js', new Date());  gtag('config', 'G-2662B66TL7'); ➡️ This section contains seven subpages: PCA,...">
+<meta name="description" content="window.dataLayer = window.dataLayer || [];  function gtag(){dataLayer.push(arguments);}  gtag('js', new Date());  gtag('config', 'G-2662B66TL7'); ➡️ This section includes seven subpages: PCA,...">
 <meta name="generator" content="bookdown 0.42 with bs4_book()">
 <meta property="og:title" content="4 Population Structure | User Guide for ShiNyP">
 <meta property="og:type" content="book">
 <meta property="og:url" content="https://github.com/TeddYenn/ShiNyP-guide/sec-population-structure.html">
 <meta property="og:image" content="https://github.com/TeddYenn/ShiNyP-guide/images/cover.png">
-<meta property="og:description" content="window.dataLayer = window.dataLayer || [];  function gtag(){dataLayer.push(arguments);}  gtag('js', new Date());  gtag('config', 'G-2662B66TL7'); ➡️ This section contains seven subpages: PCA,...">
+<meta property="og:description" content="window.dataLayer = window.dataLayer || [];  function gtag(){dataLayer.push(arguments);}  gtag('js', new Date());  gtag('config', 'G-2662B66TL7'); ➡️ This section includes seven subpages: PCA,...">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="4 Population Structure | User Guide for ShiNyP">
-<meta name="twitter:description" content="window.dataLayer = window.dataLayer || [];  function gtag(){dataLayer.push(arguments);}  gtag('js', new Date());  gtag('config', 'G-2662B66TL7'); ➡️ This section contains seven subpages: PCA,...">
+<meta name="twitter:description" content="window.dataLayer = window.dataLayer || [];  function gtag(){dataLayer.push(arguments);}  gtag('js', new Date());  gtag('config', 'G-2662B66TL7'); ➡️ This section includes seven subpages: PCA,...">
 <meta name="twitter:image" content="https://github.com/TeddYenn/ShiNyP-guide/images/cover.png">
 <!-- JS --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/6.4.6/fuse.js" integrity="sha512-zv6Ywkjyktsohkbp9bb45V6tEMoWhzFzXis+LrMehmJZZSys19Yxf1dopHx7WzIKxr5tK2dVcYmaCk2uqdjF4A==" crossorigin="anonymous"></script><script src="https://kit.fontawesome.com/6ecbd6c532.js" crossorigin="anonymous"></script><script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <link href="libs/bootstrap-4.6.0/bootstrap.min.css" rel="stylesheet">
-<script src="libs/bootstrap-4.6.0/bootstrap.bundle.min.js"></script><link href="libs/Lato-0.4.9/font.css" rel="stylesheet">
-<link href="libs/Roboto_Mono-0.4.9/font.css" rel="stylesheet">
+<script src="libs/bootstrap-4.6.0/bootstrap.bundle.min.js"></script><link href="libs/Noto_Sans-0.4.9/font.css" rel="stylesheet">
+<link href="libs/Ubuntu_Sans-0.4.9/font.css" rel="stylesheet">
 <link href="libs/Montserrat-0.4.9/font.css" rel="stylesheet">
 <script src="libs/bs3compat-0.9.0/transition.js"></script><script src="libs/bs3compat-0.9.0/tabs.js"></script><script src="libs/bs3compat-0.9.0/bs3compat.js"></script><link href="libs/bs4_book-1.0.0/bs4_book.css" rel="stylesheet">
 <script src="libs/bs4_book-1.0.0/bs4_book.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/autocomplete.js/0.38.0/autocomplete.jquery.min.js" integrity="sha512-GU9ayf+66Xx2TmpxqJpliWbT5PiGYxpaG8rfnBEk1LL8l1KGkRShhngwdXK1UgqhAzWpZHSiYPc09/NwDQIGyg==" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/mark.min.js" integrity="sha512-5CYOlHXGh6QpOFA/TeTylKLWfB3ftPsde7AnmhuitiTX4K5SqCLBeKro6sPS8ilsz1Q4NRx3v8Ko2IBiszzdww==" crossorigin="anonymous"></script><!-- CSS --><style type="text/css">
@@ -73,7 +73,7 @@
       <nav aria-label="Table of contents"><h2>Table of contents</h2>
         <ul class="book-toc list-unstyled">
 <li><a class="" href="index.html">Welcome to ShiNyP</a></li>
-<li><a class="" href="sec-quickstart.html">Quickstart</a></li>
+<li><a class="" href="get-started.html">Get Started 🚀</a></li>
 <li><a class="" href="sec-data-input.html"><span class="header-section-number">1</span> Data Input</a></li>
 <li><a class="" href="sec-data-qc.html"><span class="header-section-number">2</span> Data QC</a></li>
 <li><a class="" href="sec-data-conversion.html"><span class="header-section-number">3</span> Data Transform</a></li>
@@ -102,35 +102,33 @@
 
   gtag('config', 'G-2662B66TL7');
 </script><div class="highlighted-text" style="background-color: #7c6f41; color: white; padding: 10px 5px; margin: 10px 0px; border-radius: 15px;">
-<p>➡️ This section contains seven subpages: <u><strong>PCA</strong></u>,
-<u><strong>DAPC</strong></u>, <u><strong>UPGMA Tree</strong></u>, <u><strong>NJ
-Tree</strong></u>, <u><strong>Kinship</strong></u>, <u><strong>Scatter
-Plot</strong></u><sup><strong>Plus</strong></sup>, and <u><strong>Tree Plot</strong></u><sup><strong>Plus</strong></sup>
-allowing you to conduct various population structure analyses and
-customize your plot.</p>
+<p>➡️ This section includes seven subpages: <u>PCA</u>,
+<u>DAPC</u>, <u>UPGMA Tree</u>, <u>NJ Tree</u>,
+<u>Kinship</u>, <u>Scatter Plot</u><sup>Plus</sup>, and <u>Tree
+Plot</u><sup>Plus</sup>, allowing you to conduct various population
+structure analyses and customize your plot.</p>
 </div>
-<div class="inline-figure"><img src="images/Supplementary%20Fig.%202.jpg" width="700"></div>
+<div class="inline-figure"><img src="images/Supplementary%20Fig.%202.jpg" style="width:6.8in"></div>
 <div id="pca-principal-component-analysis" class="section level2" number="4.1">
 <h2>
 <span class="header-section-number">4.1</span> PCA (Principal Component Analysis)<a class="anchor" aria-label="anchor" href="#pca-principal-component-analysis"><i class="fas fa-link"></i></a>
 </h2>
 <p>A widely used method to uncover underlying population structure by
 reducing the dimensionality of genetic data.</p>
-<div id="required-dataset-1" class="section level4 unnumbered" style="padding: 0px 5px; margin: 0px 10px">
-<h4>Required Dataset:<a class="anchor" aria-label="anchor" href="#required-dataset-1"><i class="fas fa-link"></i></a>
+<div id="required-file-5" class="section level4 unnumbered" style="padding: 0px 5px; margin: 0px 10px">
+<h4>Required File:<a class="anchor" aria-label="anchor" href="#required-file-5"><i class="fas fa-link"></i></a>
 </h4>
 <ul>
-<li><span style="color: #8b0000;"><strong><code>data.frame</code></strong></span></li>
+<li><em>data.frame</em></li>
 </ul>
 <hr>
 </div>
-<div id="one-step-1" class="section level4 unnumbered" style="padding: 0px 5px; margin: 0px 10px">
+<div id="one-step" class="section level4 unnumbered" style="padding: 0px 5px; margin: 0px 10px">
 <h4>
-<strong>One Step:</strong><a class="anchor" aria-label="anchor" href="#one-step-1"><i class="fas fa-link"></i></a>
+<strong>One Step:</strong><a class="anchor" aria-label="anchor" href="#one-step"><i class="fas fa-link"></i></a>
 </h4>
 <ol style="list-style-type: decimal">
-<li>Click the <span style="color: #fff;background-color: #007ACC;"><strong>Run
-PCA</strong></span> button to
+<li>Click <span style="color: #fff;background-color: #007ACC;">Run PCA</span> to
 generate PCA plots and the following downloadable files.</li>
 </ol>
 <blockquote>
@@ -145,22 +143,21 @@ classify individuals and color them in the PCA Scatter Plot.</p>
 <h4>Outputs:<a class="anchor" aria-label="anchor" href="#outputs-5"><i class="fas fa-link"></i></a>
 </h4>
 <ul>
-<li><p><strong>PCA Scatter Plot (PDF)</strong>: A scatter plot showing the distribution
-of samples based on principal components, with each dot representing
-an individual.</p></li>
-<li><p><strong>PC Explained Variance Plot (PDF)</strong>: Visualizes the variance
-explained by each principal component.</p></li>
-<li><p><strong>Explained Variance (CSV)</strong>: Contains the explained variance of
-each principal component.</p></li>
-<li><p><strong>PCA Transformed Data (CSV)</strong>: Dataset transformed into principal
+<li>PCA Scatter Plot (PDF): A scatter plot showing the distribution of
+samples based on principal components, with each dot representing an
+individual.</li>
+<li>PC Explained Variance Plot (PDF): Visualizes the variance explained
+by each principal component.</li>
+<li>Explained Variance (CSV): Contains the explained variance of each
+principal component.</li>
+<li>PCA Transformed Data (CSV): Dataset transformed into principal
 components, with samples as rows and principal components as
-columns.</p></li>
-<li><p><strong>PCA Object (RDS)</strong>: Contains all PCA results for future use and
+columns.</li>
+<li>PCA Object (RDS): Contains all PCA results for future use and
 reproducibility, and can be used as input data in the <u>Population
-Structure</u>/<u>Scatter Plot</u><sup>Plus</sup> subpage.</p></li>
+Structure</u>/<u>Scatter Plot</u><sup>Plus</sup> subpage.</li>
 </ul>
-<div class="inline-figure"><img src="screenshots/PopulationStructure1.png" width="650"></div>
-<p><em>PCA Complete!</em></p>
+<div class="inline-figure"><img src="images/4.1.gif" style="width:6.8in"></div>
 <hr>
 </div>
 </div>
@@ -171,13 +168,15 @@ Structure</u>/<u>Scatter Plot</u><sup>Plus</sup> subpage.</p></li>
 <p>A multivariate method for identifying and visualizing genetic clusters
 by combining PCA and Linear Discriminant Analysis (LDA) <span class="citation">(<a href="sec-index.html#ref-jombart2010">Jombart, Devillard, and Balloux 2010</a>)</span>.
 For more information, visit
-<a href="https://adegenet.r-forge.r-project.org/files/tutorial-dapc.pdf" target="_blank">https://adegenet.r-forge.r-project.org/files/tutorial-dapc.pdf</a>.</p>
-<div id="required-dataset-2" class="section level4 unnumbered" style="padding: 0px 5px; margin: 0px 10px">
-<h4>Required Dataset:<a class="anchor" aria-label="anchor" href="#required-dataset-2"><i class="fas fa-link"></i></a>
+<a href="https://adegenet.r-forge.r-project.org/files/tutorial-dapc.pdf" class="uri">https://adegenet.r-forge.r-project.org/files/tutorial-dapc.pdf</a>.</p>
+<div id="required-file-6" class="section level4 unnumbered" style="padding: 0px 5px; margin: 0px 10px">
+<h4>Required File:<a class="anchor" aria-label="anchor" href="#required-file-6"><i class="fas fa-link"></i></a>
 </h4>
 <ul>
-<li><span style="color: #8b0000;"><strong><code>genlight</code></strong></span></li>
-<li><strong><code>genind</code></strong></li>
+<li>
+<em>genlight</em> or</li>
+<li>
+<em>genind</em> (faster)</li>
 </ul>
 <hr>
 </div>
@@ -185,9 +184,8 @@ For more information, visit
 <h4>Step 1: <strong>Cluster Identification</strong><a class="anchor" aria-label="anchor" href="#step-1-cluster-identification"><i class="fas fa-link"></i></a>
 </h4>
 <ol style="list-style-type: decimal">
-<li>Click the <span style="color: #fff;background-color: #007ACC;"><strong>Run DAPC
-I</strong></span> button to
-determine the optimal number of clusters (the lowest BIC value
+<li>Click <span style="color: #fff;background-color: #007ACC;">Run DAPC I</span>
+to determine the optimal number of clusters (the lowest BIC value
 indicates the optimal number of clusters).</li>
 </ol>
 <blockquote>
@@ -202,11 +200,10 @@ Structure</u>/<u>PCA</u> subpage.</p>
 <h4>Step 2: <strong>DAPC Analysis</strong><a class="anchor" aria-label="anchor" href="#step-2-dapc-analysis"><i class="fas fa-link"></i></a>
 </h4>
 <ol style="list-style-type: decimal">
-<li><p>Choose the number of cluster (K) based on the “Bayesian Information
-Criterion (BIC) Plot”.</p></li>
-<li><p>Click the <span style="color: #fff;background-color: #007ACC;"><strong>Run DAPC
-II</strong></span> button to
-generate DAPC plots and the following downloadable files.</p></li>
+<li>Choose the number of cluster (K) based on the “Bayesian Information
+Criterion (BIC) Plot”.</li>
+<li>Click <span style="color: #fff;background-color: #007ACC;">Run DAPC II</span>
+to generate DAPC plots and the following downloadable files.</li>
 </ol>
 <blockquote>
 <p><strong>Note</strong>: You can download the “DAPC Object” and upload it on
@@ -219,31 +216,30 @@ subpage to customize your 2D and 3D scatter plots.</p>
 <h4>Outputs:<a class="anchor" aria-label="anchor" href="#outputs-6"><i class="fas fa-link"></i></a>
 </h4>
 <ul>
-<li><p><strong>Bayesian Information Criterion (BIC) Plot (PDF)</strong>: Visual
-representation of the BIC for model selection.</p></li>
-<li><p><strong>Density Plot of First &amp; Second Discriminant Function</strong> <strong>(PDF)</strong>:
-Displays the density of the first and second discriminant functions,
-with each row bar representing an individual.</p></li>
-<li><p><strong>DAPC Scatter Plot (PDF)</strong>: A scatter plot showing the distribution
-of samples based on discriminant functions (x-axis: first
-discriminant function; y-axis: second discriminant function), with
-each dot representing an individual.</p></li>
-<li><p><strong>DAPC Membership Probability Plot (PDF)</strong>: Visualizes membership
+<li>Bayesian Information Criterion (BIC) Plot (PDF): Visual
+representation of the BIC for model selection.</li>
+<li>Density Plot of First &amp; Second Discriminant Function (PDF): Displays
+the density of the first and second discriminant functions, with
+each row bar representing an individual.</li>
+<li>DAPC Scatter Plot (PDF): A scatter plot showing the distribution of
+samples based on discriminant functions (x-axis: first discriminant
+function; y-axis: second discriminant function), with each dot
+representing an individual.</li>
+<li>DAPC Membership Probability Plot (PDF): Visualizes membership
 probabilities of individuals in different groups, with each row bar
-representing an individual.</p></li>
-<li><p><strong>DAPC Group Info. (CSV)</strong>: Contains the group assignments for each
-individual based on DAPC. This file used in various subpages.</p></li>
-<li><p><strong>DAPC Transformed Data (CSV)</strong>: Dataset transformed into
-discriminant functions with samples as rows and discriminant
-functions as columns.</p></li>
-<li><p><strong>DAPC Object (RDS)</strong>: Contains all results from the DAPC analysis
-for future reproducibility. It can be used as input data in the
+representing an individual.</li>
+<li>DAPC Group Info. (CSV): Contains the group assignments for each
+individual based on DAPC. This file used in various subpages.</li>
+<li>DAPC Transformed Data (CSV): Dataset transformed into discriminant
+functions with samples as rows and discriminant functions as
+columns.</li>
+<li>DAPC Object (RDS): Contains all results from the DAPC analysis for
+future reproducibility. It can be used as input data in the
 <u>Population Structure</u>/<u>Scatter Plot</u><sup>Plus</sup>
 and <u>Core Collection</u>/<u>Core SNP Set</u>
-subpages.</p></li>
+subpages.</li>
 </ul>
-<div class="inline-figure"><img src="screenshots/PopulationStructure2.png" width="650"></div>
-<p><em>DAPC Complete!</em></p>
+<div class="inline-figure"><img src="images/4.2.gif" style="width:6.8in"></div>
 <hr>
 </div>
 </div>
@@ -254,11 +250,11 @@ subpages.</p></li>
 <p>A classic approaach for constructing rooted trees based on genetic
 distance data. UPGMA tree is generated by <em>poppr</em> and <em>ggtree</em> packages
 <span class="citation">(<a href="sec-index.html#ref-yu2016">Yu et al. 2016</a>; <a href="sec-index.html#ref-kamvar2014">Kamvar, Tabima, and Grünwald 2014</a>)</span>.</p>
-<div id="required-dataset-3" class="section level4 unnumbered" style="padding: 0px 5px; margin: 0px 10px">
-<h4>Required Dataset:<a class="anchor" aria-label="anchor" href="#required-dataset-3"><i class="fas fa-link"></i></a>
+<div id="required-file-7" class="section level4 unnumbered" style="padding: 0px 5px; margin: 0px 10px">
+<h4>Required File:<a class="anchor" aria-label="anchor" href="#required-file-7"><i class="fas fa-link"></i></a>
 </h4>
 <ul>
-<li><span style="color: #8b0000;"><strong><code>genlight</code></strong></span></li>
+<li><em>genlight</em></li>
 </ul>
 <hr>
 </div>
@@ -267,11 +263,10 @@ distance data. UPGMA tree is generated by <em>poppr</em> and <em>ggtree</em> pac
 <strong>Steps</strong>:<a class="anchor" aria-label="anchor" href="#steps-1"><i class="fas fa-link"></i></a>
 </h4>
 <ol style="list-style-type: decimal">
-<li><p>Choose the number of bootstrap replicates, which will be used for
-assessing the confidence of the branching structure.</p></li>
-<li><p>Click the <span style="color: #fff;background-color: #007ACC;"><strong>Run
-UPGMA</strong></span> button to
-generate tree plot.</p></li>
+<li>Choose the number of bootstrap replicates, which will be used for
+assessing the confidence of the branching structure.</li>
+<li>Click <span style="color: #fff;background-color: #007ACC;">Run UPGMA</span> to
+generate tree plot.</li>
 </ol>
 <blockquote>
 <p><strong>Note</strong>: You can download the “UPGMA Object” and upload it on
@@ -284,14 +279,13 @@ subpage to customize your phylogenetic tree.</p>
 <h4>Outputs:<a class="anchor" aria-label="anchor" href="#outputs-7"><i class="fas fa-link"></i></a>
 </h4>
 <ul>
-<li><p><strong>UPGMA Phylogenetic Tree (PDF)</strong>: A UPGMA rooted tree with a
-user-defined layout style.</p></li>
-<li><p><strong>UPGMA Object (RDS)</strong>: Contains all information of the UPGMA tree,
-and can be used as input data in the <u>Population
-Structure</u>/<u>Tree Plot</u><sup>Plus</sup> subpage.</p></li>
+<li>UPGMA Phylogenetic Tree (PDF): A UPGMA rooted tree with a
+user-defined layout style.</li>
+<li>UPGMA Object (RDS): Contains all information of the UPGMA tree, and
+can be used as input data in the <u>Population
+Structure</u>/<u>Tree Plot</u><sup>Plus</sup> subpage.</li>
 </ul>
-<div class="inline-figure"><img src="screenshots/PopulationStructure3.png" width="650"></div>
-<p><em>UPGMA Tree Complete!</em></p>
+<div class="inline-figure"><img src="images/4.3.gif" style="width:6.8in"></div>
 <hr>
 </div>
 </div>
@@ -301,21 +295,20 @@ Structure</u>/<u>Tree Plot</u><sup>Plus</sup> subpage.</p></li>
 </h2>
 <p>A method for building unrooted trees using genetic distance data. NJ
 tree is generated by <em>ape</em> and <em>ggtree</em> packages <span class="citation">(<a href="sec-index.html#ref-paradis2018">Paradis and Schliep 2018</a>; <a href="sec-index.html#ref-yu2016">Yu et al. 2016</a>)</span>.</p>
-<div id="required-dataset-4" class="section level4 unnumbered" style="padding: 0px 5px; margin: 0px 10px">
-<h4>Required Dataset:<a class="anchor" aria-label="anchor" href="#required-dataset-4"><i class="fas fa-link"></i></a>
+<div id="required-file-8" class="section level4 unnumbered" style="padding: 0px 5px; margin: 0px 10px">
+<h4>Required File:<a class="anchor" aria-label="anchor" href="#required-file-8"><i class="fas fa-link"></i></a>
 </h4>
 <ul>
-<li><span style="color: #8b0000;"><strong><code>genlight</code></strong></span></li>
+<li><em>genlight</em></li>
 </ul>
 <hr>
 </div>
-<div id="one-step-2" class="section level4 unnumbered" style="padding: 0px 5px; margin: 0px 10px">
+<div id="one-step-1" class="section level4 unnumbered" style="padding: 0px 5px; margin: 0px 10px">
 <h4>
-<strong>One Step:</strong><a class="anchor" aria-label="anchor" href="#one-step-2"><i class="fas fa-link"></i></a>
+<strong>One Step:</strong><a class="anchor" aria-label="anchor" href="#one-step-1"><i class="fas fa-link"></i></a>
 </h4>
 <ol style="list-style-type: decimal">
-<li>Click the <span style="color: #fff;background-color: #007ACC;"><strong>Run
-NJ</strong></span> button to
+<li>Click <span style="color: #fff;background-color: #007ACC;">Run NJ</span> to
 generate tree plot.</li>
 </ol>
 <blockquote>
@@ -329,14 +322,13 @@ subpage to customize your phylogenetic tree.</p>
 <h4>Outputs:<a class="anchor" aria-label="anchor" href="#outputs-8"><i class="fas fa-link"></i></a>
 </h4>
 <ul>
-<li><p><strong>NJ Phylogenetic Tree (PDF)</strong>: A NJ unrooted tree with a
-user-defined layout style.</p></li>
-<li><p><strong>NJ Object (RDS)</strong>: Contains all information of the NJ tree, and
-can be used as input data in the <u>Population
-Structure</u>/<u>Tree Plot</u><sup>Plus</sup> subpage.</p></li>
+<li>NJ Phylogenetic Tree (PDF): A NJ unrooted tree with a user-defined
+layout style.</li>
+<li>NJ Object (RDS): Contains all information of the NJ tree, and can be
+used as input data in the <u>Population Structure</u>/<u>Tree
+Plot</u><sup>Plus</sup> subpage.</li>
 </ul>
-<div class="inline-figure"><img src="screenshots/PopulationStructure4.png" width="650"></div>
-<p><em>NJ Tree Complete!</em></p>
+<div class="inline-figure"><img src="images/4.4.gif" style="width:6.8in"></div>
 <hr>
 </div>
 </div>
@@ -347,12 +339,12 @@ Structure</u>/<u>Tree Plot</u><sup>Plus</sup> subpage.</p></li>
 <p>A statistical method for assessing genetic relationships and relatedness
 among individuals based on shared alleles <span class="citation">(<a href="sec-index.html#ref-kang2010">Kang et al. 2010</a>)</span>. Kinship matrix is
 generated by <em>statgenGWAS</em> package.For more information, visit
-<a href="https://rdrr.io/cran/statgenGWAS/man/kinship.html" target="_blank">https://rdrr.io/cran/statgenGWAS/man/kinship.html</a>.</p>
-<div id="required-dataset-5" class="section level4 unnumbered" style="padding: 0px 5px; margin: 0px 10px">
-<h4>Required Dataset:<a class="anchor" aria-label="anchor" href="#required-dataset-5"><i class="fas fa-link"></i></a>
+<a href="https://rdrr.io/cran/statgenGWAS/man/kinship.html" class="uri">https://rdrr.io/cran/statgenGWAS/man/kinship.html</a>.</p>
+<div id="required-file-9" class="section level4 unnumbered" style="padding: 0px 5px; margin: 0px 10px">
+<h4>Required File:<a class="anchor" aria-label="anchor" href="#required-file-9"><i class="fas fa-link"></i></a>
 </h4>
 <ul>
-<li><span style="color: #8b0000;"><strong><code>data.frame</code></strong></span></li>
+<li><em>data.frame</em></li>
 </ul>
 <hr>
 </div>
@@ -361,15 +353,14 @@ generated by <em>statgenGWAS</em> package.For more information, visit
 <strong>Steps:</strong><a class="anchor" aria-label="anchor" href="#steps-2"><i class="fas fa-link"></i></a>
 </h4>
 <ol style="list-style-type: decimal">
-<li><p><span style="background-color: #fceed2;">Upload</span> <strong>Group Info.</strong> from
-<u>Population Structure</u>/<u>DAPC</u> subpage
-(optional). If uploaded, the order of samples will follow the group
-assignment; otherwise, it will follow the order of the original VCF
-data.</p></li>
-<li><p>Choose a method to run kinship analysis.</p></li>
-<li><p>Click the <span style="color: #fff;background-color: #007ACC;"><strong>Run
-Kinship</strong></span> button to
-generate the kinship matrix.</p></li>
+<li>Upload Group Info. from <u>Population
+Structure</u>/<u>DAPC</u> subpage (optional). If
+uploaded, the order of samples will follow the group assignment;
+otherwise, it will follow the order of the original VCF data.</li>
+<li>Choose a method to run kinship analysis.</li>
+<li>Click the <span style="color: #fff;background-color: #007ACC;">Run
+Kinship</span> button to
+generate the kinship matrix.</li>
 </ol>
 <hr>
 </div>
@@ -377,17 +368,16 @@ generate the kinship matrix.</p></li>
 <h4>Outputs:<a class="anchor" aria-label="anchor" href="#outputs-9"><i class="fas fa-link"></i></a>
 </h4>
 <ul>
-<li><p><strong>Kinship Matrix Plot (PDF)</strong>: A visual representation of the
-kinship matrix.</p></li>
-<li><p><strong>Kinship Matrix (RDS)</strong>: Contains the kinship matrix data.</p></li>
+<li>Kinship Matrix Plot (PDF): A visual representation of the kinship
+matrix.</li>
+<li>Kinship Matrix (RDS): Contains the kinship matrix data.</li>
 </ul>
 <blockquote>
-<p>Note: This kinship matrix can be directly used as input for <em>GAPIT</em>
-package in genome-wide association studies (GWAS), helping to control
-for confounding effects.</p>
+<p><strong>Note:</strong> This kinship matrix can be directly used as input for
+<em>GAPIT</em> package in genome-wide association studies (GWAS), helping to
+control for confounding effects.</p>
 </blockquote>
-<div class="inline-figure"><img src="screenshots/PopulationStructure5.png" width="650"></div>
-<p><em>Kinship Analysis Complete!</em></p>
+<div class="inline-figure"><img src="images/4.5.gif" style="width:6.8in"></div>
 <hr>
 </div>
 </div>
@@ -398,21 +388,19 @@ for confounding effects.</p>
 <p>Customize your scatter plot based on the results from <u>Population
 Structure</u>/<u>PCA</u> or <u>Population
 Structure</u>/<u>DAPC</u>.</p>
-<div id="required-files" class="section level4 unnumbered" style="padding: 0px 5px; margin: 0px 10px">
-<h4>Required Files:<a class="anchor" aria-label="anchor" href="#required-files"><i class="fas fa-link"></i></a>
+<div id="required-files-1" class="section level4 unnumbered" style="padding: 0px 5px; margin: 0px 10px">
+<h4>Required Files:<a class="anchor" aria-label="anchor" href="#required-files-1"><i class="fas fa-link"></i></a>
 </h4>
 <ul>
-<li>
-<strong>PCA Object</strong> (PCA_prcomp_Object.rds file) or <strong>DAPC Object</strong>
+<li>PCA Object (PCA_prcomp_Object.rds file) or DAPC Object
 (DAPC_dapc_Object.rds file)</li>
-<li>
-<strong>Group and Other Info.</strong> (i.e. metadata, modifiable from
+<li>Group and Other Info. (i.e. metadata, modifiable from
 DAPC_Group_Info.csv)</li>
 </ul>
 <blockquote>
-<p><strong>Note:</strong> If you are using a <strong>DAPC object</strong> as input, ensure that
-there are <strong>at least 4 groups</strong>. Since an N-group dataset has N-1 LD
-axes, you need more than 3 axes to generate a 3D scatter plot.</p>
+<p><strong>Note:</strong> If you are using a DAPC object as input, ensure that there
+are at least 4 groups. Since N groups have N-1 LD axes, you need more
+than 3 axes to generate a 3D scatter plot.</p>
 </blockquote>
 <blockquote>
 <p><strong>Note</strong>: You can add metadata (more information about samples) by
@@ -420,7 +408,7 @@ adding new variables to the Group Info. file. Ensure that the sample
 order remains unchanged.</p>
 </blockquote>
 <details><summary>
-➡️ <strong>Example: Group Info. file (CSV)</strong>
+Example: Group Info. file (CSV)
 </summary><div class="inline-figure"><img src="images/Chromosome-Info.png" width="350"></div>
 </details><hr>
 </div>
@@ -429,16 +417,13 @@ order remains unchanged.</p>
 <strong>Steps:</strong><a class="anchor" aria-label="anchor" href="#steps-3"><i class="fas fa-link"></i></a>
 </h4>
 <ol style="list-style-type: decimal">
-<li><p><span style="background-color: #fceed2;">Upload</span> <strong>PCA or DAPC Object
-(RDS)</strong></p></li>
-<li><p><span style="background-color: #fceed2;">Upload</span> <strong>Group and Other Info.
-(CSV)</strong></p></li>
-<li><p>Click the <span style="color: #fff;background-color: #007ACC;"><strong>Run Scatter
-Plot</strong></span> button to
-generate the 2D and 3D interactive scatter plots.</p></li>
-<li><p>Customize the scatter plot and click the <span style="color: #fff;background-color: #007ACC;"><strong>Run Scatter
-Plot</strong></span> button
-again.</p></li>
+<li>Upload PCA or DAPC Object (RDS).</li>
+<li>Upload Group and Other Info. (CSV).</li>
+<li>Click <span style="color: #fff;background-color: #007ACC;">Run Scatter
+Plot</span> to generate
+the 2D and 3D interactive scatter plots.</li>
+<li>Customize the scatter plot and click <span style="color: #fff;background-color: #007ACC;">Run Scatter
+Plot</span> again.</li>
 </ol>
 <blockquote>
 <p><strong>Note</strong>: The scatter plots are downloaded as HTML files and can be
@@ -450,13 +435,12 @@ opened with browsers like Chrome or Edge.</p>
 <h4>Outputs:<a class="anchor" aria-label="anchor" href="#outputs-10"><i class="fas fa-link"></i></a>
 </h4>
 <ul>
-<li><p><strong>2D Scatter Plot (HTML)</strong>: Two-dimensional interactive scatter plot
-with user-defined attributes.</p></li>
-<li><p><strong>3D Scatter Plot (HTML)</strong>: Three-dimensional interactive scatter
-plot with user-defined attributes.</p></li>
+<li>2D Scatter Plot (HTML): Two-dimensional interactive scatter plot
+with user-defined attributes.</li>
+<li>3D Scatter Plot (HTML): Three-dimensional interactive scatter plot
+with user-defined attributes.</li>
 </ul>
-<div class="inline-figure"><img src="screenshots/PopulationStructure6.png" width="650"></div>
-<p><em>Scatter Plot <sup>Plus</sup> Complete!</em></p>
+<div class="inline-figure"><img src="images/4.6.gif" style="width:6.8in"></div>
 </div>
 </div>
 <div id="tree-plot-plus" class="section level2" number="4.7">
@@ -466,15 +450,13 @@ plot with user-defined attributes.</p></li>
 <p>Customize your phylogenetic tree plot based on the results from
 <u>Population Structure</u>/<u>UPGMA</u> or <u>Population
 Structure</u>/<u>NJ</u>.</p>
-<div id="required-files-1" class="section level4 unnumbered" style="padding: 0px 5px; margin: 0px 10px">
-<h4>Required Files:<a class="anchor" aria-label="anchor" href="#required-files-1"><i class="fas fa-link"></i></a>
+<div id="required-files-2" class="section level4 unnumbered" style="padding: 0px 5px; margin: 0px 10px">
+<h4>Required Files:<a class="anchor" aria-label="anchor" href="#required-files-2"><i class="fas fa-link"></i></a>
 </h4>
 <ul>
-<li>
-<strong>UPGMA Object</strong> (UPGMA_phylo_Object.rds file) or <strong>NJ Object</strong>
+<li>UPGMA Object (UPGMA_phylo_Object.rds file) or NJ Object
 (NJ_phylo_Object.rds file)</li>
-<li>
-<strong>Group and Other Info.</strong> (modifiable from DAPC_Group_Info.csv)</li>
+<li>Group and Other Info. (modifiable from DAPC_Group_Info.csv)</li>
 </ul>
 <blockquote>
 <p><strong>Note</strong>: You can add more information about samples by adding new
@@ -488,16 +470,13 @@ remains unchanged.</p>
 <strong>Steps:</strong><a class="anchor" aria-label="anchor" href="#steps-4"><i class="fas fa-link"></i></a>
 </h4>
 <ol style="list-style-type: decimal">
-<li><p><span style="background-color: #fceed2;">Upload</span> <strong>UPGMA or NJ Object
-(RDS)</strong></p></li>
-<li><p><span style="background-color: #fceed2;">Upload</span> <strong>Group and Other Info.
-(CSV)</strong></p></li>
-<li><p>Click the <span style="color: #fff;background-color: #007ACC;"><strong>Run Tree
-Plot</strong></span> button to
-generate the tree plot.</p></li>
-<li><p>Customize the tree plot and click the <span style="color: #fff;background-color: #007ACC;"><strong>Run Tree
-Plot</strong></span> button
-again.</p></li>
+<li>Upload UPGMA or NJ Object (RDS).</li>
+<li>Upload Group and Other Info. (CSV).</li>
+<li>Click <span style="color: #fff;background-color: #007ACC;">Run Tree
+Plot</span> to generate
+the tree plot.</li>
+<li>Customize the tree plot and click <span style="color: #fff;background-color: #007ACC;">Run Tree
+Plot</span> again.</li>
 </ol>
 <hr>
 </div>
@@ -505,12 +484,10 @@ again.</p></li>
 <h4>Outputs:<a class="anchor" aria-label="anchor" href="#outputs-11"><i class="fas fa-link"></i></a>
 </h4>
 <ul>
-<li>
-<strong>Phylogenetic Tree Plot (PDF)</strong>: A phylogenetic tree plot with
+<li>Phylogenetic Tree Plot (PDF): A phylogenetic tree plot with
 user-defined layout style and attributes.</li>
 </ul>
-<div class="inline-figure"><img src="screenshots/PopulationStructure7.png" width="650"></div>
-<p><em>Tree Plot <sup>Plus</sup> Complete!</em></p>
+<div class="inline-figure"><img src="images/4.7.gif" style="width:6.8in"></div>
 
 </div>
 </div>

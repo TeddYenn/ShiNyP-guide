@@ -2,16 +2,17 @@
 bookdown::bs4_book:
   theme:
     primary: "#9D6853"
+    secondary: "#53889d"
     base_font:
       google:
-        family: Lato
+        family: Noto Sans
     heading_font:
       google:
         family: Montserrat
         wght: 600
     code_font:
       google:
-        family: Roboto Mono
+        family: Ubuntu Sans
     bg: "#f9f9f9" # backgrounds
     fg: "#000000" # fonts
   repo: https://github.com/TeddYenn/ShiNyP-guide

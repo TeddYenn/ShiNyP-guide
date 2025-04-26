@@ -19,31 +19,29 @@ editor_options:
 ```
 
 ::: {.highlighted-text style="background-color: #7c6f41; color: white; padding: 10px 5px; margin: 10px 0px; border-radius: 15px;"}
-➡️ This section contains seven subpages: [**PCA**]{.underline},
-[**DAPC**]{.underline}, [**UPGMA Tree**]{.underline}, [**NJ
-Tree**]{.underline}, [**Kinship**]{.underline}, [**Scatter
-Plot**]{.underline}^**Plus**^, and [**Tree Plot**]{.underline}^**Plus**^
-allowing you to conduct various population structure analyses and
-customize your plot.
+➡️ This section includes seven subpages: [PCA]{.underline},
+[DAPC]{.underline}, [UPGMA Tree]{.underline}, [NJ Tree]{.underline},
+[Kinship]{.underline}, [Scatter Plot]{.underline}^Plus^, and [Tree
+Plot]{.underline}^Plus^, allowing you to conduct various population
+structure analyses and customize your plot.
 :::
 
-![](images/Supplementary%20Fig.%202.jpg){width="700"}
+![](images/Supplementary Fig. 2.jpg){width="6.8in"}
 
 ## PCA (Principal Component Analysis)
 
 A widely used method to uncover underlying population structure by
 reducing the dimensionality of genetic data.
 
-#### Required Dataset: {.unnumbered style="padding: 0px 5px; margin: 0px 10px"}
+#### Required File: {.unnumbered style="padding: 0px 5px; margin: 0px 10px"}
 
--   [**`data.frame`**]{style="color: #8b0000;"}
+-   *data.frame*
 
 ------------------------------------------------------------------------
 
 #### **One Step:** {.unnumbered style="padding: 0px 5px; margin: 0px 10px"}
 
-1.  Click the [**Run
-    PCA**]{style="color: #fff;background-color: #007ACC;"} button to
+1.  Click [Run PCA]{style="color: #fff;background-color: #007ACC;"} to
     generate PCA plots and the following downloadable files.
 
 > **Note**: You can upload the Group Info. (from [Population
@@ -55,27 +53,21 @@ reducing the dimensionality of genetic data.
 
 #### Outputs: {.unnumbered style="padding: 0px 5px; margin: 0px 10px"}
 
--   **PCA Scatter Plot (PDF)**: A scatter plot showing the distribution
-    of samples based on principal components, with each dot representing
-    an individual.
-
--   **PC Explained Variance Plot (PDF)**: Visualizes the variance
-    explained by each principal component.
-
--   **Explained Variance (CSV)**: Contains the explained variance of
-    each principal component.
-
--   **PCA Transformed Data (CSV)**: Dataset transformed into principal
+-   PCA Scatter Plot (PDF): A scatter plot showing the distribution of
+    samples based on principal components, with each dot representing an
+    individual.
+-   PC Explained Variance Plot (PDF): Visualizes the variance explained
+    by each principal component.
+-   Explained Variance (CSV): Contains the explained variance of each
+    principal component.
+-   PCA Transformed Data (CSV): Dataset transformed into principal
     components, with samples as rows and principal components as
     columns.
-
--   **PCA Object (RDS)**: Contains all PCA results for future use and
+-   PCA Object (RDS): Contains all PCA results for future use and
     reproducibility, and can be used as input data in the [Population
     Structure]{.underline}/[Scatter Plot]{.underline}^Plus^ subpage.
 
-![](screenshots/PopulationStructure1.png){width="650"}
-
-*PCA Complete!*
+![](images/4.1.gif){width="6.8in"}
 
 ------------------------------------------------------------------------
 
@@ -84,20 +76,19 @@ reducing the dimensionality of genetic data.
 A multivariate method for identifying and visualizing genetic clusters
 by combining PCA and Linear Discriminant Analysis (LDA) [@jombart2010].
 For more information, visit
-<a href="https://adegenet.r-forge.r-project.org/files/tutorial-dapc.pdf" target="_blank">https://adegenet.r-forge.r-project.org/files/tutorial-dapc.pdf</a>.
+<https://adegenet.r-forge.r-project.org/files/tutorial-dapc.pdf>.
 
-#### Required Dataset: {.unnumbered style="padding: 0px 5px; margin: 0px 10px"}
+#### Required File: {.unnumbered style="padding: 0px 5px; margin: 0px 10px"}
 
--   [**`genlight`**]{style="color: #8b0000;"}
--   **`genind`**
+-   *genlight* or
+-   *genind* (faster)
 
 ------------------------------------------------------------------------
 
 #### Step 1: **Cluster Identification** {.unnumbered style="padding: 0px 5px; margin: 0px 10px"}
 
-1.  Click the [**Run DAPC
-    I**]{style="color: #fff;background-color: #007ACC;"} button to
-    determine the optimal number of clusters (the lowest BIC value
+1.  Click [Run DAPC I]{style="color: #fff;background-color: #007ACC;"}
+    to determine the optimal number of clusters (the lowest BIC value
     indicates the optimal number of clusters).
 
 > **Note:** The default number of PC axes for cluster identification is
@@ -111,10 +102,8 @@ For more information, visit
 
 1.  Choose the number of cluster (K) based on the "Bayesian Information
     Criterion (BIC) Plot".
-
-2.  Click the [**Run DAPC
-    II**]{style="color: #fff;background-color: #007ACC;"} button to
-    generate DAPC plots and the following downloadable files.
+2.  Click [Run DAPC II]{style="color: #fff;background-color: #007ACC;"}
+    to generate DAPC plots and the following downloadable files.
 
 > **Note**: You can download the "DAPC Object" and upload it on
 > [Population Structure]{.underline}/[Scatter Plot]{.underline}^Plus^
@@ -124,38 +113,30 @@ For more information, visit
 
 #### Outputs: {.unnumbered style="padding: 0px 5px; margin: 0px 10px"}
 
--   **Bayesian Information Criterion (BIC) Plot (PDF)**: Visual
+-   Bayesian Information Criterion (BIC) Plot (PDF): Visual
     representation of the BIC for model selection.
-
--   **Density Plot of First & Second Discriminant Function** **(PDF)**:
-    Displays the density of the first and second discriminant functions,
-    with each row bar representing an individual.
-
--   **DAPC Scatter Plot (PDF)**: A scatter plot showing the distribution
-    of samples based on discriminant functions (x-axis: first
-    discriminant function; y-axis: second discriminant function), with
-    each dot representing an individual.
-
--   **DAPC Membership Probability Plot (PDF)**: Visualizes membership
+-   Density Plot of First & Second Discriminant Function (PDF): Displays
+    the density of the first and second discriminant functions, with
+    each row bar representing an individual.
+-   DAPC Scatter Plot (PDF): A scatter plot showing the distribution of
+    samples based on discriminant functions (x-axis: first discriminant
+    function; y-axis: second discriminant function), with each dot
+    representing an individual.
+-   DAPC Membership Probability Plot (PDF): Visualizes membership
     probabilities of individuals in different groups, with each row bar
     representing an individual.
-
--   **DAPC Group Info. (CSV)**: Contains the group assignments for each
+-   DAPC Group Info. (CSV): Contains the group assignments for each
     individual based on DAPC. This file used in various subpages.
-
--   **DAPC Transformed Data (CSV)**: Dataset transformed into
-    discriminant functions with samples as rows and discriminant
-    functions as columns.
-
--   **DAPC Object (RDS)**: Contains all results from the DAPC analysis
-    for future reproducibility. It can be used as input data in the
+-   DAPC Transformed Data (CSV): Dataset transformed into discriminant
+    functions with samples as rows and discriminant functions as
+    columns.
+-   DAPC Object (RDS): Contains all results from the DAPC analysis for
+    future reproducibility. It can be used as input data in the
     [Population Structure]{.underline}/[Scatter Plot]{.underline}^Plus^
     and [Core Collection]{.underline}/[Core SNP Set]{.underline}
     subpages.
 
-![](screenshots/PopulationStructure2.png){width="650"}
-
-*DAPC Complete!*
+![](images/4.2.gif){width="6.8in"}
 
 ------------------------------------------------------------------------
 
@@ -165,9 +146,9 @@ A classic approaach for constructing rooted trees based on genetic
 distance data. UPGMA tree is generated by *poppr* and *ggtree* packages
 [@yu2016; @kamvar2014].
 
-#### Required Dataset: {.unnumbered style="padding: 0px 5px; margin: 0px 10px"}
+#### Required File: {.unnumbered style="padding: 0px 5px; margin: 0px 10px"}
 
--   [**`genlight`**]{style="color: #8b0000;"}
+-   *genlight*
 
 ------------------------------------------------------------------------
 
@@ -175,9 +156,7 @@ distance data. UPGMA tree is generated by *poppr* and *ggtree* packages
 
 1.  Choose the number of bootstrap replicates, which will be used for
     assessing the confidence of the branching structure.
-
-2.  Click the [**Run
-    UPGMA**]{style="color: #fff;background-color: #007ACC;"} button to
+2.  Click [Run UPGMA]{style="color: #fff;background-color: #007ACC;"} to
     generate tree plot.
 
 > **Note**: You can download the "UPGMA Object" and upload it on
@@ -188,16 +167,13 @@ distance data. UPGMA tree is generated by *poppr* and *ggtree* packages
 
 #### Outputs: {.unnumbered style="padding: 0px 5px; margin: 0px 10px"}
 
--   **UPGMA Phylogenetic Tree (PDF)**: A UPGMA rooted tree with a
+-   UPGMA Phylogenetic Tree (PDF): A UPGMA rooted tree with a
     user-defined layout style.
-
--   **UPGMA Object (RDS)**: Contains all information of the UPGMA tree,
-    and can be used as input data in the [Population
+-   UPGMA Object (RDS): Contains all information of the UPGMA tree, and
+    can be used as input data in the [Population
     Structure]{.underline}/[Tree Plot]{.underline}^Plus^ subpage.
 
-![](screenshots/PopulationStructure3.png){width="650"}
-
-*UPGMA Tree Complete!*
+![](images/4.3.gif){width="6.8in"}
 
 ------------------------------------------------------------------------
 
@@ -207,16 +183,15 @@ A method for building unrooted trees using genetic distance data. NJ
 tree is generated by *ape* and *ggtree* packages [@paradis2018;
 @yu2016].
 
-#### Required Dataset: {.unnumbered style="padding: 0px 5px; margin: 0px 10px"}
+#### Required File: {.unnumbered style="padding: 0px 5px; margin: 0px 10px"}
 
--   [**`genlight`**]{style="color: #8b0000;"}
+-   *genlight*
 
 ------------------------------------------------------------------------
 
 #### **One Step:** {.unnumbered style="padding: 0px 5px; margin: 0px 10px"}
 
-1.  Click the [**Run
-    NJ**]{style="color: #fff;background-color: #007ACC;"} button to
+1.  Click [Run NJ]{style="color: #fff;background-color: #007ACC;"} to
     generate tree plot.
 
 > **Note**: You can download the "NJ Object" and upload it on
@@ -227,16 +202,13 @@ tree is generated by *ape* and *ggtree* packages [@paradis2018;
 
 #### Outputs: {.unnumbered style="padding: 0px 5px; margin: 0px 10px"}
 
--   **NJ Phylogenetic Tree (PDF)**: A NJ unrooted tree with a
-    user-defined layout style.
+-   NJ Phylogenetic Tree (PDF): A NJ unrooted tree with a user-defined
+    layout style.
+-   NJ Object (RDS): Contains all information of the NJ tree, and can be
+    used as input data in the [Population Structure]{.underline}/[Tree
+    Plot]{.underline}^Plus^ subpage.
 
--   **NJ Object (RDS)**: Contains all information of the NJ tree, and
-    can be used as input data in the [Population
-    Structure]{.underline}/[Tree Plot]{.underline}^Plus^ subpage.
-
-![](screenshots/PopulationStructure4.png){width="650"}
-
-*NJ Tree Complete!*
+![](images/4.4.gif){width="6.8in"}
 
 ------------------------------------------------------------------------
 
@@ -245,44 +217,38 @@ tree is generated by *ape* and *ggtree* packages [@paradis2018;
 A statistical method for assessing genetic relationships and relatedness
 among individuals based on shared alleles [@kang2010]. Kinship matrix is
 generated by *statgenGWAS* package.For more information, visit
-<a href="https://rdrr.io/cran/statgenGWAS/man/kinship.html" target="_blank">https://rdrr.io/cran/statgenGWAS/man/kinship.html</a>.
+<https://rdrr.io/cran/statgenGWAS/man/kinship.html>.
 
-#### Required Dataset: {.unnumbered style="padding: 0px 5px; margin: 0px 10px"}
+#### Required File: {.unnumbered style="padding: 0px 5px; margin: 0px 10px"}
 
--   [**`data.frame`**]{style="color: #8b0000;"}
+-   *data.frame*
 
 ------------------------------------------------------------------------
 
 #### **Steps:** {.unnumbered style="padding: 0px 5px; margin: 0px 10px"}
 
-1.  [Upload]{style="background-color: #fceed2;"} **Group Info.** from
-    [Population Structure]{.underline}/[DAPC]{.underline} subpage
-    (optional). If uploaded, the order of samples will follow the group
-    assignment; otherwise, it will follow the order of the original VCF
-    data.
-
+1.  Upload Group Info. from [Population
+    Structure]{.underline}/[DAPC]{.underline} subpage (optional). If
+    uploaded, the order of samples will follow the group assignment;
+    otherwise, it will follow the order of the original VCF data.
 2.  Choose a method to run kinship analysis.
-
-3.  Click the [**Run
-    Kinship**]{style="color: #fff;background-color: #007ACC;"} button to
+3.  Click the [Run
+    Kinship]{style="color: #fff;background-color: #007ACC;"} button to
     generate the kinship matrix.
 
 ------------------------------------------------------------------------
 
 #### Outputs: {.unnumbered style="padding: 0px 5px; margin: 0px 10px"}
 
--   **Kinship Matrix Plot (PDF)**: A visual representation of the
-    kinship matrix.
+-   Kinship Matrix Plot (PDF): A visual representation of the kinship
+    matrix.
+-   Kinship Matrix (RDS): Contains the kinship matrix data.
 
--   **Kinship Matrix (RDS)**: Contains the kinship matrix data.
+> **Note:** This kinship matrix can be directly used as input for
+> *GAPIT* package in genome-wide association studies (GWAS), helping to
+> control for confounding effects.
 
-> Note: This kinship matrix can be directly used as input for *GAPIT*
-> package in genome-wide association studies (GWAS), helping to control
-> for confounding effects.
-
-![](screenshots/PopulationStructure5.png){width="650"}
-
-*Kinship Analysis Complete!*
+![](images/4.5.gif){width="6.8in"}
 
 ------------------------------------------------------------------------
 
@@ -294,14 +260,14 @@ Structure]{.underline}/[DAPC]{.underline}.
 
 #### Required Files: {.unnumbered style="padding: 0px 5px; margin: 0px 10px"}
 
--   **PCA Object** (PCA_prcomp_Object.rds file) or **DAPC Object**
+-   PCA Object (PCA_prcomp_Object.rds file) or DAPC Object
     (DAPC_dapc_Object.rds file)
--   **Group and Other Info.** (i.e. metadata, modifiable from
+-   Group and Other Info. (i.e. metadata, modifiable from
     DAPC_Group_Info.csv)
 
-> **Note:** If you are using a **DAPC object** as input, ensure that
-> there are **at least 4 groups**. Since an N-group dataset has N-1 LD
-> axes, you need more than 3 axes to generate a 3D scatter plot.
+> **Note:** If you are using a DAPC object as input, ensure that there
+> are at least 4 groups. Since N groups have N-1 LD axes, you need more
+> than 3 axes to generate a 3D scatter plot.
 
 > **Note**: You can add metadata (more information about samples) by
 > adding new variables to the Group Info. file. Ensure that the sample
@@ -309,7 +275,7 @@ Structure]{.underline}/[DAPC]{.underline}.
 
 <details>
 
-<summary>➡️ **Example: Group Info. file (CSV)**</summary>
+<summary> Example: Group Info. file (CSV)</summary>
 
 ![](images/Chromosome-Info.png){width="350"}
 
@@ -319,19 +285,13 @@ Structure]{.underline}/[DAPC]{.underline}.
 
 #### **Steps:** {.unnumbered style="padding: 0px 5px; margin: 0px 10px"}
 
-1.  [Upload]{style="background-color: #fceed2;"} **PCA or DAPC Object
-    (RDS)**
-
-2.  [Upload]{style="background-color: #fceed2;"} **Group and Other Info.
-    (CSV)**
-
-3.  Click the [**Run Scatter
-    Plot**]{style="color: #fff;background-color: #007ACC;"} button to
-    generate the 2D and 3D interactive scatter plots.
-
-4.  Customize the scatter plot and click the [**Run Scatter
-    Plot**]{style="color: #fff;background-color: #007ACC;"} button
-    again.
+1.  Upload PCA or DAPC Object (RDS).
+2.  Upload Group and Other Info. (CSV).
+3.  Click [Run Scatter
+    Plot]{style="color: #fff;background-color: #007ACC;"} to generate
+    the 2D and 3D interactive scatter plots.
+4.  Customize the scatter plot and click [Run Scatter
+    Plot]{style="color: #fff;background-color: #007ACC;"} again.
 
 > **Note**: The scatter plots are downloaded as HTML files and can be
 > opened with browsers like Chrome or Edge.
@@ -340,15 +300,12 @@ Structure]{.underline}/[DAPC]{.underline}.
 
 #### Outputs: {.unnumbered style="padding: 0px 5px; margin: 0px 10px"}
 
--   **2D Scatter Plot (HTML)**: Two-dimensional interactive scatter plot
+-   2D Scatter Plot (HTML): Two-dimensional interactive scatter plot
+    with user-defined attributes.
+-   3D Scatter Plot (HTML): Three-dimensional interactive scatter plot
     with user-defined attributes.
 
--   **3D Scatter Plot (HTML)**: Three-dimensional interactive scatter
-    plot with user-defined attributes.
-
-![](screenshots/PopulationStructure6.png){width="650"}
-
-*Scatter Plot ^Plus^ Complete!*
+![](images/4.6.gif){width="6.8in"}
 
 ## Tree Plot ^Plus^
 
@@ -358,9 +315,9 @@ Structure]{.underline}/[NJ]{.underline}.
 
 #### Required Files: {.unnumbered style="padding: 0px 5px; margin: 0px 10px"}
 
--   **UPGMA Object** (UPGMA_phylo_Object.rds file) or **NJ Object**
+-   UPGMA Object (UPGMA_phylo_Object.rds file) or NJ Object
     (NJ_phylo_Object.rds file)
--   **Group and Other Info.** (modifiable from DAPC_Group_Info.csv)
+-   Group and Other Info. (modifiable from DAPC_Group_Info.csv)
 
 > **Note**: You can add more information about samples by adding new
 > variables to the Group Info. file. Ensure that the sample order
@@ -370,27 +327,19 @@ Structure]{.underline}/[NJ]{.underline}.
 
 #### **Steps:** {.unnumbered style="padding: 0px 5px; margin: 0px 10px"}
 
-1.  [Upload]{style="background-color: #fceed2;"} **UPGMA or NJ Object
-    (RDS)**
-
-2.  [Upload]{style="background-color: #fceed2;"} **Group and Other Info.
-    (CSV)**
-
-3.  Click the [**Run Tree
-    Plot**]{style="color: #fff;background-color: #007ACC;"} button to
-    generate the tree plot.
-
-4.  Customize the tree plot and click the [**Run Tree
-    Plot**]{style="color: #fff;background-color: #007ACC;"} button
-    again.
+1.  Upload UPGMA or NJ Object (RDS).
+2.  Upload Group and Other Info. (CSV).
+3.  Click [Run Tree
+    Plot]{style="color: #fff;background-color: #007ACC;"} to generate
+    the tree plot.
+4.  Customize the tree plot and click [Run Tree
+    Plot]{style="color: #fff;background-color: #007ACC;"} again.
 
 ------------------------------------------------------------------------
 
 #### Outputs: {.unnumbered style="padding: 0px 5px; margin: 0px 10px"}
 
--   **Phylogenetic Tree Plot (PDF)**: A phylogenetic tree plot with
+-   Phylogenetic Tree Plot (PDF): A phylogenetic tree plot with
     user-defined layout style and attributes.
 
-![](screenshots/PopulationStructure7.png){width="650"}
-
-*Tree Plot ^Plus^ Complete!*
+![](images/4.7.gif){width="6.8in"}

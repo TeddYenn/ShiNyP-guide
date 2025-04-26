@@ -19,8 +19,8 @@
 <meta name="twitter:image" content="https://github.com/TeddYenn/ShiNyP-guide/images/cover.png">
 <!-- JS --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/6.4.6/fuse.js" integrity="sha512-zv6Ywkjyktsohkbp9bb45V6tEMoWhzFzXis+LrMehmJZZSys19Yxf1dopHx7WzIKxr5tK2dVcYmaCk2uqdjF4A==" crossorigin="anonymous"></script><script src="https://kit.fontawesome.com/6ecbd6c532.js" crossorigin="anonymous"></script><script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <link href="libs/bootstrap-4.6.0/bootstrap.min.css" rel="stylesheet">
-<script src="libs/bootstrap-4.6.0/bootstrap.bundle.min.js"></script><link href="libs/Lato-0.4.9/font.css" rel="stylesheet">
-<link href="libs/Roboto_Mono-0.4.9/font.css" rel="stylesheet">
+<script src="libs/bootstrap-4.6.0/bootstrap.bundle.min.js"></script><link href="libs/Noto_Sans-0.4.9/font.css" rel="stylesheet">
+<link href="libs/Ubuntu_Sans-0.4.9/font.css" rel="stylesheet">
 <link href="libs/Montserrat-0.4.9/font.css" rel="stylesheet">
 <script src="libs/bs3compat-0.9.0/transition.js"></script><script src="libs/bs3compat-0.9.0/tabs.js"></script><script src="libs/bs3compat-0.9.0/bs3compat.js"></script><link href="libs/bs4_book-1.0.0/bs4_book.css" rel="stylesheet">
 <script src="libs/bs4_book-1.0.0/bs4_book.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/autocomplete.js/0.38.0/autocomplete.jquery.min.js" integrity="sha512-GU9ayf+66Xx2TmpxqJpliWbT5PiGYxpaG8rfnBEk1LL8l1KGkRShhngwdXK1UgqhAzWpZHSiYPc09/NwDQIGyg==" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/mark.min.js" integrity="sha512-5CYOlHXGh6QpOFA/TeTylKLWfB3ftPsde7AnmhuitiTX4K5SqCLBeKro6sPS8ilsz1Q4NRx3v8Ko2IBiszzdww==" crossorigin="anonymous"></script><!-- CSS --><style type="text/css">
@@ -73,7 +73,7 @@
       <nav aria-label="Table of contents"><h2>Table of contents</h2>
         <ul class="book-toc list-unstyled">
 <li><a class="" href="index.html">Welcome to ShiNyP</a></li>
-<li><a class="" href="sec-quickstart.html">Quickstart</a></li>
+<li><a class="" href="get-started.html">Get Started 🚀</a></li>
 <li><a class="" href="sec-data-input.html"><span class="header-section-number">1</span> Data Input</a></li>
 <li><a class="" href="sec-data-qc.html"><span class="header-section-number">2</span> Data QC</a></li>
 <li><a class="active" href="sec-data-conversion.html"><span class="header-section-number">3</span> Data Transform</a></li>
@@ -102,111 +102,93 @@
 
   gtag('config', 'G-2662B66TL7');
 </script><div style="background-color: #7c6f41; color: white; padding: 10px 5px; margin: 10px 0px; border-radius: 15px;">
-<p>➡️ This section allow you to convert your SNP data in <strong>data.frame</strong>
-into <strong>genind</strong> and <strong>more</strong>.</p>
+<p>➡️ This section allow you to convert your SNP data in <em>data.frame</em> into
+multiple formats, including <em>genind</em>, <em>genind</em> and PLINK.</p>
 </div>
-<div id="required-dataset-one-of-the-following-4" class="section level4 unnumbered" style="padding: 0px 5px; margin: 0px 10px">
-<h4>Required Dataset (one of the following):<a class="anchor" aria-label="anchor" href="#required-dataset-one-of-the-following-4"><i class="fas fa-link"></i></a>
+<div id="required-file-4" class="section level4 unnumbered" style="padding: 0px 5px; margin: 0px 10px">
+<h4>Required File:<a class="anchor" aria-label="anchor" href="#required-file-4"><i class="fas fa-link"></i></a>
 </h4>
 <ul>
-<li><p>Input VCF Data (<span style="color: #8b0000;"><strong><code>data.frame</code></strong></span> file)
-from the <u>Data Input</u> page.</p></li>
-<li><p>Post-QC Data (<span style="color: #8b0000;"><strong><code>data.frame</code></strong></span> file) from
-the <u>Data QC</u> page.</p></li>
+<li>Input VCF Data (<em>data.frame</em> file) from the <u>Data Input</u>
+page or</li>
+<li>Post-QC Data (<em>data.frame</em> file) from the <u>Data QC</u>
+page.</li>
 </ul>
 <hr>
 </div>
 <div id="step-1-transform-data.frame-to-genlight" class="section level4 unnumbered" style="padding: 0px 5px; margin: 0px 10px">
-<h4>Step 1: Transform <span style="color: #8b0000;"><strong><code>data.frame</code></strong></span> to <span style="color: #8b0000;"><strong><code>genlight</code></strong></span><a class="anchor" aria-label="anchor" href="#step-1-transform-data.frame-to-genlight"><i class="fas fa-link"></i></a>
+<h4>Step 1: Transform <em>data.frame</em> to <em>genlight</em><a class="anchor" aria-label="anchor" href="#step-1-transform-data.frame-to-genlight"><i class="fas fa-link"></i></a>
 </h4>
-<p>Click the <span style="color: #fff;background-color: #007ACC;"><strong>Transform to
-genlight</strong></span> button. This
-will generate the <span style="color: #8b0000;"><strong><code>genlight</code></strong></span> file.</p>
-<blockquote>
-<p><strong>Note:</strong> After obtaining the clustering results from the <u>Population
-Structure</u>/<u>DAPC</u> subpage, you can add Group
-Info. to the <span style="color: #8b0000;"><strong><code>genlight</code></strong></span> file by
-inputting the ‘DAPC_Group_Info.csv’. This step is necessary for
-analyses like ‘AMOVA’ and ‘OutFLANK’.</p>
-</blockquote>
-<hr>
+<ol style="list-style-type: decimal">
+<li>Click <span style="color: #fff;background-color: #007ACC;">Transform to
+genlight</span>.</li>
+<li>Download the generated <em>genlight</em> (in RDS format) to skip VCF or
+<em>data.frame</em> upload next time by directly importing this file.</li>
+</ol>
 </div>
 <div id="output" class="section level4 unnumbered" style="padding: 0px 5px; margin: 0px 10px">
 <h4>Output:<a class="anchor" aria-label="anchor" href="#output"><i class="fas fa-link"></i></a>
 </h4>
 <ul>
 <li>
-<strong>genlight (RDS)</strong>: <span style="color: #8b0000;"><strong><code>genlight</code></strong></span> file.
-It’s necessary for downstream analyses, <em>please download and save
-it!</em>
-</li>
+<em>genlight</em> (RDS): <em>genlight</em> file — required for downstream
+analysis.</li>
 </ul>
-<blockquote>
-<p><strong>Note:</strong> Please download and save your
-<span style="color: #8b0000;"><strong><code>data.frame</code></strong></span> and
-<span style="color: #8b0000;"><strong><code>genlight</code></strong></span> files after transformation.
-This will save you from having to input the large VCF file again next
-time.</p>
-</blockquote>
 <hr>
+<p><br></p>
 </div>
-<div id="step-2-transform-genind-to-others" class="section level4 unnumbered" style="padding: 0px 5px; margin: 0px 10px">
-<h4>Step 2: Transform <span style="color: #8b0000;"><strong><code>genind</code></strong></span> to others<a class="anchor" aria-label="anchor" href="#step-2-transform-genind-to-others"><i class="fas fa-link"></i></a>
+<div id="step-2-transform-genlight-to-others" class="section level4 unnumbered" style="padding: 0px 5px; margin: 0px 10px">
+<h4>Step 2: Transform <em>genlight</em> to others<a class="anchor" aria-label="anchor" href="#step-2-transform-genlight-to-others"><i class="fas fa-link"></i></a>
 </h4>
-<p>Select the desired data format to export from
-<span style="color: #8b0000;"><strong><code>genlight</code></strong></span> and click the
-<span style="color: #fff;background-color: #007ACC;"><strong>Transform</strong></span> button.
-This will generate the specified file.</p>
-<hr>
+<p>Select the desired data format to export from <em>genlight</em> and click
+<span style="color: #fff;background-color: #007ACC;">Transform</span>.</p>
 </div>
 <div id="outputs-4" class="section level4 unnumbered" style="padding: 0px 5px; margin: 0px 10px">
 <h4>Outputs:<a class="anchor" aria-label="anchor" href="#outputs-4"><i class="fas fa-link"></i></a>
 </h4>
 <ul>
-<li><p><strong>genlight (RDS)</strong>: <span style="color: #8b0000;"><strong><code>genlight</code></strong></span> file
-with Group Info. It’s necessary for downstream analyses, <em>please
-download and save it!</em> Downloadable on
-<span style="color: #9D6853;"><strong><em>ShiNyP</em></strong></span>.</p></li>
-<li><p><strong>genind (RDS)</strong>: Input format for
-<span style="color: #9D6853;"><strong><em>ShiNyP</em></strong></span> <u>DAPC</u> subpage,
-optimized for DAPC analysis to reduce computation time. Downloadable
-on <span style="color: #9D6853;"><strong><em>ShiNyP</em></strong></span>.</p></li>
+<li>
+<em>genlight</em> (RDS): <em>genlight</em> file with Group Info. — required for
+downstream analysis.</li>
+<li>
+<em>genind</em> (RDS): One of the input format for <em>ShiNyP</em>
+<u>DAPC</u> subpage, optimized for DAPC analysis to reduce
+computation time.</li>
 </ul>
 <p>The following transformed files will be generated at the specified path
 you provide.</p>
 <ul>
-<li><p><strong>PLINK (PED &amp; MAP)</strong>: Input format for
+<li>PLINK (PED &amp; MAP): Input format for
 <a href="https://www.cog-genomics.org/plink/1.9/input#ped">PLINK</a> program,
-designed to perform a range of basic and large-scale SNP analyses.</p></li>
-<li><p><strong>GenAlEx (CSV)</strong>: Input format for
+designed to perform a range of basic and large-scale SNP analyses.</li>
+<li>GenAlEx (CSV): Input format for
 <a href="https://biology-assets.anu.edu.au/GenAlEx/Welcome.html">GenAlEx</a>
 program, offers a wide range of population genetic analysis in
-Excel.</p></li>
-<li><p><strong>LEA (GENO &amp; LFMM)</strong>: Input format for
+Excel.</li>
+<li>LEA (GENO &amp; LFMM): Input format for
 <a href="https://www.bioconductor.org/packages/release/bioc/html/LEA.html">LEA</a>
 R package, designed for population genomics, landscape genomics and
-genotype-environment association tests.</p></li>
-<li><p><strong>GDS (GDS)</strong>: Input format for
+genotype-environment association tests.</li>
+<li>GDS (GDS): Input format for
 <a href="https://bioconductor.org/packages/release/bioc/html/SNPRelate.html">SNPRelate</a>
-R package, designed for efficient SNP data analysis.</p></li>
-<li><p><strong>STRUCTURE (STR)</strong>: Input format for
+R package, designed for efficient SNP data analysis.</li>
+<li>STRUCTURE (STR): Input format for
 <a href="https://web.stanford.edu/group/pritchardlab/structure.html">STRUCTURE</a>
-program, used for inferring population structure.</p></li>
-<li><p><strong>fastStructure (STR)</strong>: Input format for
+program, used for inferring population structure.</li>
+<li>fastStructure (STR): Input format for
 <a href="https://rajanil.github.io/fastStructure/">fastStructure</a> program,
-used for inferring population structure from large SNP data.</p></li>
-<li><p><strong>PHYLIP (TXT)</strong>: Input format for
+used for inferring population structure from large SNP data.</li>
+<li>PHYLIP (TXT): Input format for
 <a href="https://phylipweb.github.io/phylip/">PHYLIP</a> program, used for
-phylogenetic tree reconstruction and evolutionary analysis.</p></li>
-<li><p><strong>Treemix (GZ)</strong>: Input format for
+phylogenetic tree reconstruction and evolutionary analysis.</li>
+<li>Treemix (GZ): Input format for
 <a href="https://speciationgenomics.github.io/Treemix/">Treemix</a> program,
-designed for modeling population splits and migration events.</p></li>
-<li><p><strong>BayeScan (TXT)</strong>: Input format for
+designed for modeling population splits and migration events.</li>
+<li>BayeScan (TXT): Input format for
 <a href="https://cmpg.unibe.ch/software/BayeScan/files/BayeScan2.0_manual.pdf">BayeScan</a>,
-used for detecting loci under selection.</p></li>
+used for detecting loci under selection.</li>
 </ul>
 <div class="inline-figure"><img src="screenshots/DataTransform1.png" width="650"></div>
-<p><em>Data Transformation Complete!</em></p>
 
 </div>
 </div>

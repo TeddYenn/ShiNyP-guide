@@ -8,7 +8,7 @@ h1, h2, h3 {
   font-weight: 600;
 }
 code {
-  font-family: 'Sofia Sans Condensed', monospace;
+  font-family: 'Roboto Mono', monospace;
   font-style: italic;
 }
 p.caption {
@@ -54,7 +54,13 @@ h5 {
 }
 
 a {
+  color: #3358a7  !important;
   text-decoration: none;
+}
+
+a:hover {
+  color: #1E90FF !important;
+  text-decoration: underline;
 }
 
 .highlighted-text {
