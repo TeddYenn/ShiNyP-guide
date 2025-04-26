@@ -53,10 +53,10 @@ Last Updated: April 2025
 ## Quickstart {.unnumbered}
 
 🚀 [**Run *ShiNyP* via
-R**](https://teddyenn.github.io/ShiNyP-guide/sec-run-shinyp-via-r.html)
+R**](https://teddyenn.github.io/ShiNyP-guide/get-started.html#sec-run-shinyp-via-r)
 
 🚀 [**Run *ShiNyP* via
-Docker**](https://teddyenn.github.io/ShiNyP-guide/sec-run-shinyp-via-docker.html)
+Docker**](https://teddyenn.github.io/ShiNyP-guide/get-started.html#sec-run-shinyp-via-docker)
 
 ------------------------------------------------------------------------
 
@@ -218,6 +218,7 @@ Open your browser and visit 👉
 ![](images/Graphical%20Abstract.jpg){width="680"}
 
 | 🔼 **Overview of the *ShiNyP* Platform Workflow for SNP Analysis.**
+| 
 | ▸ **Data Input & Processing:**
 | The workflow begins with Variant Call Format (VCF) [Data Input](https://teddyenn.github.io/ShiNyP-guide/sec-data-input.html), followed by essential steps such as [Data Quality Control (QC)](https://teddyenn.github.io/ShiNyP-guide/sec-data-qc.html) and [Data Transformation](https://teddyenn.github.io/ShiNyP-guide/sec-data-conversion.html) to prepare the data for analysis.
 | ▸ **Modular Analysis & Output:**

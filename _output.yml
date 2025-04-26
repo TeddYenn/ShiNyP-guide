@@ -16,6 +16,8 @@ bookdown::bs4_book:
     bg: "#f9f9f9" # backgrounds
     fg: "#000000" # fonts
   repo: https://github.com/TeddYenn/ShiNyP-guide
+  includes:
+    in_header: "favicon.html"
 
 bookdown::gitbook:
   css: style.css
