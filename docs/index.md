@@ -2,7 +2,7 @@
 title: "User Guide for ShiNyP"
 subtitle: "SNP Analysis and Visualization Platform"
 author: "Yen-Hsiang Huang, Chung-Feng Kao"
-date: "Apr 2025"
+date: "May 2025"
 knit: "bookdown::render_book"
 site: bookdown::bookdown_site
 output: bookdown::bs4_book
@@ -15,7 +15,7 @@ colorlinks: true
 github-repo: "TeddYenn/ShiNyP"
 cover-image: images/cover.png
 url: https://github.com/TeddYenn/ShiNyP-guide
-description: "ShiNyP: An Interactive Shiny-Based Platform for Genome-Wide SNP Analysis and Visualization"
+description: "An R/Shiny platform for genome-wide SNP analysis and visualization with AI-assisted features"
 editor_options: 
   markdown: 
     wrap: 72
@@ -46,7 +46,7 @@ under the [GNU General Public
 License](https://www.gnu.org/licenses/gpl-3.0.html.en).</p>
 :::
 
-Last Updated: April 2025
+Last Updated: May 2025
 
 ------------------------------------------------------------------------
 
@@ -71,13 +71,28 @@ visualization of SNP datasets.
 | 📋 **Output:** Publication-ready figures, tables, R objects, and free AI-driven report.
 :::
 
-<br>
-
 ![](images/0.gif){width="6.8in"}
 
 ------------------------------------------------------------------------
 
-## Updates {.unnumbered}
+## Publication {.unnumbered}
+
+If you use *ShiNyP* in your research, please cite:
+
+> Huang, Y.-H., Chen, L.-Y., Septiningsih E. M., Kao, P.-H., Kao, C.-F.
+> (2025) *ShiNyP*: Unlocking SNP-Based Population Genetics—An
+> AI-Assisted Platform for Rapid and Interactive Visual Exploration.
+> *Molecular Biology and Evolution*, *43*(6), msaf117.
+> <https://doi.org/10.1093/molbev/msaf117>
+
+In addition, please acknowledge the R packages utilized in your
+analysis. The relevant citations and descriptions for each module are
+detailed in the *ShiNyP* [User
+Guide](https://teddyenn.github.io/ShiNyP-guide/).
+
+------------------------------------------------------------------------
+
+## **Updates and Support** {.unnumbered}
 
 Aug 2024: alpha version
 
@@ -91,30 +106,33 @@ Feb 2025: v0.1.1
 
 :   | - Simplified workflow for Data Input & Transform.
     | - Refined visual elements.
-    | - Optimized memory usage.
 
-🆕 Apr 2025: v0.1.2 on [GitHub](https://github.com/TeddYenn/ShiNyP).
+Apr 2025: v0.2.0
 
 :   | - Enhanced AI report functionality with new options and models.
     | - Improved the layout of preliminary results for better readability.
     | - Added more methods for constructing core SNP set.
     | - Added the Docker-based installation.
 
-------------------------------------------------------------------------
+🆕 May 2025: v1.0.0 on [GitHub](https://github.com/TeddYenn/ShiNyP).
 
-## Support {.unnumbered}
-
-If you encounter any issues or have suggestions for new features, please
-submit a request on the [GitHub Issues
-page](https://github.com/TeddYenn/ShiNyP/issues) or email us at:
-[teddyhuangyh\@gmail.com](#0)
+:   | - Introduced the **new *ShiNyP* AI chatbot**.
+    | - Enhanced AI report features and deprecated older AI models.
+    | - Added publication details.
+    | - Made minor UI improvements.
+    | - Fixed several bugs.
 
 <br>
 
-> **This is the User Guide site for *ShiNyP*, live at [GitHub
-> Page](https://teddyenn.github.io/ShiNyP-guide/).**
+:   If you encounter any issues or have suggestions for new features,
+    please submit a request on the [GitHub Issues
+    page](https://github.com/TeddYenn/ShiNyP/issues) or email us at:
+    [teddyhuangyh\@gmail.com](#0)
 
 ------------------------------------------------------------------------
+
+> **This is the User Guide site for *ShiNyP*, live at [GitHub
+> Page](https://teddyenn.github.io/ShiNyP-guide/).**
 
 # **Get Started** 🚀 {.unnumbered}
 
@@ -124,7 +142,7 @@ There are two easy ways to install and run *ShiNyP*:
     This method is suitable if you already have R installed or prefer
     working within the R environment. You’ll need to install some R
     packages and then launch *ShiNyP* directly from R environment. ▸
-    R/RStudio/Rtools Tutorial for Beginners!
+    R/RStudio/Rtools Tutorial for Beginners! (#Developing)
 
 2.  **Using Docker**:\
     This is the simpler option if you’d rather skip installing R or any
@@ -224,4 +242,4 @@ Open your browser and visit 👉
 | ▸ **Modular Analysis & Output:**
 | Analytical functions are organized into distinct modules—each accessible as a separate page within the platform. These include: [Population Structure](https://teddyenn.github.io/ShiNyP-guide/sec-population-structure.html), [Genetic Diversity](https://teddyenn.github.io/ShiNyP-guide/sec-genetic-diversity.html), [Selection Sweep](https://teddyenn.github.io/ShiNyP-guide/sec-selection-sweep.html), and [Core Collection](https://teddyenn.github.io/ShiNyP-guide/sec-core-collection.html). Each module contains multiple subpages offering specialized tools for detailed analysis.
 | ▸ **Customizable Output:**
-| *ShiNyP* delivers publication-ready visualizations and AI-generated reports that summarize analytical results in clear, structured narratives. Users can tailor output formats to fit specific research needs, ensuring both flexibility and interpretability.
+| *ShiNyP* delivers publication-ready visualizations and [AI Report](https://teddyenn.github.io/ShiNyP-guide/sec-ai-report.html) that summarize analytical results in clear, structured narratives. Users can tailor output formats to fit specific research needs.

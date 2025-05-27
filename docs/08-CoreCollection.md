@@ -24,7 +24,7 @@ and [Core SNP Set]{.underline}, allowing you to capture the key samples
 and SNPs.
 :::
 
-![](images/Supplementary Fig. 5.jpg){width="6.8in"}
+![](images/Supplementary%20Fig.%205.jpg){width="6.8in"}
 
 ## Core Sample Set
 
@@ -41,7 +41,7 @@ entire population. This approach is modified function from GenoCore
 #### **Steps:** {.unnumbered style="padding: 0px 5px; margin: 0px 10px"}
 
 1.  Choose the minimum genetic coverage (%).
-2.  Choose the genetic coverage differences between iterations.
+2.  Choose the minimum genetic coverage differences between iterations.
 3.  Click [Run Core
     Sample]{style="color: #fff;background-color: #007ACC;"} to perform
     core collection.
@@ -89,8 +89,8 @@ observed in the full dataset or a random SNP set.
     (CSV).
 2.  Choose the method and Upload DAPC Object (RDS) or set the parameter.
 3.  Click the [Run Core
-    SNP]{style="color: #fff;background-color: #007ACC;"} button to
-    perform core collection.
+    SNP]{style="color: #fff;background-color: #007ACC;"} to perform core
+    collection.
 
 ------------------------------------------------------------------------
 

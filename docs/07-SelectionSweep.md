@@ -25,7 +25,7 @@ Plot]{.underline}^Plus^, allowing you to detect selection signatures in
 different scenario and customize your plot.
 :::
 
-![](images/Supplementary Fig. 4.jpg){width="6.8in"}
+![](images/Supplementary%20Fig.%204.jpg){width="6.8in"}
 
 ## pcadapt
 
@@ -183,13 +183,13 @@ Sweep]{.underline}/[OutFLANK]{.underline}.
 #### **Steps:** {.unnumbered style="padding: 0px 5px; margin: 0px 10px"}
 
 1.  Upload genetic_diversity/pcadapt_pvalue/OutFLANK_pvalue per site
-    (RDS).
+    object (RDS).
 2.  Upload Chromosome Info. (CSV).
 3.  Click the [Run Manhattan
-    Plot]{style="color: #fff;background-color: #007ACC;"} button to
-    generate the Manhattan plot.
+    Plot]{style="color: #fff;background-color: #007ACC;"} to generate
+    the Manhattan plot.
 4.  Customize the Manhattan plot and click the [Run Manhattan
-    Plot]{style="color: #fff;background-color: #007ACC;"} button again.
+    Plot]{style="color: #fff;background-color: #007ACC;"} again.
 
 ------------------------------------------------------------------------
 

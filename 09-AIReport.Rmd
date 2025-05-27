@@ -54,7 +54,7 @@ editor_options:
 
 5.  Upload your AI API key: Provide a **`.txt`** file containing your
     API key (e.g., sk-...).\
-    💡Google Gemini API key is free — see below to get started!
+    💡Model: "Gemini 2.0 Flash (API Free)" — no API required!
 
     ▼ Example of API key file.
 
@@ -72,34 +72,29 @@ editor_options:
 
 ## 🤖 AI models {#ai-models .unnumbered style="padding: 0px 5px; margin: 0px 10px"}
 
-🆕 For *ShiNyP* v0.1.2 (Apr 17, 2025), we support 14 AI models:
+🆕 For *ShiNyP* v1.0.0 (May 27, 2025), we support 10 AI models:
 
-| Models                | Developer | Price ^a^                  | Overall rank |
-|----------------|----------------|----------------|----------------|
-| DeepSeek-V3           | DeepSeek  | \$0.07/\$1.10              | 🥈           |
-| Gemini 2.0 Flash      | Google    | **Free** or \$0.10/\$0.40  | 🥇           |
-| Gemini 2.0 Flash-Lite | Google    | **Free** or \$0.075/\$0.30 |              |
-| 🆕 o4-mini            | OpenAI    | \$1.10/\$4.40              | 🥉^\#^       |
-| o3-mini               | OpenAI    | \$1.10/\$4.40              | 🥉^\#^       |
-| o1-mini               | OpenAI    | \$1.10/\$4.40              |              |
-| 🆕 GPT-4.1            | OpenAI    | \$2.00/\$8.00              | 🥈           |
-| 🆕 GPT-4.1 mini       | OpenAI    | \$0.40/\$1.60              |              |
-| 🆕 GPT-4.1 nano       | OpenAI    | \$0.10/\$0.40              |              |
-| GPT-4o                | OpenAI    | \$2.50/\$10.00             |              |
-| GPT-4o mini           | OpenAI    | \$0.15/\$0.60              |              |
-| GPT-4 Turbo           | OpenAI    | \$10.00/\$30.00            |              |
-| GPT-4                 | OpenAI    | \$30.00/\$60.00            |              |
-| GPT-3.5 Turbo         | OpenAI    | \$0.50/\$1.50              |              |
+| Models                | Developer | Price ^a^                  |
+|-----------------------|-----------|----------------------------|
+| DeepSeek-V3           | DeepSeek  | \$0.07/\$1.10              |
+| Gemini 2.0 Flash      | Google    | **Free** or \$0.10/\$0.40  |
+| Gemini 2.0 Flash-Lite | Google    | **Free** or \$0.075/\$0.30 |
+| 🆕 o4-mini            | OpenAI    | \$1.10/\$4.40              |
+| o3-mini               | OpenAI    | \$1.10/\$4.40              |
+| 🆕 GPT-4.1            | OpenAI    | \$2.00/\$8.00              |
+| 🆕 GPT-4.1 mini       | OpenAI    | \$0.40/\$1.60              |
+| 🆕 GPT-4.1 nano       | OpenAI    | \$0.10/\$0.40              |
+| GPT-4o                | OpenAI    | \$2.50/\$10.00             |
+| GPT-4o mini           | OpenAI    | \$0.15/\$0.60              |
 
 : ^a^ Price per 1M Tokens (Input / Output)\
 ⚡ We recommend using Google [**Gemini 2.0
 Flash**](https://ai.google.dev/gemini-api/docs/models/gemini#gemini-2.0-flash)—the
 flagship model—for generating AI reports. ***It is free to use*** (see
 below).\
-💸 If you have paid API access from DeepSeek or OpenAI, we recommend
-using [DeepSeek-V3](https://api-docs.deepseek.com/news/news250325) or
+💸 If you have paid API access from OpenAI, we recommend using
 [GPT-4.1](https://platform.openai.com/docs/models/gpt-4.1) for optimal
-performance. ^\#^ Please note that
+performance. Please note that
 [o4-mini](https://platform.openai.com/docs/models/o4-mini) and
 [o3-mini](https://platform.openai.com/docs/models/o3-mini) are more
 suitable for single-turn conversations and are not ideal for multi-turn.
@@ -171,9 +166,5 @@ suitable for single-turn conversations and are not ideal for multi-turn.
 :   This error may indicate that the request timed out, possibly due to
     an excessive input token count, which prevents the OpenAI model from
     completing the task within the allotted time.
-
-    To resolve this issue, try selecting the 'GPT-3.5 Turbo' model to
-    generate the report first. If successful, you can then switch to
-    other models for subsequent tasks.
 
 ------------------------------------------------------------------------

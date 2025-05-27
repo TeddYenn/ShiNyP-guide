@@ -23,113 +23,173 @@ editor_options:
 > page](https://github.com/TeddYenn/ShiNyP/issues) or email us
 > at: [teddyhuangyh\@gmail.com](mailto:teddyhuangyh@gmail.com)**
 
-## Troubleshooting for **Installation** {.unnumbered}
+## General Usage {.unnumbered}
 
-During installation or while running *ShiNyP*, you might encounter
-issues. Below are common problems and their solutions.
+docker run -d -p 3838:3838 teddyenn/shinyp-platfor
 
-⚒️ **R and Bioconductor Version Mismatch**
+1.  **Can I use the online version of *ShiNyP* platform?**
 
-:   The installation specifies Bioconductor version 3.19, which requires
-    R version ≥ 4.4. If your R version is below 4.4, update it from
-    CRAN.
+    Yes, a trial version of *ShiNyP* is available online at:
+    <https://teddyhuang.shinyapps.io/ShiNyP_Demo/>
+
+    This web-based DEMO is hosted on Shinyapps.io and is intended for
+    trial purposes. Please note that, due to server memory limitations
+    (1GB RAM), this version is not suitable for the analysis of
+    large-scale SNP datasets. For complete functionality and to analyze
+    larger datasets, we strongly recommend downloading *ShiNyP* from
+    GitHub.
+
+    For more information: [Get
+    Started](https://teddyenn.github.io/ShiNyP-guide/get-started.html)
+
+2.  **Do I need programming skills to use *ShiNyP*?**
+
+    No programming experience is required. *ShiNyP* provides a
+    user-friendly graphical interface that allows you to perform all
+    analyses interactively without coding.
+
+3.  **How do I install and start the *ShiNyP* platform?**
+
+    You can install *ShiNyP* in R via:
 
     ``` r
-    # Check your R version R.version.string
+    remotes::install_github("TeddYenn/ShiNyP")
+    library(ShiNyP)
+    ShiNyP::run_ShiNyP()
     ```
+
+    Alternatively, use the Docker image for a one-step deployment:
+
+    ``` bash
+    docker run -d -p 3838:3838 teddyenn/shinyp-platfor
+    ```
+
+    For more information: [Get
+    Started](https://teddyenn.github.io/ShiNyP-guide/get-started.html)
+
+4.  **Is my data secure when using *ShiNyP*?**
+
+    All analyses are conducted locally on your machine or server. No
+    user data is transmitted to third-party servers unless you
+    explicitly use AI features (*ShiNyP* AI chatbot and reporting
+    system).
+
+5.  **Does *ShiNyP* require internet access to function?**
+
+    *ShiNyP* runs locally and does not require internet access for core
+    analyses. Internet is only needed when installing the packages and
+    using AI features (*ShiNyP* AI chatbot and reporting system).
 
 ------------------------------------------------------------------------
 
-⚒️ **Installation of Dependencies**
+## Analysis & Features {.unnumbered}
 
-:   Installing packages like *shiny* and *dartR* may require additional
+1.  **What types of input data are supported by *ShiNyP*?**
+
+    *ShiNyP* supports genome-wide biallelic SNP datasets in Variant Call
+    Format (VCF). It is also compatible with `data.frame` and `genlight`
+    files, covering both diploid and polyploid species.
+
+    For more information: [Data
+    Input](https://teddyenn.github.io/ShiNyP-guide/sec-data-input.html)
+
+2.  **What kind of output does the platform provide?**
+
+    The platform generates publication-ready figures (PDF, PNG, or JPEG)
+    and tables, reusable R data objects, and AI-assisted reports that
+    summarize analytical results in natural language.
+
+3.  **Can I customize analysis parameters?**
+
+    Yes, users can adjust analysis thresholds, models, and filtering
+    criteria directly through the interface to suit their research
+    needs.
+
+4.  **Can I analyze large SNP datasets with *ShiNyP*?**
+
+    Yes, *ShiNyP* is optimized for both moderate and large-scale SNP
+    datasets. However, performance may depend on your system’s hardware
+    specifications.
+
+5.  **Can I analyze datasets from different species in one session?**
+
+    Yes, as long as your data are properly formatted, *ShiNyP* supports
+    datasets from different species. However, it is recommended to
+    analyze each species separately for clearer results.
+
+6.  **Can *ShiNyP* export data to formats used by other genetics
+    software?**
+
+    Yes, results and transformed data can be exported in formats
+    compatible with tools such as STRUCTURE, PLINK, GenAlEx, and others.
+
+    For more information: [Data
+    Transform](https://teddyenn.github.io/ShiNyP-guide/sec-data-conversion.html)
+
+------------------------------------------------------------------------
+
+## Support {.unnumbered}
+
+1.  **Is *ShiNyP* open-source? Is it possible to extend ShiNyP with
+    custom modules or scripts?**
+
+    Yes, *ShiNyP* is released under an open-source license ([GNU General
+    Public License](https://www.gnu.org/licenses/gpl-3.0.html.en)). The
+    source code is available on GitHub for transparency and community
+    contributions.
+
+2.  **Where can I report bugs or request new features?**
+
+    If you encounter any issues or have suggestions for new features,
+    please submit a request on the [GitHub Issues
+    page](https://github.com/TeddYenn/ShiNyP/issues) or email us
+    at: [teddyhuangyh\@gmail.com](#0){.email}.
+
+------------------------------------------------------------------------
+
+## Instal**lation Issues** {.unnumbered}
+
+-   **R and Bioconductor version mismatch**
+
+    The installation specifies Bioconductor version 3.21, which requires
+    R version ≥ 4.5. If your R version is below 4.5, update it from
+    [CRAN](https://cran.r-project.org/).
+
+    ``` r
+    # Check your R version 
+    R.version.string
+    ```
+
+-   xcode-select --install
+
+-   **Installation of dependencies**
+
+    Installing packages like *shiny* and *dartR* may require additional
     developer tools. You might encounter error messages such as:
 
     ``` r
     ERROR: dependencies 'shiny', 'dartR' are not available for package 'ShiNyP'
     ```
 
-:   -   **For Windows**:
-
-        Download Rtools from [**CRAN
+    -   **For Windows**: Download Rtools from [**CRAN
         Rtools**](https://cran.r-project.org/bin/windows/Rtools/).
 
-        Run the installer and follow the on-screen instructions.
+    -   **For macOS**: Open Terminal and run the installation command:
 
-        Ensure Rtools is added to your system PATH during installation.
-
-        Verify Installation:
-
-        ``` r
-        pkgbuild::find_rtools()
-        ```
-
-        It should return **`TRUE`** if Rtools is correctly installed.
-
-    -   **For macOS**:
-
-        Open Terminal: Press **`Cmd + Space`**, type "Terminal", and
-        press **`Enter`**.
-
-        Run the Installation Command:
-
-        ``` r
+        ``` bash
         xcode-select --install
         ```
 
-        Verify Installation:
+-   **GitHub installation issues**
 
-        ``` r
-        xcode-select -p
-        ```
-
-        It should return **`/Library/Developer/CommandLineTools`**.
-
-    -   **For Linux**:
-
-        Install Essential Build Tools:
-
-        ``` r
-        sudo apt-get install r-base-dev sudo apt-get install build-essential libcurl4-gnutls-dev libxml2-dev libssl-dev
-        ```
-
-------------------------------------------------------------------------
-
-⚒️ **GitHub Installation Issues**
-
-:   Verify that your system is connected to the internet. Check for any
+    Verify that your system is connected to the internet. Check for any
     firewall or proxy settings that might block GitHub access.
 
-------------------------------------------------------------------------
+-   **Package loading issues**
 
-⚒️ **Package Loading Issues**
-
-:   Errors occur when loading *ShiNyP* or its dependencies, possibly due
-    to outdated packages or conflicts.
-
-    1.  **Update All Installed Packages**:
-
-        When prompted with
-
-        ``` r
-        # These packages have more recent versions available. # It is recommended to update all of them. # Which would you like to update?  # -> Respond with 1 to update all packages.
-        ```
-
-        Please type 1 (1: All)
-
-    2.  If a specific package is causing issues, reinstall it.
-
-        ``` r
-        install.packages("dartRverse") BiocManager::install("SNPRelate")
-        ```
-
-    3.  Check for Namespace Conflicts:
-
-        Identify if multiple packages are masking functions.
-
-        ``` r
-        conflicts()
-        ```
+    Errors occur when loading *ShiNyP* or its dependencies, possibly due
+    to outdated packages or conflicts. **Update all installed
+    packages.**
 
 ------------------------------------------------------------------------
 

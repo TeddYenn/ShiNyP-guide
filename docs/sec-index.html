@@ -108,101 +108,167 @@ please submit a request on the <a href="https://github.com/TeddYenn/ShiNyP/issue
 page</a> or email us
 at: <a href="mailto:teddyhuangyh@gmail.com">teddyhuangyh@gmail.com</a></strong></p>
 </blockquote>
-<div id="troubleshooting-for-installation" class="section level2 unnumbered">
-<h2>Troubleshooting for <strong>Installation</strong><a class="anchor" aria-label="anchor" href="#troubleshooting-for-installation"><i class="fas fa-link"></i></a>
+<div id="general-usage" class="section level2 unnumbered">
+<h2>General Usage<a class="anchor" aria-label="anchor" href="#general-usage"><i class="fas fa-link"></i></a>
 </h2>
-<p>During installation or while running <em>ShiNyP</em>, you might encounter
-issues. Below are common problems and their solutions.</p>
-<dl>
-<dt>⚒️ <strong>R and Bioconductor Version Mismatch</strong>
-</dt>
-<dd>
-<p>The installation specifies Bioconductor version 3.19, which requires
-R version ≥ 4.4. If your R version is below 4.4, update it from
-CRAN.</p>
-<div class="sourceCode" id="cb5"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="co"># Check your R version R.version.string</span></span></code></pre></div>
-</dd>
-</dl>
-<hr>
-<dl>
-<dt>⚒️ <strong>Installation of Dependencies</strong>
-</dt>
-<dd>
-<p>Installing packages like <em>shiny</em> and <em>dartR</em> may require additional
-developer tools. You might encounter error messages such as:</p>
-<div class="sourceCode" id="cb6"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb6-1"><a href="sec-index.html#cb6-1" tabindex="-1"></a>ERROR<span class="sc">:</span> dependencies <span class="st">'shiny'</span>, <span class="st">'dartR'</span> are not available <span class="cf">for</span> package <span class="st">'ShiNyP'</span></span></code></pre></div>
-</dd>
-<dd>
-<ul>
-<li>
-<p><strong>For Windows</strong>:</p>
-<p>Download Rtools from <a href="https://cran.r-project.org/bin/windows/Rtools/"><strong>CRAN
-Rtools</strong></a>.</p>
-<p>Run the installer and follow the on-screen instructions.</p>
-<p>Ensure Rtools is added to your system PATH during installation.</p>
-<p>Verify Installation:</p>
-<div class="sourceCode" id="cb7"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="fu">pkgbuild</span><span class="fu">::</span><span class="fu"><a href="https://pkgbuild.r-lib.org/reference/has_rtools.html">find_rtools</a></span><span class="op">(</span><span class="op">)</span></span></code></pre></div>
-<p>It should return <strong><code>TRUE</code></strong> if Rtools is correctly installed.</p>
-</li>
-<li>
-<p><strong>For macOS</strong>:</p>
-<p>Open Terminal: Press <strong><code>Cmd + Space</code></strong>, type “Terminal”, and
-press <strong><code>Enter</code></strong>.</p>
-<p>Run the Installation Command:</p>
-<div class="sourceCode" id="cb8"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="va">xcode</span><span class="op">-</span><span class="va">select</span> <span class="op">-</span><span class="op">-</span><span class="va">install</span></span></code></pre></div>
-<p>Verify Installation:</p>
-<div class="sourceCode" id="cb9"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="va">xcode</span><span class="op">-</span><span class="va">select</span> <span class="op">-</span><span class="va">p</span></span></code></pre></div>
-<p>It should return <strong><code>/Library/Developer/CommandLineTools</code></strong>.</p>
-</li>
-<li>
-<p><strong>For Linux</strong>:</p>
-<p>Install Essential Build Tools:</p>
-<div class="sourceCode" id="cb10"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb10-1"><a href="sec-index.html#cb10-1" tabindex="-1"></a>sudo apt<span class="sc">-</span>get install r<span class="sc">-</span>base<span class="sc">-</span>dev sudo apt<span class="sc">-</span>get install build<span class="sc">-</span>essential libcurl4<span class="sc">-</span>gnutls<span class="sc">-</span>dev libxml2<span class="sc">-</span>dev libssl<span class="sc">-</span>dev</span></code></pre></div>
-</li>
-</ul>
-</dd>
-</dl>
-<hr>
-<dl>
-<dt>⚒️ <strong>GitHub Installation Issues</strong>
-</dt>
-<dd>
-<p>Verify that your system is connected to the internet. Check for any
-firewall or proxy settings that might block GitHub access.</p>
-</dd>
-</dl>
-<hr>
-<dl>
-<dt>⚒️ <strong>Package Loading Issues</strong>
-</dt>
-<dd>
-<p>Errors occur when loading <em>ShiNyP</em> or its dependencies, possibly due
-to outdated packages or conflicts.</p>
+<p>docker run -d -p 3838:3838 teddyenn/shinyp-platfor</p>
 <ol style="list-style-type: decimal">
 <li>
-<p><strong>Update All Installed Packages</strong>:</p>
-<p>When prompted with</p>
-<div class="sourceCode" id="cb11"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="co"># These packages have more recent versions available. # It is recommended to update all of them. # Which would you like to update?  # -&gt; Respond with 1 to update all packages.</span></span></code></pre></div>
-<p>Please type 1 (1: All)</p>
+<p><strong>Can I use the online version of <em>ShiNyP</em> platform?</strong></p>
+<p>Yes, a trial version of <em>ShiNyP</em> is available online at:
+<a href="https://teddyhuang.shinyapps.io/ShiNyP_Demo/" class="uri">https://teddyhuang.shinyapps.io/ShiNyP_Demo/</a></p>
+<p>This web-based DEMO is hosted on Shinyapps.io and is intended for
+trial purposes. Please note that, due to server memory limitations
+(1GB RAM), this version is not suitable for the analysis of
+large-scale SNP datasets. For complete functionality and to analyze
+larger datasets, we strongly recommend downloading <em>ShiNyP</em> from
+GitHub.</p>
+<p>For more information: <a href="https://teddyenn.github.io/ShiNyP-guide/get-started.html">Get
+Started</a></p>
 </li>
 <li>
-<p>If a specific package is causing issues, reinstall it.</p>
-<div class="sourceCode" id="cb12"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb12-1"><a href="sec-index.html#cb12-1" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">"dartRverse"</span>) BiocManager<span class="sc">::</span><span class="fu">install</span>(<span class="st">"SNPRelate"</span>)</span></code></pre></div>
+<p><strong>Do I need programming skills to use <em>ShiNyP</em>?</strong></p>
+<p>No programming experience is required. <em>ShiNyP</em> provides a
+user-friendly graphical interface that allows you to perform all
+analyses interactively without coding.</p>
 </li>
 <li>
-<p>Check for Namespace Conflicts:</p>
-<p>Identify if multiple packages are masking functions.</p>
-<div class="sourceCode" id="cb13"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/base/conflicts.html">conflicts</a></span><span class="op">(</span><span class="op">)</span></span></code></pre></div>
+<p><strong>How do I install and start the <em>ShiNyP</em> platform?</strong></p>
+<p>You can install <em>ShiNyP</em> in R via:</p>
+<div class="sourceCode" id="cb5"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="fu">remotes</span><span class="fu">::</span><span class="fu"><a href="https://remotes.r-lib.org/reference/install_github.html">install_github</a></span><span class="op">(</span><span class="st">"TeddYenn/ShiNyP"</span><span class="op">)</span></span>
+<span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va">ShiNyP</span><span class="op">)</span></span>
+<span><span class="fu">ShiNyP</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/ShiNyP/man/run_ShiNyP.html">run_ShiNyP</a></span><span class="op">(</span><span class="op">)</span></span></code></pre></div>
+<p>Alternatively, use the Docker image for a one-step deployment:</p>
+<div class="sourceCode" id="cb6"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb6-1"><a href="sec-index.html#cb6-1" tabindex="-1"></a><span class="ex">docker</span> run <span class="at">-d</span> <span class="at">-p</span> 3838:3838 teddyenn/shinyp-platfor</span></code></pre></div>
+<p>For more information: <a href="https://teddyenn.github.io/ShiNyP-guide/get-started.html">Get
+Started</a></p>
+</li>
+<li>
+<p><strong>Is my data secure when using <em>ShiNyP</em>?</strong></p>
+<p>All analyses are conducted locally on your machine or server. No
+user data is transmitted to third-party servers unless you
+explicitly use AI features (<em>ShiNyP</em> AI chatbot and reporting
+system).</p>
+</li>
+<li>
+<p><strong>Does <em>ShiNyP</em> require internet access to function?</strong></p>
+<p><em>ShiNyP</em> runs locally and does not require internet access for core
+analyses. Internet is only needed when installing the packages and
+using AI features (<em>ShiNyP</em> AI chatbot and reporting system).</p>
 </li>
 </ol>
-</dd>
-</dl>
+<hr>
+</div>
+<div id="analysis-features" class="section level2 unnumbered">
+<h2>Analysis &amp; Features<a class="anchor" aria-label="anchor" href="#analysis-features"><i class="fas fa-link"></i></a>
+</h2>
+<ol style="list-style-type: decimal">
+<li>
+<p><strong>What types of input data are supported by <em>ShiNyP</em>?</strong></p>
+<p><em>ShiNyP</em> supports genome-wide biallelic SNP datasets in Variant Call
+Format (VCF). It is also compatible with <code>data.frame</code> and <code>genlight</code>
+files, covering both diploid and polyploid species.</p>
+<p>For more information: <a href="https://teddyenn.github.io/ShiNyP-guide/sec-data-input.html">Data
+Input</a></p>
+</li>
+<li>
+<p><strong>What kind of output does the platform provide?</strong></p>
+<p>The platform generates publication-ready figures (PDF, PNG, or JPEG)
+and tables, reusable R data objects, and AI-assisted reports that
+summarize analytical results in natural language.</p>
+</li>
+<li>
+<p><strong>Can I customize analysis parameters?</strong></p>
+<p>Yes, users can adjust analysis thresholds, models, and filtering
+criteria directly through the interface to suit their research
+needs.</p>
+</li>
+<li>
+<p><strong>Can I analyze large SNP datasets with <em>ShiNyP</em>?</strong></p>
+<p>Yes, <em>ShiNyP</em> is optimized for both moderate and large-scale SNP
+datasets. However, performance may depend on your system’s hardware
+specifications.</p>
+</li>
+<li>
+<p><strong>Can I analyze datasets from different species in one session?</strong></p>
+<p>Yes, as long as your data are properly formatted, <em>ShiNyP</em> supports
+datasets from different species. However, it is recommended to
+analyze each species separately for clearer results.</p>
+</li>
+<li>
+<p><strong>Can <em>ShiNyP</em> export data to formats used by other genetics
+software?</strong></p>
+<p>Yes, results and transformed data can be exported in formats
+compatible with tools such as STRUCTURE, PLINK, GenAlEx, and others.</p>
+<p>For more information: <a href="https://teddyenn.github.io/ShiNyP-guide/sec-data-conversion.html">Data
+Transform</a></p>
+</li>
+</ol>
+<hr>
+</div>
+<div id="support" class="section level2 unnumbered">
+<h2>Support<a class="anchor" aria-label="anchor" href="#support"><i class="fas fa-link"></i></a>
+</h2>
+<ol style="list-style-type: decimal">
+<li>
+<p><strong>Is <em>ShiNyP</em> open-source? Is it possible to extend ShiNyP with
+custom modules or scripts?</strong></p>
+<p>Yes, <em>ShiNyP</em> is released under an open-source license (<a href="https://www.gnu.org/licenses/gpl-3.0.html.en">GNU General
+Public License</a>). The
+source code is available on GitHub for transparency and community
+contributions.</p>
+</li>
+<li>
+<p><strong>Where can I report bugs or request new features?</strong></p>
+<p>If you encounter any issues or have suggestions for new features,
+please submit a request on the <a href="https://github.com/TeddYenn/ShiNyP/issues">GitHub Issues
+page</a> or email us
+at: <a href="#id_0" class="email">teddyhuangyh@gmail.com</a>.</p>
+</li>
+</ol>
+<hr>
+</div>
+<div id="installation-issues" class="section level2 unnumbered">
+<h2>Instal<strong>lation Issues</strong><a class="anchor" aria-label="anchor" href="#installation-issues"><i class="fas fa-link"></i></a>
+</h2>
+<ul>
+<li>
+<p><strong>R and Bioconductor version mismatch</strong></p>
+<p>The installation specifies Bioconductor version 3.21, which requires
+R version ≥ 4.5. If your R version is below 4.5, update it from
+<a href="https://cran.r-project.org/">CRAN</a>.</p>
+<div class="sourceCode" id="cb7"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="co"># Check your R version </span></span>
+<span><span class="va">R.version.string</span></span></code></pre></div>
+</li>
+<li><p>xcode-select –install</p></li>
+<li>
+<p><strong>Installation of dependencies</strong></p>
+<p>Installing packages like <em>shiny</em> and <em>dartR</em> may require additional
+developer tools. You might encounter error messages such as:</p>
+<div class="sourceCode" id="cb8"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb8-1"><a href="sec-index.html#cb8-1" tabindex="-1"></a>ERROR<span class="sc">:</span> dependencies <span class="st">'shiny'</span>, <span class="st">'dartR'</span> are not available <span class="cf">for</span> package <span class="st">'ShiNyP'</span></span></code></pre></div>
+<ul>
+<li><p><strong>For Windows</strong>: Download Rtools from <a href="https://cran.r-project.org/bin/windows/Rtools/"><strong>CRAN
+Rtools</strong></a>.</p></li>
+<li>
+<p><strong>For macOS</strong>: Open Terminal and run the installation command:</p>
+<div class="sourceCode" id="cb9"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb9-1"><a href="sec-index.html#cb9-1" tabindex="-1"></a><span class="ex">xcode-select</span> <span class="at">--install</span></span></code></pre></div>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>GitHub installation issues</strong></p>
+<p>Verify that your system is connected to the internet. Check for any
+firewall or proxy settings that might block GitHub access.</p>
+</li>
+<li>
+<p><strong>Package loading issues</strong></p>
+<p>Errors occur when loading <em>ShiNyP</em> or its dependencies, possibly due
+to outdated packages or conflicts. <strong>Update all installed
+packages.</strong></p>
+</li>
+</ul>
 <hr>
 </div>
 <div id="index" class="section level2 unnumbered">
@@ -391,7 +457,10 @@ Yu, Guangchuang, David K. Smith, Huachen Zhu, Yi Guan, and Tommy Tsan-Yuk Lam. 2
     <nav id="toc" data-toggle="toc" aria-label="On this page"><h2>On this page</h2>
       <ul class="nav navbar-nav">
 <li><a class="nav-link" href="#sec-index"><span class="header-section-number">9</span> FAQ</a></li>
-<li><a class="nav-link" href="#troubleshooting-for-installation">Troubleshooting for Installation</a></li>
+<li><a class="nav-link" href="#general-usage">General Usage</a></li>
+<li><a class="nav-link" href="#analysis-features">Analysis &amp; Features</a></li>
+<li><a class="nav-link" href="#support">Support</a></li>
+<li><a class="nav-link" href="#installation-issues">Installation Issues</a></li>
 <li><a class="nav-link" href="#index">Index</a></li>
 <li><a class="nav-link" href="#bibliography">Bibliography</a></li>
 </ul>
@@ -411,7 +480,7 @@ Yu, Guangchuang, David K. Smith, Huachen Zhu, Yi Guan, and Tommy Tsan-Yuk Lam. 2
 <footer class="bg-primary text-light mt-5"><div class="container"><div class="row">
 
   <div class="col-12 col-md-6 mt-3">
-    <p>"<strong>User Guide for ShiNyP</strong>: SNP Analysis and Visualization Platform" was written by Yen-Hsiang Huang, Chung-Feng Kao. It was last built on Apr 2025.</p>
+    <p>"<strong>User Guide for ShiNyP</strong>: SNP Analysis and Visualization Platform" was written by Yen-Hsiang Huang, Chung-Feng Kao. It was last built on May 2025.</p>
   </div>
 
   <div class="col-12 col-md-6 mt-3">
