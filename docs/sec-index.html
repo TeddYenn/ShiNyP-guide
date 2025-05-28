@@ -111,7 +111,6 @@ at: <a href="mailto:teddyhuangyh@gmail.com">teddyhuangyh@gmail.com</a></strong>
 <div id="general-usage" class="section level2 unnumbered">
 <h2>General Usage<a class="anchor" aria-label="anchor" href="#general-usage"><i class="fas fa-link"></i></a>
 </h2>
-<p>docker run -d -p 3838:3838 teddyenn/shinyp-platfor</p>
 <ol style="list-style-type: decimal">
 <li>
 <p><strong>Can I use the online version of <em>ShiNyP</em> platform?</strong></p>
@@ -165,6 +164,15 @@ using AI features (<em>ShiNyP</em> AI chatbot and reporting system).</p>
 </h2>
 <ol style="list-style-type: decimal">
 <li>
+<p><strong>What makes <em>ShiNyP</em> different from other SNP analysis tools?</strong></p>
+<p><em>ShiNyP</em> uniquely integrates a modular Graphical User Interface
+(GUI), <em>ShiNyP AI</em> (real-time chatbot), cross-species compatibility,
+AI-based interpretation, customizable visualizations, and
+open-source accessibility—all in one platform, making it a versatile
+tool for researchers in genomics, breeding, and evolutionary
+biology.</p>
+</li>
+<li>
 <p><strong>What types of input data are supported by <em>ShiNyP</em>?</strong></p>
 <p><em>ShiNyP</em> supports genome-wide biallelic SNP datasets in Variant Call
 Format (VCF). It is also compatible with <code>data.frame</code> and <code>genlight</code>
@@ -191,10 +199,11 @@ datasets. However, performance may depend on your system’s hardware
 specifications.</p>
 </li>
 <li>
-<p><strong>Can I analyze datasets from different species in one session?</strong></p>
+<p><strong>Can I analyze datasets from different size/species in one
+session?</strong></p>
 <p>Yes, as long as your data are properly formatted, <em>ShiNyP</em> supports
-datasets from different species. However, it is recommended to
-analyze each species separately for clearer results.</p>
+datasets from different size/species. However, it is recommended to
+analyze each dataset separately for clearer results.</p>
 </li>
 <li>
 <p><strong>Can <em>ShiNyP</em> export data to formats used by other genetics
@@ -224,7 +233,8 @@ contributions.</p>
 <p>If you encounter any issues or have suggestions for new features,
 please submit a request on the <a href="https://github.com/TeddYenn/ShiNyP/issues">GitHub Issues
 page</a> or email us
-at: <a href="#id_0" class="email">teddyhuangyh@gmail.com</a>.</p>
+at: <a href="#id_0" class="email">teddyhuangyh@gmail.com</a>. The project is actively
+maintained and welcomes community feedback and collaboration.</p>
 </li>
 </ol>
 <hr>
@@ -232,6 +242,10 @@ at: <a href="#id_0" class="email">teddyhuangyh@gmail.com</a>.</p>
 <div id="installation-issues" class="section level2 unnumbered">
 <h2>Instal<strong>lation Issues</strong><a class="anchor" aria-label="anchor" href="#installation-issues"><i class="fas fa-link"></i></a>
 </h2>
+<p>If you encounter any issues while installing <em>ShiNyP</em>, please don’t
+hesitate to let us know. The issue may not be unique to you, and by
+reporting it, you help improve the entire community. Below are some
+common installation issues:</p>
 <ul>
 <li>
 <p><strong>R and Bioconductor version mismatch</strong></p>
@@ -242,7 +256,12 @@ R version ≥ 4.5. If your R version is below 4.5, update it from
 <code class="sourceCode R"><span><span class="co"># Check your R version </span></span>
 <span><span class="va">R.version.string</span></span></code></pre></div>
 </li>
-<li><p>xcode-select –install</p></li>
+<li>
+<p><strong>Permission denied: curl.dll</strong></p>
+<p>Please close all R/RStudio programs and terminal windows to ensure
+no sessions are using the package, then restart and try installing
+again.</p>
+</li>
 <li>
 <p><strong>Installation of dependencies</strong></p>
 <p>Installing packages like <em>shiny</em> and <em>dartR</em> may require additional

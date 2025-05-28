@@ -25,8 +25,6 @@ editor_options:
 
 ## General Usage {.unnumbered}
 
-docker run -d -p 3838:3838 teddyenn/shinyp-platfor
-
 1.  **Can I use the online version of *ShiNyP* platform?**
 
     Yes, a trial version of *ShiNyP* is available online at:
@@ -84,7 +82,16 @@ docker run -d -p 3838:3838 teddyenn/shinyp-platfor
 
 ## Analysis & Features {.unnumbered}
 
-1.  **What types of input data are supported by *ShiNyP*?**
+1.  **What makes *ShiNyP* different from other SNP analysis tools?**
+
+    *ShiNyP* uniquely integrates a modular Graphical User Interface
+    (GUI), *ShiNyP AI* (real-time chatbot), cross-species compatibility,
+    AI-based interpretation, customizable visualizations, and
+    open-source accessibility—all in one platform, making it a versatile
+    tool for researchers in genomics, breeding, and evolutionary
+    biology.
+
+2.  **What types of input data are supported by *ShiNyP*?**
 
     *ShiNyP* supports genome-wide biallelic SNP datasets in Variant Call
     Format (VCF). It is also compatible with `data.frame` and `genlight`
@@ -93,31 +100,32 @@ docker run -d -p 3838:3838 teddyenn/shinyp-platfor
     For more information: [Data
     Input](https://teddyenn.github.io/ShiNyP-guide/sec-data-input.html)
 
-2.  **What kind of output does the platform provide?**
+3.  **What kind of output does the platform provide?**
 
     The platform generates publication-ready figures (PDF, PNG, or JPEG)
     and tables, reusable R data objects, and AI-assisted reports that
     summarize analytical results in natural language.
 
-3.  **Can I customize analysis parameters?**
+4.  **Can I customize analysis parameters?**
 
     Yes, users can adjust analysis thresholds, models, and filtering
     criteria directly through the interface to suit their research
     needs.
 
-4.  **Can I analyze large SNP datasets with *ShiNyP*?**
+5.  **Can I analyze large SNP datasets with *ShiNyP*?**
 
     Yes, *ShiNyP* is optimized for both moderate and large-scale SNP
     datasets. However, performance may depend on your system’s hardware
     specifications.
 
-5.  **Can I analyze datasets from different species in one session?**
+6.  **Can I analyze datasets from different size/species in one
+    session?**
 
     Yes, as long as your data are properly formatted, *ShiNyP* supports
-    datasets from different species. However, it is recommended to
-    analyze each species separately for clearer results.
+    datasets from different size/species. However, it is recommended to
+    analyze each dataset separately for clearer results.
 
-6.  **Can *ShiNyP* export data to formats used by other genetics
+7.  **Can *ShiNyP* export data to formats used by other genetics
     software?**
 
     Yes, results and transformed data can be exported in formats
@@ -143,11 +151,17 @@ docker run -d -p 3838:3838 teddyenn/shinyp-platfor
     If you encounter any issues or have suggestions for new features,
     please submit a request on the [GitHub Issues
     page](https://github.com/TeddYenn/ShiNyP/issues) or email us
-    at: [teddyhuangyh\@gmail.com](#0){.email}.
+    at: [teddyhuangyh\@gmail.com](#0){.email}. The project is actively
+    maintained and welcomes community feedback and collaboration.
 
 ------------------------------------------------------------------------
 
 ## Instal**lation Issues** {.unnumbered}
+
+If you encounter any issues while installing *ShiNyP*, please don't
+hesitate to let us know. The issue may not be unique to you, and by
+reporting it, you help improve the entire community. Below are some
+common installation issues:
 
 -   **R and Bioconductor version mismatch**
 
@@ -160,7 +174,11 @@ docker run -d -p 3838:3838 teddyenn/shinyp-platfor
     R.version.string
     ```
 
--   xcode-select --install
+-   **Permission denied: curl.dll**
+
+    Please close all R/RStudio programs and terminal windows to ensure
+    no sessions are using the package, then restart and try installing
+    again.
 
 -   **Installation of dependencies**
 

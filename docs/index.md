@@ -58,6 +58,9 @@ R**](https://teddyenn.github.io/ShiNyP-guide/get-started.html#sec-run-shinyp-via
 🚀 [**Run *ShiNyP* via
 Docker**](https://teddyenn.github.io/ShiNyP-guide/get-started.html#sec-run-shinyp-via-docker)
 
+📢 [***ShiNyP*** **Online Version – Trial
+Platform**](https://teddyhuang.shinyapps.io/ShiNyP_Demo/)
+
 ------------------------------------------------------------------------
 
 ## Overview {.unnumbered}
@@ -122,6 +125,10 @@ Apr 2025: v0.2.0
     | - Made minor UI improvements.
     | - Fixed several bugs.
 
+▾ 🐣 *ShiNyP AI* Chatbot!
+
+![](images/ShiNyP_AI.gif){width="5.5in"}
+
 <br>
 
 :   If you encounter any issues or have suggestions for new features,
@@ -148,6 +155,7 @@ There are two easy ways to install and run *ShiNyP*:
     This is the simpler option if you’d rather skip installing R or any
     packages. With Docker, you can run *ShiNyP* in a ready-to-use setup
     with just one command. ▸ Docker Tutorial for Beginners!
+    (#Developing)
 
 <br>
 
