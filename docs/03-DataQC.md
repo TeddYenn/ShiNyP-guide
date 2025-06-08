@@ -48,7 +48,7 @@ Thresholds]{style="color: #fff;background-color: #007ACC;"}. This will
 generate the Post-QC *data.frame* file.
 
 > **Note:** If you prefer not to perform sample QC by sample missing
-> rate or heterozygosity rate, please set the threshold to 0.
+> rate or heterozygosity rate, please set the threshold to 1.
 
 ------------------------------------------------------------------------
 

@@ -69,14 +69,14 @@ editor_options:
 
     All analyses are conducted locally on your machine or server. No
     user data is transmitted to third-party servers unless you
-    explicitly use AI features (*ShiNyP* AI chatbot and reporting
+    explicitly use AI features (*ShiNyP* *AI* chatbot and reporting
     system).
 
 5.  **Does *ShiNyP* require internet access to function?**
 
     *ShiNyP* runs locally and does not require internet access for core
     analyses. Internet is only needed when installing the packages and
-    using AI features (*ShiNyP* AI chatbot and reporting system).
+    using AI features (*ShiNyP* *AI* chatbot and reporting system).
 
 ------------------------------------------------------------------------
 
@@ -129,7 +129,8 @@ editor_options:
     software?**
 
     Yes, results and transformed data can be exported in formats
-    compatible with tools such as STRUCTURE, PLINK, GenAlEx, and others.
+    compatible with tools such as R, STRUCTURE, PLINK, GenAlEx, and
+    others.
 
     For more information: [Data
     Transform](https://teddyenn.github.io/ShiNyP-guide/sec-data-conversion.html)
@@ -138,12 +139,13 @@ editor_options:
 
 ## Support {.unnumbered}
 
-1.  **Is *ShiNyP* open-source? Is it possible to extend ShiNyP with
+1.  **Is *ShiNyP* open-source? Is it possible to extend *ShiNyP* with
     custom modules or scripts?**
 
-    Yes, *ShiNyP* is released under an open-source license ([GNU General
-    Public License](https://www.gnu.org/licenses/gpl-3.0.html.en)). The
-    source code is available on GitHub for transparency and community
+    Yes, *ShiNyP* is released under an open-source license ([GNU Affero
+    General Public
+    License](https://www.gnu.org/licenses/agpl-3.0.html.en)). The source
+    code is available on GitHub for transparency and community
     contributions.
 
 2.  **Where can I report bugs or request new features?**
@@ -154,14 +156,16 @@ editor_options:
     at: [teddyhuangyh\@gmail.com](#0){.email}. The project is actively
     maintained and welcomes community feedback and collaboration.
 
+3.  **Future?**
+
 ------------------------------------------------------------------------
 
 ## Instal**lation Issues** {.unnumbered}
 
-If you encounter any issues while installing *ShiNyP*, please don't
-hesitate to let us know. The issue may not be unique to you, and by
-reporting it, you help improve the entire community. Below are some
-common installation issues:
+> If you encounter any issues while installing *ShiNyP*, please don't
+> hesitate to let us know. The issue may not be unique to you, and by
+> reporting it, you help improve the entire community. Below are some
+> common installation issues:
 
 -   **R and Bioconductor version mismatch**
 

@@ -42,8 +42,8 @@ editor_options:
 
 <p>This work, primarily authored by Yen-Hsiang Huang from the Department
 of Agronomy, National Chung Hsing University, Taiwan (🇹🇼), is licensed
-under the [GNU General Public
-License](https://www.gnu.org/licenses/gpl-3.0.html.en).</p>
+under the [GNU Affero General Public
+License](https://www.gnu.org/licenses/agpl-3.0.en.html).</p>
 :::
 
 Last Updated: May 2025
@@ -107,8 +107,7 @@ Oct 2024: v0.1.0
 
 Feb 2025: v0.1.1
 
-:   | - Simplified workflow for Data Input & Transform.
-    | - Refined visual elements.
+:   
 
 Apr 2025: v0.2.0
 
