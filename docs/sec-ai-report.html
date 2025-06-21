@@ -138,7 +138,7 @@ use.</p>
 <li>
 <p>Upload your AI API key: Provide a <strong><code>.txt</code></strong> file containing your
 API key (e.g., sk-…).<br>
-💡Model: “Gemini 2.0 Flash (API Free)” — no API required!</p>
+💡Model: “Gemini 2.5 Flash (API Free)” — no API required!</p>
 <p>▼ Example of API key file.</p>
 <div class="inline-figure"><img src="images/OpenAI-API.png" width="450"></div>
 </li>
@@ -154,20 +154,20 @@ professional layout.</p></li>
 <div id="ai-models" class="section level2 unnumbered" style="padding: 0px 5px; margin: 0px 10px">
 <h2>🤖 AI models<a class="anchor" aria-label="anchor" href="#ai-models"><i class="fas fa-link"></i></a>
 </h2>
-<p>🆕 For <em>ShiNyP</em> v1.0.0 (May 27, 2025), we support 10 AI models:</p>
+<p>🆕 For <em>ShiNyP</em> v1.1.0, we support 11 AI models:</p>
 <div class="inline-table"><table class="table table-sm">
 <caption>
-<sup>a</sup> Price per 1M Tokens (Input / Output)<br>
-⚡ We recommend using Google <a href="https://ai.google.dev/gemini-api/docs/models/gemini#gemini-2.0-flash"><strong>Gemini 2.0
+<sup>a</sup> Price (USD) per 1M Tokens (Input / Output)<br>
+⚡ We recommend using Google <a href="https://ai.google.dev/gemini-api/docs/models?hl=zh-tw#gemini-2.5-flash-preview-tts"><strong>Gemini 2.5
 Flash</strong></a>—the
-flagship model—for generating AI reports. <strong><em>It is free to use</em></strong> (see
-below).<br>
+flagship model—for generating AI reports. <strong><em>It is free to get API key &amp;
+use</em></strong> (see below).<br>
 💸 If you have paid API access from OpenAI, we recommend using
-<a href="https://platform.openai.com/docs/models/gpt-4.1">GPT-4.1</a> for optimal
+<a href="https://platform.openai.com/docs/models/gpt-4.1">GPT-4.1</a> for stable
 performance. Please note that
 <a href="https://platform.openai.com/docs/models/o4-mini">o4-mini</a> and
 <a href="https://platform.openai.com/docs/models/o3-mini">o3-mini</a> are more
-suitable for single-turn conversations and are not ideal for multi-turn.</caption>
+suitable for “Idea Expansion” task within single-turn conversation.</caption>
 <thead><tr class="header">
 <th>Models</th>
 <th>Developer</th>
@@ -187,42 +187,48 @@ suitable for single-turn conversations and are not ideal for multi-turn.</captio
 <strong>Free</strong> or $0.10/$0.40</td>
 </tr>
 <tr class="odd">
-<td>Gemini 2.0 Flash-Lite</td>
+<td>🆕 Gemini 2.5 Flash</td>
 <td>Google</td>
 <td>
-<strong>Free</strong> or $0.075/$0.30</td>
+<strong>Free</strong> or $0.30/$2.50</td>
 </tr>
 <tr class="even">
-<td>🆕 o4-mini</td>
+<td>🆕 Gemini 2.5 Flash-Lite</td>
+<td>Google</td>
+<td>
+<strong>Free</strong> or $0.10/$0.40</td>
+</tr>
+<tr class="odd">
+<td>o4-mini</td>
 <td>OpenAI</td>
 <td>$1.10/$4.40</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td>o3-mini</td>
 <td>OpenAI</td>
 <td>$1.10/$4.40</td>
 </tr>
-<tr class="even">
-<td>🆕 GPT-4.1</td>
+<tr class="odd">
+<td>GPT-4.1</td>
 <td>OpenAI</td>
 <td>$2.00/$8.00</td>
 </tr>
-<tr class="odd">
-<td>🆕 GPT-4.1 mini</td>
+<tr class="even">
+<td>GPT-4.1 mini</td>
 <td>OpenAI</td>
 <td>$0.40/$1.60</td>
 </tr>
-<tr class="even">
-<td>🆕 GPT-4.1 nano</td>
+<tr class="odd">
+<td>GPT-4.1 nano</td>
 <td>OpenAI</td>
 <td>$0.10/$0.40</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td>GPT-4o</td>
 <td>OpenAI</td>
 <td>$2.50/$10.00</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td>GPT-4o mini</td>
 <td>OpenAI</td>
 <td>$0.15/$0.60</td>
@@ -235,18 +241,24 @@ suitable for single-turn conversations and are not ideal for multi-turn.</captio
 <h2>✨ Tasks for AI<a class="anchor" aria-label="anchor" href="#tasks-for-ai"><i class="fas fa-link"></i></a>
 </h2>
 <ul>
+<li><p><strong>Summary Request</strong>: Provide a clear, structured overview of key SNP
+analysis results.</p></li>
+<li><p><strong>Data Interpretation</strong>: Clarify findings and highlight key insights
+into population genetics.</p></li>
+<li><p><strong>Report Structuring</strong>: Create a framework for presenting SNP
+analysis results in a scientific report.</p></li>
+<li><p><strong>Idea Expansion</strong>: Propose future research directions informed by
+SNP findings.</p></li>
 <li>
-<strong>Summary Request</strong>: Provide a clear, structured overview of key SNP
-analysis results.</li>
-<li>
-<strong>Data Interpretation</strong>: Clarify findings and highlight key insights
-into population genetics.</li>
-<li>
-<strong>Report Structuring</strong>: Create a framework for presenting SNP
-analysis results in a scientific report.</li>
-<li>
-<strong>Idea Expansion</strong>: Propose future research directions informed by
-SNP findings.</li>
+<p>🆕 <strong>Custom Template:</strong> You can upload a template (<strong><code>.txt</code></strong> file)
+tailored to specific project, and AI will automatically fill in the
+analysis results.</p>
+<p>This reports fully comply with designated standards, enabling truly
+automated and standardized report generation for your lab. <em>Only
+single-turn conversation is supported.</em></p>
+<p><a class="btn btn-primary" href="assets/AI_Report_Custom_Template.txt" download>
+<em>Download an example of Custom Template (TXT).</em></a></p>
+</li>
 </ul>
 <hr>
 </div>
@@ -316,7 +328,7 @@ API key and organization ID in your request header.</p>
 <a href="https://emojipedia.org/warning">⚠️</a> Error: Failed to Perform HTTP Request</dt>
 <dd>
 <p>This error may indicate that the request timed out, possibly due to
-an excessive input token count, which prevents the OpenAI model from
+an excessive input token count, which prevents the AI model from
 completing the task within the allotted time.</p>
 </dd>
 </dl>
@@ -352,7 +364,7 @@ completing the task within the allotted time.</p>
 <footer class="bg-primary text-light mt-5"><div class="container"><div class="row">
 
   <div class="col-12 col-md-6 mt-3">
-    <p>"<strong>User Guide for ShiNyP</strong>: SNP Analysis and Visualization Platform" was written by Yen-Hsiang Huang, Chung-Feng Kao. It was last built on May 2025.</p>
+    <p>"<strong>User Guide for ShiNyP</strong>: SNP Analysis and Visualization Platform" was written by Yen-Hsiang Huang, Chung-Feng Kao. It was last built on Jun 2025.</p>
   </div>
 
   <div class="col-12 col-md-6 mt-3">

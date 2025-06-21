@@ -119,33 +119,16 @@ generate the Post-QC *data.frame* file.
 -   Chromosome Info. (CSV): Reference genome information of the current
     study.
 
-    [***Click
-    here***](https://github.com/TeddYenn/ShiNyP/blob/main/inst/demo_data/Wild_Rice/Chromosome_Info.csv)*:
-    Download an example of Chromosome Info. (CSV).*
+    <a class="btn btn-primary" href="assets/Chromosome_Info.csv" download>
+    *Download an example of Chromosome Info. (CSV).*</a>
 
-<details>
+    This file should contain three columns: "Chr", "Start", and "End".
 
-<summary>Example: Chromosome Info. of Rice</summary>
-
-Data source:
-<https://www.ncbi.nlm.nih.gov/datasets/genome/GCF_034140825.1/>
-
-| Chr   | Start | End      |
-|-------|-------|----------|
-| Chr01 | 0     | 43929697 |
-| Chr02 | 0     | 36447916 |
-| Chr03 | 0     | 37399924 |
-| Chr04 | 0     | 36078568 |
-| Chr05 | 0     | 30400764 |
-| Chr06 | 0     | 32122276 |
-| Chr07 | 0     | 29936421 |
-| Chr08 | 0     | 28605474 |
-| Chr09 | 0     | 27474823 |
-| Chr10 | 0     | 23931887 |
-| Chr11 | 0     | 31111469 |
-| Chr12 | 0     | 28271460 |
-
-</details>
+    -   "Chr" column should specify the chromosome names (as characters,
+        e.g., "Chr01", "Chr11")
+    -   "End" column should indicate the length of each chromosome
+        (numeric)
+    -   "Start" column can be set to 0 or 1 for each chromosome.
 
 ------------------------------------------------------------------------
 

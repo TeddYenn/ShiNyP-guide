@@ -57,9 +57,23 @@ Select the desired data format to export from *genlight* and click
 
 -   *genlight* (RDS): *genlight* file with Group Info. — required for
     downstream analysis.
+
 -   *genind* (RDS): One of the input format for *ShiNyP*
     [DAPC]{.underline} subpage, optimized for DAPC analysis to reduce
     computation time.
+
+    <a class="btn btn-primary" href="assets/Group_Info.csv" download>
+    *Download an example of Group Info. (CSV).*</a>
+
+    This file should have at least two columns: "ID" and "Group".
+
+> **Note:** You can obtain a template after completing a DAPC analysis
+> (Section
+> [4.2](https://teddyenn.github.io/ShiNyP-guide/sec-population-structure.html#dapc-discriminant-analysis-of-principal-components))
+> first to generate the initial file ("DAPC_Group_Info.csv"). If your
+> SNP data is large, you can create and use a core SNP set as input to
+> obtain DAPC results more efficiently. You can then expand this file
+> based on your own metadata (e.g., origin, type).
 
 The following transformed files will be generated at the specified path
 you provide.

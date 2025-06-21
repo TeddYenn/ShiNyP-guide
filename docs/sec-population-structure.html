@@ -132,12 +132,6 @@ reducing the dimensionality of genetic data.</p>
 <li>Click <span style="color: #fff;background-color: #007ACC;">Run PCA</span> to
 generate PCA plots and the following downloadable files.</li>
 </ol>
-<blockquote>
-<p><strong>Note</strong>: You can upload the Group Info. (from <u>Population
-Structure</u>/<u>DAPC</u>) or Core Sample Info. (from
-<u>Core Collection</u>/<u>Core Sample Set</u>) to
-classify individuals and color them in the PCA Scatter Plot.</p>
-</blockquote>
 <hr>
 </div>
 <div id="outputs-5" class="section level4 unnumbered" style="padding: 0px 5px; margin: 0px 10px">
@@ -147,6 +141,16 @@ classify individuals and color them in the PCA Scatter Plot.</p>
 <li>PCA Scatter Plot (PDF): A scatter plot showing the distribution of
 samples based on principal components, with each dot representing an
 individual.</li>
+</ul>
+<blockquote>
+<p><strong>Note</strong>: You can upload the Group Info. (from <u>Population
+Structure</u>/<u>DAPC</u>) or Core Sample Info. (from
+<u>Core Collection</u>/<u>Core Sample Set</u>) to
+classify individuals and color them in the PCA Scatter Plot.</p>
+</blockquote>
+<p><a class="btn btn-primary" href="assets/Group_Info.csv" download>
+<em>Download an example of Group Info. (CSV).</em></a></p>
+<ul>
 <li>PC Explained Variance Plot (PDF): Visualizes the variance explained
 by each principal component.</li>
 <li>Explained Variance (CSV): Contains the explained variance of each
@@ -393,10 +397,14 @@ Structure</u>/<u>DAPC</u>.</p>
 <h4>Required Files:<a class="anchor" aria-label="anchor" href="#required-files-1"><i class="fas fa-link"></i></a>
 </h4>
 <ul>
-<li>PCA Object (PCA_prcomp_Object.rds file) or DAPC Object
-(DAPC_dapc_Object.rds file)</li>
-<li>Group and Other Info. (i.e. metadata, modifiable from
-DAPC_Group_Info.csv)</li>
+<li><p>PCA Object (PCA_prcomp_Object.rds file) or DAPC Object
+(DAPC_dapc_Object.rds file)</p></li>
+<li>
+<p>Group and Other Info. (i.e. metadata, modifiable from
+DAPC_Group_Info.csv)</p>
+<p><a class="btn btn-primary" href="assets/Group_Info.csv" download>
+<em>Download an example of Group Info. (CSV).</em></a></p>
+</li>
 </ul>
 <blockquote>
 <p><strong>Note:</strong> If you are using a DAPC object as input, ensure that there
@@ -408,10 +416,7 @@ than 3 axes to generate a 3D scatter plot.</p>
 adding new variables to the Group Info. file. Ensure that the sample
 order remains unchanged.</p>
 </blockquote>
-<details><summary>
-Example: Group Info. file (CSV)
-</summary><div class="inline-figure"><img src="images/Chromosome-Info.png" width="350"></div>
-</details><hr>
+<hr>
 </div>
 <div id="steps-3" class="section level4 unnumbered" style="padding: 0px 5px; margin: 0px 10px">
 <h4>
@@ -455,9 +460,13 @@ Structure</u>/<u>NJ</u>.</p>
 <h4>Required Files:<a class="anchor" aria-label="anchor" href="#required-files-2"><i class="fas fa-link"></i></a>
 </h4>
 <ul>
-<li>UPGMA Object (UPGMA_phylo_Object.rds file) or NJ Object
-(NJ_phylo_Object.rds file)</li>
-<li>Group and Other Info. (modifiable from DAPC_Group_Info.csv)</li>
+<li><p>UPGMA Object (UPGMA_phylo_Object.rds file) or NJ Object
+(NJ_phylo_Object.rds file)</p></li>
+<li>
+<p>Group and Other Info. (modifiable from DAPC_Group_Info.csv)</p>
+<p><a class="btn btn-primary" href="assets/Group_Info.csv" download>
+<em>Download an example of Group Info. (CSV).</em></a></p>
+</li>
 </ul>
 <blockquote>
 <p><strong>Note</strong>: You can add more information about samples by adding new
@@ -524,7 +533,7 @@ user-defined layout style and attributes.</li>
 <footer class="bg-primary text-light mt-5"><div class="container"><div class="row">
 
   <div class="col-12 col-md-6 mt-3">
-    <p>"<strong>User Guide for ShiNyP</strong>: SNP Analysis and Visualization Platform" was written by Yen-Hsiang Huang, Chung-Feng Kao. It was last built on May 2025.</p>
+    <p>"<strong>User Guide for ShiNyP</strong>: SNP Analysis and Visualization Platform" was written by Yen-Hsiang Huang, Chung-Feng Kao. It was last built on Jun 2025.</p>
   </div>
 
   <div class="col-12 col-md-6 mt-3">

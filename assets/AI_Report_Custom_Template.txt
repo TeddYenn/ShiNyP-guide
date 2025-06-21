@@ -1,0 +1,141 @@
+# SNP Data Analysis Report Template
+
+## Basic Information
+- **Dataset Name/Source:** ___________________________
+- **Analysis Date:** ____/____/____
+- **Analyst:** ___________________________
+- **Original Number of Samples:** ______
+- **Original Number of SNPs:** ______
+
+---
+
+## Data Quality Control (QC)
+
+### Sample QC
+- **Filtering Criteria:**  
+  - Missing rate > ______
+  - Heterozygosity rate > ______
+- **Number of Samples After QC:** ______
+- **Number of SNPs After QC:** ______
+
+### SNP QC
+- **Filtering Criteria:**  
+  - Missing rate > ______
+  - Heterozygosity rate < ______
+  - Heterozygosity rate > ______
+  - -log(p) for Hardy-Weinberg equilibrium (HWE) > ______
+- **Number of Samples After QC:** ______
+- **Number of SNPs After QC:** ______
+
+### SNP Density Summary
+- **Reference Genome:** ___________________________
+- **Number of Chromosomes:** ______
+- **Total Genome Length (bp):** ______
+- **Number of SNPs After QC:** ______
+- **Average SNP Spacing (bp):** ______
+- **Number of SNPs per 1000 bp:** ______
+
+---
+
+## Dataset for Downstream Analysis
+
+- **Final Number of Samples:** ______
+- **Final Number of SNPs:** ______
+
+---
+
+## Population Structure Analysis
+
+### Principal Component Analysis (PCA)
+- **Variance Explained by Top PCs (PC1 ~ PCn):** ___________________________
+
+### Discriminant Analysis of Principal Components (DAPC)
+- **Optimal Number of Groups (K) and Criterion:** K = ______ (e.g., BIC/other criteria)
+- **Sample Size per Group:**
+  - Group 1: ______
+  - Group 2: ______
+  - Group 3: ______
+  - Group 4: ______
+  - ...
+- **Group Centroids on Discriminant Axes:**  
+  - Discriminant Function 1: Group 1 ______, Group 2 ______, Group 3 ______, Group 4 ______
+  - Discriminant Function 2: Group 1 ______, Group 2 ______, Group 3 ______, Group 4 ______
+
+---
+
+## Genetic Diversity
+
+- **Average Missing Rate (%):** ______
+- **Average Minor Allele Frequency (MAF):** ______
+- **Average Nucleotide Diversity (π):** ______
+- **Average Expected Heterozygosity (He) per Group:**
+  - Group 1: ______
+  - Group 2: ______
+  - Group 3: ______
+  - Group 4: ______
+- **Average Unbiased Pi per Group:**
+  - Group 1: ______
+  - Group 2: ______
+  - Group 3: ______
+  - Group 4: ______
+- **Number of Exclusive Alleles per Group:**
+  - Group 1: ______
+  - Group 2: ______
+  - Group 3: ______
+  - Group 4: ______
+- **Number of Fixed Alleles per Group:**
+  - Group 1: ______
+  - Group 2: ______
+  - Group 3: ______
+  - Group 4: ______
+
+### Genetic Distance (Between Groups)
+- Group 1 – Group 2: ______
+- Group 1 – Group 3: ______
+- Group 1 – Group 4: ______
+- Group 2 – Group 3: ______
+- Group 2 – Group 4: ______
+- Group 3 – Group 4: ______
+
+### Analysis of Molecular Variance (AMOVA)
+- **Among Groups Variance (%):** ______ (p-value: ______)
+- **Among Individuals Within Groups Variance (%):** ______ (p-value: ______)
+- **Within Individuals Variance (%):** ______ (p-value: ______)
+
+---
+
+## Selection Sweep Analysis
+
+### pcadapt (PCA-based Genome Scan)
+- **Number of Significant SNPs:** ______
+- **Threshold / FDR / α:** ______
+- **Chromosomes Involved:** ______
+
+### OutFLANK (Fst-based Genome Scan)
+- **Number of Significant SNPs:** ______
+- **Threshold / FDR / α:** ______
+- **Chromosomes Involved:** ______
+
+---
+
+## Core Collection
+
+### Core Sample Set
+- **Number of Core Samples:** ______
+- **Proportion of Total Samples (%):** ______
+- **Coverage (%):** ______
+
+### Core SNP Set
+- **Number of Core SNPs:** ______
+- **Proportion of Total SNPs (%):** ______
+
+---
+
+## Notes / Additional Remarks
+
+- _________________________________________________________________
+
+---
+
+> **Instructions:**  
+> This template can be customized according to your laboratory requirements.

@@ -25,7 +25,7 @@ Distance]{.underline}, and [AMOVA]{.underline}, allowing you to conduct
 various population diversity and differentiation analyses.
 :::
 
-![](images/Supplementary Fig. 3.jpg){width="6.8in"}
+![](images/Supplementary%20Fig.%203.jpg){width="6.8in"}
 
 ## Diversity Parameter
 
@@ -46,9 +46,14 @@ performed using the function from *snpReady* package [@granato2018].
 #### **Steps:** {.unnumbered style="padding: 0px 5px; margin: 0px 10px"}
 
 1.  Upload Site Info. (required).
+
 2.  Upload Group Info. from [Population
     Structure]{.underline}/[DAPC]{.underline} subpage (optional). If
     uploaded, population-based parameters will be calculated.
+
+    <a class="btn btn-primary" href="assets/Group_Info.csv" download>
+    *Download an example of Group Info. (CSV).*</a>
+
 3.  Click [Run Diversity
     Analysis]{style="color: #fff;background-color: #007ACC;"} to
     generate genetic diversity and the following downloadable files.
@@ -85,9 +90,15 @@ parameters in a sliding window format.
 
 -   Auto-import the results from the [Genetic
     Diversity]{.underline}/[Diversity Parameter]{.underline} subpage.
+
 -   Chromosome Info. (CSV): Reference genome information of the current
-    study. For more details about this file, refer to Section
+    study.
+
+    For more details about this file, refer to Section
     \@ref(snp-density) (SNP Density).
+
+    <a class="btn btn-primary" href="assets/Chromosome_Info.csv" download>
+    *Download an example of Chromosome Info. (CSV).*</a>
 
 > **Note:** Please ensure that each chromosome contains at least one SNP
 > marker.
@@ -133,8 +144,12 @@ Pairwise genetic distance between populations is computed using
 #### Required File: {.unnumbered style="padding: 0px 5px; margin: 0px 10px"}
 
 -   *data.frame*
+
 -   Group Info. from [Population
     Structure]{.underline}/[DAPC]{.underline} subpage (required).
+
+    <a class="btn btn-primary" href="assets/Group_Info.csv" download>
+    *Download an example of Group Info. (CSV).*</a>
 
 ------------------------------------------------------------------------
 

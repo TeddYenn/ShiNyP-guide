@@ -22,7 +22,7 @@ editor_options:
 | ➡️ This section includes two subpages: [VCF]{.underline} and [data.frame/genlight]{.underline}, allowing you to upload and work with different data formats for analysis.
 :::
 
-![](images/Supplementary Fig. 1.jpg){width="6.8in"}
+![](images/Supplementary%20Fig.%201.jpg){width="6.8in"}
 
 ------------------------------------------------------------------------
 
@@ -79,7 +79,8 @@ editor_options:
 
 > **Note:** *ShiNyP* is optimized for genome-wide SNP analysis in
 > diploid species. For haploid or polyploid data, please the check
-> "Applying diploidization processing" option.
+> "Applying diploidization processing" option. *This approach simplifies
+> genotype data and does not account for allelic dosage effects.*
 
 ------------------------------------------------------------------------
 
@@ -107,9 +108,10 @@ editor_options:
 
 -   *data.frame* in RDS format
 -   *genlight* in RDS format
+-   *genind* in RDS format
 
 > | **Note:** *data.frame* available on subpages such as [VCF]{.underline}, [Sample QC]{.underline}, [SNP QC]{.underline}, [Core Sample Set]{.underline}, or [Core SNP Set]{.underline}.
-> | *genlight* available on [Data Transform]{.underline} page.
+> | *genlight* and *genind* available on [Data Transform]{.underline} page.
 
 ------------------------------------------------------------------------
 

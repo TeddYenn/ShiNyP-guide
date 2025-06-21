@@ -2,7 +2,7 @@
 title: "User Guide for ShiNyP"
 subtitle: "SNP Analysis and Visualization Platform"
 author: "Yen-Hsiang Huang, Chung-Feng Kao"
-date: "May 2025"
+date: "Jun 2025"
 knit: "bookdown::render_book"
 site: bookdown::bookdown_site
 output: bookdown::bs4_book
@@ -15,7 +15,7 @@ colorlinks: true
 github-repo: "TeddYenn/ShiNyP"
 cover-image: images/cover.png
 url: https://github.com/TeddYenn/ShiNyP-guide
-description: "An R/Shiny platform for genome-wide SNP analysis and visualization with AI-assisted features"
+description: "ShiNyP: Unlocking SNP-Based Population Genetics—AI-Assisted Platform for Rapid and Interactive Visual Exploration"
 editor_options: 
   markdown: 
     wrap: 72
@@ -41,12 +41,12 @@ editor_options:
 </a>
 
 <p>This work, primarily authored by Yen-Hsiang Huang from the Department
-of Agronomy, National Chung Hsing University, Taiwan (🇹🇼), is licensed
-under the [GNU Affero General Public
+of Agronomy, National Chung Hsing University, Taiwan, is licensed under
+the [GNU Affero General Public
 License](https://www.gnu.org/licenses/agpl-3.0.en.html).</p>
 :::
 
-Last Updated: May 2025
+Last Updated: Jun 2025
 
 ------------------------------------------------------------------------
 
@@ -83,9 +83,9 @@ visualization of SNP datasets.
 If you use *ShiNyP* in your research, please cite:
 
 > Huang, Y.-H., Chen, L.-Y., Septiningsih E. M., Kao, P.-H., Kao, C.-F.
-> (2025) *ShiNyP*: Unlocking SNP-Based Population Genetics—An
-> AI-Assisted Platform for Rapid and Interactive Visual Exploration.
-> *Molecular Biology and Evolution*, *43*(6), msaf117.
+> (2025) *ShiNyP*: Unlocking SNP-Based Population Genetics—AI-Assisted
+> Platform for Rapid and Interactive Visual Exploration. *Molecular
+> Biology and Evolution*, *42*(6), msaf117.
 > <https://doi.org/10.1093/molbev/msaf117>
 
 In addition, please acknowledge the R packages utilized in your
@@ -112,19 +112,30 @@ Feb 2025: v0.1.1
 Apr 2025: v0.2.0
 
 :   | - Enhanced AI report functionality with new options and models.
-    | - Improved the layout of preliminary results for better readability.
+    | - Improved readability of preliminary results.
     | - Added more methods for constructing core SNP set.
     | - Added the Docker-based installation.
 
-🆕 May 2025: v1.0.0 on [GitHub](https://github.com/TeddYenn/ShiNyP).
+May 2025: v1.0.0 on [GitHub](https://github.com/TeddYenn/ShiNyP/releases/tag/v1.0.0).
 
 :   | - Introduced the **new *ShiNyP* AI chatbot**.
     | - Enhanced AI report features and deprecated older AI models.
     | - Added publication details.
-    | - Made minor UI improvements.
+    | - Made UI/UX improvements.
     | - Fixed several bugs.
 
-▾ 🐣 *ShiNyP AI* Chatbot!
+🆕 Jun 2025: v1.1.0 on [GitHub](https://github.com/TeddYenn/ShiNyP/releases/tag/v1.1.0).
+
+:   | - Enhanced AI report features.
+    | - Enhanced *ShiNyP* *AI* chatbot.
+    | - Made UI/UX improvements.
+    | - Fixed several bugs.
+
+🛠️ Aug 2025: v1.2.0.
+
+:   | - Adding new features.
+
+🔽 🐣 *ShiNyP AI* Chatbot!
 
 ![](images/ShiNyP_AI.gif){width="5.5in"}
 
@@ -208,8 +219,6 @@ Data**]{style="color: #1e90ff;"}.
 
 ------------------------------------------------------------------------
 
-<br>
-
 ## 🔘 Run *ShiNyP* via Docker {#sec-run-shinyp-via-docker .unnumbered}
 
 If you have 🐳 Docker installed, you can launch *ShiNyP* without
@@ -234,9 +243,9 @@ Open your browser and visit 👉
 
 ![](images/1.3-Docker.gif){width="6.8in"}
 
-------------------------------------------------------------------------
-
 <br>
+
+------------------------------------------------------------------------
 
 ## Main Features {.unnumbered}
 

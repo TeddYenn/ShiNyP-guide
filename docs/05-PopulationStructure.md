@@ -26,7 +26,7 @@ Plot]{.underline}^Plus^, allowing you to conduct various population
 structure analyses and customize your plot.
 :::
 
-![](images/Supplementary Fig. 2.jpg){width="6.8in"}
+![](images/Supplementary%20Fig.%202.jpg){width="6.8in"}
 
 ## PCA (Principal Component Analysis)
 
@@ -44,11 +44,6 @@ reducing the dimensionality of genetic data.
 1.  Click [Run PCA]{style="color: #fff;background-color: #007ACC;"} to
     generate PCA plots and the following downloadable files.
 
-> **Note**: You can upload the Group Info. (from [Population
-> Structure]{.underline}/[DAPC]{.underline}) or Core Sample Info. (from
-> [Core Collection]{.underline}/[Core Sample Set]{.underline}) to
-> classify individuals and color them in the PCA Scatter Plot.
-
 ------------------------------------------------------------------------
 
 #### Outputs: {.unnumbered style="padding: 0px 5px; margin: 0px 10px"}
@@ -56,6 +51,15 @@ reducing the dimensionality of genetic data.
 -   PCA Scatter Plot (PDF): A scatter plot showing the distribution of
     samples based on principal components, with each dot representing an
     individual.
+
+> **Note**: You can upload the Group Info. (from [Population
+> Structure]{.underline}/[DAPC]{.underline}) or Core Sample Info. (from
+> [Core Collection]{.underline}/[Core Sample Set]{.underline}) to
+> classify individuals and color them in the PCA Scatter Plot.
+
+<a class="btn btn-primary" href="assets/Group_Info.csv" download>
+*Download an example of Group Info. (CSV).*</a>
+
 -   PC Explained Variance Plot (PDF): Visualizes the variance explained
     by each principal component.
 -   Explained Variance (CSV): Contains the explained variance of each
@@ -262,8 +266,12 @@ Structure]{.underline}/[DAPC]{.underline}.
 
 -   PCA Object (PCA_prcomp_Object.rds file) or DAPC Object
     (DAPC_dapc_Object.rds file)
+
 -   Group and Other Info. (i.e. metadata, modifiable from
     DAPC_Group_Info.csv)
+
+    <a class="btn btn-primary" href="assets/Group_Info.csv" download>
+    *Download an example of Group Info. (CSV).*</a>
 
 > **Note:** If you are using a DAPC object as input, ensure that there
 > are at least 4 groups. Since N groups have N-1 LD axes, you need more
@@ -272,14 +280,6 @@ Structure]{.underline}/[DAPC]{.underline}.
 > **Note**: You can add metadata (more information about samples) by
 > adding new variables to the Group Info. file. Ensure that the sample
 > order remains unchanged.
-
-<details>
-
-<summary> Example: Group Info. file (CSV)</summary>
-
-![](images/Chromosome-Info.png){width="350"}
-
-</details>
 
 ------------------------------------------------------------------------
 
@@ -317,7 +317,11 @@ Structure]{.underline}/[NJ]{.underline}.
 
 -   UPGMA Object (UPGMA_phylo_Object.rds file) or NJ Object
     (NJ_phylo_Object.rds file)
+
 -   Group and Other Info. (modifiable from DAPC_Group_Info.csv)
+
+    <a class="btn btn-primary" href="assets/Group_Info.csv" download>
+    *Download an example of Group Info. (CSV).*</a>
 
 > **Note**: You can add more information about samples by adding new
 > variables to the Group Info. file. Ensure that the sample order

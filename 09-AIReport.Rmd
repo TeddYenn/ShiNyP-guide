@@ -54,7 +54,7 @@ editor_options:
 
 5.  Upload your AI API key: Provide a **`.txt`** file containing your
     API key (e.g., sk-...).\
-    💡Model: "Gemini 2.0 Flash (API Free)" — no API required!
+    💡Model: "Gemini 2.5 Flash (API Free)" — no API required!
 
     ▼ Example of API key file.
 
@@ -72,32 +72,33 @@ editor_options:
 
 ## 🤖 AI models {#ai-models .unnumbered style="padding: 0px 5px; margin: 0px 10px"}
 
-🆕 For *ShiNyP* v1.0.0 (May 27, 2025), we support 10 AI models:
+🆕 For *ShiNyP* v1.1.0, we support 11 AI models:
 
-| Models                | Developer | Price ^a^                  |
-|-----------------------|-----------|----------------------------|
-| DeepSeek-V3           | DeepSeek  | \$0.07/\$1.10              |
-| Gemini 2.0 Flash      | Google    | **Free** or \$0.10/\$0.40  |
-| Gemini 2.0 Flash-Lite | Google    | **Free** or \$0.075/\$0.30 |
-| 🆕 o4-mini            | OpenAI    | \$1.10/\$4.40              |
-| o3-mini               | OpenAI    | \$1.10/\$4.40              |
-| 🆕 GPT-4.1            | OpenAI    | \$2.00/\$8.00              |
-| 🆕 GPT-4.1 mini       | OpenAI    | \$0.40/\$1.60              |
-| 🆕 GPT-4.1 nano       | OpenAI    | \$0.10/\$0.40              |
-| GPT-4o                | OpenAI    | \$2.50/\$10.00             |
-| GPT-4o mini           | OpenAI    | \$0.15/\$0.60              |
+| Models                   | Developer | Price ^a^                 |
+|--------------------------|-----------|---------------------------|
+| DeepSeek-V3              | DeepSeek  | \$0.07/\$1.10             |
+| Gemini 2.0 Flash         | Google    | **Free** or \$0.10/\$0.40 |
+| 🆕 Gemini 2.5 Flash      | Google    | **Free** or \$0.30/\$2.50 |
+| 🆕 Gemini 2.5 Flash-Lite | Google    | **Free** or \$0.10/\$0.40 |
+| o4-mini                  | OpenAI    | \$1.10/\$4.40             |
+| o3-mini                  | OpenAI    | \$1.10/\$4.40             |
+| GPT-4.1                  | OpenAI    | \$2.00/\$8.00             |
+| GPT-4.1 mini             | OpenAI    | \$0.40/\$1.60             |
+| GPT-4.1 nano             | OpenAI    | \$0.10/\$0.40             |
+| GPT-4o                   | OpenAI    | \$2.50/\$10.00            |
+| GPT-4o mini              | OpenAI    | \$0.15/\$0.60             |
 
-: ^a^ Price per 1M Tokens (Input / Output)\
-⚡ We recommend using Google [**Gemini 2.0
-Flash**](https://ai.google.dev/gemini-api/docs/models/gemini#gemini-2.0-flash)—the
-flagship model—for generating AI reports. ***It is free to use*** (see
-below).\
+: ^a^ Price (USD) per 1M Tokens (Input / Output)\
+⚡ We recommend using Google [**Gemini 2.5
+Flash**](https://ai.google.dev/gemini-api/docs/models?hl=zh-tw#gemini-2.5-flash-preview-tts)—the
+flagship model—for generating AI reports. ***It is free to get API key &
+use*** (see below).\
 💸 If you have paid API access from OpenAI, we recommend using
-[GPT-4.1](https://platform.openai.com/docs/models/gpt-4.1) for optimal
+[GPT-4.1](https://platform.openai.com/docs/models/gpt-4.1) for stable
 performance. Please note that
 [o4-mini](https://platform.openai.com/docs/models/o4-mini) and
 [o3-mini](https://platform.openai.com/docs/models/o3-mini) are more
-suitable for single-turn conversations and are not ideal for multi-turn.
+suitable for "Idea Expansion" task within single-turn conversation.
 
 ------------------------------------------------------------------------
 
@@ -105,12 +106,26 @@ suitable for single-turn conversations and are not ideal for multi-turn.
 
 -   **Summary Request**: Provide a clear, structured overview of key SNP
     analysis results.
+
 -   **Data Interpretation**: Clarify findings and highlight key insights
     into population genetics.
+
 -   **Report Structuring**: Create a framework for presenting SNP
     analysis results in a scientific report.
+
 -   **Idea Expansion**: Propose future research directions informed by
     SNP findings.
+
+-   🆕 **Custom Template:** You can upload a template (**`.txt`** file)
+    tailored to specific project, and AI will automatically fill in the
+    analysis results.
+
+    This reports fully comply with designated standards, enabling truly
+    automated and standardized report generation for your lab. *Only
+    single-turn conversation is supported.*
+
+    <a class="btn btn-primary" href="assets/AI_Report_Custom_Template.txt" download>
+    *Download an example of Custom Template (TXT).*</a>
 
 ------------------------------------------------------------------------
 
@@ -164,7 +179,7 @@ suitable for single-turn conversations and are not ideal for multi-turn.
 [⚠️](https://emojipedia.org/warning) Error: Failed to Perform HTTP Request
 
 :   This error may indicate that the request timed out, possibly due to
-    an excessive input token count, which prevents the OpenAI model from
+    an excessive input token count, which prevents the AI model from
     completing the task within the allotted time.
 
 ------------------------------------------------------------------------

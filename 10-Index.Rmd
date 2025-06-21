@@ -95,7 +95,9 @@ editor_options:
 
     *ShiNyP* supports genome-wide biallelic SNP datasets in Variant Call
     Format (VCF). It is also compatible with `data.frame` and `genlight`
-    files, covering both diploid and polyploid species.
+    files, covering both diploid and polyploid species. NOTE: *The
+    diploidization processing simplifies genotype data and does not
+    account for allelic dosage effects.*
 
     For more information: [Data
     Input](https://teddyenn.github.io/ShiNyP-guide/sec-data-input.html)

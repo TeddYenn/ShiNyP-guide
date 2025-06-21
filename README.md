@@ -2,7 +2,7 @@
 
 This is the repo for the [**User Guide for _ShiNyP_**](https://teddyenn.github.io/ShiNyP-guide/).
 
-Last Updated: May 2025
+Last Updated: June 2025
 
 > This work, primarily authored by Yen-Hsiang Huang from the Department of Agronomy, National Chung Hsing University, Taiwan, is licensed under the GNU General Public License.
 

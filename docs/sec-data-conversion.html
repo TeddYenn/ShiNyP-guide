@@ -148,14 +148,26 @@ analysis.</li>
 <h4>Outputs:<a class="anchor" aria-label="anchor" href="#outputs-4"><i class="fas fa-link"></i></a>
 </h4>
 <ul>
+<li><p><em>genlight</em> (RDS): <em>genlight</em> file with Group Info. — required for
+downstream analysis.</p></li>
 <li>
-<em>genlight</em> (RDS): <em>genlight</em> file with Group Info. — required for
-downstream analysis.</li>
-<li>
-<em>genind</em> (RDS): One of the input format for <em>ShiNyP</em>
+<p><em>genind</em> (RDS): One of the input format for <em>ShiNyP</em>
 <u>DAPC</u> subpage, optimized for DAPC analysis to reduce
-computation time.</li>
+computation time.</p>
+<p><a class="btn btn-primary" href="assets/Group_Info.csv" download>
+<em>Download an example of Group Info. (CSV).</em></a></p>
+<p>This file should have at least two columns: “ID” and “Group”.</p>
+</li>
 </ul>
+<blockquote>
+<p><strong>Note:</strong> You can obtain a template after completing a DAPC analysis
+(Section
+<a href="https://teddyenn.github.io/ShiNyP-guide/sec-population-structure.html#dapc-discriminant-analysis-of-principal-components">4.2</a>)
+first to generate the initial file (“DAPC_Group_Info.csv”). If your
+SNP data is large, you can create and use a core SNP set as input to
+obtain DAPC results more efficiently. You can then expand this file
+based on your own metadata (e.g., origin, type).</p>
+</blockquote>
 <p>The following transformed files will be generated at the specified path
 you provide.</p>
 <ul>
@@ -215,7 +227,7 @@ used for detecting loci under selection.</li>
 <footer class="bg-primary text-light mt-5"><div class="container"><div class="row">
 
   <div class="col-12 col-md-6 mt-3">
-    <p>"<strong>User Guide for ShiNyP</strong>: SNP Analysis and Visualization Platform" was written by Yen-Hsiang Huang, Chung-Feng Kao. It was last built on May 2025.</p>
+    <p>"<strong>User Guide for ShiNyP</strong>: SNP Analysis and Visualization Platform" was written by Yen-Hsiang Huang, Chung-Feng Kao. It was last built on Jun 2025.</p>
   </div>
 
   <div class="col-12 col-md-6 mt-3">

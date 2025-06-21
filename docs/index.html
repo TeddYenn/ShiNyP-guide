@@ -6,16 +6,16 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <title>Welcome to ShiNyP | User Guide for ShiNyP</title>
 <meta name="author" content="Yen-Hsiang Huang, Chung-Feng Kao">
-<meta name="description" content="An R/Shiny platform for genome-wide SNP analysis and visualization with AI-assisted features">
+<meta name="description" content="ShiNyP: Unlocking SNP-Based Population Genetics—AI-Assisted Platform for Rapid and Interactive Visual Exploration">
 <meta name="generator" content="bookdown 0.43 with bs4_book()">
 <meta property="og:title" content="Welcome to ShiNyP | User Guide for ShiNyP">
 <meta property="og:type" content="book">
 <meta property="og:url" content="https://github.com/TeddYenn/ShiNyP-guide">
 <meta property="og:image" content="https://github.com/TeddYenn/ShiNyP-guide/images/cover.png">
-<meta property="og:description" content="An R/Shiny platform for genome-wide SNP analysis and visualization with AI-assisted features">
+<meta property="og:description" content="ShiNyP: Unlocking SNP-Based Population Genetics—AI-Assisted Platform for Rapid and Interactive Visual Exploration">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Welcome to ShiNyP | User Guide for ShiNyP">
-<meta name="twitter:description" content="An R/Shiny platform for genome-wide SNP analysis and visualization with AI-assisted features">
+<meta name="twitter:description" content="ShiNyP: Unlocking SNP-Based Population Genetics—AI-Assisted Platform for Rapid and Interactive Visual Exploration">
 <meta name="twitter:image" content="https://github.com/TeddYenn/ShiNyP-guide/images/cover.png">
 <!-- JS --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/6.4.6/fuse.js" integrity="sha512-zv6Ywkjyktsohkbp9bb45V6tEMoWhzFzXis+LrMehmJZZSys19Yxf1dopHx7WzIKxr5tK2dVcYmaCk2uqdjF4A==" crossorigin="anonymous"></script><script src="https://kit.fontawesome.com/6ecbd6c532.js" crossorigin="anonymous"></script><script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <link href="libs/bootstrap-4.6.0/bootstrap.min.css" rel="stylesheet">
@@ -106,12 +106,12 @@
 <img src="images/ShiNyP-icon_20250213.png" alt="ShiNyP-icon" class="cover" width="100" height="100"></a></p>
 <p>
 This work, primarily authored by Yen-Hsiang Huang from the Department
-of Agronomy, National Chung Hsing University, Taiwan (🇹🇼), is licensed
-under the <a href="https://www.gnu.org/licenses/agpl-3.0.en.html">GNU Affero General Public
+of Agronomy, National Chung Hsing University, Taiwan, is licensed under
+the <a href="https://www.gnu.org/licenses/agpl-3.0.en.html">GNU Affero General Public
 License</a>.
 </p>
 </div>
-<p>Last Updated: May 2025</p>
+<p>Last Updated: Jun 2025</p>
 <hr>
 <div id="quickstart" class="section level2 unnumbered">
 <h2>Quickstart<a class="anchor" aria-label="anchor" href="#quickstart"><i class="fas fa-link"></i></a>
@@ -143,9 +143,9 @@ visualization of SNP datasets.</p>
 <p>If you use <em>ShiNyP</em> in your research, please cite:</p>
 <blockquote>
 <p>Huang, Y.-H., Chen, L.-Y., Septiningsih E. M., Kao, P.-H., Kao, C.-F.
-(2025) <em>ShiNyP</em>: Unlocking SNP-Based Population Genetics—An
-AI-Assisted Platform for Rapid and Interactive Visual Exploration.
-<em>Molecular Biology and Evolution</em>, <em>43</em>(6), msaf117.
+(2025) <em>ShiNyP</em>: Unlocking SNP-Based Population Genetics—AI-Assisted
+Platform for Rapid and Interactive Visual Exploration. <em>Molecular
+Biology and Evolution</em>, <em>42</em>(6), msaf117.
 <a href="https://doi.org/10.1093/molbev/msaf117" class="uri">https://doi.org/10.1093/molbev/msaf117</a></p>
 </blockquote>
 <p>In addition, please acknowledge the R packages utilized in your
@@ -174,20 +174,31 @@ Guide</a>.</p>
 <dt>Apr 2025: v0.2.0</dt>
 <dd>
 <div class="line-block">- Enhanced AI report functionality with new options and models.<br>
-- Improved the layout of preliminary results for better readability.<br>
+- Improved readability of preliminary results.<br>
 - Added more methods for constructing core SNP set.<br>
 - Added the Docker-based installation.</div>
 </dd>
-<dt>🆕 May 2025: v1.0.0 on <a href="https://github.com/TeddYenn/ShiNyP">GitHub</a>.</dt>
+<dt>May 2025: v1.0.0 on <a href="https://github.com/TeddYenn/ShiNyP/releases/tag/v1.0.0">GitHub</a>.</dt>
 <dd>
 <div class="line-block">- Introduced the <strong>new <em>ShiNyP</em> AI chatbot</strong>.<br>
 - Enhanced AI report features and deprecated older AI models.<br>
 - Added publication details.<br>
-- Made minor UI improvements.<br>
+- Made UI/UX improvements.<br>
 - Fixed several bugs.</div>
 </dd>
+<dt>🆕 Jun 2025: v1.1.0 on <a href="https://github.com/TeddYenn/ShiNyP/releases/tag/v1.1.0">GitHub</a>.</dt>
+<dd>
+<div class="line-block">- Enhanced AI report features.<br>
+- Enhanced <em>ShiNyP</em> <em>AI</em> chatbot.<br>
+- Made UI/UX improvements.<br>
+- Fixed several bugs.</div>
+</dd>
+<dt>🛠️ Aug 2025: v1.2.0.</dt>
+<dd>
+<div class="line-block">- Adding new features.</div>
+</dd>
 </dl>
-<p>▾ 🐣 <em>ShiNyP AI</em> Chatbot!</p>
+<p>🔽 🐣 <em>ShiNyP AI</em> Chatbot!</p>
 <div class="inline-figure"><img src="images/ShiNyP_AI.gif" style="width:5.5in"></div>
 <dl>
 <dt><br></dt>
@@ -233,7 +244,7 @@ Page</a>.</strong></p>
 <footer class="bg-primary text-light mt-5"><div class="container"><div class="row">
 
   <div class="col-12 col-md-6 mt-3">
-    <p>"<strong>User Guide for ShiNyP</strong>: SNP Analysis and Visualization Platform" was written by Yen-Hsiang Huang, Chung-Feng Kao. It was last built on May 2025.</p>
+    <p>"<strong>User Guide for ShiNyP</strong>: SNP Analysis and Visualization Platform" was written by Yen-Hsiang Huang, Chung-Feng Kao. It was last built on Jun 2025.</p>
   </div>
 
   <div class="col-12 col-md-6 mt-3">

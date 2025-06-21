@@ -127,11 +127,18 @@ individuals, useful for identifying pedigree relationships.
 #### Required Files: {.unnumbered style="padding: 0px 5px; margin: 0px 10px"}
 
 -   *data.frame*
+
 -   Site Info. (RDS) of the current *data.frame*, downloadable from
     [Data Input]{.underline} or [Data QC]{.underline} pages.
+
 -   Chromosome Info. (CSV): Reference genome information of the current
-    study. For more details about this file, refer to Section
+    study.
+
+    For more details about this file, refer to Section
     \@ref(snp-density) (SNP Density).
+
+    <a class="btn btn-primary" href="assets/Chromosome_Info.csv" download>
+    *Download an example of Chromosome Info. (CSV).*</a>
 
 ------------------------------------------------------------------------
 
@@ -174,9 +181,15 @@ Sweep]{.underline}/[OutFLANK]{.underline}.
 -   Genetic Diversity per Site (Genetic_Diversity_per_Site.rds), pcadapt
     p-value per Site (pcadapt_p-value_per_site.rds), or OutFLANK p-value
     per Site (OutFLANK_p-value_per_site.rds).
+
 -   Chromosome Info. (CSV): Reference genome information of the current
-    study. For more details about this file, refer to Section
+    study.
+
+    For more details about this file, refer to Section
     \@ref(snp-density) (SNP Density).
+
+    <a class="btn btn-primary" href="assets/Chromosome_Info.csv" download>
+    *Download an example of Chromosome Info. (CSV).*</a>
 
 ------------------------------------------------------------------------
 
