@@ -46,37 +46,36 @@ editor_options:
     user-friendly graphical interface that allows you to perform all
     analyses interactively without coding.
 
-3.  **How do I install and start the *ShiNyP* platform?**
+3.  **How to update/re-installl the *ShiNyP* platform?**
 
-    You can install *ShiNyP* in R via:
+    Remove the existing version:
 
     ``` r
-    remotes::install_github("TeddYenn/ShiNyP")
+    detach("package:ShiNyP", unload = TRUE)
+    remove.packages("ShiNyP")
+    ```
+
+    Re-install the latest version & load and run *ShiNyP*:
+
+    ``` r
+    install_github("TeddYenn/ShiNyP", force = TRUE)
     library(ShiNyP)
     ShiNyP::run_ShiNyP()
     ```
 
-    Alternatively, use the Docker image for a one-step deployment:
-
-    ``` bash
-    docker run -d -p 3838:3838 teddyenn/shinyp-platfor
-    ```
-
-    For more information: [Get
-    Started](https://teddyenn.github.io/ShiNyP-guide/get-started.html)
-
 4.  **Is my data secure when using *ShiNyP*?**
 
-    All analyses are conducted locally on your machine or server. No
+    All analyses are conducted **locally** on your machine or server. No
     user data is transmitted to third-party servers unless you
     explicitly use AI features (*ShiNyP* *AI* chatbot and reporting
     system).
 
 5.  **Does *ShiNyP* require internet access to function?**
 
-    *ShiNyP* runs locally and does not require internet access for core
-    analyses. Internet is only needed when installing the packages and
-    using AI features (*ShiNyP* *AI* chatbot and reporting system).
+    *ShiNyP* runs **locally** and does not require internet access for
+    core analyses. Internet is only needed when installing the packages
+    at first and using AI features (*ShiNyP* *AI* chatbot and reporting
+    system).
 
 ------------------------------------------------------------------------
 
@@ -104,30 +103,17 @@ editor_options:
 
 3.  **What kind of output does the platform provide?**
 
-    The platform generates publication-ready figures (PDF, PNG, or JPEG)
-    and tables, reusable R data objects, and AI-assisted reports that
+    The platform generates customizable figures (PDF, PNG, or JPEG) and
+    tables, reusable R data objects, and AI-assisted reports that
     summarize analytical results in natural language.
 
-4.  **Can I customize analysis parameters?**
-
-    Yes, users can adjust analysis thresholds, models, and filtering
-    criteria directly through the interface to suit their research
-    needs.
-
-5.  **Can I analyze large SNP datasets with *ShiNyP*?**
+4.  **Can I analyze large SNP datasets with *ShiNyP*?**
 
     Yes, *ShiNyP* is optimized for both moderate and large-scale SNP
     datasets. However, performance may depend on your system’s hardware
     specifications.
 
-6.  **Can I analyze datasets from different size/species in one
-    session?**
-
-    Yes, as long as your data are properly formatted, *ShiNyP* supports
-    datasets from different size/species. However, it is recommended to
-    analyze each dataset separately for clearer results.
-
-7.  **Can *ShiNyP* export data to formats used by other genetics
+5.  **Can *ShiNyP* export data to formats used by other genetics
     software?**
 
     Yes, results and transformed data can be exported in formats
@@ -157,8 +143,6 @@ editor_options:
     page](https://github.com/TeddYenn/ShiNyP/issues) or email us
     at: [teddyhuangyh\@gmail.com](#0){.email}. The project is actively
     maintained and welcomes community feedback and collaboration.
-
-3.  **Future?**
 
 ------------------------------------------------------------------------
 

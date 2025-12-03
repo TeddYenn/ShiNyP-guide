@@ -7,7 +7,7 @@
 <title>9 FAQ | User Guide for ShiNyP</title>
 <meta name="author" content="Yen-Hsiang Huang, Chung-Feng Kao">
 <meta name="description" content="window.dataLayer = window.dataLayer || [];  function gtag(){dataLayer.push(arguments);}  gtag('js', new Date());  gtag('config', 'G-2662B66TL7'); If you encounter any issues or have suggestions...">
-<meta name="generator" content="bookdown 0.43 with bs4_book()">
+<meta name="generator" content="bookdown 0.45 with bs4_book()">
 <meta property="og:title" content="9 FAQ | User Guide for ShiNyP">
 <meta property="og:type" content="book">
 <meta property="og:url" content="https://github.com/TeddYenn/ShiNyP-guide/sec-index.html">
@@ -132,29 +132,30 @@ user-friendly graphical interface that allows you to perform all
 analyses interactively without coding.</p>
 </li>
 <li>
-<p><strong>How do I install and start the <em>ShiNyP</em> platform?</strong></p>
-<p>You can install <em>ShiNyP</em> in R via:</p>
+<p><strong>How to update/re-installl the <em>ShiNyP</em> platform?</strong></p>
+<p>Remove the existing version:</p>
 <div class="sourceCode" id="cb5"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="fu">remotes</span><span class="fu">::</span><span class="fu"><a href="https://remotes.r-lib.org/reference/install_github.html">install_github</a></span><span class="op">(</span><span class="st">"TeddYenn/ShiNyP"</span><span class="op">)</span></span>
+<code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/detach.html">detach</a></span><span class="op">(</span><span class="st">"package:ShiNyP"</span>, unload <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/utils/remove.packages.html">remove.packages</a></span><span class="op">(</span><span class="st">"ShiNyP"</span><span class="op">)</span></span></code></pre></div>
+<p>Re-install the latest version &amp; load and run <em>ShiNyP</em>:</p>
+<div class="sourceCode" id="cb6"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="fu"><a href="https://remotes.r-lib.org/reference/install_github.html">install_github</a></span><span class="op">(</span><span class="st">"TeddYenn/ShiNyP"</span>, force <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span></span>
 <span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va">ShiNyP</span><span class="op">)</span></span>
 <span><span class="fu">ShiNyP</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/ShiNyP/man/run_ShiNyP.html">run_ShiNyP</a></span><span class="op">(</span><span class="op">)</span></span></code></pre></div>
-<p>Alternatively, use the Docker image for a one-step deployment:</p>
-<div class="sourceCode" id="cb6"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb6-1"><a href="sec-index.html#cb6-1" tabindex="-1"></a><span class="ex">docker</span> run <span class="at">-d</span> <span class="at">-p</span> 3838:3838 teddyenn/shinyp-platfor</span></code></pre></div>
-<p>For more information: <a href="https://teddyenn.github.io/ShiNyP-guide/get-started.html">Get
-Started</a></p>
 </li>
 <li>
 <p><strong>Is my data secure when using <em>ShiNyP</em>?</strong></p>
-<p>All analyses are conducted locally on your machine or server. No
+<p>All analyses are conducted <strong>locally</strong> on your machine or server. No
 user data is transmitted to third-party servers unless you
 explicitly use AI features (<em>ShiNyP</em> <em>AI</em> chatbot and reporting
 system).</p>
 </li>
 <li>
 <p><strong>Does <em>ShiNyP</em> require internet access to function?</strong></p>
-<p><em>ShiNyP</em> runs locally and does not require internet access for core
-analyses. Internet is only needed when installing the packages and
-using AI features (<em>ShiNyP</em> <em>AI</em> chatbot and reporting system).</p>
+<p><em>ShiNyP</em> runs <strong>locally</strong> and does not require internet access for
+core analyses. Internet is only needed when installing the packages
+at first and using AI features (<em>ShiNyP</em> <em>AI</em> chatbot and reporting
+system).</p>
 </li>
 </ol>
 <hr>
@@ -184,28 +185,15 @@ Input</a></p>
 </li>
 <li>
 <p><strong>What kind of output does the platform provide?</strong></p>
-<p>The platform generates publication-ready figures (PDF, PNG, or JPEG)
-and tables, reusable R data objects, and AI-assisted reports that
+<p>The platform generates customizable figures (PDF, PNG, or JPEG) and
+tables, reusable R data objects, and AI-assisted reports that
 summarize analytical results in natural language.</p>
-</li>
-<li>
-<p><strong>Can I customize analysis parameters?</strong></p>
-<p>Yes, users can adjust analysis thresholds, models, and filtering
-criteria directly through the interface to suit their research
-needs.</p>
 </li>
 <li>
 <p><strong>Can I analyze large SNP datasets with <em>ShiNyP</em>?</strong></p>
 <p>Yes, <em>ShiNyP</em> is optimized for both moderate and large-scale SNP
 datasets. However, performance may depend on your system’s hardware
 specifications.</p>
-</li>
-<li>
-<p><strong>Can I analyze datasets from different size/species in one
-session?</strong></p>
-<p>Yes, as long as your data are properly formatted, <em>ShiNyP</em> supports
-datasets from different size/species. However, it is recommended to
-analyze each dataset separately for clearer results.</p>
 </li>
 <li>
 <p><strong>Can <em>ShiNyP</em> export data to formats used by other genetics
@@ -240,7 +228,6 @@ page</a> or email us
 at: <a href="#id_0" class="email">teddyhuangyh@gmail.com</a>. The project is actively
 maintained and welcomes community feedback and collaboration.</p>
 </li>
-<li><p><strong>Future?</strong></p></li>
 </ol>
 <hr>
 </div>
@@ -506,7 +493,7 @@ Yu, Guangchuang, David K. Smith, Huachen Zhu, Yi Guan, and Tommy Tsan-Yuk Lam. 2
 <footer class="bg-primary text-light mt-5"><div class="container"><div class="row">
 
   <div class="col-12 col-md-6 mt-3">
-    <p>"<strong>User Guide for ShiNyP</strong>: SNP Analysis and Visualization Platform" was written by Yen-Hsiang Huang, Chung-Feng Kao. It was last built on Jun 2025.</p>
+    <p>"<strong>User Guide for ShiNyP</strong>: SNP Analysis and Visualization Platform" was written by Yen-Hsiang Huang, Chung-Feng Kao. It was last built on Dec 2025.</p>
   </div>
 
   <div class="col-12 col-md-6 mt-3">

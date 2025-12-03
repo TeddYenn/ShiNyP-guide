@@ -82,8 +82,9 @@ more information, visit <https://rpubs.com/lotterhos/outflank>.
 
 #### Required Files: {.unnumbered style="padding: 0px 5px; margin: 0px 10px"}
 
--   *genlight* with 'Group Info.', downloadable from [Data
+-   *genlight* or *genind* (faster) with 'Group Info.', downloadable from [Data
     Transform]{.underline} page after you have Group Info.
+    
 -   Site Info. (RDS) of the current *genlight* downloadable from [Data
     Input]{.underline} or [Data QC]{.underline} pages.
 

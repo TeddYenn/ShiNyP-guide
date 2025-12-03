@@ -2,7 +2,7 @@
 title: "User Guide for ShiNyP"
 subtitle: "SNP Analysis and Visualization Platform"
 author: "Yen-Hsiang Huang, Chung-Feng Kao"
-date: "Jun 2025"
+date: "Dec 2025"
 knit: "bookdown::render_book"
 site: bookdown::bookdown_site
 output: bookdown::bs4_book
@@ -40,13 +40,14 @@ editor_options:
 <img src="images/ShiNyP-icon_20250213.png" alt="ShiNyP-icon" class="cover" width="100" height="100"/>
 </a>
 
-<p>This work, primarily authored by Yen-Hsiang Huang from the Department
-of Agronomy, National Chung Hsing University, Taiwan, is licensed under
-the [GNU Affero General Public
+<p>This work, primarily authored by [Yen-Hsiang
+Huang](https://teddyenn.github.io/) from the Department of Agronomy,
+National Chung Hsing University, Taiwan, is licensed under the [GNU
+Affero General Public
 License](https://www.gnu.org/licenses/agpl-3.0.en.html).</p>
 :::
 
-Last Updated: Jun 2025
+Last Updated: Dec 2025
 
 ------------------------------------------------------------------------
 
@@ -124,18 +125,21 @@ May 2025: v1.0.0 on [GitHub](https://github.com/TeddYenn/ShiNyP/releases/tag/v1.
     | - Made UI/UX improvements.
     | - Fixed several bugs.
 
-🆕 Jun 2025: v1.1.0 on [GitHub](https://github.com/TeddYenn/ShiNyP/releases/tag/v1.1.0).
+Jun 2025: v1.1.0 on [GitHub](https://github.com/TeddYenn/ShiNyP/releases/tag/v1.1.0).
 
 :   | - Enhanced AI report features.
     | - Enhanced *ShiNyP* *AI* chatbot.
     | - Made UI/UX improvements.
     | - Fixed several bugs.
 
-🛠️ Aug 2025: v1.2.0.
+🆕 Oct 2025: v1.1.1 on [GitHub](https://github.com/TeddYenn/ShiNyP/releases/tag/v1.1.1).
 
-:   | - Adding new features.
+:   | - Made UI/UX improvements.
+    | - Fixed several bugs.
+    | - Added flexible download options.
+    | - Added defensive & error trapping codes.
 
-🔽 🐣 *ShiNyP AI* Chatbot!
+🔽 **🐣 *ShiNyP AI* Chatbot!**
 
 ![](images/ShiNyP_AI.gif){width="5.5in"}
 
@@ -158,14 +162,12 @@ There are two easy ways to install and run *ShiNyP*:
 1.  **Using R**:\
     This method is suitable if you already have R installed or prefer
     working within the R environment. You’ll need to install some R
-    packages and then launch *ShiNyP* directly from R environment. ▸
-    R/RStudio/Rtools Tutorial for Beginners! (#Developing)
+    packages and then launch *ShiNyP* directly from R environment.
 
 2.  **Using Docker**:\
-    This is the simpler option if you’d rather skip installing R or any
+    This is an alternative if you’d rather skip installing R or any
     packages. With Docker, you can run *ShiNyP* in a ready-to-use setup
-    with just one command. ▸ Docker Tutorial for Beginners!
-    (#Developing)
+    with just one command.
 
 <br>
 
@@ -226,7 +228,7 @@ installing R.
 
 #### **✅ Prerequisite** {.unnumbered}
 
--   [Docker](https://www.docker.com/).
+-   [Docker](https://www.docker.com/)
 
     Verify your Docker installation in Terminal: **`docker --version`**
 

@@ -176,10 +176,20 @@ suitable for "Idea Expansion" task within single-turn conversation.
     To resolve this error, first check that you are using the correct
     API key and organization ID in your request header.
 
+[⚠️](https://emojipedia.org/warning) Error: 'curl_modify_url' is not an exported object from 'namespace:curl'\`
+
+:   This error indicates that your environment is loading an outdated
+    version of the `curl` package that lacks the \`curl_modify_url()\`
+    helper required by the AI Report module. To resolve this error:
+
+    1.  Restart the R session.
+    2.  Update the `curl` package in your R session to the latest
+        release.
+    3.  Re-launch *ShiNyP* and click [Get
+        Report]{style="color: #fff;background-color: #00a595;"} again.
+
 [⚠️](https://emojipedia.org/warning) Error: Failed to Perform HTTP Request
 
 :   This error may indicate that the request timed out, possibly due to
     an excessive input token count, which prevents the AI model from
     completing the task within the allotted time.
-
-------------------------------------------------------------------------

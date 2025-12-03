@@ -37,13 +37,13 @@ editor_options:
     [VCFtools](https://vcftools.sourceforge.net/man_latest.html)
 -   VCF file in RDS format previously saved by *ShiNyP*
 
-> **Note:** The VCF file should contain chromosome and position
+> **Note:** The VCF file should contain SNPs' chromosome and position
 > information in the first two columns
 > ([**`#CHROM`**]{style="color: #8b0000;"} and
 > [**`POS`**]{style="color: #8b0000;"}), along with sample names and
 > their genotypic information. For some whole genome sequencing (WGS)
-> data, where SNP marker ID information is missing, *ShiNyP* will
-> auto-generate the SNP ID names as [#CHROM:POS]{.underline}, such as
+> data, where SNP markers' IDs are missing, *ShiNyP* will auto-generate
+> the SNP ID names as [#CHROM:POS]{.underline}, such as
 > [2:12500]{.underline}, indicating chromosome 2, position 12500.
 
 ------------------------------------------------------------------------

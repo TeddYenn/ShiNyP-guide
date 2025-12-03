@@ -130,8 +130,10 @@ parameters in a sliding window format.
 
 -   Sliding Window Data (CSV): A sliding window dataset based on
     user-selected parameters.
--   Circos Plot (PDF): A circos plot visualizing the user-selected
-    parameters, with the top 1% of each parameter colored in red.
+-   Circos Plot (PDF): This circos plot visualizes the user-selected
+    parameters, highlighting the top 1% of each parameter in red.
+    Chromosome information is displayed on track 1, with coordinates
+    scaled in megabases (Mb).
 
 ------------------------------------------------------------------------
 
