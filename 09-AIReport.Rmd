@@ -43,27 +43,19 @@ editor_options:
 
 #### Step 2: AI-Driven Report {.unnumbered style="padding: 0px 5px; margin: 0px 10px"}
 
-1.  Select an AI model.
+> **Note**: Your AI model and API key are now managed globally. Please ensure you have configured them on the **Home** page under the **AI Activation** section before proceeding.
 
-2.  Define the task for the AI model.
+1.  Define the task for the AI model.
 
-3.  Select the conversation mode (*Single-Turn*: one request;
+2.  Select the conversation mode (*Single-Turn*: one request;
     *Multi-Turn*: up to five requests).
 
-4.  Select the report language.
+3.  Select the report language.
 
-5.  Upload your AI API key: Provide a **`.txt`** file containing your
-    API key (e.g., sk-...).\
-    💡Model: "Gemini 2.5 Flash (API Free)" — no API required!
-
-    ▼ Example of API key file.
-
-    ![](images/OpenAI-API.png){width="450"}
-
-6.  Click [Get Report]{style="color: #fff;background-color: #00a595;"}
+4.  Click [Get Report]{style="color: #fff;background-color: #00a595;"}
     to obtain AI-driven Report.
 
-7.  Download the **`.docx`** (Word) file with a fully styled,
+5.  Download the **`.docx`** (Word) file with a fully styled,
     professional layout.
 
 ![](images/8.2.gif){width="6.8in"}
@@ -72,33 +64,23 @@ editor_options:
 
 ## 🤖 AI models {#ai-models .unnumbered style="padding: 0px 5px; margin: 0px 10px"}
 
-🆕 For *ShiNyP* v1.1.0, we support 11 AI models:
+🆕 For *ShiNyP* v1.2.0, we support 8 AI models:
 
 | Models                   | Developer | Price ^a^                 |
 |--------------------------|-----------|---------------------------|
-| DeepSeek-V3              | DeepSeek  | \$0.07/\$1.10             |
-| Gemini 2.0 Flash         | Google    | **Free** or \$0.10/\$0.40 |
-| 🆕 Gemini 2.5 Flash      | Google    | **Free** or \$0.30/\$2.50 |
-| 🆕 Gemini 2.5 Flash-Lite | Google    | **Free** or \$0.10/\$0.40 |
-| o4-mini                  | OpenAI    | \$1.10/\$4.40             |
-| o3-mini                  | OpenAI    | \$1.10/\$4.40             |
+| DeepSeek-V3              | DeepSeek  | \$0.14/\$0.28             |
+| 🆕 Gemini 3 Flash        | Google    | **Free** or \$0.10/\$0.40 |
+| Gemini 2.5 Flash         | Google    | **Free** or \$0.30/\$2.50 |
+| Gemini 2.5 Flash-Lite    | Google    | **Free** or \$0.10/\$0.40 |
+| 🆕 GPT-5.5               | OpenAI    | \$10.00/\$30.00           |
+| 🆕 GPT-5                 | OpenAI    | \$5.00/\$15.00            |
+| 🆕 GPT-5 mini            | OpenAI    | \$0.15/\$0.60             |
 | GPT-4.1                  | OpenAI    | \$2.00/\$8.00             |
-| GPT-4.1 mini             | OpenAI    | \$0.40/\$1.60             |
-| GPT-4.1 nano             | OpenAI    | \$0.10/\$0.40             |
-| GPT-4o                   | OpenAI    | \$2.50/\$10.00            |
-| GPT-4o mini              | OpenAI    | \$0.15/\$0.60             |
 
-: ^a^ Price (USD) per 1M Tokens (Input / Output)\
-⚡ We recommend using Google [**Gemini 2.5
-Flash**](https://ai.google.dev/gemini-api/docs/models?hl=zh-tw#gemini-2.5-flash-preview-tts)—the
-flagship model—for generating AI reports. ***It is free to get API key &
-use*** (see below).\
-💸 If you have paid API access from OpenAI, we recommend using
-[GPT-4.1](https://platform.openai.com/docs/models/gpt-4.1) for stable
-performance. Please note that
-[o4-mini](https://platform.openai.com/docs/models/o4-mini) and
-[o3-mini](https://platform.openai.com/docs/models/o3-mini) are more
-suitable for "Idea Expansion" task within single-turn conversation.
+: ^a^ Price (USD) per 1M Tokens (Input / Output)
+⚡ We recommend using Google AI models (https://ai.google.dev/gemini-api/docs/models?hl=zh-tw) ***It is free to get API key & use*** (see below).
+💸 If you have paid API access from OpenAI, we recommend using [GPT-5](https://platform.openai.com/docs/models/gpt-5) for high-quality performance. Please note that [GPT-5 mini](https://platform.openai.com/docs/models/gpt-5-mini) is extremely fast and cost-effective.
+
 
 ------------------------------------------------------------------------
 

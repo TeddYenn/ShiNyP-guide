@@ -1,8 +1,8 @@
 ---
-title: "User Guide for ShiNyP"
+title: "User Guide for ShiNyP v1.2.0"
 subtitle: "SNP Analysis and Visualization Platform"
 author: "Yen-Hsiang Huang, Chung-Feng Kao"
-date: "Dec 2025"
+date: "May 2026"
 knit: "bookdown::render_book"
 site: bookdown::bookdown_site
 output: bookdown::bs4_book
@@ -47,7 +47,7 @@ Affero General Public
 License](https://www.gnu.org/licenses/agpl-3.0.en.html).</p>
 :::
 
-Last Updated: Dec 2025
+Last Updated: May 2026
 
 ------------------------------------------------------------------------
 
@@ -132,12 +132,17 @@ Jun 2025: v1.1.0 on [GitHub](https://github.com/TeddYenn/ShiNyP/releases/tag/v1.
     | - Made UI/UX improvements.
     | - Fixed several bugs.
 
-🆕 Oct 2025: v1.1.1 on [GitHub](https://github.com/TeddYenn/ShiNyP/releases/tag/v1.1.1).
+Oct 2025: v1.1.1 on [GitHub](https://github.com/TeddYenn/ShiNyP/releases/tag/v1.1.1).
 
 :   | - Made UI/UX improvements.
     | - Fixed several bugs.
     | - Added flexible download options.
     | - Added defensive & error trapping codes.
+
+🆕 May 2026: v1.2.0 on [GitHub](https://github.com/TeddYenn/ShiNyP/releases/tag/v1.2.0).
+
+:   | - Global AI Sync.
+    | - Fixed several bugs.
 
 🔽 **🐣 *ShiNyP AI* Chatbot!**
 
@@ -149,6 +154,17 @@ Jun 2025: v1.1.0 on [GitHub](https://github.com/TeddYenn/ShiNyP/releases/tag/v1.
     please submit a request on the [GitHub Issues
     page](https://github.com/TeddYenn/ShiNyP/issues) or email us at:
     [teddyhuangyh\@gmail.com](#0)
+
+------------------------------------------------------------------------
+
+## **AI Activation** {.unnumbered}
+
+To use the AI features (AI chatbot and AI reporting), you need to configure your AI model and API key on the **Home** page.
+
+1.  Go to the **Home** page.
+2.  Find the **AI Activation** section.
+3.  Click **Activate Now!** to upload your API key and select your preferred model.
+4.  Once activated, your settings will sync across the platform.
 
 ------------------------------------------------------------------------
 
