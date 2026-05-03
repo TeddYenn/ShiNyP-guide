@@ -211,7 +211,7 @@ requirements:
 ``` r
 install.packages("BiocManager")
 BiocManager::install(version = "3.21") # Use the version that matches your R
-BiocManager::install(c("qvalue", "SNPRelate", "ggtree", "snpStats"), force = TRUE)
+BiocManager::install(c("qvalue", "SNPRelate", "ggtree", "snpStats", "LEA"), force = TRUE)
 ```
 
 #### **2️⃣ Install the *ShiNyP* Package** {.unnumbered}
